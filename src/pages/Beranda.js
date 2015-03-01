@@ -101,10 +101,11 @@ export default function Beranda() {
         linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
         linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
       });
-    } else if (new Date() < new Date(2021, 7, 15)) {
+    } else if (new Date() < new Date(2021, 7, 11)) {
       setToday(new Date());
       DaftarAgenda.map((item, index) => {
-        if (new Date() === item.date()) {
+        let waktu = new Date();
+        if (waktu.getDate() === item.date.getDate() && waktu.getMonth() === item.date.getMonth()) {
           setActiveDate({
             date: item.date,
             title: item.title,
@@ -114,9 +115,17 @@ export default function Beranda() {
             linkTugas: item.linkTugas,
             linkSimaster: item.linkSimaster,
           });
-          console.log("activeDate after: ", activeDate.date);
         }
         return(null)
+      });
+    } else if (new Date() < new Date(2021, 7, 14)) {
+      setToday(new Date());
+      setActiveDate({
+        date: new Date(2021, 7, 14),
+        title: "Penutupan PPSMB UGM 2021",
+        desc: "Upacara penutupan seluruh rangkaian acara PPSMB UGM 2021.",
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
+        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
       });
     } else {
       setToday(new Date(2021, 7, 14));
@@ -396,7 +405,7 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        <section className='vmap pattern-bg'>
+        {/* <section className='vmap pattern-bg'>
         <Fade bottom>
           <div className="red-stick">
             <img src={RedStick} className='red-stick' alt=""></img>
@@ -428,7 +437,7 @@ export default function Beranda() {
             </div>
             </Slide>
           </div>
-        </section>
+        </section> */}
         <section className="agenda">
           <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>

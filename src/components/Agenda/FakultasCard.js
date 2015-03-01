@@ -52,7 +52,7 @@ export default function Card(props) {
       : day === "fourteen"
       ? "Fakultas Pertanian"
       : day === "fivteen"
-      ? "Fakultas Pertenakan"
+      ? "Fakultas Peternakan"
       : day === "sixteen"
       ? "Fakultas Psikologi"
       : day === "seventeen"
