@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import Kollektif from './assets/fonts/Kollektif.woff';
+import IndonesiaScript from './assets/fonts/Indonesia-Script.woff';
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -22,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Kollektif Regular';
         font-style: normal;
         font-weight: normal;
-        src:url('./assets/fonts/Kollektif.woff') format('woff');
+        src: url(${Kollektif}) format('woff');
         font-display: swap;
     }
 
@@ -30,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Indonesia Script';
         font-style: normal;
         font-weight: normal;
-        src: local('Indonesia Script'), url('./assets/fonts/Indonesia-Script.woff') format('woff');
+        src: url(${IndonesiaScript}) format('woff');
         font-display: swap;
     }
 
@@ -121,6 +123,7 @@ const GlobalStyle = createGlobalStyle`
     100% {
         opacity: 1;
     }
-`;
+}
+`
 
 export default GlobalStyle;
