@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+
 import Kollektif from './assets/fonts/Kollektif.woff';
 import IndonesiaScript from './assets/fonts/Indonesia-Script.woff';
+import LogoPPSMBOfficial from './assets/img/logo-ppsmb-official.webp';
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -13,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
         --color-orange: #FFBE00;
         --color-yellow: #FF7C02;
         --color-black: #2D2D2D;
+        --color-white: #ffffff;
 
         --delay-multiplier: 0.1s;
     }
@@ -70,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
         color: var(--color-black);
     }
     .ppsmb-white {
-        color: white;
+        color: var(--color-white);
     }
 
     /*----------------------*\
