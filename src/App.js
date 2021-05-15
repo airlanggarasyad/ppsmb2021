@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import ComingSoon from "./pages/ComingSoon";
-import Informasi from "./pages/Informasi";
+import Galeri from './pages/Galeri'
 import GlobalStyle from "./globalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -11,8 +10,7 @@ class App extends Component {
         <GlobalStyle />
         <Router>
           <Switch>
-            <Route exact path="/" component={ComingSoon} />
-            <Route path="/informasi" component={Informasi} />
+            <Route exact path="/" component={Galeri} />
           </Switch>
         </Router>
       </>

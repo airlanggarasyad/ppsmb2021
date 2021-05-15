@@ -8,13 +8,16 @@ const GlobalStyle = createGlobalStyle`
         --color-red: #C50034;
         --color-blue: #0593F7;
         --color-darkblue: #01385E;
-        --color-orange: #FFBE00;
-        --color-yellow: #FF7C02;
+        --color-footerblue: #0074AF;
+        --color-orange: #FF7C02;
+        --color-yellow: #FFBE00;
         --color-black: #2D2D2D;
 
         --delay-multiplier: 0.1s;
+        --spacer: 1rem;
     }
     
+
     /*----------------------*\
                Font
     \*----------------------*/
@@ -39,12 +42,64 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Kollektif Regular";
     }
 
+    .font-bold {
+        font-weight: bold;
+    }
+
+
     /*----------------------*\
               Utility
     \*----------------------*/
+    /* Margin */
     .m-0 {
-        margin: 0;
+        margin: calc(var(--spacer) * 0);
     }
+
+    .m-1 {
+        margin: calc(var(--spacer) * 0.25);
+    }
+
+    .m-2 {
+        margin: calc(var(--spacer) * 0.5);
+    }
+
+    .m-3 {
+        margin: calc(var(--spacer) * 1);
+    }
+
+    .m-4 {
+        margin: calc(var(--spacer) * 1.5);
+    }
+
+    .m-5 {
+        margin: calc(var(--spacer) * 3);
+    }
+
+    /* Padding */
+    .p-0 {
+        padding: calc(var(--spacer) * 0);
+    }
+
+    .p-1 {
+        padding: calc(var(--spacer) * 0.25);
+    }
+
+    .p-2 {
+        padding: calc(var(--spacer) * 0.5);
+    }
+
+    .p-3 {
+        padding: calc(var(--spacer) * 1);
+    }
+
+    .p-4 {
+        padding: calc(var(--spacer) * 1.5);
+    }
+
+    .p-5 {
+        padding: calc(var(--spacer) * 3);
+    }
+
 
     /*----------------------*\
               Color
@@ -71,6 +126,7 @@ const GlobalStyle = createGlobalStyle`
         color: white;
     }
 
+
     /*----------------------*\
             Typography
     \*----------------------*/
@@ -90,6 +146,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Indonesia Script";
     }
 
+
+    /*----------------------*\
+              Grid
+    \*----------------------*/
     .grid-container-6x12 {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -98,6 +158,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         width: 100%;
     }
+
 
     /*----------------------*\
             Animation
@@ -113,7 +174,6 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    
     @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -121,6 +181,12 @@ const GlobalStyle = createGlobalStyle`
     100% {
         opacity: 1;
     }
+    }
+
+
+    /*----------------------*\
+            Breakpoint
+    \*----------------------*/
 `;
 
 export default GlobalStyle;
