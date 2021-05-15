@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faInstagram,
-  faFacebook,
-  faTiktok,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import SocialMedia from "./SocialMedia";
 
 function Footer() {
   return (
@@ -22,9 +15,14 @@ function Footer() {
             <br />
             Universitas Gadjah Mada
           </p>
-          <p className="ppsmb-yellow">
+          <a
+            href="https://goo.gl/maps/NPeetPpr5vVcRTXr5"
+            target="_blank"
+            rel="noopener noreferrer"
+            classname="ppsmb-yellow"
+          >
             Jl. Asem Kranji Blok K-8 Sekip, Bulaksumur, Sleman, Yogyakarta 55281
-          </p>
+          </a>
           <p>
             Jam kerja pukul:
             <span className="ppsmb-yellow"> 08:00 - 16:00 WIB</span>
@@ -35,56 +33,31 @@ function Footer() {
           <p>Help Desk PPSMB: +62-822-8433-1119</p>
           <p className="font-bold">Official Account PPSMB:</p>
           <div className="social-media">
-            <a
-              href="http://twitter.com/ppsmb_ugm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <FontAwesomeIcon icon={faTwitter} />
-                <span>Twitter</span>
-              </div>
-            </a>
-            <a
-              href="http://instagram.com/ppsmb_ugm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <FontAwesomeIcon icon={faInstagram} />
-                <span>Instagram</span>
-              </div>
-            </a>
-            <a
-              href="https://vt.tiktok.com/ZSJ2VX4kJ/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <FontAwesomeIcon icon={faTiktok} />
-                <span>Tiktok</span>
-              </div>
-            </a>
-            <a
-              href="https://www.facebook.com/PPSMB-UGM-325374494259950/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <FontAwesomeIcon icon={faFacebook} />
-                <span>Facebook</span>
-              </div>
-            </a>
-            <a
-              href="https://www.youtube.com/user/ppsmbpalapa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <FontAwesomeIcon icon={faYoutube} />
-                <span>Youtube</span>
-              </div>
-            </a>
+            <SocialMedia
+              name="Twitter"
+              faIcon={["fab", "twitter"]}
+              link="http://twitter.com/ppsmb_ugm"
+            />
+            <SocialMedia
+              name="Instagram"
+              faIcon={["fab", "instagram"]}
+              link="http://instagram.com/ppsmb_ugm"
+            />
+            <SocialMedia
+              name="Tiktok"
+              faIcon={["fab", "tiktok"]}
+              link="https://vt.tiktok.com/ZSJ2VX4kJ/"
+            />
+            <SocialMedia
+              name="Facebook"
+              faIcon={["fab", "facebook"]}
+              link="https://www.facebook.com/PPSMB-UGM-325374494259950/"
+            />
+            <SocialMedia
+              name="Youtube"
+              faIcon={["fab", "youtube"]}
+              link="https://www.youtube.com/user/ppsmbpalapa"
+            />
           </div>
         </div>
       </div>
@@ -127,47 +100,6 @@ const FooterContainer = styled.div`
     display: block;
     color: var(--color-yellow);
     text-decoration: none;
-  }
-
-  .social-media {
-  }
-
-  .social-media a {
-    text-decoration: none;
-  }
-
-  .social-media a div {
-    display: flex;
-    align-items: center;
-  }
-
-  .social-media a div * {
-    display: inline;
-  }
-
-  .social-media a div span {
-    display: inline;
-    transition: all 0.4s ease;
-  }
-
-  .social-media a svg {
-    color: var(--color-yellow);
-    border: 2px solid var(--color-yellow);
-    border-radius: 11px;
-    padding: 5px;
-    margin: 2px;
-    transition: all 0.4s ease;
-    width: calc(0.5rem + 3vmin);
-    height: auto;
-  }
-
-  .social-media a:hover > div svg {
-    border: 2px solid white;
-    color: white;
-  }
-
-  .social-media a:hover > div span {
-    color: white;
   }
 
   @media (min-width: 576px) {

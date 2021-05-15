@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Kollektif Regular';
         font-style: normal;
         font-weight: normal;
-        src:url('./assets/fonts/Kollektif.woff') format('woff');
+        src: local('Kollektif Regular') url('./assets/fonts/Kollektif.woff') format('woff');
         font-display: swap;
     }
 
@@ -187,6 +187,14 @@ const GlobalStyle = createGlobalStyle`
     /*----------------------*\
             Breakpoint
     \*----------------------*/
+    html {
+        --bp-xs: 0;
+        --bp-sm: 576px;
+        --bp-md: 768px;
+        --bp-lg: 992px;
+        --bp-xl: 1200px;
+        --bp-xxl: 1400px; 
+    }
 `;
 
 export default GlobalStyle;
