@@ -8,7 +8,7 @@ function Test1() {
   console.log(location);
   return (
     <div>
-      <Breadcrumbs navigations={["Beranda", "Agenda", "Test 1"]}  color="var(--color-yellow)"/>
+      <Breadcrumbs navigations={["Beranda", "Agenda", "Test 1"]}  color="var(--color-yellow)" slashColor=""/>
       <Link to={`${location.pathname}/test2`}>Dalemnya hari 1</Link>
       <h2>Test 1</h2>
     </div>

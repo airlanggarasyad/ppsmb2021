@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useLocation, useHistory } from "react-router";
+import { useHistory } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +16,7 @@ function Breadcrumbs(props) {
 
   // Get the current URL
   const history = useHistory();
-  console.log(history)
+  console.log(history);
   const location = history.location;
 
   // Function to generate each Link for navigation
@@ -39,11 +39,13 @@ function Breadcrumbs(props) {
 
   // Get the current link
   const crumbsLinks = crumbsLinkGenerator(location);
+  console.log(crumbsLinks);
+  console.log(crumbsLinks[crumbsLinks.length - 2]);
 
   // Creating the Link Component for each navigation
   const breadCrumbs = [];
-  for (let i = 0; i < props.navigations.length; i++) {
-    i !== props.navigations.length - 1
+  for (let i = 0; i < crumbsLinks.length; i++) {
+    i !== crumbsLinks.length - 1
       ? breadCrumbs.push(
           <>
             <Link key={i} to={crumbsLinks[i]}>
@@ -61,14 +63,12 @@ function Breadcrumbs(props) {
         );
   }
 
-  const handleClick = () => {
-    history.replace(crumbsLinks[crumbsLinks.length - 1])
-  };
-
   return (
     <BreadCrumbsContainer key={location.pathname} color={props.color}>
       <div className="back-button">
-        <FontAwesomeIcon icon={faArrowLeft} onClick={handleClick} />
+        <Link to={crumbsLinks[crumbsLinks.length - 2]}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Link>
       </div>
       {breadCrumbs}
     </BreadCrumbsContainer>
@@ -96,5 +96,6 @@ const BreadCrumbsContainer = styled.div`
 
   .back-button {
     cursor: pointer;
+    margin-right: 5px;
   }
 `;
