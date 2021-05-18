@@ -6,7 +6,7 @@ export default class Galeri extends Component {
   render() {
     return (
       <div>
-        <Breadcrumbs navigations={["Beranda", "Agenda"]}/>
+        <Breadcrumbs navigations={["Beranda"]}/>
         <Link to="./agenda/test1">Hari 1</Link>
       </div>
     );
