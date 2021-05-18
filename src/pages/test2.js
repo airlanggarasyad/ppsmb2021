@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Breadcrumbs from "../components/Breadcrumbs";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 
-function test2() {
-    return (
-        <div>
-            <h1>test2</h1>
-        </div>
-    )
+function Test2() {
+  return (
+    <div>
+      <Breadcrumbs />
+      <h1>test2</h1>
+      <Link to={`${useLocation().pathname}/test3`}>Dalemnya-dalemnya hari 1</Link>
+    </div>
+  );
 }
 
-export default test2
+export default Test2;

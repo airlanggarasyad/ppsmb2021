@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Breadcrumbs from "../components/Breadcrumbs";
+import { Link } from "react-router-dom";
 
-function test3() {
-    return (
-        <div>
-            <h1>test 3</h1>
-        </div>
-    )
+function Test3() {
+  return (
+    <div>
+      <Breadcrumbs />
+      <h1>Akhiran Cihuy</h1>
+    </div>
+  );
 }
 
-export default test3
+export default Test3;

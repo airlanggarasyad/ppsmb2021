@@ -188,6 +188,7 @@ const GlobalStyle = createGlobalStyle`
             Breakpoint
     \*----------------------*/
     html {
+        /* Breakpoint use min-width for mobile first development */
         --bp-xs: 0;
         --bp-sm: 576px;
         --bp-md: 768px;
