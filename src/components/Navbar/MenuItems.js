@@ -1,27 +1,22 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: '#',
-        cName: 'nav-links'
+        url: '#'
     },
     {
         title: 'Agenda & Materi',
-        url: '#',
-        cName: 'nav-links'
+        url: '#'
     },
     {
         title: 'Peta UGM',
-        url: '#',
-        cName: 'nav-links'
+        url: '#'
     },
     {
         title: 'Galeri',
-        url: '#',
-        cName: 'nav-links'
+        url: '#'
     },
     {
         title: 'FAQ',
-        url: '#',
-        cName: 'nav-links'
+        url: '#'
     },
 ]

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import GlobalStyle from '../../globalStyle';
 
 import LogoPPSMBOfficial from '../../assets/img/logo-ppsmb-official.webp';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
 
 export default class Navbar extends Component{
     state = {clicked: false}
@@ -19,9 +21,9 @@ export default class Navbar extends Component{
                 <NavStyled>
 
                     {/* Left-corner: Logo PPSMB */}
-                    <NavLogoStyled>
+                    <NavLogoStyled href ="#">
                         <img src={LogoPPSMBOfficial} alt='Logo PPSMB'/>
-                        <h1>PPSMB UGM 2021</h1>    
+                        <p>PPSMB UGM 2021</p>
                     </NavLogoStyled>
                                 
                     {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
@@ -29,19 +31,16 @@ export default class Navbar extends Component{
                         {MenuItems.map((item,index) => {
                             return (
                                 <li key={index}>
-                                    <NavLinksStyled className={item.cName} href={item.url}>{item.title}</NavLinksStyled>
+                                    <NavLinksStyled className='nav-links' href={item.url}>{item.title}</NavLinksStyled>
                                 </li>
-                            
                             )
                         })}
                     </NavItemsStyled>
 
                     {/* Right-corner mobile: Hamburger bar & cross symbol*/}
-                    <NavIconStyled className="menu-icon" onClick={this.handleClick}>
-                                        <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} ></i>
-                    </NavIconStyled>
-                    
-
+                    <NavIconStyled  onClick={this.handleClick}>
+                        <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars } className='fa-icon'/>
+                    </NavIconStyled>                    
                 </NavStyled>
             </Header>
         )
@@ -66,7 +65,7 @@ const NavStyled = styled.nav`
 
     //Text style
     white-space: nowrap;
-    font-size: calc(0.5rem + 1vmin);
+    font-size: calc(0.5rem + 1.5vmin);
 
     //Flex layout
     display: flex;
@@ -77,7 +76,7 @@ const NavStyled = styled.nav`
     text-align: center;
 `
 
-const NavLogoStyled = styled.div`
+const NavLogoStyled = styled.a`
     display:flex;
     color: var(--color-darkblue);
     align-items: center;
@@ -89,6 +88,13 @@ const NavLogoStyled = styled.div`
     img {
         height: 1.8em;
         padding: 10px;
+    }
+    
+    p {
+        color: var(--color-darkblue);
+        text-decoration: none;    
+        font-weight: bold;
+        font-size: calc(0.5rem + 2vmin);
     }
 `
 const NavItemsStyled = styled.ul`
@@ -123,30 +129,28 @@ const NavItemsStyled = styled.ul`
             opacity: 1;
             transition: all 0.5 ease;
             box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-            
         }
     }
 `
 
 const NavLinksStyled = styled.a`
     color: var(--color-black);
-    text-decoration: none;    
+    text-decoration: none;
+    transition: all 0.2s ease-out;  
 
-    &:hover {
+    &.nav-links:hover {
         color: var(--color-darkblue);
-        transition: all 0.2 ease-out;
-        
     }
 
     @media (max-width: 768px) {
         width: 100%;
         display: table;
-        background-color: var(--color--blue);
         padding: 3vh;
     
-        &:hover {
-            background-color: var(--color-yellow);
-            transition: 250ms;
+        &.nav-links:hover {
+            background-color: var(--color-darkblue);
+            color: var(--color-white);
+            transition: all 0.2s ease-out;
         }
     } 
 `
@@ -160,16 +164,10 @@ const NavIconStyled = styled.image`
         font-size: calc(0.5rem + 2vmin);
         cursor: pointer;
 
-        .fa-times {
+        .fa-icon {
             color: var(--color-black);
         }
-        .fa-times:hover {
-            color:var(--color-darkblue);
-        }
-        .fa-bars {
-            color:var(--color-black);
-        }
-        .fa-bars:hover {
+        .fa-icon:hover {
             color:var(--color-darkblue);
         }
     }
