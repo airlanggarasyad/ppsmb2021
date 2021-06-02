@@ -1,11 +1,15 @@
 import React from "react";
-import Card from "../component/Agenda/Card";
-import Day from "../component/Agenda/Day";
+import styled from "styled-components";
+import AgendaCarousel from "../component/Agenda/AgendaCarousel";
+import Agenda from "../component/Agenda/Agenda";
+import AgendaDay from "../component/Agenda/AgendaDay";
 
 export default function landingPage() {
   return (
     <div>
-      <Day day="one" />
+      <AgendaCarousel />
     </div>
   );
 }
+
+const AgendaStyle = styled.div``;
