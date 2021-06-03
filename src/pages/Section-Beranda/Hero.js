@@ -89,15 +89,31 @@ const Container = styled.div`
     margin:0;
     box-sizing: border-box;
     justify-content: center;
+    background: url(${mainBG});
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
 
-    background-image: url(${mainBG});
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
+
 
     height: 100vh;
 
     z-index: 1;
+
+    /* &::after{
+        content: '';
+        background: url(${mainBG});
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        opacity: 0.4;
+        top: calc(0.5rem + 8vmin);
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    } */
     
     img{
         pointer-events: none;
@@ -200,6 +216,9 @@ const Container = styled.div`
       }
       .main{
           height: 65%;
+      }
+      .batiks{
+          display: none;
       }
   }
 
