@@ -21,7 +21,7 @@ function Footer() {
             rel="noopener noreferrer"
             classname="ppsmb-yellow"
           >
-            Jl. Asem Kranji Blok K-8 Sekip, Bulaksumur, Sleman, Yogyakarta 55281
+            Jl. Asem Kranji Blok K-8 Sekip, Sendowo, Sinduadi, Mlati, Sleman, Yogyakarta 55281
           </a>
           <p>
             Jam kerja pukul:
@@ -68,7 +68,7 @@ function Footer() {
 export default Footer;
 
 const FooterContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   min-width: 140px;
   background-color: var(--color-footerblue);
   color: white;

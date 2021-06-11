@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import Kollektif from './assets/fonts/Kollektif.woff';
+import IndonesiaScript from './assets/fonts/Indonesia-Script.woff';
+import LogoPPSMBOfficial from './assets/img/logo-ppsmb-official.webp';
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -6,17 +9,22 @@ const GlobalStyle = createGlobalStyle`
     \*----------------------*/
     html {
         --color-red: #C50034;
+        --color-redpink: #F31958;
         --color-blue: #0593F7;
         --color-darkblue: #01385E;
         --color-footerblue: #0074AF;
         --color-orange: #FF7C02;
         --color-yellow: #FFBE00;
         --color-black: #2D2D2D;
+        --color-white: #ffffff;
 
         --delay-multiplier: 0.1s;
         --spacer: 1rem;
     }
     
+    * {
+        box-sizing: border-box;
+    }
 
     /*----------------------*\
                Font
@@ -33,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Indonesia Script';
         font-style: normal;
         font-weight: normal;
-        src: local('Indonesia Script'), url('./assets/fonts/Indonesia-Script.woff') format('woff');
+        src: url(${IndonesiaScript}) format('woff');
         font-display: swap;
     }
 
@@ -107,6 +115,9 @@ const GlobalStyle = createGlobalStyle`
     .ppsmb-red {
         color: var(--color-red);
     }
+    .ppsmb-redpink {
+        color: var(--color-redpink);
+    }
     .ppsmb-blue {
         color: var(--color-blue);
     }
@@ -123,7 +134,7 @@ const GlobalStyle = createGlobalStyle`
         color: var(--color-black);
     }
     .ppsmb-white {
-        color: white;
+        color: var(--color-white);
     }
 
 
