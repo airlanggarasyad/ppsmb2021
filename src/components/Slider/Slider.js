@@ -5,36 +5,44 @@ import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components"; 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronRight, faChevronLeft} from '@fortawesome/free-solid-svg-icons'
+import {faChevronRight, faChevronLeft, faChevronUp, faChevronDown} from '@fortawesome/free-solid-svg-icons'
 
 export default function Sliders(props) {
   const settings = {
-    //Component
-    dots: props.withDots,
-    arrows: props.withArrow,
-  
-    //Layout
-    centerMode: props.centerMode,
-    infinite: true,
-    centerPadding: props.centerPadding,
 
-    vertical: props.isVertical,
-    verticalSwiping: true,
-    // variableWidth: true,
-    // adaptiveHeight: true,
-  
-    //What to show
-    slidesToScroll: props.slidesToScroll,
+    //Lini Masa
+    infinite: props.infinite,
     slidesToShow: props.slidesToShow,
-    cssEase: 'linear',
- 
+    slidesToScroll: props.slidesToScroll,
+    dots: props.dots,
+    arrows: props.arrows,
+
+    swipeToSlide: true,
     speed: 500,
+    
     nextArrow: <NextArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize}/>,
     prevArrow: <PrevArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize}/>,
+
+    responsive: [
+      {
+        breakpoint: 764,
+        settings: {
+          slidesToShow: props.slidesToShowMobile,
+          slidesToScroll: props.slidesToScrollMobile,
+        }
+      }, 
+            {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: props.slidesToShowTablet,
+          slidesToScroll: props.slidesToScrolllTablet
+        }
+      },
+    ]
+
   };
 
     return (
-      // <head></head>
       <Container>
         <Items>
           <Slider {...settings}>
@@ -45,10 +53,47 @@ export default function Sliders(props) {
     );
 }
 
+Sliders.defaultProps = {
+  arrows: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  slidesToShowMobile: 1,
+  slidesToScrollMobile: 1,
+  slidesToShowTablet: 1,
+  slidesToScrollTablet: 1,
+  dots: true,
+  
+  arrowColor: 'var(color--black)',
+  edgeSize: '-25px',
+
+}
+
+const Container = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 30px;
+  .arrow {
+    display:block;
+  }
+`;
+
+const Items = styled.div`
+  display: block;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+`;
+ 
+
+//Customize Arrow Style
 function NextArrow(props) {
-  const { arrowColor, edgeSize, onClick } = props;
+  const { onClick } = props;
   return (
-    <Arrow onClick={onClick} style={{right: props.edgeSize, color: props.arrowColor}}>
+    <Arrow onClick={onClick} style={{right: props.edgeSize, color: props.arrowColor} }>
       <FontAwesomeIcon icon={faChevronRight}/> 
     </Arrow>
   );
@@ -56,7 +101,7 @@ function NextArrow(props) {
 
 function PrevArrow(props) {
 
-  const { arrowColor, edgeSize, onClick } = props;
+  const { onClick } = props;
   return (
   <Arrow onClick={onClick} style={{left: props.edgeSize, color: props.arrowColor}}> 
     <FontAwesomeIcon icon={faChevronLeft}/> 
@@ -72,50 +117,5 @@ const Arrow = styled.div`
   padding: 10px;
   transform: translate(0, -50%);
   cursor: pointer;
+  z-index: 2;
 `;
-
-Sliders.defaultProps = {
-  withDots: true,
-
-  
-  withArrow: true,
-  arrowColor: 'var(color--black)',
-  edgeSize: '-25px',
-
-  centerMode: true,
-  centerPadding: '50px', 
-  isVertical: false,
-
-  slidesToScroll: 1,
-  slidesToShow: 1
-}
-
-const Container = styled.div`
-  /* background-color: yellow; */
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  padding-bottom: 30px;
-  .arrow {
-    display:block;
-  }
-`;
-
-const Items = styled.div`
-  display: block;
-  flex-direction: row;
-  width: 80%;
-  align-items: center;
-  /* background-color: blue; */
-  text-align: center;
-  align-self: center;
-  /* the slides */
-.slick-slide {
-    /* margin: 0 10px; */
-}
-/* the parent */
-.slick-list {
-    /* margin: 0 -10px; */
-}
-`;
- 
