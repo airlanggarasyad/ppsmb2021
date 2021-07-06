@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "short_name": "React App",
   "name": "Create React App Sample",
+=======
+  "short_name": "PPSMB 2021 | Coming Soon",
+  "name": "PPSMB 2021 | Coming Soon",
+>>>>>>> develop
   "icons": [
     {
       "src": "favicon.ico",
