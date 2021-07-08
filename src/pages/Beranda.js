@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Hero from "./Section-Beranda/Hero";
 import GlobalStyle from "../globalStyle";
-import Greeting from "./Section-Beranda/Greeting";
-import Tentang from "./Section-Beranda/About"
 import LogoPPSMB from "../assets/img/logo-ppsmb-decorative.svg";
 import Bulk1 from "../assets/img/corner-bulk1.webp";
 import Bulk2 from "../assets/img/corner-bulk2.webp";
 import Batik from "../assets/img/batik-color.svg";
-import Sliders from "../components/Slider/Slider";
+import Sliders from "../components/Slider";
 import Lean1 from "../assets/img/corner-lean1.webp";
 import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
@@ -22,21 +19,21 @@ import DayCard from "../components/Agenda/DayCard";
 
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
+        title: "PPSMB UGM 2021",        
         src: require('../assets/img/logo-ppsmb-official.webp').default,
-        title: "PPSMB UGM 2021",
-        desc: "Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) adalah kegiatan resmi orientasi dan pengenalan kampus bagi mahasiswa baru di lingkungan UGM. Berikut surat keputusan rektor terkait PPSMB.",
+        desc: "Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) adalah kegiatan resmi orientasi dan pengenalan kampus bagi mahasiswa baru di lingkungan UGM. “Ragam Kreasi UGM Pancarkan Pesona Pertiwi” sebagai tema PPSMB UGM 2021 merupakan sebuah langkah awal bagi Gadjah Mada Muda untuk menumbuhkan semangat serta keberanian berkreasi. Harapannya, buah kreasi Gadjah Mada Muda dapat memancarkan pesona kreasi Indonesia ke kancah yang lebih luas. Tidak hanya itu, tema yang dipadukan dengan berbagai rangkaian kegiatan PPSMB UGM 2021 diharapkan dapat melahirkan insan-insan yang kreatif, inovatif, dan adaptif sebagai modal menuju Indonesia maju.",
         instaLink: "http://instagram.com/ppsmb_ugm",
         youtubeLink: "https://www.youtube.com/user/ppsmbpalapa",
-        tiktokLink: "https://tiktok.com/@/ppsmb_ugm",
+        tiktokLink: "https://tiktok.com/@ppsmb_ugm",
         facebookLink: "https://www.facebook.com/PPSMB-UGM-325374494259950",
-        twitterLink: "http://twitter.com/ppsmb_ugm",
+        twitterLink: "http://twitter.com/ppsmb_ugm"
 
     });
     const [videoPlay, setVideoPlay] = useState({
-        embedId: 'aBKEt3MhNMM',
-        thumbnail: require('../assets/img/video-left.png').default,
-        title: 'Video saya',
-        desc: 'Deskripsinya'
+        title: 'Apa Itu PPSMB?',
+        desc: 'Pahami apa itu PPSMB di sini!',
+        embedId: '_3uPoHK0XZk',
+        thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     });
     return(
         <>
@@ -84,7 +81,7 @@ export default function Beranda() {
                             </div>
                             <div className='lini-masa text-center ppsmb-darkblue'>
                                 {/* <h2>Lini Masa</h2> */}
-                                <Sliders
+                                {/* <Sliders
                                 slidesToShow={3}
                                 slidesToShowMobile={2}
                                 slidesToShowTablet={2}>
@@ -100,7 +97,7 @@ export default function Beranda() {
                                     <div>
                                         <DayCard day="four" href='www.facebook.com'></DayCard>
                                     </div>
-                                </Sliders>
+                                </Sliders> */}
                             </div>
                         </div>
 
@@ -113,8 +110,9 @@ export default function Beranda() {
 
 
                 <div className='videos'>
-                        <div className="video">Video1</div>
-                    {/* <div className="video">Video2</div> */}
+                    <div className="video">
+                        <YoutubeEmbed embedId='fGOamlnU_uI'/>
+                    </div>
                 </div>
             <div className='right'>
                 <img src={Bulk1} alt="" srcset="" className="corner upper-right"/>
@@ -195,7 +193,18 @@ export default function Beranda() {
             <section className='serba-serbi'>
                 <div className='title'>
                     <h2>
-                        Serba-Serbi Palapa
+                        <span className='ppsmb-orange'>S</span>
+                        <span className='ppsmb-yellow'>e</span>
+                        <span className='ppsmb-red'>r</span>
+                        <span className='ppsmb-orange'>b</span>
+                        <span className='ppsmb-red'>a</span>
+                        <span className='ppsmb-white'>-</span>
+                        <span className='ppsmb-red'>S</span>
+                        <span className='ppsmb-blue'>e</span>
+                        <span className='ppsmb-red'>r</span>
+                        <span className='ppsmb-yellow'>b</span>
+                        <span className='ppsmb-blue'>i</span>
+                        <span className='font-indonesia-script ppsmb-white'> Gamada!</span>
                     </h2>
                     <p>
                         Video kreasi Palapa seputar UGM buat mengisi harimu!
@@ -206,7 +215,7 @@ export default function Beranda() {
                 <div className='main'>
                     <div className='video-utama'>
                         <YoutubeEmbed embedId={videoPlay.embedId} />
-                        <h2>{videoPlay.title}</h2>
+                        <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
                         <p>{videoPlay.desc}</p>
                     </div>
                     <div className='daftar-video'>
@@ -224,7 +233,7 @@ export default function Beranda() {
                                 <Video onClick={onClickThumbnail}>
                                     <img src={item.thumbnail} alt={item.title + ' thumbnail'}/>
                                     <div>
-                                        <h3>{item.title}</h3>
+                                        <p className='title'>{item.title}</p>
                                         <p>{item.desc}</p>
                                     </div>
                                 </Video>
@@ -283,15 +292,25 @@ const Video = styled.div`
     box-sizing: border-box;
     /* background-color:grey; */
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     cursor: pointer;
-    padding: 1vmin 0;
+    margin: 2vmin 0;
     img{
+        border-radius: 25px;
         width: 14vw;
     }
     div{
-        padding: 1vmin;
+        height: 100%;
+        overflow-y: hidden;
+        padding: 0 10px;
+        p{
+            margin: 0.2rem;
+            padding: 0;
+        }
+        .title{
+            font-weight: bold;
+        }
     }
 
     @media(max-width: 1024px){
@@ -463,11 +482,12 @@ const Container = styled.div`
                 flex-direction: column;
                 justify-content: center;
                 width: 50vw;
+                align-items: center;
 
                 .video {
                     text-align: center;
                     margin: 10px;
-                    height: 30vmin;
+                    width: 60%;
                 }
             }
 
@@ -495,7 +515,6 @@ const Container = styled.div`
                     width: 90%;
                     border-radius: 25px 0 0 25px;
                     padding-left: 7vmin;
-                    overflow: visible;
                     white-space: nowrap;
 
                     .title{
@@ -661,7 +680,14 @@ const Container = styled.div`
             
             .title{
                 h2{
-                font-size: calc(0.5rem + 4vmin);
+                    span{
+                        font-size: calc(0.5rem + 4vmin);
+                    }
+                    .font-indonesia-script{
+                        display: inline-block;
+                        transform: rotate(-18deg) translate(-40%, -10%);
+                        font-weight: lighter;
+                    }
                 }
 
                 p{
@@ -696,7 +722,7 @@ const Container = styled.div`
                 }
 
                 .daftar-video{
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     width: 40%;
                     /* flex-grow:4; */
                     height: 30vw;
@@ -707,7 +733,7 @@ const Container = styled.div`
 
             @media (max-width: 1024px){
                 .title{
-                    h2, p{
+                    h2{
                     text-align: center;
                     }                
                 }

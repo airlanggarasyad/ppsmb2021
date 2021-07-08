@@ -1,44 +1,14 @@
 export const DaftarVideo = [
     {
-        title: 'Palapods Ep. 1',
-        desc: 'Kiat-kiat Mahasiswa',
-        embedId: '1vrEljMfXYo',
-        thumbnail: require('../assets/img/video-left.png').default,
+        title: 'Apa Itu PPSMB?',
+        desc: 'Pahami apa itu PPSMB di sini!',
+        embedId: '_3uPoHK0XZk',
+        thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     },
     {
-        title: 'Palapods Ep. 2',
-        desc: 'Kiat-kiat Mahasiswa',
-        embedId: '1vrEljMfXYo',
-        thumbnail: require('../assets/img/video-left.png').default,
-    },
-    {
-        title: 'Palapods Ep. 3',
-        desc: 'Kiat-kiat Mahasiswa',
-        embedId: '1vrEljMfXYo',
-        thumbnail: require('../assets/img/video-left.png').default,
-    },
-    {
-        title: 'Palapods Ep. 4',
-        desc: 'Kiat-kiat Mahasiswa',
-        thumbnail: '1vrEljMfXYo',
-        src: require('../assets/img/video-left.png').default,
-    },
-    {
-        title: 'Palapods Ep. 4',
-        desc: 'Kiat-kiat Mahasiswa',
-        thumbnail: '1vrEljMfXYo',
-        src: require('../assets/img/video-left.png').default,
-    },
-    {
-        title: 'Palapods Ep. 4',
-        desc: 'Kiat-kiat Mahasiswa',
-        thumbnail: '1vrEljMfXYo',
-        src: require('../assets/img/video-left.png').default,
-    },
-    {
-        title: 'Palapods Ep. 4',
-        desc: 'Kiat-kiat Mahasiswa',
-        thumbnail: '1vrEljMfXYo',
-        src: require('../assets/img/video-left.png').default,
+        title: 'Tarian Selebrasi - PPSMB UGM 2021',
+        desc: 'Sudahkah Gamada menghafalkan lirik Anthem "Sinergi dalam Harmoni"?',
+        embedId: 'AAtiYhMi_4o',
+        thumbnail: require('../assets/img/serba-serbi/tarianselebrasi.webp').default,
     },
 ]
