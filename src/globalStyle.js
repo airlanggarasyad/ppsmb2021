@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Kollektif Regular';
         font-style: normal;
         font-weight: normal;
-        src: local('Kollektif Regular') url('./assets/fonts/Kollektif.woff') format('woff');
+        src: url(${Kollektif}) format('woff');
         font-display: swap;
     }
 

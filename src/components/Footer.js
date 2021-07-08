@@ -68,7 +68,7 @@ function Footer() {
 export default Footer;
 
 const FooterContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   min-width: 140px;
   background-color: var(--color-footerblue);
   color: white;

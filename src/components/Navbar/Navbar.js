@@ -1,35 +1,33 @@
-import React, {Component} from 'react'
-import {MenuItems} from "./MenuItems"
+import React, { Component } from 'react'
+import { MenuItems } from "./MenuItems"
 import styled from "styled-components";
 import GlobalStyle from '../../globalStyle';
 
 import LogoPPSMBOfficial from '../../assets/img/logo-ppsmb-official.webp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 // import Route from 'react-router-dom';
 
-export default class Navbar extends Component{
-    state = {clicked: false}
+export default class Navbar extends Component {
+    state = { clicked: false }
 
     handleClick = () => {
-        this.setState({ clicked : !this.state.clicked})
+        this.setState({ clicked: !this.state.clicked })
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <Header>
-                <GlobalStyle/>
-                <NavStyled>
-
+                <NavStyled>        
                     {/* Left-corner: Logo PPSMB */}
-                    <NavLogoStyled href ="/beranda">
-                        <img src={LogoPPSMBOfficial} alt='Logo PPSMB'/>
+                    <NavLogoStyled href="/beranda">
+                        <img src={LogoPPSMBOfficial} alt='Logo PPSMB' />
                         <p>PPSMB UGM 2021</p>
                     </NavLogoStyled>
-                                
+
                     {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
                     <NavItemsStyled className={this.state.clicked ? 'nav-items active' : 'nav-items'}>
-                        {MenuItems.map((item,index) => {
+                        {MenuItems.map((item, index) => {
                             return (
                                 <li key={index}>
                                     <NavLinksStyled className='nav-links' href={item.url}>{item.title}</NavLinksStyled>
@@ -39,29 +37,30 @@ export default class Navbar extends Component{
                     </NavItemsStyled>
 
                     {/* Right-corner mobile: Hamburger bar & cross symbol*/}
-                    <NavIconStyled  onClick={this.handleClick}>
-                        <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars } className='fa-icon'/>
-                    </NavIconStyled>                    
+                    <NavIconStyled onClick={this.handleClick}>
+                        <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars} className='fa-icon' />
+                    </NavIconStyled>
                 </NavStyled>
             </Header>
         )
     }
-    
+
 }
 
 const Header = styled.header` //Give block with same height as absolute navbar
-    height: calc(0.5rem + 8vmin);
     display: inline-block;
     width: 100%;
+    box-sizing: border-box;
+    height: calc(0.5rem + 9vmin);
+
 `
 
 const NavStyled = styled.nav`
     //Container style
     z-index: 3;
-    box-sizing: border-box;
     background: var(--color-white);
     box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-    height: calc(0.5rem + 8vmin);
+    padding: 0.6vmin;
     width: 100%;
     top: 0;
 
@@ -89,7 +88,7 @@ const NavLogoStyled = styled.a`
 
     img {
         height: 1.8em;
-        padding: 10px;
+        padding: 0.5em;
     }
     
     p {

@@ -1,55 +1,64 @@
-import React, {useState}from 'react';
+import React, {useState, useEffect}from 'react';
 import {QuestionItems} from './QuestionItems';
 import styled from "styled-components";
 import mainBG from "../assets/img/main-bg.webp";
+import Breadcrumbs from '../components/Breadcrumbs'
+import UpperRight from "../assets/img/corner-bulk2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faUnderline} from '@fortawesome/free-solid-svg-icons';
+import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 export default function FAQ(){
+        // const [isActive, setIsActive] = useState(false);
         const [input, setInput] = useState("");
+        const [chosenCategory, setChosenCategory] = useState("Semua");
+        const [activeCategory, setActiveCategory] = useState(false);
+        
+
+        if (chosenCategory != "Semua"){
+            var questions = QuestionItems.filter(item => item.category == chosenCategory);
+        }else{
+            questions = QuestionItems;
+        }
+
+        const handleChange = (e) => {
+            e.preventDefault();
+            setInput(e.target.value);
+        };
+
         return(
             <Container>
                 <div className='top'>
-                    <div>Breadcrumbs</div>
-                    <div>Logo</div>
+                    <div>
+                        <Breadcrumbs>
+                        </Breadcrumbs>
+                    </div>
+                    <div className="corner-decoratives">
+                        <img src={UpperRight} alt="" srcset="" className="upper-right"/>
+                    </div>
                 </div>
                 <div className='title'>
-                    <h1 className="ppsmb-darkblue">Pertanyaan Umum</h1>
-                    <div>Search Bar</div>
+                    <h1 className="ppsmb-darkblue">Pertanyaan yang Sering Diajukan</h1>
+                    <div className="search-bar">
+                        <input type="search" placeholder="Cari pertanyaanmu di sini..." onChange={handleChange} value={input} className="ppsmb-darkblue"/>
+                    </div>
                 </div>
 
                 <div className='content'>
                     <div className='choose-category' >
+                        <p className="ppsmb-red" onClick={() => setChosenCategory("Semua")}>Semua</p>
                         {QuestionItems.map((item,index) => {
-                            return(
+                            return(                  
                                 <div key={index}>
-                                    <p className="ppsmb-red">{item.category}</p>
+                                    <p className="ppsmb-red"  onClick={() => setChosenCategory(item.category)}>{item.category} </p>
                                 </div>
                             )
                         })}
                     </div>
                     
-                    <div className="category">
-                        {QuestionItems.map((item,index) => {
-                                    return (
-                                        <div key={index}>
-                                            <h2 className="ppsmb-red">{item.category}</h2>
-                                            
-                                                {item.question.map(question => {
-                                                    return(
-                                                        <div>
-                                                            <p className="ppsmb-darkblue">{question.title}, {question.answer}></p>
-                                                            <div className="line"></div>
-                                                        </div>
-                                                
-                                                    )
-                                                    
-                                                })}
-                                            
-                                          
-                                        </div>
-                                    )
-                                })}
+                    <div className="questions">
+                        {questions.map(item => {
+                            return <Kategori item={item} input={input} chosenCategory={chosenCategory}/>
+                        })}
                     </div>
                 </div>
 
@@ -67,63 +76,98 @@ const Container = styled.div`
         background-position: center;
         background-size: cover;
         overflow: hidden;
-
+    min-height: 100vh;
     .top{
         width: 100vw;
         display: flex;
         justify-content: space-between;
+        height: 14vh;
+
+        .corner-decoratives{
+            position: relative;
+            .upper-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: calc(0.5rem + 30vmin);
+                pointer-events: none;
+            }
+        }
     }
 
     .title{
         text-align: center;
-        
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(0.5rem + 1.4vmin);
+
+        .search-bar{
+            margin: 1%;
+            width: 50%;
+            input{
+                font-family: 'Kollektif Regular';
+                padding: 10px;
+                font-size: calc(0.5rem + 1.4vmin);
+                width: 100%;
+                border-radius: 7px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+            input[type="search"]::-webkit-search-cancel-button {
+                cursor: pointer;
+            }
+
+        }
     }
 
     .content{
-        width: 100vw;
+        width: 80%;
         display: flex;
-        justify-content: flex-start;
-        /* background-color: aquamarine; */
-        margin-top: 20px;
+        justify-content: center;
+        margin: 0 10% 5% 10%;
 
         .choose-category{
-            margin-left: 10%;
-            width: 10%;
-            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
             p{
-                line-height: 30px;
+                line-height: 3vmin;
+                cursor: pointer;
                 &:hover{
                     font-weight: bold;
                 }
             }
         }
 
-        .category{
-            margin: 0 10% 10% 4%;
-            width: 70%;
-            div{
-                margin-bottom: 5%;
+
+        .questions{
+            display: flex;
+            flex-grow: 7;
+            flex-direction: column;
+            .per-category{
+                margin-bottom: 1%;
+                padding: 1% 3%;
                 background-color: var(--color-white);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                padding: 0 25px 0 25px;
+                display: block;
                 border-radius: 20px;
-                h2{
-                    margin-bottom: 0;
-                }
                 div{
-                    margin: 0;
-                    width: 100%;
+                    margin-bottom: 2%;
                     p{
-                        margin: 10px 0px;
+                        margin: 4px 0px;
+                        cursor: pointer;
+                        &:hover{
+                            color: var(--color-darkblue);
+                        }
                     }
                     .line{
                         height: 2px;
                         width: 100%;
                         background-color: var(--color-red);
-                        margin: 0 0 10px 0;
                     }
                 }
                 
@@ -131,8 +175,79 @@ const Container = styled.div`
             }
 
         }
-
-
-        
+         
     }
+    @media (max-width: 767px){
+        .top{
+            height: 12vh;
+        }
+        .title{
+            .search-bar{
+                width: 70%;
+            }
+        }
+        
+        .content{
+            flex-direction: column;
+            .choose-category{
+                justify-content: space-around;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        
+    }    
+
+   
 `
+const Kategori = ({ item, input, chosenCategory }) => {
+    const [isShown, setIsShown] = useState(false);
+    useEffect(() => {
+        setIsShown(false)
+        item.question.map((question, index) => {
+            if (question.title.toLowerCase().includes(input.toLowerCase())){
+                setIsShown(true)
+            } 
+        })
+    },[input, item])
+    return (
+        <>
+            {isShown && 
+            <div className="per-category">
+                <h3 className="ppsmb-red">{item.category}</h3>
+                {item.question.map((question, index) => {
+                    return(
+                        <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
+                            show={question.title.toLowerCase().includes(input.toLowerCase())}/>
+                    )                                                   
+                })}                                                                                      
+            </div>
+            }                   
+        </>
+        
+
+    );
+  };
+
+const Accordion = ({ show, title, content, chosenCategory, key }) => {
+    const [isActive, setIsActive] = useState(false);
+    useEffect(() => {
+        setIsActive(false);
+    },[chosenCategory]);
+    useEffect(() => {
+        console.log(show)
+    },[show]);
+    return (
+        <>
+            {show && 
+                <div class="accordion" onClick={() => setIsActive(!isActive)} key={key}>
+                    <p className="ppsmb-black" >{title}</p>
+                    {isActive && <p><FontAwesomeIcon icon={faChevronRight}/>    {content}</p>}
+                    <div className="line"></div>
+                </div>    
+            }
+        </>
+        
+
+    );
+  };

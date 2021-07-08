@@ -7,7 +7,7 @@ export const QuestionItems = [
                 answer: 'Orelia',
             },
             {
-                title: 'Siapa ketua divisi Humpubit PPSMB UGM 2021?',
+                title: 'Siapa tes divisi Humpubit PPSMB UGM 2021?',
                 answer: 'Orelia',
             },
             {
@@ -53,6 +53,19 @@ export const QuestionItems = [
             {
                 title: 'Kapan Angga potong rambut pendek?',
                 answer: 'Saat negara api menyerang',
+            },
+        ]
+    },
+    {
+        category: 'Bab apa',
+        question: [
+            {
+                title: 'Di mana apa nya Aldo berkuliah?',
+                answer: 'aaa',
+            },
+            {
+                title: 'Di mana apa nya Aldo berkuliah?',
+                answer: 'aaa',
             },
         ]
     },
