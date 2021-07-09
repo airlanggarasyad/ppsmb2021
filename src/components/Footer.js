@@ -37,26 +37,31 @@ function Footer() {
               name="Twitter"
               faIcon={["fab", "twitter"]}
               link="http://twitter.com/ppsmb_ugm"
+              secondaryColor='#ffffff'
             />
             <SocialMedia
               name="Instagram"
               faIcon={["fab", "instagram"]}
               link="http://instagram.com/ppsmb_ugm"
+              secondaryColor='#ffffff'
             />
             <SocialMedia
               name="Tiktok"
               faIcon={["fab", "tiktok"]}
               link="https://vt.tiktok.com/ZSJ2VX4kJ/"
+              secondaryColor='#ffffff'
             />
             <SocialMedia
               name="Facebook"
               faIcon={["fab", "facebook"]}
               link="https://www.facebook.com/PPSMB-UGM-325374494259950/"
+              secondaryColor='#ffffff'
             />
             <SocialMedia
               name="Youtube"
               faIcon={["fab", "youtube"]}
               link="https://www.youtube.com/user/ppsmbpalapa"
+              secondaryColor='#ffffff'
             />
           </div>
         </div>

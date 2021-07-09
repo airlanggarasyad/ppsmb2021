@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useState } from 'react'
 import { MenuItems } from "./MenuItems"
 import styled from "styled-components";
 import GlobalStyle from '../../globalStyle';
@@ -32,7 +33,7 @@ export default class Navbar extends Component {
                     </Link>
 
                     {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
-                    <NavItemsStyled className={this.state.clicked ? 'nav-items active' : 'nav-items'}>
+                    <NavItemsStyled className={this.state.clicked ? 'nav-items active' : 'nav-items'} onClick={this.handleClick}>
                         {MenuItems.map((item, index) => {
                             return (
                                 <li key={index}>

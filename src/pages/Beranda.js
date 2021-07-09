@@ -162,7 +162,7 @@ export default function Beranda() {
                 
                 <div className='desc'>
                     <div className='pengertian ppsmb-darkblue'>
-                        <Fade  left spy={highlight.title}>
+                        <Fade left spy={highlight.title}>
                         <h2>{highlight.title}</h2>
                         <p>{highlight.desc}</p>
                         <ShowEmail email={highlight.email}/>

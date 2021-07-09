@@ -33,7 +33,7 @@ export default function FAQ(){
         return(
             <Container>
                 <div className='top'>
-                    <Breadcrumbs></Breadcrumbs>
+                    {/* <Breadcrumbs></Breadcrumbs> */}
                     <img src={UpperRight} alt="" srcset="" className="upper-right"/>
                 </div>
                 <Fade >
@@ -189,13 +189,13 @@ const Container = styled.div`
         }
          
     }
-    @media (max-width: 767px){
+    @media (max-width: 768px){
         .top{
             height: 12vh;
         }
         .title{
             .search-bar{
-                width: 70%;
+                width: 100%;
             }
         }
         
