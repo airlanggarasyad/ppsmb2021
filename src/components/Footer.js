@@ -72,7 +72,7 @@ const FooterContainer = styled.div`
   min-width: 140px;
   background-color: var(--color-footerblue);
   color: white;
-
+  padding: 10vmin;
   font-size: calc(0.5rem + 2vmin);
 
   .grid-container {

@@ -8,12 +8,14 @@ import Navbar from "./components/Navbar/Navbar";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <>
         <GlobalStyle />
         <Navbar />
-        <Routes />
+        <Router>
+          <Routes />
+        </Router>
         <Footer />
-      </Router>
+      </>
     );
   }
 }
