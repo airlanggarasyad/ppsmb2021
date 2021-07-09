@@ -7,7 +7,7 @@ import AgendaDay from "../components/Agenda/AgendaDay";
 export default function landingPage() {
   return (
     <div>
-      <AgendaCarousel />
+      <AgendaDay />
     </div>
   );
 }

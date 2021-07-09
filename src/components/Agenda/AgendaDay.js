@@ -8,6 +8,7 @@ import five from "../../assets/images/agenda/DayContainer/five.png";
 import six from "../../assets/images/agenda/DayContainer/six.png";
 import Button from "../main/Button";
 import Breadcrumb from "../main/Breadcrumb";
+import Fade from "react-reveal/Fade"
 
 export default function Day(props) {
   const { day } = props;
@@ -141,6 +142,7 @@ export default function Day(props) {
           primer={BreadcrumbPrimer}
           secondary={BreadcrumbSecondary}
         />
+        <Fade bottom>
         <div className="title-container">
           <h1>Agenda </h1>
           <div className="diamond">
@@ -162,17 +164,25 @@ export default function Day(props) {
           </div>
           <h3>{Title}</h3>
         </div>
+        </Fade>
+
         <div className="pdf-container">
           <div className="pdf-content">
+          <Fade >
             <iframe id="pdf" src={Pdf} frameborder="0" cellspacing="0"></iframe>
+            </Fade>
+            <Fade bottom>
             <p className="noted">
               *Login menggunakan akun SSO UGM untuk melihat dokumen-dokumen di
               atas
             </p>
+            </Fade>
           </div>
+
         </div>
         <div className="button-container">
           <div className="button-content">
+          <Fade bottom>
             <div className="back-button">
               <Button text="kembali" textColor={TextColor}>
                 <div className="back-icon">
@@ -191,6 +201,8 @@ export default function Day(props) {
                 </div>
               </Button>
             </div>
+            </Fade>
+            <Fade bottom>
             <div className="download-button">
               <Button text="Download" color={Color}>
                 <div className="download-icon">
@@ -213,6 +225,7 @@ export default function Day(props) {
                 </div>
               </Button>
             </div>
+            </Fade>
           </div>
         </div>
       </div>

@@ -5,35 +5,51 @@ import GeoOne from "../../assets/images/agenda/Carousel/geo-one.png";
 import GeoTwo from "../../assets/images/agenda/Carousel/geo-two.png";
 import Batik from "../../assets/images/agenda/Carousel/batik.png";
 import Agenda from "../../assets/images/agenda/Carousel/agenda.png";
+import Fade from "react-reveal/Fade"
 
 export default function CarouselCard(props) {
   const { title, text, image, link } = props;
   return (
     <CarouselStyle>
       <div className="batik">
+      <Fade left>
         <img src={Batik} alt="" />
+        </Fade>
       </div>
       <div className="geo-one">
+      <Fade right>
         <img src={GeoOne} alt="" />
+        </Fade>
       </div>
       <div className="geo-two">
+      <Fade right>
         <img src={GeoTwo} alt="" />
+        </Fade>
       </div>
       <div className="card-container">
         <div className="card-one">
           <div className="image-container">
+            <Fade bottom>
             <img src={Agenda} alt="" />
+            </Fade>
+            
           </div>
         </div>
         <div className="card-two">
+        <Fade left>
           <h3>{title}</h3>
+          </Fade>
           <div className="image-card">
             <img src={Agenda} alt="" />
           </div>
+          <Fade left>
           <p>{text}</p>
+          </Fade>
           <div className="button-container">
             <div className="more-button">
+            <Fade bottom>
               <Button text="Selengkapnya" color="yellow" borderColor="yellow" />
+              </Fade>
             </div>
           </div>
         </div>
@@ -113,7 +129,7 @@ const CarouselStyle = styled.div`
     width: 80%;
     font-size: 6vmin;
     margin: 0;
-    margin-bottom: 5vmin;
+    margin-bottom: 7vmin;
   }
   .card-two > p {
     width: 65%;
@@ -121,7 +137,7 @@ const CarouselStyle = styled.div`
     margin: 0;
     margin-left: 4vmin;
     line-height: 1.8;
-    margin-bottom: 5vmin;
+    margin-bottom: 7vmin;
   }
   .button-container {
     width: 70%;

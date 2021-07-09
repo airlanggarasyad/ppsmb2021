@@ -176,7 +176,7 @@ const Container = styled.div`
       grid-row: 5 / span 2;
     }
   }
-
+/* 
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) { ... }
 
@@ -187,5 +187,5 @@ const Container = styled.div`
   @media (min-width: 1200px) { ... }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) { ... }
+  @media (min-width: 1400px) { ... } */
 `;

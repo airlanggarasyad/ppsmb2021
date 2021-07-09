@@ -1,11 +1,12 @@
 import React from "react";
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../pages/Beranda";
+import Agenda from "../pages/Agenda";
 
 function test1() {
   return (
     <div>
-      <Breadcrumbs />
-      <h2>Test 1</h2>
+    
+ <Agenda/>
     </div>
   );
 }

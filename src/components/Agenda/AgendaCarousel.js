@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Batik from "../../assets/images/agenda/Carousel/background.png";
 import Breadcrumb from "../main/Breadcrumb";
+import Fade from "react-reveal/Fade"
 
 export default class AgendaPenugasan extends Component {
   state = {
@@ -149,7 +150,6 @@ export default class AgendaPenugasan extends Component {
         >
           {" "}
         </div>
-
         <div className="breadcrumb-container">
           <div className="breadcrumb">
             <Breadcrumb data={DataBreadcrumb} secondary="black" />

@@ -236,7 +236,7 @@ const Container = styled.div`
     }
   }
 
-  // Medium devices (tablets, 768px and up)
+  /* // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) { ... }
 
   // Large devices (desktops, 992px and up)
@@ -246,5 +246,5 @@ const Container = styled.div`
   @media (min-width: 1200px) { ... }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) { ... }
+  @media (min-width: 1400px) { ... } */
 `;
