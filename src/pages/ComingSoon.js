@@ -236,15 +236,15 @@ const Container = styled.div`
     }
   }
 
-  /* // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) { ... }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {  }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) { ... }
+  @media (min-width: 992px) {  }
 
   // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) { ... }
+  @media (min-width: 1200px) {  }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) { ... } */
+  @media (min-width: 1400px) { ... };
 `;

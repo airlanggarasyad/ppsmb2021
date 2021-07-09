@@ -104,6 +104,45 @@ const Header = styled.header` //Give block with same height as absolute navbar
                 font-size: calc(0.5rem + 2vmin);
             }
         }
+    background: var(--color-white);
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+    height: calc(0.5rem + 8vmin);
+    width: 100%;
+    top: 0;
+
+    //Text style
+    white-space: nowrap;
+    font-size: calc(0.5rem + 1.5vmin);
+
+    //Flex layout
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    }
+`
+
+const NavLogoStyled = styled.a`
+    display:flex;
+    color: var(--color-darkblue);
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5vmin;
+    cursor: pointer;
+
+    img {
+        height: 1.8em;
+        margin: 10px;
+    }
+    
+    p {
+        color: var(--color-darkblue);
+        text-decoration: none;    
+        font-weight: bold;
+        font-size: calc(0.5rem + 2vmin);
     }
 
 `
