@@ -176,7 +176,7 @@ const Container = styled.div`
       grid-row: 5 / span 2;
     }
   }
-
+/* 
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {  }
 

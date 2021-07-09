@@ -46,6 +46,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        width:100vw;
         margin: 0;
         font-family: "Kollektif Regular";
     }
