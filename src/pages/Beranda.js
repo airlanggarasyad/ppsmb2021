@@ -9,7 +9,7 @@ import Sliders from "../components/Slider";
 import Lean1 from "../assets/img/corner-lean1.webp";
 import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
-import {DaftarPPSMB} from "./DaftarPPSMB";
+import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
 import YoutubeEmbed from "../components/YoutubeEmbed"
 import { DaftarVideo } from "./DaftarVideo";
@@ -23,7 +23,7 @@ import Swing from 'react-reveal/Swing';
 
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
-        title: "PPSMB UGM 2021",        
+        title: "PPSMB UGM 2021",
         src: require('../assets/img/logo-ppsmb-official.webp').default,
         desc: "Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) adalah kegiatan resmi orientasi dan pengenalan kampus bagi mahasiswa baru di lingkungan UGM. “Ragam Kreasi UGM Pancarkan Pesona Pertiwi” sebagai tema PPSMB UGM 2021 merupakan sebuah langkah awal bagi Gadjah Mada Muda untuk menumbuhkan semangat serta keberanian berkreasi. Harapannya, buah kreasi Gadjah Mada Muda dapat memancarkan pesona kreasi Indonesia ke kancah yang lebih luas. Tidak hanya itu, tema yang dipadukan dengan berbagai rangkaian kegiatan PPSMB UGM 2021 diharapkan dapat melahirkan insan-insan yang kreatif, inovatif, dan adaptif sebagai modal menuju Indonesia maju.",
         instaLink: "http://instagram.com/ppsmb_ugm",
@@ -39,29 +39,29 @@ export default function Beranda() {
         embedId: '_3uPoHK0XZk',
         thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     });
-    return(
+    return (
         <>
-            <GlobalStyle/>
+            <GlobalStyle />
             <Container url="./assets/img/main-bg.jpg">
                 <section className='hero'>
-                    <img src={Bulk1} alt="" srcset="" className="corner upper-left"/>
-                    <img src={Bulk2} alt="" srcset="" className="corner upper-right"/>
+                    <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
+                    <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
                     <Fade >
-                    <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo"/>
+                        <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
                     </Fade>
                     <div className='batiks'>
                         <Spin duration={4000} count={5}>
-                            <img src={Batik} alt="" srcset="" className="batik"/>
-                            <img src={Batik} alt="" srcset="" className="batik"/>
-                            <img src={Batik} alt="" srcset="" className="batik"/>
+                            <img src={Batik} alt="" srcset="" className="batik" />
+                            <img src={Batik} alt="" srcset="" className="batik" />
+                            <img src={Batik} alt="" srcset="" className="batik" />
                         </Spin>
                     </div>
-                    
 
-                        <div className='hero-content'>
-                            <div className='content-title'>
-                                <div>
-                                    <Fade left >
+
+                    <div className='hero-content'>
+                        <div className='content-title'>
+                            <div>
+                                <Fade left >
                                     <h2 className="text-center m-0 ppsmb ppsmb-darkblue">
                                         PPSMB UGM
                                         <span className="ppsmb-blue"> 2</span>
@@ -83,15 +83,15 @@ export default function Beranda() {
                                             Pesona Pertiwi
                                         </h1>
                                     </div>
-                                    </Fade>
-                                </div>
-
-
-
+                                </Fade>
                             </div>
-                            <div className='lini-masa text-center ppsmb-darkblue'>
-                                {/* <h2>Lini Masa</h2> */}
-                                {/* <Sliders
+
+
+
+                        </div>
+                        <div className='lini-masa text-center ppsmb-darkblue'>
+                            {/* <h2>Lini Masa</h2> */}
+                            {/* <Sliders
                                 slidesToShow={3}
                                 slidesToShowMobile={2}
                                 slidesToShowTablet={2}>
@@ -108,168 +108,168 @@ export default function Beranda() {
                                         <DayCard day="four" href='www.facebook.com'></DayCard>
                                     </div>
                                 </Sliders> */}
-                            </div>
                         </div>
+                    </div>
 
                 </section>
                 <section className='greeting'>
-                <div className='left-corner'>
-                    <img src={Bulk2} alt="" srcset="" className="corner upper-left"/>
-                    <img src={Lean1} alt="" srcset="" className="corner bottom-left"/>
-                </div>
-                <div className='videos'>  
-                
-                <Fade >                                         
-                    <div className="video">
-                        <YoutubeEmbed embedId='fGOamlnU_uI'/>
+                    <div className='left-corner'>
+                        <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
+                        <img src={Lean1} alt="" srcset="" className="corner bottom-left" />
                     </div>
+                    <div className='videos'>
 
-                </Fade>
-                </div>
-            <div className='right'>
-                <img src={Bulk1} alt="" srcset="" className="corner upper-right"/>
-                <Fade right >
-                <div className='title-box'>
+                        <Fade >
+                            <div className="video">
+                                <YoutubeEmbed embedId='fGOamlnU_uI' />
+                            </div>
 
-                    <Pulse delay={2500} forever={true}>
-                    <div className='title'>
-                        <Lightspeed right>                   
-                        <h1 className='ppsmb-darkblue'>Selamat Datang
+                        </Fade>
+                    </div>
+                    <div className='right'>
+                        <img src={Bulk1} alt="" srcset="" className="corner upper-right" />
+                        <Fade right >
+                            <div className='title-box'>
+
+                                <Pulse delay={2500} forever={true}>
+                                    <div className='title'>
+                                        <Lightspeed right>
+                                            <h1 className='ppsmb-darkblue'>Selamat Datang
                             <Fade delay={500} left cascade >
-                                <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
-                            </Fade>
-                        </h1>
-                        </Lightspeed>                   
-                            <img src={RedStick} className='red-stick'></img>
-                    </div>
-                    <div className="batiks">
-                            <img src={Batik} alt="" srcset="" className="batik"/>
-                            <img src={Batik} alt="" srcset="" className="batik"/>
-                            <img src={Batik} alt="" srcset="" className="batik"/>
-                    </div>
-                    </Pulse>
-                 
-
-                </div>
-                </Fade>
-                <img src={Lean2} alt="" srcset="" className="corner bottom-right"/>
-
-
-            </div>
-
-            </section>
-            <section className='about'>
-                
-                <div className='desc'>
-                    <div className='pengertian ppsmb-darkblue'>
-                        <Fade left spy={highlight.title}>
-                        <h2>{highlight.title}</h2>
-                        <p>{highlight.desc}</p>
-                        <ShowEmail email={highlight.email}/>
-                        <div className="socmed">
-                            <p>Media Sosial: &nbsp;</p>
-                            <ShowSocialMedia  icon="youtube" link={highlight.youtubeLink}/>
-                            <ShowSocialMedia  icon="instagram" link={highlight.instaLink}/>
-                            <ShowSocialMedia  icon="line" link={highlight.lineLink}/>
-                            <ShowSocialMedia  icon="twitter" link={highlight.twitterLink}/>
-                            <ShowSocialMedia  icon="facebook" link={highlight.facebookLink}/>
-                            <ShowSocialMedia  icon="tiktok" link={highlight.tiktokLink}/>
-                        </div>
-                        </Fade>
-                    </div>
-                </div>
-
-                <div className='logo2-ppsmb'>
-                    <div className="highlight">
-                        <Fade  spy={highlight}>                            
-                            <Pulse forever={true} delay={1000} duration={3000} fraction={1}>                                               
-                                <img src={highlight.src} alt={highlight.title + ' logo'}></img>                         
-                            </Pulse>
-                        </Fade>
-                    </div>
-                    <div className="box">
-                        {DaftarPPSMB.map((item,index) => {
-                            const onClickLogo = () => {
-                                setHighlight({
-                                    src: item.src,
-                                    title: item.title,
-                                    desc: item.desc,
-                                    instaLink: item.instaLink,
-                                    twitterLink: item.twitterLink,
-                                    tiktokLink: item.tiktokLink,
-                                    lineLink: item.lineLink,
-                                    youtubeLink: item.youtubeLink,
-                                    facebookLink: item.facebookLink,
-                                    email: item.email,
-                                })
-                            }
-                            return (
-                                <Unit i={index} key={index} onClick={onClickLogo}>
-                                    <img src={item.src} alt={item.title + ' logo'}/>
-                                </Unit>
-                            )
-                        })}
-                    </div>
-                </div>
-
-            </section>
-            <section className='serba-serbi'>
-                <div className='title'>
-                    <Fade left >
-                    <h2>
-                        <span className='ppsmb-orange'>S</span>
-                        <span className='ppsmb-yellow'>e</span>
-                        <span className='ppsmb-red'>r</span>
-                        <span className='ppsmb-orange'>b</span>
-                        <span className='ppsmb-red'>a</span>
-                        <span className='ppsmb-white'>-</span>
-                        <span className='ppsmb-red'>S</span>
-                        <span className='ppsmb-blue'>e</span>
-                        <span className='ppsmb-red'>r</span>
-                        <span className='ppsmb-yellow'>b</span>
-                        <span className='ppsmb-blue'>i</span>
-                        <span className='font-indonesia-script ppsmb-white'> Gamada!</span>
-                    </h2>
-                    <p>
-                        Video kreasi Palapa seputar UGM buat mengisi harimu!
-                    </p>                       
-                    </Fade>               
-                </div>
-                
-
-                <div className='main'>
-                    <div className='video-utama'>
-                        <Fade  left spy={videoPlay}>
-                        <YoutubeEmbed embedId={videoPlay.embedId} />
-                        <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
-                        <p>{videoPlay.desc}</p>
-                        </Fade>
-                    </div>
-                    <div className='daftar-video'>
-                        {DaftarVideo.map((item,index)=>{
-                            const onClickThumbnail = () => {
-                                setVideoPlay(({
-                                    embedId: item.embedId,
-                                    title: item.title,
-                                    desc: item.desc,
-                                    thumbnail: item.thumbnail
-                                }))
-                            }
-
-                            return(
-                                <Fade  bottom>
-                                <Video onClick={onClickThumbnail}>
-                                    <img src={item.thumbnail} alt={item.title + ' thumbnail'}/>
-                                    <div>
-                                        <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
-                                        <p>{item.desc}</p>
+                                                    <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
+                                                </Fade>
+                                            </h1>
+                                        </Lightspeed>
+                                        <img src={RedStick} className='red-stick'></img>
                                     </div>
-                                </Video>
-                                </Fade>
-                            )
-                        })}
-                        
-                        {/* <Sliders
+                                    <div className="batiks">
+                                        <img src={Batik} alt="" srcset="" className="batik" />
+                                        <img src={Batik} alt="" srcset="" className="batik" />
+                                        <img src={Batik} alt="" srcset="" className="batik" />
+                                    </div>
+                                </Pulse>
+
+
+                            </div>
+                        </Fade>
+                        <img src={Lean2} alt="" srcset="" className="corner bottom-right" />
+
+
+                    </div>
+
+                </section>
+                <section className='about'>
+
+                    <div className='desc'>
+                        <div className='pengertian ppsmb-darkblue'>
+                            <Fade left spy={highlight.title}>
+                                <h2>{highlight.title}</h2>
+                                <p>{highlight.desc}</p>
+                                <ShowEmail email={highlight.email} />
+                                <div className="socmed">
+                                    <p>Media Sosial: &nbsp;</p>
+                                    <ShowSocialMedia icon="youtube" link={highlight.youtubeLink} />
+                                    <ShowSocialMedia icon="instagram" link={highlight.instaLink} />
+                                    <ShowSocialMedia icon="line" link={highlight.lineLink} />
+                                    <ShowSocialMedia icon="twitter" link={highlight.twitterLink} />
+                                    <ShowSocialMedia icon="facebook" link={highlight.facebookLink} />
+                                    <ShowSocialMedia icon="tiktok" link={highlight.tiktokLink} />
+                                </div>
+                            </Fade>
+                        </div>
+                    </div>
+
+                    <div className='logo2-ppsmb'>
+                        <div className="highlight">
+                            <Fade spy={highlight}>
+                                <Pulse forever={true} delay={1000} duration={3000} fraction={1}>
+                                    <img src={highlight.src} alt={highlight.title + ' logo'}></img>
+                                </Pulse>
+                            </Fade>
+                        </div>
+                        <div className="box">
+                            {DaftarPPSMB.map((item, index) => {
+                                const onClickLogo = () => {
+                                    setHighlight({
+                                        src: item.src,
+                                        title: item.title,
+                                        desc: item.desc,
+                                        instaLink: item.instaLink,
+                                        twitterLink: item.twitterLink,
+                                        tiktokLink: item.tiktokLink,
+                                        lineLink: item.lineLink,
+                                        youtubeLink: item.youtubeLink,
+                                        facebookLink: item.facebookLink,
+                                        email: item.email,
+                                    })
+                                }
+                                return (
+                                    <Unit i={index} key={index} onClick={onClickLogo}>
+                                        <img src={item.src} alt={item.title + ' logo'} />
+                                    </Unit>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                </section>
+                <section className='serba-serbi'>
+                    <div className='title'>
+                        <Fade left >
+                            <h2>
+                                <span className='ppsmb-orange'>S</span>
+                                <span className='ppsmb-yellow'>e</span>
+                                <span className='ppsmb-red'>r</span>
+                                <span className='ppsmb-orange'>b</span>
+                                <span className='ppsmb-red'>a</span>
+                                <span className='ppsmb-white'>-</span>
+                                <span className='ppsmb-red'>S</span>
+                                <span className='ppsmb-blue'>e</span>
+                                <span className='ppsmb-red'>r</span>
+                                <span className='ppsmb-yellow'>b</span>
+                                <span className='ppsmb-blue'>i</span>
+                                <span className='font-indonesia-script ppsmb-white'> Gamada!</span>
+                            </h2>
+                            <p>
+                                Video kreasi Palapa seputar UGM buat mengisi harimu!
+                    </p>
+                        </Fade>
+                    </div>
+
+
+                    <div className='main'>
+                        <div className='video-utama'>
+                            <Fade left spy={videoPlay}>
+                                <YoutubeEmbed embedId={videoPlay.embedId} />
+                                <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
+                                <p>{videoPlay.desc}</p>
+                            </Fade>
+                        </div>
+                        <div className='daftar-video'>
+                            {DaftarVideo.map((item, index) => {
+                                const onClickThumbnail = () => {
+                                    setVideoPlay(({
+                                        embedId: item.embedId,
+                                        title: item.title,
+                                        desc: item.desc,
+                                        thumbnail: item.thumbnail
+                                    }))
+                                }
+
+                                return (
+                                    <Fade bottom>
+                                        <Video onClick={onClickThumbnail}>
+                                            <img src={item.thumbnail} alt={item.title + ' thumbnail'} />
+                                            <div>
+                                                <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
+                                                <p>{item.desc}</p>
+                                            </div>
+                                        </Video>
+                                    </Fade>
+                                )
+                            })}
+
+                            {/* <Sliders
                             slidesToShow={4}
                             slidesToShowMobile={2}
                             slidesToShowTablet={2}
@@ -293,12 +293,12 @@ export default function Beranda() {
                                     <Video><p>5</p></Video>
                                 </div>
                             </Sliders> */}
+                        </div>
                     </div>
-                </div>
 
 
 
-            </section>
+                </section>
             </Container>
         </>
 
@@ -812,15 +812,15 @@ const Unit = styled.a`
 
 `;
 
-function ShowSocialMedia(props){
-    if(props.link != null){
+function ShowSocialMedia(props) {
+    if (props.link != null) {
         return <SocialMedia mainColor='#01385E' secondaryColor='#C50034' faIcon={["fab", props.icon]} link={props.link} />;
     } else {
         return null;
     }
 }
-function ShowEmail(props){
-    if(props.email != null){
+function ShowEmail(props) {
+    if (props.email != null) {
         return <p>Email: {props.email}</p>;
     } else {
         return null;

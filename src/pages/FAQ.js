@@ -1,79 +1,79 @@
-import React, {useState, useEffect}from 'react';
-import {QuestionItems} from './QuestionItems';
+import React, { useState, useEffect } from 'react';
+import { QuestionItems } from './QuestionItems';
 import styled from "styled-components";
 import mainBG from "../assets/img/main-bg.webp";
 import Breadcrumbs from '../components/Breadcrumbs'
 import UpperRight from "../assets/img/corner-bulk2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
 
 
-export default function FAQ(){
-        // const [isActive, setIsActive] = useState(false);
-        const [input, setInput] = useState("");
-        const [chosenCategory, setChosenCategory] = useState("Semua");
-        const [activeCategory, setActiveCategory] = useState(false);
-        
+export default function FAQ() {
+    // const [isActive, setIsActive] = useState(false);
+    const [input, setInput] = useState("");
+    const [chosenCategory, setChosenCategory] = useState("Semua");
+    const [activeCategory, setActiveCategory] = useState(false);
 
-        if (chosenCategory != "Semua"){
-            var questions = QuestionItems.filter(item => item.category == chosenCategory);
-        }else{
-            questions = QuestionItems;
-        }
 
-        const handleChange = (e) => {
-            e.preventDefault();
-            setInput(e.target.value);
-        };
+    if (chosenCategory != "Semua") {
+        var questions = QuestionItems.filter(item => item.category == chosenCategory);
+    } else {
+        questions = QuestionItems;
+    }
 
-        return(
-            <Container>
-                <div className='top'>
-                    {/* <Breadcrumbs></Breadcrumbs> */}
-                    <img src={UpperRight} alt="" srcset="" className="upper-right"/>
-                </div>
-                <Fade >
-                    <div className='title'>
-                        <h2 className="ppsmb-darkblue">Pertanyaan yang Sering Diajukan</h2>
-                        <div className="search-bar">
-                            <input type="search" placeholder="Cari pertanyaanmu di sini..." onChange={handleChange} value={input} className="ppsmb-darkblue"/>
-                        </div>
+    const handleChange = (e) => {
+        e.preventDefault();
+        setInput(e.target.value);
+    };
+
+    return (
+        <Container>
+            <div className='top'>
+                {/* <Breadcrumbs></Breadcrumbs> */}
+                <img src={UpperRight} alt="" srcset="" className="upper-right" />
+            </div>
+            <Fade >
+                <div className='title'>
+                    <h2 className="ppsmb-darkblue">Pertanyaan yang Sering Diajukan</h2>
+                    <div className="search-bar">
+                        <input type="search" placeholder="Cari pertanyaanmu di sini..." onChange={handleChange} value={input} className="ppsmb-darkblue" />
                     </div>
-                
+                </div>
+
 
                 <div className='content'>
                     <div className='choose-category' >
                         <p className={((chosenCategory == 'Semua') ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
-                        {QuestionItems.map((item,index) => {
-                            return(                  
+                        {QuestionItems.map((item, index) => {
+                            return (
                                 <div key={index} >
                                     <p className={((chosenCategory == item.category) ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
                                 </div>
                             )
                         })}
                     </div>
-                    
+
                     <div className="questions">
                         {questions.map(item => {
                             return (
                                 <Fade spy={chosenCategory} >
-                                    <Kategori item={item} input={input} chosenCategory={chosenCategory}/>                    
+                                    <Kategori item={item} input={input} chosenCategory={chosenCategory} />
                                 </Fade>
                             )
 
                         })}
                     </div>
                 </div>
-                </Fade>
+            </Fade>
 
-            </Container>
-            
-        )
-        
+        </Container>
+
+    )
+
 }
 
 const Container = styled.div`
@@ -205,6 +205,9 @@ const Container = styled.div`
                 justify-content: space-around;
                 flex-direction: row;
                 flex-wrap: wrap;
+                p{
+                    padding: 0 2px;
+                }
             }
         }
         
@@ -217,51 +220,51 @@ const Kategori = ({ item, input, chosenCategory }) => {
     useEffect(() => {
         setIsShown(false)
         item.question.map((question, index) => {
-            if (question.title.toLowerCase().includes(input.toLowerCase())){
+            if (question.title.toLowerCase().includes(input.toLowerCase())) {
                 setIsShown(true)
-            } 
+            }
         })
-    },[input, item])
+    }, [input, item])
     return (
         <>
-            {isShown && 
-            <div className="per-category">
-                <h3 className="ppsmb-red">{item.category}</h3>
-                {item.question.map((question, index) => {
-                    return(
-                        <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
-                            show={question.title.toLowerCase().includes(input.toLowerCase())}/>
-                    )                                                   
-                })}                                                                                      
-            </div>
-            }                   
+            {isShown &&
+                <div className="per-category">
+                    <h3 className="ppsmb-red">{item.category}</h3>
+                    {item.question.map((question, index) => {
+                        return (
+                            <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
+                                show={question.title.toLowerCase().includes(input.toLowerCase())} />
+                        )
+                    })}
+                </div>
+            }
         </>
-        
+
 
     );
-  };
+};
 
 const Accordion = ({ show, title, content, chosenCategory, key }) => {
     const [isActive, setIsActive] = useState(false);
     useEffect(() => {
         setIsActive(false);
-    },[chosenCategory]);
+    }, [chosenCategory]);
     useEffect(() => {
         console.log(show)
-    },[show]);
+    }, [show]);
     return (
         <>
-            {show && 
-                <div class="accordion"key={key}>
-                    <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs': 'ppsmb-black qs')} >{title}</p>
-                    <Fade  spy={isActive}>                
-                    {isActive && <p onClick={() => setIsActive(!isActive)} ><FontAwesomeIcon icon={faChevronRight}/>    {content}</p>}
+            {show &&
+                <div class="accordion" key={key}>
+                    <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
+                    <Fade spy={isActive}>
+                        {isActive && <p onClick={() => setIsActive(!isActive)} ><FontAwesomeIcon icon={faChevronRight} />    {content}</p>}
                     </Fade>
                     <div className="line"></div>
-                </div>    
+                </div>
             }
         </>
-        
+
 
     );
-  };
+};

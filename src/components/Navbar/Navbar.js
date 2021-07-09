@@ -13,7 +13,7 @@ import {
     Link,
     Route,
     useRouteMatch,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 export default class Navbar extends Component {
     state = { clicked: false }
@@ -21,13 +21,15 @@ export default class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
+    nothing = () => {
+    }
 
     render() {
         return (
             <Header>
-                <nav className='navbar'>        
+                <nav className='navbar'>
                     {/* Left-corner: Logo PPSMB */}
-                    <Link to="/beranda" className='logo'>
+                    <Link to="/beranda" className='logo' onClick={((this.state.clicked) ? this.handleClick : this.nothing())}>
                         <img src={LogoPPSMBOfficial} alt='Logo PPSMB' />
                         <p>PPSMB UGM 2021</p>
                     </Link>
