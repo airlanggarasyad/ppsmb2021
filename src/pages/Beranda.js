@@ -14,7 +14,11 @@ import SocialMedia from "../components/SocialMedia";
 import YoutubeEmbed from "../components/YoutubeEmbed"
 import { DaftarVideo } from "./DaftarVideo";
 import DayCard from "../components/Agenda/DayCard";
-
+import Fade from 'react-reveal/Fade';
+import Spin from 'react-reveal/Spin';
+import Lightspeed from 'react-reveal/LightSpeed';
+import Pulse from 'react-reveal/Pulse';
+import Swing from 'react-reveal/Swing';
 
 
 export default function Beranda() {
@@ -42,16 +46,22 @@ export default function Beranda() {
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left"/>
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right"/>
+                    <Fade >
                     <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo"/>
+                    </Fade>
                     <div className='batiks'>
-                        <img src={Batik} alt="" srcset="" className="batik"/>
-                        <img src={Batik} alt="" srcset="" className="batik"/>
-                        <img src={Batik} alt="" srcset="" className="batik"/>
+                        <Spin duration={4000} count={5}>
+                            <img src={Batik} alt="" srcset="" className="batik"/>
+                            <img src={Batik} alt="" srcset="" className="batik"/>
+                            <img src={Batik} alt="" srcset="" className="batik"/>
+                        </Spin>
                     </div>
+                    
 
                         <div className='hero-content'>
                             <div className='content-title'>
                                 <div>
+                                    <Fade left >
                                     <h2 className="text-center m-0 ppsmb ppsmb-darkblue">
                                         PPSMB UGM
                                         <span className="ppsmb-blue"> 2</span>
@@ -73,7 +83,7 @@ export default function Beranda() {
                                             Pesona Pertiwi
                                         </h1>
                                     </div>
-
+                                    </Fade>
                                 </div>
 
 
@@ -107,29 +117,41 @@ export default function Beranda() {
                     <img src={Bulk2} alt="" srcset="" className="corner upper-left"/>
                     <img src={Lean1} alt="" srcset="" className="corner bottom-left"/>
                 </div>
-
-
-                <div className='videos'>
+                <div className='videos'>  
+                
+                <Fade >                                         
                     <div className="video">
                         <YoutubeEmbed embedId='fGOamlnU_uI'/>
                     </div>
+
+                </Fade>
                 </div>
             <div className='right'>
                 <img src={Bulk1} alt="" srcset="" className="corner upper-right"/>
+                <Fade right >
                 <div className='title-box'>
+
+                    <Pulse delay={2500} forever={true}>
                     <div className='title'>
+                        <Lightspeed right>                   
                         <h1 className='ppsmb-darkblue'>Selamat Datang
-                        <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
+                            <Fade delay={500} left cascade >
+                                <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
+                            </Fade>
                         </h1>
-                        <img src={RedStick} className='red-stick'></img>
+                        </Lightspeed>                   
+                            <img src={RedStick} className='red-stick'></img>
                     </div>
                     <div className="batiks">
                             <img src={Batik} alt="" srcset="" className="batik"/>
                             <img src={Batik} alt="" srcset="" className="batik"/>
                             <img src={Batik} alt="" srcset="" className="batik"/>
                     </div>
+                    </Pulse>
+                 
 
                 </div>
+                </Fade>
                 <img src={Lean2} alt="" srcset="" className="corner bottom-right"/>
 
 
@@ -137,18 +159,15 @@ export default function Beranda() {
 
             </section>
             <section className='about'>
+                
                 <div className='desc'>
                     <div className='pengertian ppsmb-darkblue'>
+                        <Fade  left spy={highlight.title}>
                         <h2>{highlight.title}</h2>
-                        <p>
-                            {highlight.desc}
-                        </p>
-                            <ShowEmail email={highlight.email}/>
-
+                        <p>{highlight.desc}</p>
+                        <ShowEmail email={highlight.email}/>
                         <div className="socmed">
-                            <p>
-                                Media Sosial: &nbsp;
-                            </p>
+                            <p>Media Sosial: &nbsp;</p>
                             <ShowSocialMedia  icon="youtube" link={highlight.youtubeLink}/>
                             <ShowSocialMedia  icon="instagram" link={highlight.instaLink}/>
                             <ShowSocialMedia  icon="line" link={highlight.lineLink}/>
@@ -156,14 +175,19 @@ export default function Beranda() {
                             <ShowSocialMedia  icon="facebook" link={highlight.facebookLink}/>
                             <ShowSocialMedia  icon="tiktok" link={highlight.tiktokLink}/>
                         </div>
+                        </Fade>
                     </div>
                 </div>
 
                 <div className='logo2-ppsmb'>
                     <div className="highlight">
-                        <img src={highlight.src} alt={highlight.title + ' logo'}></img>
+                        <Fade  spy={highlight}>                            
+                            <Pulse forever={true} delay={1000} duration={3000} fraction={1}>                                               
+                                <img src={highlight.src} alt={highlight.title + ' logo'}></img>                         
+                            </Pulse>
+                        </Fade>
                     </div>
-                    <div className="box"  >
+                    <div className="box">
                         {DaftarPPSMB.map((item,index) => {
                             const onClickLogo = () => {
                                 setHighlight({
@@ -180,7 +204,6 @@ export default function Beranda() {
                                 })
                             }
                             return (
-
                                 <Unit i={index} key={index} onClick={onClickLogo}>
                                     <img src={item.src} alt={item.title + ' logo'}/>
                                 </Unit>
@@ -192,6 +215,7 @@ export default function Beranda() {
             </section>
             <section className='serba-serbi'>
                 <div className='title'>
+                    <Fade left >
                     <h2>
                         <span className='ppsmb-orange'>S</span>
                         <span className='ppsmb-yellow'>e</span>
@@ -208,15 +232,18 @@ export default function Beranda() {
                     </h2>
                     <p>
                         Video kreasi Palapa seputar UGM buat mengisi harimu!
-                    </p>                  
+                    </p>                       
+                    </Fade>               
                 </div>
                 
 
                 <div className='main'>
                     <div className='video-utama'>
+                        <Fade  left spy={videoPlay}>
                         <YoutubeEmbed embedId={videoPlay.embedId} />
                         <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
                         <p>{videoPlay.desc}</p>
+                        </Fade>
                     </div>
                     <div className='daftar-video'>
                         {DaftarVideo.map((item,index)=>{
@@ -230,14 +257,15 @@ export default function Beranda() {
                             }
 
                             return(
+                                <Fade  bottom>
                                 <Video onClick={onClickThumbnail}>
                                     <img src={item.thumbnail} alt={item.title + ' thumbnail'}/>
                                     <div>
-                                        <p className='title'>{item.title}</p>
+                                        <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
                                         <p>{item.desc}</p>
                                     </div>
                                 </Video>
-
+                                </Fade>
                             )
                         })}
                         
@@ -398,21 +426,13 @@ const Container = styled.div`
                     }
 
                     .ppsmb {
-                        opacity: 0;
                         margin-bottom: 4.5vmin;
                         font-size: calc(0.5rem + 2.5vmin);
-                        animation-name: fadeIn;
-                        animation-fill-mode: forwards;
                     }
 
                     .font-indonesia-script {
-                        opacity:0;
                         line-height: calc(0.5rem + 3.3vmin);
                         font-weight: lighter;
-
-                        animation: 1s ease-in-out 0s 1 fadeIn;
-                        animation-delay: calc(var(--delay-multiplier) * 5);
-                        animation-fill-mode: forwards;
                     }
 
 
@@ -514,7 +534,7 @@ const Container = styled.div`
                     text-align: left;
                     width: 90%;
                     border-radius: 25px 0 0 25px;
-                    padding-left: 7vmin;
+                    padding-left: 9vmin;
                     white-space: nowrap;
 
                     .title{
@@ -546,7 +566,7 @@ const Container = styled.div`
             }
             @media (max-width: 576px) {
                 flex-direction: column;
-                height: auto;
+                /* height: auto; */
 
                 .right {
                     order: 1;
@@ -555,6 +575,7 @@ const Container = styled.div`
                 .videos {
                     order: 2;
                     width: 100vw;
+                    margin-bottom: 25vmin;
                 }
 
                 .upper-left{

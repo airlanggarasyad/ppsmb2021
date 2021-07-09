@@ -6,6 +6,11 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import UpperRight from "../assets/img/corner-bulk2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import Fade from 'react-reveal/Fade';
+import Spin from 'react-reveal/Spin';
+import Lightspeed from 'react-reveal/LightSpeed';
+import Pulse from 'react-reveal/Pulse';
+
 
 export default function FAQ(){
         // const [isActive, setIsActive] = useState(false);
@@ -28,28 +33,25 @@ export default function FAQ(){
         return(
             <Container>
                 <div className='top'>
-                    <div>
-                        <Breadcrumbs>
-                        </Breadcrumbs>
-                    </div>
-                    <div className="corner-decoratives">
-                        <img src={UpperRight} alt="" srcset="" className="upper-right"/>
-                    </div>
+                    <Breadcrumbs></Breadcrumbs>
+                    <img src={UpperRight} alt="" srcset="" className="upper-right"/>
                 </div>
-                <div className='title'>
-                    <h1 className="ppsmb-darkblue">Pertanyaan yang Sering Diajukan</h1>
-                    <div className="search-bar">
-                        <input type="search" placeholder="Cari pertanyaanmu di sini..." onChange={handleChange} value={input} className="ppsmb-darkblue"/>
+                <Fade >
+                    <div className='title'>
+                        <h2 className="ppsmb-darkblue">Pertanyaan yang Sering Diajukan</h2>
+                        <div className="search-bar">
+                            <input type="search" placeholder="Cari pertanyaanmu di sini..." onChange={handleChange} value={input} className="ppsmb-darkblue"/>
+                        </div>
                     </div>
-                </div>
+                
 
                 <div className='content'>
                     <div className='choose-category' >
-                        <p className="ppsmb-red" onClick={() => setChosenCategory("Semua")}>Semua</p>
+                        <p className={((chosenCategory == 'Semua') ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
                         {QuestionItems.map((item,index) => {
                             return(                  
-                                <div key={index}>
-                                    <p className="ppsmb-red"  onClick={() => setChosenCategory(item.category)}>{item.category} </p>
+                                <div key={index} >
+                                    <p className={((chosenCategory == item.category) ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
                                 </div>
                             )
                         })}
@@ -57,10 +59,16 @@ export default function FAQ(){
                     
                     <div className="questions">
                         {questions.map(item => {
-                            return <Kategori item={item} input={input} chosenCategory={chosenCategory}/>
+                            return (
+                                <Fade spy={chosenCategory} >
+                                    <Kategori item={item} input={input} chosenCategory={chosenCategory}/>                    
+                                </Fade>
+                            )
+
                         })}
                     </div>
                 </div>
+                </Fade>
 
             </Container>
             
@@ -72,26 +80,25 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(${mainBG});
-        background-position: center;
-        background-size: cover;
-        overflow: hidden;
     min-height: 100vh;
+    padding: 0 10vmin 10vmin 10vmin;
+
+    p{
+        font-size: calc(0.5rem + 1.4vmin);
+    }
+
     .top{
         width: 100vw;
         display: flex;
-        justify-content: space-between;
         height: 14vh;
+        position: relative;
+        top: 0;
 
-        .corner-decoratives{
-            position: relative;
-            .upper-right {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: calc(0.5rem + 30vmin);
-                pointer-events: none;
-            }
+        .upper-right {
+            position: absolute;
+            right: 0;
+            width: 25vmin;
+            pointer-events: none;
         }
     }
 
@@ -102,7 +109,9 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: calc(0.5rem + 1.4vmin);
+        h2{
+            font-size: calc(0.5rem + 4vmin);
+        }
 
         .search-bar{
             margin: 1%;
@@ -126,7 +135,7 @@ const Container = styled.div`
     }
 
     .content{
-        width: 80%;
+        width: 100%;
         display: flex;
         justify-content: center;
         margin: 0 10% 5% 10%;
@@ -135,11 +144,14 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             flex-grow: 1;
+
+            cursor: pointer;
             p{
+                display: inline-block;
+                width: auto;
                 line-height: 3vmin;
-                cursor: pointer;
                 &:hover{
-                    font-weight: bold;
+                    color: var(--color-red);
                 }
             }
         }
@@ -157,12 +169,12 @@ const Container = styled.div`
                 border-radius: 20px;
                 div{
                     margin-bottom: 2%;
+                    .qs:hover{
+                        color: var(--color-red);
+                    }
                     p{
                         margin: 4px 0px;
                         cursor: pointer;
-                        &:hover{
-                            color: var(--color-darkblue);
-                        }
                     }
                     .line{
                         height: 2px;
@@ -240,9 +252,11 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
     return (
         <>
             {show && 
-                <div class="accordion" onClick={() => setIsActive(!isActive)} key={key}>
-                    <p className="ppsmb-black" >{title}</p>
-                    {isActive && <p><FontAwesomeIcon icon={faChevronRight}/>    {content}</p>}
+                <div class="accordion"key={key}>
+                    <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs': 'ppsmb-black qs')} >{title}</p>
+                    <Fade  spy={isActive}>                
+                    {isActive && <p onClick={() => setIsActive(!isActive)} ><FontAwesomeIcon icon={faChevronRight}/>    {content}</p>}
+                    </Fade>
                     <div className="line"></div>
                 </div>    
             }
