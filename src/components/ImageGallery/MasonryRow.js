@@ -3,7 +3,7 @@ import Gallery from "react-photo-gallery";
 // import Gallery from 'react-grid-gallery';
 import Modal from "react-modal";
 import styled from "styled-components";
-import Sliders from "../Slider/Slider";
+import Sliders from "../Slider";
 import { srcPhotos } from "./Photo-Thumbnail";
 
 export default function MasonryRow() {

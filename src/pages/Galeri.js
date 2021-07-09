@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 
 import VideoContainer from "../components/VideoContainer";
-import Sliders from "../components/Slider/Slider";
+import Sliders from "../components/Slider";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";

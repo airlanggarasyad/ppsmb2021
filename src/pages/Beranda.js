@@ -13,12 +13,14 @@ import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
 import YoutubeEmbed from "../components/YoutubeEmbed"
 import { DaftarVideo } from "./DaftarVideo";
-import DayCard from "../components/Agenda/DayCard";
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
-import Swing from 'react-reveal/Swing';
+import mainBG from '../assets/img/pattern-bg-white.webp'
+import yellowBG from '../assets/img/pattern-bg-yellow.webp'
+import darkBlueBG from '../assets/img/pattern-bg-darkblue.webp'
+import VideoContainer from "../components/VideoContainer";
 
 
 export default function Beranda() {
@@ -61,7 +63,7 @@ export default function Beranda() {
                     <div className='hero-content'>
                         <div className='content-title'>
                             <div>
-                                <Fade left >
+                                <Fade left delay={2000} >
                                     <h2 className="text-center m-0 ppsmb ppsmb-darkblue">
                                         PPSMB UGM
                                         <span className="ppsmb-blue"> 2</span>
@@ -89,9 +91,9 @@ export default function Beranda() {
 
 
                         </div>
-                        <div className='lini-masa text-center ppsmb-darkblue'>
-                            {/* <h2>Lini Masa</h2> */}
-                            {/* <Sliders
+                        {/* <div className='lini-masa text-center ppsmb-darkblue'>
+                            <h2>Lini Masa</h2> 
+                             <Sliders
                                 slidesToShow={3}
                                 slidesToShowMobile={2}
                                 slidesToShowTablet={2}>
@@ -107,8 +109,8 @@ export default function Beranda() {
                                     <div>
                                         <DayCard day="four" href='www.facebook.com'></DayCard>
                                     </div>
-                                </Sliders> */}
-                        </div>
+                                </Sliders> 
+                        </div> */}
                     </div>
 
                 </section>
@@ -120,7 +122,17 @@ export default function Beranda() {
                     <div className='videos'>
 
                         <Fade >
+                            
                             <div className="video">
+                                {/* <VideoContainer
+                                    bgurl={
+                                        process.env.PUBLIC_URL +
+                                        "/assets/img/galeri/" +
+                                        videoPlay.thumbnail
+                                    }
+                                    bgcolor={"var(--color-redpink)"}
+                                    noDecor
+                                ></VideoContainer> */}
                                 <YoutubeEmbed embedId='fGOamlnU_uI' />
                             </div>
 
@@ -353,7 +365,9 @@ const Video = styled.div`
 const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
-
+  background-image: url(${mainBG});
+  background-repeat: repeat;
+  background-size: 15%;
   overflow: hidden;
   margin:0;
   display: flex;
@@ -372,7 +386,7 @@ const Container = styled.div`
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            height: 80vh;
+            height: 100vh;
             padding: 10vmin;
             z-index: 1;
 
@@ -401,7 +415,7 @@ const Container = styled.div`
                 right: 1.5%;
                 .batik{
                     padding: 1vmin;
-                    height: calc(0.5rem + 3vmin);
+                    height: calc(0.5rem + 5vmin);
                 }
             }
 
@@ -413,6 +427,7 @@ const Container = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
 
                 .content-title{
                     display: flex;
@@ -420,6 +435,7 @@ const Container = styled.div`
                     justify-content: center;
                     align-items: center;
                     padding: 4vmin;
+                    white-space: nowrap;
 
                     .title {
                         font-size: calc(0.5rem + 4vmin);
@@ -470,7 +486,9 @@ const Container = styled.div`
             display: flex;
             position: relative;
             margin:0;
-            background-size: cover;
+            background-image: url(${yellowBG});
+            background-repeat: repeat;
+            background-size: 15%;
             justify-content: space-between;
             background-color: var(--color-yellow);
             /* height: calc(0.5rem + 92vmin); */
@@ -540,6 +558,7 @@ const Container = styled.div`
                     .title{
                         font-size: calc(0.5rem + 1.4vw);
                         width:80%;
+                        z-index: 1;
                         .font-indonesia-script{
                             display: inline-block;
                             transform: rotate(-18deg) translate(-40%, -10%);
@@ -558,7 +577,8 @@ const Container = styled.div`
                         width: 20%;
                         .batik{
                             padding: 1vmin;
-                            height: calc(0.5rem + 3vmin);
+                            height: calc(0.5rem + 5vmin);
+                            z-index: 0;
 
                         }
                     }
@@ -607,7 +627,6 @@ const Container = styled.div`
                 float: center;
                 width: 50%;
                 text-align: justify;
-                /* background-color: blue; */
 
                 .socmed{
                     display: flex;
@@ -625,7 +644,6 @@ const Container = styled.div`
                 padding: 10vmin;
                 width: 50%;
                 height: 130%;
-                /* background-color: blueviolet; */
                 margin-bottom: 100px;
 
             }
@@ -691,13 +709,13 @@ const Container = styled.div`
 
 
         &.serba-serbi{
-            background-color: var(--color-darkblue);
-            /* height: 100vh; */
+            background-image: url(${darkBlueBG});
+            background-repeat: repeat;
+            background-size: 15%;
             padding: 10vmin;
             color: var(--color-white);
             display: flex;
             flex-direction: column;
-            /* flex-grow: 7; */
             
             .title{
                 h2{

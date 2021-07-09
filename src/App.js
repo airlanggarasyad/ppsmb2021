@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <>
         <GlobalStyle />
-        <Navbar />
         <Router>
+          <Navbar />
           <Routes />
         </Router>
         <Footer />

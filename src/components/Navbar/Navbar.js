@@ -8,12 +8,15 @@ import LogoPPSMBOfficial from '../../assets/img/logo-ppsmb-official.webp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
     Link,
     Route,
     useRouteMatch,
 } from "react-router-dom";
+import Beranda from '../../pages/Beranda';
+import FAQ from '../../pages/FAQ';
+import Galeri from '../../pages/Galeri';
 
 export default class Navbar extends Component {
     state = { clicked: false }
@@ -50,6 +53,7 @@ export default class Navbar extends Component {
                         <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars} className='fa-icon' />
                     </NavIconStyled>
                 </nav>
+
             </Header>
         )
     }
@@ -60,7 +64,7 @@ const Header = styled.header` //Give block with same height as absolute navbar
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    height: calc(0.5rem + 9vmin);
+    height: calc(0.5rem + 7.5vmin);
 
     .navbar{
         //Container style
@@ -93,7 +97,7 @@ const Header = styled.header` //Give block with same height as absolute navbar
             cursor: pointer;
 
             img {
-                height: 1.8em;
+                height: 2.5em;
                 padding: 0.5em;
             }
             
@@ -122,29 +126,6 @@ const Header = styled.header` //Give block with same height as absolute navbar
     align-items: center;
     text-align: center;
     }
-`
-
-const NavLogoStyled = styled.a`
-    display:flex;
-    color: var(--color-darkblue);
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    margin-left: 5vmin;
-    cursor: pointer;
-
-    img {
-        height: 1.8em;
-        margin: 10px;
-    }
-    
-    p {
-        color: var(--color-darkblue);
-        text-decoration: none;    
-        font-weight: bold;
-        font-size: calc(0.5rem + 2vmin);
-    }
-
 `
 const NavItemsStyled = styled.ul`
     display: grid;

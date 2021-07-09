@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { QuestionItems } from './QuestionItems';
 import styled from "styled-components";
-import mainBG from "../assets/img/main-bg.webp";
+import mainBG from '../assets/img/pattern-bg-white.webp'
 import Breadcrumbs from '../components/Breadcrumbs'
 import UpperRight from "../assets/img/corner-bulk2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,11 +13,8 @@ import Pulse from 'react-reveal/Pulse';
 
 
 export default function FAQ() {
-    // const [isActive, setIsActive] = useState(false);
     const [input, setInput] = useState("");
     const [chosenCategory, setChosenCategory] = useState("Semua");
-    const [activeCategory, setActiveCategory] = useState(false);
-
 
     if (chosenCategory != "Semua") {
         var questions = QuestionItems.filter(item => item.category == chosenCategory);
@@ -82,6 +79,9 @@ const Container = styled.div`
     align-items: center;
     min-height: 100vh;
     padding: 0 10vmin 10vmin 10vmin;
+    background-image: url(${mainBG});
+    background-repeat: repeat;
+    background-size: 15%;
 
     p{
         font-size: calc(0.5rem + 1.4vmin);
@@ -229,7 +229,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
         <>
             {isShown &&
                 <div className="per-category">
-                    <h3 className="ppsmb-red">{item.category}</h3>
+                    <h4 className="ppsmb-red">{item.category}</h4>
                     {item.question.map((question, index) => {
                         return (
                             <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
