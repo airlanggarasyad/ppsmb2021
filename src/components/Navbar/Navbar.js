@@ -89,7 +89,7 @@ const NavLogoStyled = styled.a`
 
     img {
         height: 1.8em;
-        padding: 10px;
+        margin: 10px;
     }
     
     p {

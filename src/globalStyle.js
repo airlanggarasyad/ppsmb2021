@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-
-import Kollektif from './assets/fonts/Kollektif.woff';
-import IndonesiaScript from './assets/fonts/Indonesia-Script.woff';
-import LogoPPSMBOfficial from './assets/img/logo-ppsmb-official.webp';
+import Kollektif from "./assets/fonts/Kollektif.woff";
+import IndonesiaScript from "./assets/fonts/Indonesia-Script.woff";
+import patternBGWhite from "./assets/img/pattern-bg-white.webp";
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -10,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     \*----------------------*/
     html {
         --color-red: #C50034;
+        --color-redpink: #F31958;
         --color-blue: #0593F7;
         --color-darkblue: #01385E;
         --color-footerblue: #0074AF;
@@ -22,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
         --spacer: 1rem;
     }
     
+    * {
+        box-sizing: border-box;
+    }
 
     /*----------------------*\
                Font
@@ -30,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Kollektif Regular';
         font-style: normal;
         font-weight: normal;
-        src: local('Kollektif Regular') url('./assets/fonts/Kollektif.woff') format('woff');
+        src: local('Kollektif Regular') url(${Kollektif}) format('woff');
         font-display: swap;
     }
 
@@ -48,7 +51,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .font-bold {
-        font-weight: bold;
+        font-weight: 700;
+    }
+
+    .font-normal {
+        font-weight: 400;
     }
 
 
@@ -112,6 +119,9 @@ const GlobalStyle = createGlobalStyle`
     .ppsmb-red {
         color: var(--color-red);
     }
+    .ppsmb-redpink {
+        color: var(--color-redpink);
+    }
     .ppsmb-blue {
         color: var(--color-blue);
     }
@@ -131,6 +141,17 @@ const GlobalStyle = createGlobalStyle`
         color: var(--color-white);
     }
 
+    /*----------------------*\
+            Background
+    \*----------------------*/
+    .pattern-bg {
+        background-size: 30%;
+    }
+
+    .pattern-bg-white {
+        background-image: url(${patternBGWhite});
+        background-repeat: repeat;
+    }
 
     /*----------------------*\
             Typography
@@ -149,6 +170,10 @@ const GlobalStyle = createGlobalStyle`
 
     .font-indonesia-script {
         font-family: "Indonesia Script";
+    }
+
+    .font-kollektif {
+        font-family: "Kollektif Regular";
     }
 
 
@@ -188,11 +213,45 @@ const GlobalStyle = createGlobalStyle`
     }
     }
 
+    .ReactModal__Body--open {
+        overflow: hidden;
+    }
+
+    .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+
+    .modalContent {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin-left: -40%;
+
+        background: #fff;
+        overflow: auto;
+        WebkitOverflowScrolling: touch;
+        outline: none;
+        width: 80%;
+        height: 80%;
+    }
+
 
     /*----------------------*\
             Breakpoint
     \*----------------------*/
     html {
+        /* Breakpoint use min-width for mobile first development */
         --bp-xs: 0;
         --bp-sm: 576px;
         --bp-md: 768px;
@@ -200,6 +259,16 @@ const GlobalStyle = createGlobalStyle`
         --bp-xl: 1200px;
         --bp-xxl: 1400px; 
     }
+
+    @media (min-width: 576px) {
+        .pattern-bg {
+            background-size: 20%;
+        }
+    }
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {}
+    @media (min-width: 1400px) {}
 `;
 
 export default GlobalStyle;
