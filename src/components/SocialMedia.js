@@ -7,13 +7,14 @@ import {
   faFacebook,
   faTiktok,
   faYoutube,
+  faLine,
 } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(faTwitter, faInstagram, faFacebook, faTiktok, faYoutube);
+library.add(faTwitter, faInstagram, faFacebook, faTiktok, faYoutube, faLine);
 
 function SocialMedia(props) {
   return (
-    <SocialMediaContainer>
+    <SocialMediaContainer mainColor={props.mainColor} secondaryColor={props.secondaryColor}>
       <div className="social-media-icon">
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           <div>
@@ -48,8 +49,8 @@ const SocialMediaContainer = styled.div`
   }
 
   .social-media-icon a svg {
-    color: var(--color-yellow);
-    border: 2px solid var(--color-yellow);
+    color: ${props => props.mainColor};
+    border: 2px solid ${props => props.mainColor};
     border-radius: 11px;
     padding: 5px;
     margin: 2px;
@@ -59,11 +60,11 @@ const SocialMediaContainer = styled.div`
   }
 
   .social-media-icon a:hover > div svg {
-    border: 2px solid white;
-    color: white;
+    border: 2px solid ${props => props.secondaryColor};
+    color: ${props => props.secondaryColor};
   }
 
   .social-media-icon a:hover > div span {
-    color: white;
+    color: ${props => props.secondaryColor};
   }
 `;

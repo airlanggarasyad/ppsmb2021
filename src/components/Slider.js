@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styled from "styled-components"; 
+import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronRight, faChevronLeft, faChevronUp, faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronLeft, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default function Sliders(props) {
   const settings = {
@@ -16,12 +16,14 @@ export default function Sliders(props) {
     slidesToScroll: props.slidesToScroll,
     dots: props.dots,
     arrows: props.arrows,
+    vertical: props.vertical,
+    verticalSwiping: true,
 
     swipeToSlide: true,
     speed: 500,
-    
-    nextArrow: <NextArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize}/>,
-    prevArrow: <PrevArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize}/>,
+
+    nextArrow: <NextArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize} />,
+    prevArrow: <PrevArrow arrowColor={props.arrowColor} edgeSize={props.edgeSize} />,
 
     responsive: [
       {
@@ -30,8 +32,8 @@ export default function Sliders(props) {
           slidesToShow: props.slidesToShowMobile,
           slidesToScroll: props.slidesToScrollMobile,
         }
-      }, 
-            {
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: props.slidesToShowTablet,
@@ -42,15 +44,15 @@ export default function Sliders(props) {
 
   };
 
-    return (
-      <Container>
-        <Items>
-          <Slider {...settings}>
-            {props.children}
-          </Slider>
-        </Items>
-      </Container>
-    );
+  return (
+    <Container>
+      <Items>
+        <Slider {...settings}>
+          {props.children}
+        </Slider>
+      </Items>
+    </Container>
+  );
 }
 
 Sliders.defaultProps = {
@@ -63,7 +65,8 @@ Sliders.defaultProps = {
   slidesToShowTablet: 1,
   slidesToScrollTablet: 1,
   dots: true,
-  
+  vertical: false,
+
   arrowColor: 'var(color--black)',
   edgeSize: '-25px',
 
@@ -71,6 +74,7 @@ Sliders.defaultProps = {
 
 const Container = styled.div`
   box-sizing: border-box;
+border-radius: 25px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -82,19 +86,19 @@ const Container = styled.div`
 
 const Items = styled.div`
   display: block;
-  width: 90%;
+  width: 100%;
   align-items: center;
   text-align: center;
   align-self: center;
 `;
- 
+
 
 //Customize Arrow Style
 function NextArrow(props) {
   const { onClick } = props;
   return (
-    <Arrow onClick={onClick} style={{right: props.edgeSize, color: props.arrowColor} }>
-      <FontAwesomeIcon icon={faChevronRight}/> 
+    <Arrow onClick={onClick} style={{ right: props.edgeSize, color: props.arrowColor }}>
+      <FontAwesomeIcon icon={faChevronRight} />
     </Arrow>
   );
 }
@@ -103,9 +107,9 @@ function PrevArrow(props) {
 
   const { onClick } = props;
   return (
-  <Arrow onClick={onClick} style={{left: props.edgeSize, color: props.arrowColor}}> 
-    <FontAwesomeIcon icon={faChevronLeft}/> 
-  </Arrow>
+    <Arrow onClick={onClick} style={{ left: props.edgeSize, color: props.arrowColor }}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+    </Arrow>
   );
 }
 

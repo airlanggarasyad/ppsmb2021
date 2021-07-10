@@ -1,64 +1,113 @@
-import React, {Component} from 'react'
-import {MenuItems} from "./MenuItems"
+import React, { Component } from 'react'
+import { useState } from 'react'
+import { MenuItems } from "./MenuItems"
 import styled from "styled-components";
 import GlobalStyle from '../../globalStyle';
 
 import LogoPPSMBOfficial from '../../assets/img/logo-ppsmb-official.webp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
-// import Route from 'react-router-dom';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+    Router,
+    Switch,
+    Link,
+    Route,
+    useRouteMatch,
+} from "react-router-dom";
+import Beranda from '../../pages/Beranda';
+import FAQ from '../../pages/FAQ';
+import Galeri from '../../pages/Galeri';
 
-export default class Navbar extends Component{
-    state = {clicked: false}
+export default class Navbar extends Component {
+    state = { clicked: false }
 
     handleClick = () => {
-        this.setState({ clicked : !this.state.clicked})
+        this.setState({ clicked: !this.state.clicked })
+    }
+    nothing = () => {
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <Header>
-                <GlobalStyle/>
-                <NavStyled>
-
+                <nav className='navbar'>
                     {/* Left-corner: Logo PPSMB */}
-                    <NavLogoStyled href ="/beranda">
-                        <img src={LogoPPSMBOfficial} alt='Logo PPSMB'/>
+                    <Link to="/beranda" className='logo' onClick={((this.state.clicked) ? this.handleClick : this.nothing())}>
+                        <img src={LogoPPSMBOfficial} alt='Logo PPSMB' />
                         <p>PPSMB UGM 2021</p>
-                    </NavLogoStyled>
-                                
+                    </Link>
+
                     {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
-                    <NavItemsStyled className={this.state.clicked ? 'nav-items active' : 'nav-items'}>
-                        {MenuItems.map((item,index) => {
+                    <NavItemsStyled className={this.state.clicked ? 'nav-items active' : 'nav-items'} onClick={this.handleClick}>
+                        {MenuItems.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <NavLinksStyled className='nav-links' href={item.url}>{item.title}</NavLinksStyled>
+                                    <Link className='nav-links' to={item.url}>{item.title}</Link>
                                 </li>
                             )
                         })}
                     </NavItemsStyled>
 
                     {/* Right-corner mobile: Hamburger bar & cross symbol*/}
-                    <NavIconStyled  onClick={this.handleClick}>
-                        <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars } className='fa-icon'/>
-                    </NavIconStyled>                    
-                </NavStyled>
+                    <NavIconStyled onClick={this.handleClick}>
+                        <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars} className='fa-icon' />
+                    </NavIconStyled>
+                </nav>
+
             </Header>
         )
     }
-    
+
 }
 
 const Header = styled.header` //Give block with same height as absolute navbar
-    height: calc(0.5rem + 8vmin);
     display: inline-block;
     width: 100%;
-`
-
-const NavStyled = styled.nav`
-    //Container style
-    z-index: 3;
     box-sizing: border-box;
+    height: calc(0.5rem + 7.5vmin);
+
+    .navbar{
+        //Container style
+        z-index: 3;
+        background: var(--color-white);
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+        padding: 0.6vmin;
+        width: 100%;
+        top: 0;
+
+        //Text style
+        white-space: nowrap;
+        font-size: calc(0.5rem + 1.5vmin);
+
+        //Flex layout
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .logo{
+            display:flex;
+            color: var(--color-darkblue);
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            margin-left: 5vmin;
+            cursor: pointer;
+
+            img {
+                height: 2.5em;
+                padding: 0.5em;
+            }
+            
+            p {
+                color: var(--color-darkblue);
+                text-decoration: none;    
+                font-weight: bold;
+                font-size: calc(0.5rem + 2vmin);
+            }
+        }
     background: var(--color-white);
     box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
     height: calc(0.5rem + 8vmin);
@@ -76,27 +125,6 @@ const NavStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     text-align: center;
-`
-
-const NavLogoStyled = styled.a`
-    display:flex;
-    color: var(--color-darkblue);
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    margin-left: 5vmin;
-    cursor: pointer;
-
-    img {
-        height: 1.8em;
-        margin: 10px;
-    }
-    
-    p {
-        color: var(--color-darkblue);
-        text-decoration: none;    
-        font-weight: bold;
-        font-size: calc(0.5rem + 2vmin);
     }
 `
 const NavItemsStyled = styled.ul`
@@ -132,28 +160,28 @@ const NavItemsStyled = styled.ul`
             box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
         }
     }
-`
 
-const NavLinksStyled = styled.a`
-    color: var(--color-black);
-    text-decoration: none;
-    transition: all 0.2s ease-out;  
+    .nav-links{            
+            color: var(--color-black);
+            text-decoration: none;
+            transition: all 0.2s ease-out;  
 
-    &.nav-links:hover {
-        color: var(--color-darkblue);
-    }
+            &:hover {
+                color: var(--color-darkblue);
+            }
 
-    @media (max-width: 1024px) {
-        width: 100%;
-        display: table;
-        padding: 3vh 0 3vh 0;
-    
-        &.nav-links:hover {
-            background-color: var(--color-darkblue);
-            color: var(--color-white);
-            transition: all 0.2s ease-out;
+            @media (max-width: 1024px) {
+                width: 100%;
+                display: table;
+                padding: 3vh 0 3vh 0;
+            
+                &:hover {
+                    background-color: var(--color-darkblue);
+                    color: var(--color-white);
+                    transition: all 0.2s ease-out;
+                }
+            } 
         }
-    } 
 `
 
 const NavIconStyled = styled.image`

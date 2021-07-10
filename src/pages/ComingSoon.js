@@ -13,7 +13,7 @@ import Batik from "../assets/img/batik-color.svg";
 
 export default function ComingSoon() {
   return (
-    <>
+    <>      
       <Helmet>
         <link rel="preload" href={LogoPPSMB} as="image" type="image/svg+xml" />
       </Helmet>
@@ -211,7 +211,7 @@ const Container = styled.div`
       grid-column: 5 / span 7;
       grid-row: 2 / span 4;
       align-self: center;    
-      just-self: center;
+      justify-self: center;
     }
 
     .logo-ppsmb {
@@ -246,5 +246,5 @@ const Container = styled.div`
   @media (min-width: 1200px) {  }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {  }
+  /* @media (min-width: 1400px) { ... }; */
 `;
