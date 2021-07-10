@@ -1,7 +1,7 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: '/beranda'
+        url: '/'
     },
     {
         title: 'Agenda Materi',

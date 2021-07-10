@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import VideoContainer from "../components/VideoContainer";
 import Sliders from "../components/Slider";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
+import Slider from "react-slick";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";
 import Batik from "../assets/img/batik-color.svg";
@@ -120,7 +121,7 @@ var video = ukmVideos.map(function (sekber) {
     <div className="sekber">
       <h3>{sekber.sekberName}</h3>
       <div className="video-carousel">
-        <Sliders
+        <Slider
           slidesToShow={3}
           slidesToShowMobile={2}
           slidesToShowTablet={3}
@@ -128,7 +129,7 @@ var video = ukmVideos.map(function (sekber) {
           dots={false}
         >
           {videosSekber}
-        </Sliders>
+        </Slider>
       </div>
     </div>
   );
