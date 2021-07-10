@@ -21,6 +21,15 @@ import mainBG from '../assets/img/pattern-bg-white.webp'
 import yellowBG from '../assets/img/pattern-bg-yellow.webp'
 import darkBlueBG from '../assets/img/pattern-bg-darkblue.webp'
 import VideoContainer from "../components/VideoContainer";
+import DayCard from "../components/Agenda/DayCard";
+import LiniMasa from "../components/Card"
+import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
+import BgTwo from "../assets/images/agenda/DayCardContainer/two.png";
+import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
+import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
+import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
+import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
+import Slider from "react-slick";
 
 
 export default function Beranda() {
@@ -63,7 +72,7 @@ export default function Beranda() {
                     <div className='hero-content'>
                         <div className='content-title'>
                             <div>
-                                <Fade left delay={2000} >
+                                <Fade left >
                                     <h2 className="text-center m-0 ppsmb ppsmb-darkblue">
                                         PPSMB UGM
                                         <span className="ppsmb-blue"> 2</span>
@@ -91,26 +100,47 @@ export default function Beranda() {
 
 
                         </div>
-                        {/* <div className='lini-masa text-center ppsmb-darkblue'>
-                            <h2>Lini Masa</h2> 
-                             <Sliders
+                        <div className='lini-masa text-center ppsmb-darkblue'>
+                            <h2>Lini Masa</h2>
+                            <Sliders
                                 slidesToShow={3}
                                 slidesToShowMobile={2}
-                                slidesToShowTablet={2}>
-                                    <div>
-                                        <DayCard day="one" href='www.facebook.com'></DayCard>
-                                    </div>
-                                    <div>
-                                        <DayCard day="two" href='www.facebook.com'></DayCard>
-                                    </div>
-                                    <div>
-                                        <DayCard day="three" href='www.facebook.com'></DayCard>
-                                    </div>
-                                    <div>
-                                        <DayCard day="four" href='www.facebook.com'></DayCard>
-                                    </div>
-                                </Sliders> 
-                        </div> */}
+                                slidesToShowTablet={2}
+                                slidesToScroll={1}>
+                                <LiniMasa
+                                    mainText='Surat Keputusan Rektor'
+                                    mainTextColor='var(--color-white)'
+                                    background={BgOne}
+                                    title='28 Jun 21'
+                                    titleColor='var(--color-white)'
+                                    headerColor='var(--color-redpink)'
+                                    shadow='rgba(255,190,0,0.4)'
+                                    link='www.facebook.com'>
+                                </LiniMasa>
+
+                                <LiniMasa
+                                    mainText='Surat Keputusan Rektor'
+                                    mainTextColor='var(--color-white)'
+                                    background={BgTwo}
+                                    title='28 Des 01'
+                                    titleColor='var(--color-white)'
+                                    headerColor='var(--color-redpink)'
+                                    shadow='rgba(1,56,94,0.8)'
+                                    link='www.facebook.com'>
+                                </LiniMasa>
+
+                                <LiniMasa
+                                    mainText='Surat Keputusan Rektor'
+                                    mainTextColor='var(--color-white)'
+                                    background={BgThree}
+                                    title='30 Sept 1965'
+                                    titleColor='var(--color-white)'
+                                    headerColor='var(--color-redpink)'
+                                    shadow='rgba(197,0,52,0.4)'
+                                    link='www.facebook.com'>
+                                </LiniMasa>
+                            </Sliders>
+                        </div>
                     </div>
 
                 </section>
@@ -122,7 +152,6 @@ export default function Beranda() {
                     <div className='videos'>
 
                         <Fade >
-                            
                             <div className="video">
                                 {/* <VideoContainer
                                     bgurl={
@@ -240,7 +269,7 @@ export default function Beranda() {
                                 <span className='ppsmb-red'>r</span>
                                 <span className='ppsmb-yellow'>b</span>
                                 <span className='ppsmb-blue'>i</span>
-                                <span className='font-indonesia-script ppsmb-white'> Gamada!</span>
+                                <span className='font-indonesia-script ppsmb-white'> Palapa!</span>
                             </h2>
                             <p>
                                 Video kreasi Palapa seputar UGM buat mengisi harimu!
@@ -386,7 +415,9 @@ const Container = styled.div`
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            height: 100vh;
+            
+            min-height: 100vh;
+            height: auto;
             padding: 10vmin;
             z-index: 1;
 
@@ -405,7 +436,7 @@ const Container = styled.div`
             .hero-logo{
                 position: absolute;
                 right: 70%;
-                width: 30vmax;
+                width: 25vmax;
                 z-index:-2;
             }
             .batiks{
@@ -421,7 +452,7 @@ const Container = styled.div`
 
 
             .hero-content{
-                width: 60%;
+                width: 70%;
                 height: 100%;
                 padding: 5vmin;
                 display: flex;
@@ -455,21 +486,35 @@ const Container = styled.div`
 
                 }
                 .lini-masa {
-                    width: 100%;
                     font-size: calc(0.5rem + 2vmin);
+                    width: 85vmin;
                 }
             }
-            @media (max-width: 576px) {
-                align-items: center;
+            @media(max-width: 1024px){
+                .hero-content{
+                    width: 80%;
+                    .lini-masa{
+                    width: 60vmin;
+                }
+                }
+                
+
+            }
+            @media (max-width: 768px) {
+                justify-content: flex-start;
 
                 .batiks{
                     display: none;
                 }
 
                 .hero-content{
-                    margin-top: 18vmin;
+                    /* margin-top: 18vmin; */
                     justify-content: flex-start;
                     width: 100%;
+
+                    .lini-masa{
+                        width: 60vmin;
+                    }
                 }
 
                 .hero-logo{
@@ -477,6 +522,7 @@ const Container = styled.div`
                     top: 70%;
                     right: 30%;
                 }
+
 
             }
 
@@ -552,7 +598,7 @@ const Container = styled.div`
                     text-align: left;
                     width: 90%;
                     border-radius: 25px 0 0 25px;
-                    padding-left: 9vmin;
+                    padding-left: 40px;
                     white-space: nowrap;
 
                     .title{
@@ -586,7 +632,6 @@ const Container = styled.div`
             }
             @media (max-width: 576px) {
                 flex-direction: column;
-                /* height: auto; */
 
                 .right {
                     order: 1;
