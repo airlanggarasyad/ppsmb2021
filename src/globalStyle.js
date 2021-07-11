@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        width:100vw;
+        width:100%;
         margin: 0;
         font-family: "Kollektif Regular";
     }
@@ -214,39 +214,72 @@ const GlobalStyle = createGlobalStyle`
     }
     }
 
+    /*----------------------*\
+            Modal
+    \*----------------------*/
+
     .ReactModal__Body--open {
         overflow: hidden;
     }
 
-    .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-  }
+    .modalOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index:20;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+        box-sizing: border-box;
+    }
 
-  .ReactModal__Overlay--after-open {
-    opacity: 1;
-  }
+    .ReactModal__Overlay--after-open {
+        opacity: 1;
+    }
 
-  .ReactModal__Overlay--before-close {
-    opacity: 0;
+    .ReactModal__Overlay--before-close {
+        opacity: 0;
   }
 
     .modalContent {
+        box-sizing: border-box;
         position: absolute;
-        top: 15%;
-        left: 50%;
+        top: 50vh;
+        left: 50vw;
         right: auto;
         bottom: auto;
-        margin-left: -40%;
-
-        background: #fff;
+        margin-left: -40vw;
+        margin-top: -40vh;
         overflow: auto;
-        WebkitOverflowScrolling: touch;
+        -webkit-overflow-scrolling: touch;
         outline: none;
         width: 80%;
-        height: 80%;
+        position: relative;
+        padding: 5vmin;
     }
 
+    .modalContent > div {
+        padding: 0;
+    }
+
+    .modalContent * {
+        margin: 0;
+    }
+
+    .modalContent .photo {
+        position: relative;
+        height: 70vh;
+        max-width:90%;
+        text-align: center;
+    }
+
+    .modalContent img {
+        max-height: 70vh;
+        width: 100%;
+        margin: 0 auto;
+    }
 
     /*----------------------*\
             Breakpoint
@@ -265,6 +298,12 @@ const GlobalStyle = createGlobalStyle`
         .pattern-bg {
             background-size: 20%;
         }
+
+        .modalContent img {
+        max-height: 70vh;
+        height:70vh;
+        width: auto;
+    }
     }
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}

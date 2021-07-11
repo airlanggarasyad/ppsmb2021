@@ -1,10 +1,9 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
-// import Gallery from 'react-grid-gallery';
-import Modal from "react-modal";
-import styled from "styled-components";
-import Sliders from "../Slider";
-import { srcPhotos } from "./Photo-Thumbnail";
+
+import { srcPhotos } from "./PhotoList";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
 export default function MasonryRow() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -19,30 +18,24 @@ export default function MasonryRow() {
     setCurrentImage(0);
     setViewerIsOpen(false);
   };
-  Modal.setAppElement("#root");
-
-  let imagesCarousel = srcPhotos.map(function (photo, index) {
-    console.log(photo.fwSrc);
-    return (
-      <div key={index} className="photo">
-        <img src={photo.fwSrc} alt="" />
-      </div>
-    );
-  });
 
   return (
-    <GalleryContainer>
+    <>
       <Gallery photos={srcPhotos} onClick={openLightbox}></Gallery>
-      <Modal
-        isOpen={viewerIsOpen}
-        onRequestClose={closeLightbox}
-        className="modalContent"
-      >
-        <Sliders>{imagesCarousel}</Sliders>
-      </Modal>
-      {/* <Gallery images={srcPhotos}></Gallery> */}
-    </GalleryContainer>
+      {viewerIsOpen && (
+          <Lightbox
+            mainSrc={srcPhotos[currentImage].fwSrc}
+            nextSrc={srcPhotos[(currentImage + 1) % srcPhotos.length].fwSrc}
+            prevSrc={srcPhotos[(currentImage + srcPhotos.length - 1) % srcPhotos.length].fwSrc}
+            onCloseRequest={closeLightbox}
+            onMovePrevRequest={() =>
+              setCurrentImage((currentImage + srcPhotos.length - 1) % srcPhotos.length)
+            }
+            onMoveNextRequest={() =>
+              setCurrentImage((currentImage + 1) % srcPhotos.length)
+            }               
+          />
+        )}
+    </>
   );
 }
-
-const GalleryContainer = styled.div``;

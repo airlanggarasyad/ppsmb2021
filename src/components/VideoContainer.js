@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import titleDecoration from "../assets/img/galeri/title-decoration.svg";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 function VideoContainer(props) {
   return (
@@ -9,13 +11,18 @@ function VideoContainer(props) {
       bgcolor={props.bgcolor}
       noDecor={props.noDecor}
     >
+    <LiteYouTubeEmbed 
+      id={props.id}
+      title={props.title}
+      onClick={console.log("Clicked")}
+    />
       <div className={`title-decoration ${props.passClass}`}>
         <div className="title-text">
           <h3>{props.title}</h3>
         </div>
         <img src={titleDecoration} alt="" />
       </div>
-      <div className="play-button">
+      {/* <div className="play-button">
         <div className="bg"></div>
         <div className="triangle">
           <svg
@@ -36,7 +43,7 @@ function VideoContainer(props) {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
     </VideoSectionContainer>
   );
 }
@@ -45,14 +52,14 @@ export default VideoContainer;
 
 const VideoSectionContainer = styled.div`
   position: relative;
-  display: flex;
+  /* display: flex; */
   aspect-ratio: 17 / 9;
   overflow: clip;
 
   width: 100%;
   border-radius: 5vmin;
   margin-bottom: 20px;
-  padding: 5%;
+  /* padding: 5%; */
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,6 +67,11 @@ const VideoSectionContainer = styled.div`
 
   * {
     margin: 0;
+  }
+
+  .yt-lite {
+    height:100%;
+    border-radius:5vmin;
   }
 
   h3 {
