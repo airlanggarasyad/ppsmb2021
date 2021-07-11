@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 
-import { srcPhotos } from "./Photo-Thumbnail";
+import { srcPhotos } from "./PhotoList";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 

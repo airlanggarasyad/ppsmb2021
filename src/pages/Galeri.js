@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 
 import VideoContainer from "../components/VideoContainer";
-import Sliders from "../components/Slider";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
 import Slider from "react-slick";
 
@@ -12,22 +11,6 @@ import Batik from "../assets/img/batik-color.svg";
 import patternBlue from "../assets/img/pattern-bg-blue.webp";
 import whiteBatik from "../assets/img/white-batik-corner.webp";
 import videoUKMHeader from "../assets/img/galeri/ornament-ukm.webp";
-
-var photoImages = [
-  { id: 1, url: "1.webp" },
-  { id: 2, url: "2.webp" },
-  { id: 3, url: "3.webp" },
-  { id: 4, url: "4.webp" },
-  { id: 5, url: "5.webp" },
-  { id: 6, url: "6.webp" },
-  { id: 7, url: "7.webp" },
-  { id: 8, url: "8.webp" },
-  { id: 9, url: "9.webp" },
-  { id: 10, url: "10.webp" },
-  { id: 11, url: "11.webp" },
-  { id: 12, url: "12.webp" },
-  { id: 13, url: "13.webp" },
-];
 
 var ukmVideos = [
   {
@@ -83,23 +66,6 @@ var ukmVideos = [
     ],
   },
 ];
-
-var photo = photoImages.map(function (photoImage) {
-  return (
-    <div key={photoImage.id} className="photo">
-      <a href={process.env.PUBLIC_URL + "/assets/img/galeri/" + photoImage.url}>
-        <img
-          src={
-            process.env.PUBLIC_URL +
-            "/assets/img/galeri/thumbnail/" +
-            photoImage.url
-          }
-          alt=""
-        />
-      </a>
-    </div>
-  );
-});
 
 var video = ukmVideos.map(function (sekber) {
   let videosSekber = sekber.videoList.map(function (videoContent) {
@@ -185,28 +151,16 @@ export default class Galeri extends Component {
             </div>
             <div className="video-list">
               <div className="video-item">
-                <VideoContainer
-                  title="Anthem PPSMB"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/4.webp"}
-                />
+                <VideoContainer id="AAtiYhMi_4o" title="Anthem PPSMB" />
               </div>
               <div className="video-item">
-                <VideoContainer
-                  title="Aftermovie PPSMB"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/7.webp"}
-                />
+                <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
               </div>
               <div className="video-item">
-                <VideoContainer
-                  title="Profil UGM"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/5.webp"}
-                />
+                <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" />
               </div>
               <div className="video-item">
-                <VideoContainer
-                  title="Hymne UGM"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/11.webp"}
-                />
+                <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" />
               </div>
             </div>
             <div className="white-batik">
@@ -217,7 +171,7 @@ export default class Galeri extends Component {
             </div>
           </section>
 
-          <section className="video-ukm pattern-bg pattern-bg-white">
+          {/* <section className="video-ukm pattern-bg pattern-bg-white">
             <div className="head">
               <div className="header-image">
                 <img src={videoUKMHeader} alt="" />
@@ -230,7 +184,7 @@ export default class Galeri extends Component {
               </div>
             </div>
             <div className="video-list-ukm">{video}</div>
-          </section>
+          </section> */}
         </GaleriContainer>
       </>
     );
@@ -246,7 +200,7 @@ const GaleriContainer = styled.div`
     min-height: 100vh;
     width: 100%;
     overflow: clip;
-
+    box-shadow: 0px 0.2em 3em 0px rgba(0, 0, 0, 0.78);
     display: flex;
     flex-direction: column;
     position: relative;
