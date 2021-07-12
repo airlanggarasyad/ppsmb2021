@@ -23,7 +23,7 @@ export default function Card(props) {
                     mainTextColor={props.mainTextColor}
                     link={props.link}
                 >
-                    <a href={props.link} target='_blank'>
+                    <a style={{textDecoration:'none'}} href={props.link} target='_blank'>
                         <div className="card-header">
                             <h6>{props.title}</h6>
                         </div>
@@ -44,7 +44,7 @@ export default function Card(props) {
 
 }
 const CardStyle = styled.div`
-  height: 27vmin;
+  height: 30vmin;
   width: 27vmin;
   display: block;
   flex-direction: column;
@@ -71,7 +71,7 @@ const CardStyle = styled.div`
     top: 0;
   }
   .card-header > h6 {
-    font-size: calc(0.5rem + 1vmin);
+    font-size: calc(0.5rem + 0.8vmin);
     margin: 0;
     color: white;
     color: ${(props) => props.titleColor};
@@ -92,7 +92,7 @@ const CardStyle = styled.div`
   .card-content > h6 {
     width:80%;
     text-align: right;
-    font-size: calc(0.5rem + 2vmin);
+    font-size: calc(0.5rem + 1.8vmin);
     color: white;
     color: ${(props) => props.mainTextColor};
     margin: 0 3vmin 3vmin 0;
@@ -100,17 +100,19 @@ const CardStyle = styled.div`
 
   }
   .card-background {
-    height: 27vmin;
+    height: 30vmin;
     width: 27vmin;
     position: absolute;
     z-index: -2;
+    display: flex;
+    justify-content: center;
   }
   .card-background > img {
-    height: 27vmin;
-    width: 27vmin;
+    height: 30vmin;
+    width: 30vmin;
   }
   .card-shadow {
-    height: 27vmin;
+    height: 30vmin;
     width: 27vmin;
     position: absolute;
     z-index: -1;
