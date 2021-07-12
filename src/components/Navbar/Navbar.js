@@ -7,11 +7,13 @@ import GlobalStyle from "../../globalStyle";
 import LogoPPSMBOfficial from "../../assets/img/logo-ppsmb-official.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
+// import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 import Beranda from "../../pages/Beranda";
 import FAQ from "../../pages/FAQ";
 import Galeri from "../../pages/Galeri";
 import Modal from "react-modal";
+import {Link} from "../../Routes/RelativeRoute"
+
 
 export default class Navbar extends Component {
   state = { clicked: false, modalIsOpen: false };
@@ -25,7 +27,7 @@ export default class Navbar extends Component {
     if (e.target.classList[1] != undefined) {
       this.setState({clicked: this.clicked, modalIsOpen: true });
     }
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   closeModal = () => {
@@ -42,7 +44,8 @@ export default class Navbar extends Component {
         <nav className="navbar">
           {/* Left-corner: Logo PPSMB */}
           <Link
-            to="./"
+            to="/"
+            relative
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
           >
@@ -62,6 +65,7 @@ export default class Navbar extends Component {
                     className={item.block ? "nav-links block" : "nav-links"}
                     to={item.block ? {} : item.url}
                     onClick={this.openModal}
+                    relative
                   >
                     {item.title}
                   </Link>
