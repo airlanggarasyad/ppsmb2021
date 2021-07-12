@@ -1,41 +1,49 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 
-import { srcPhotos } from "./PhotoList";
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import { srcPhotos, srlPhotos } from "./PhotoList";
+import {SRLWrapper, useLightbox} from 'simple-react-lightbox'
+import Fade from "react-reveal/Fade";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 export default function MasonryRow() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const { openLightbox, closeLightbox } = useLightbox()
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
+  const options = {
+    settings: {
+      autoplaySpeed: 1500,
+      transitionSpeed: 500,
+      hideControlsAfter: 1000,
+      slideAnimationType: 'both',
+      slideTransitionSpeed: 0.9,
+    },
+    buttons: {
+      backgroundColor: "#F31958",
+      iconColor: "#FFFFFF",
+      showDownloadButton: false,
+      showFullscreenButton: false,
+    },
+    caption: {
+      captionColor: "#a6cfa5",
+      captionFontFamily: "Raleway, sans-serif",
+      captionFontWeight: "300",
+      captionTextTransform: "uppercase",
+    },
+    thumbnails: {
+      showThumbnails: false,
+    }
   };
+
+  const imageRenderer = useCallback(({ index, left, top, key, photo }) => (
+      <Fade>
+        <img alt={photo.alt} {...photo} onClick={() => openLightbox(index)} style={{padding: "0.5vmin", cursor: "pointer"}}/>
+      </Fade>
+  ));
 
   return (
     <>
-      <Gallery photos={srcPhotos} onClick={openLightbox}></Gallery>
-      {viewerIsOpen && (
-          <Lightbox
-            mainSrc={srcPhotos[currentImage].fwSrc}
-            nextSrc={srcPhotos[(currentImage + 1) % srcPhotos.length].fwSrc}
-            prevSrc={srcPhotos[(currentImage + srcPhotos.length - 1) % srcPhotos.length].fwSrc}
-            onCloseRequest={closeLightbox}
-            onMovePrevRequest={() =>
-              setCurrentImage((currentImage + srcPhotos.length - 1) % srcPhotos.length)
-            }
-            onMoveNextRequest={() =>
-              setCurrentImage((currentImage + 1) % srcPhotos.length)
-            }               
-          />
-        )}
+      <Gallery photos={srcPhotos} renderImage={imageRenderer}></Gallery>
+      <SRLWrapper elements={srlPhotos} options={options}/>
     </>
   );
 }

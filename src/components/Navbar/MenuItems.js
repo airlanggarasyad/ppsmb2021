@@ -1,22 +1,22 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: '/'
+        url: './'
     },
     {
         title: 'Agenda Materi',
-        url: '/agenda'
+        url: './agenda'
     },
     {
         title: 'Peta UGM',
-        url: '/peta'
+        url: './peta'
     },
     {
         title: 'Galeri',
-        url: '/galeri'
+        url: './galeri'
     },
     {
         title: 'FAQ',
-        url: '/faq'
+        url: './faq'
     },
 ]

@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
+import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
+import Zoom from "react-reveal/Zoom";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 import VideoContainer from "../components/VideoContainer";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
@@ -104,24 +108,28 @@ var video = ukmVideos.map(function (sekber) {
 export default class Galeri extends Component {
   render() {
     return (
-      <>
+      <SimpleReactLightbox>
         <Helmet>
           <title>Galeri | PPSMB UGM 2021</title>
         </Helmet>
         <GaleriContainer>
           <section className="galeri-hero pattern-bg pattern-bg-white">
             <div className="galeri-title">
-              <div className="batik">
-                <img src={Batik} alt="" />
-                <img src={Batik} alt="" />
-                <img src={Batik} alt="" />
-              </div>
-              <h1 className="font-indonesia-script font-normal ppsmb-redpink">
-                Galeri
-              </h1>
+              <Fade>
+                <div className="batik">
+                  <img src={Batik} alt="" />
+                  <img src={Batik} alt="" />
+                  <img src={Batik} alt="" />
+                </div>
+                <h1 className="font-indonesia-script font-normal ppsmb-redpink">
+                  Galeri
+                </h1>
+              </Fade>
             </div>
             <div>
-              <img className="hero-ornament" src={heroGaleriDesktop} alt="" />
+              <Fade right>
+                <img className="hero-ornament" src={heroGaleriDesktop} alt="" />
+              </Fade>
             </div>
           </section>
 
@@ -142,30 +150,36 @@ export default class Galeri extends Component {
 
           <section className="gadjah-mada-kita">
             <div className="title">
-              <h2 className="font-kollektif ppsmb-white font-normal">
-                Gadjah Mada
-              </h2>
-              <h2 className="font-indonesia-script font-normal   ppsmb-yellow">
-                Kita
-              </h2>
+              <Zoom>
+                <h2 className="font-kollektif ppsmb-white font-normal">
+                  Gadjah Mada
+                </h2>
+                <h2 className="font-indonesia-script font-normal   ppsmb-yellow">
+                  Kita
+                </h2>
+              </Zoom>
             </div>
             <div className="video-list">
-              <div className="video-item">
-                <VideoContainer id="AAtiYhMi_4o" title="Anthem PPSMB" />
-              </div>
-              <div className="video-item">
-                <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
-              </div>
-              <div className="video-item">
-                <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" />
-              </div>
-              <div className="video-item">
-                <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" />
-              </div>
+              <Fade bottom delay={200}>
+                <div className="video-item">
+                  <VideoContainer id="AAtiYhMi_4o" title="Anthem PPSMB" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" />
+                </div>
+              </Fade>
             </div>
-            <div className="white-batik">
-              <img src={whiteBatik} alt="" />
-            </div>
+            <Zoom delay={500}>
+              <div className="white-batik">
+                <img src={whiteBatik} alt="" />
+              </div>
+            </Zoom>
             <div className="white-batik">
               <img src={whiteBatik} alt="" />
             </div>
@@ -186,7 +200,7 @@ export default class Galeri extends Component {
             <div className="video-list-ukm">{video}</div>
           </section> */}
         </GaleriContainer>
-      </>
+      </SimpleReactLightbox>
     );
   }
 }
@@ -401,9 +415,10 @@ const GaleriContainer = styled.div`
     }
 
     .hero-ornament {
-      right: 0;
+      right: -20%;
       bottom: 0;
-      width: 65%;
+      width: auto;
+      height: 100%;
     }
 
     .gadjah-mada-kita {
@@ -446,6 +461,10 @@ const GaleriContainer = styled.div`
 
     .white-batik img {
       width: 60%;
+    }
+
+    .hero-ornament {
+      right: -10%;
     }
   }
 `;
