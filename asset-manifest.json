@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "./static/js/main.498d21a6.chunk.js",
-    "main.js.map": "./static/js/main.498d21a6.chunk.js.map",
+    "main.js": "./static/js/main.d81a4acc.chunk.js",
+    "main.js.map": "./static/js/main.d81a4acc.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.89cd1817.js",
     "runtime-main.js.map": "./static/js/runtime-main.89cd1817.js.map",
     "static/css/2.e2c1ff4d.chunk.css": "./static/css/2.e2c1ff4d.chunk.css",
-    "static/js/2.bf0848cb.chunk.js": "./static/js/2.bf0848cb.chunk.js",
-    "static/js/2.bf0848cb.chunk.js.map": "./static/js/2.bf0848cb.chunk.js.map",
+    "static/js/2.cceb54f8.chunk.js": "./static/js/2.cceb54f8.chunk.js",
+    "static/js/2.cceb54f8.chunk.js.map": "./static/js/2.cceb54f8.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.e2c1ff4d.chunk.css.map": "./static/css/2.e2c1ff4d.chunk.css.map",
-    "static/js/2.bf0848cb.chunk.js.LICENSE.txt": "./static/js/2.bf0848cb.chunk.js.LICENSE.txt",
+    "static/js/2.cceb54f8.chunk.js.LICENSE.txt": "./static/js/2.cceb54f8.chunk.js.LICENSE.txt",
     "static/media/Arrow.850497d5.png": "./static/media/Arrow.850497d5.png",
     "static/media/Indonesia-Script.241a9023.woff": "./static/media/Indonesia-Script.241a9023.woff",
     "static/media/Kollektif.f40b6345.woff": "./static/media/Kollektif.f40b6345.woff",
@@ -25,10 +25,10 @@
     "static/media/PPSMB-KedokteranGigi.webp": "./static/media/PPSMB-KedokteranGigi.0f47accd.webp",
     "static/media/PPSMB-KedokteranHewan.webp": "./static/media/PPSMB-KedokteranHewan.3dffbd60.webp",
     "static/media/PPSMB-Kehutanan.webp": "./static/media/PPSMB-Kehutanan.0564dff7.webp",
-    "static/media/PPSMB-MIPA.webp": "./static/media/PPSMB-MIPA.31a2cfcc.webp",
+    "static/media/PPSMB-MIPA.webp": "./static/media/PPSMB-MIPA.95587b7c.webp",
     "static/media/PPSMB-Pertanian.webp": "./static/media/PPSMB-Pertanian.8b16c10b.webp",
     "static/media/PPSMB-Psikologi.webp": "./static/media/PPSMB-Psikologi.b3246b41.webp",
-    "static/media/PPSMB-SekolahVokasi.webp": "./static/media/PPSMB-SekolahVokasi.1fce783a.webp",
+    "static/media/PPSMB-SekolahVokasi.webp": "./static/media/PPSMB-SekolahVokasi.27ae7243.webp",
     "static/media/PPSMB-Teknik.webp": "./static/media/PPSMB-Teknik.0e6fe674.webp",
     "static/media/agenda.0d24bb4e.png": "./static/media/agenda.0d24bb4e.png",
     "static/media/apaituppsmb.webp": "./static/media/apaituppsmb.242cdd40.webp",
@@ -66,7 +66,7 @@
   "entrypoints": [
     "static/js/runtime-main.89cd1817.js",
     "static/css/2.e2c1ff4d.chunk.css",
-    "static/js/2.bf0848cb.chunk.js",
-    "static/js/main.498d21a6.chunk.js"
+    "static/js/2.cceb54f8.chunk.js",
+    "static/js/main.d81a4acc.chunk.js"
   ]
 }
