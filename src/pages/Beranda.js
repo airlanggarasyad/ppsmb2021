@@ -31,7 +31,6 @@ import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 import Slider from "react-slick";
 
-
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
         title: "PPSMB UGM 2021",
@@ -103,9 +102,9 @@ export default function Beranda() {
                         <div className='lini-masa text-center ppsmb-darkblue'>
                             <h2>Lini Masa</h2>
                             <Sliders
-                                slidesToShow={3}
-                                slidesToShowMobile={2}
-                                slidesToShowTablet={2}
+                                slidesToShow={1}
+                                slidesToShowMobile={1}
+                                slidesToShowTablet={1}
                                 slidesToScroll={1}>
                                 <LiniMasa
                                     mainText='Surat Keputusan Rektor'
@@ -115,10 +114,10 @@ export default function Beranda() {
                                     titleColor='var(--color-white)'
                                     headerColor='var(--color-redpink)'
                                     shadow='rgba(255,190,0,0.4)'
-                                    link='www.facebook.com'>
+                                    link='www.'>
                                 </LiniMasa>
 
-                                <LiniMasa
+                                {/* <LiniMasa
                                     mainText='Surat Keputusan Rektor'
                                     mainTextColor='var(--color-white)'
                                     background={BgTwo}
@@ -138,7 +137,7 @@ export default function Beranda() {
                                     headerColor='var(--color-redpink)'
                                     shadow='rgba(197,0,52,0.4)'
                                     link='www.facebook.com'>
-                                </LiniMasa>
+                                </LiniMasa> */}
                             </Sliders>
                         </div>
                     </div>
@@ -153,16 +152,7 @@ export default function Beranda() {
 
                         <Fade >
                             <div className="video">
-                                {/* <VideoContainer
-                                    bgurl={
-                                        process.env.PUBLIC_URL +
-                                        "/assets/img/galeri/" +
-                                        videoPlay.thumbnail
-                                    }
-                                    bgcolor={"var(--color-redpink)"}
-                                    noDecor
-                                ></VideoContainer> */}
-                                <YoutubeEmbed embedId='fGOamlnU_uI' />
+                                <VideoContainer id="fGOamlnU_uI" title="Selamat Datang Gamada!" />
                             </div>
 
                         </Fade>
@@ -175,13 +165,13 @@ export default function Beranda() {
                                 <Pulse delay={2500} forever={true}>
                                     <div className='title'>
                                         <Lightspeed right>
-                                            <h1 className='ppsmb-darkblue'>Selamat Datang
-                            <Fade delay={500} left cascade >
-                                                    <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
+                                            <h1 className='ppsmb-darkblue underline red-stick'>Selamat Datang
+                                                <Fade delay={500} left cascade >
+                                                    <span className='font-indonesia-script'> Gamada!</span>
                                                 </Fade>
                                             </h1>
                                         </Lightspeed>
-                                        <img src={RedStick} className='red-stick'></img>
+                                            <img src={RedStick} className='red-stick'></img>
                                     </div>
                                     <div className="batiks">
                                         <img src={Batik} alt="" srcset="" className="batik" />
@@ -257,22 +247,12 @@ export default function Beranda() {
                 <section className='serba-serbi'>
                     <div className='title'>
                         <Fade left >
-                            <h2>
-                                <span className='ppsmb-orange'>S</span>
-                                <span className='ppsmb-yellow'>e</span>
-                                <span className='ppsmb-red'>r</span>
-                                <span className='ppsmb-orange'>b</span>
-                                <span className='ppsmb-red'>a</span>
-                                <span className='ppsmb-white'>-</span>
-                                <span className='ppsmb-red'>S</span>
-                                <span className='ppsmb-blue'>e</span>
-                                <span className='ppsmb-red'>r</span>
-                                <span className='ppsmb-yellow'>b</span>
-                                <span className='ppsmb-blue'>i</span>
+                            <h2 className="ppsmb-yellow">
+                                Serba-Serbi
                                 <span className='font-indonesia-script ppsmb-white'> Palapa!</span>
                             </h2>
                             <p>
-                                Video kreasi Palapa seputar UGM buat mengisi harimu!
+                                Video menarik seputar UGM buat mengisi harimu!
                     </p>
                         </Fade>
                     </div>
@@ -281,7 +261,7 @@ export default function Beranda() {
                     <div className='main'>
                         <div className='video-utama'>
                             <Fade left spy={videoPlay}>
-                                <YoutubeEmbed embedId={videoPlay.embedId} />
+                            <VideoContainer id={videoPlay.embedId} title={videoPlay.title} />
                                 <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
                                 <p>{videoPlay.desc}</p>
                             </Fade>
@@ -301,7 +281,7 @@ export default function Beranda() {
                                     <Fade bottom>
                                         <Video onClick={onClickThumbnail}>
                                             <img src={item.thumbnail} alt={item.title + ' thumbnail'} />
-                                            <div>
+                                            <div style={{ overflow: 'hidden' }}>
                                                 <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
                                                 <p>{item.desc}</p>
                                             </div>
@@ -348,7 +328,6 @@ export default function Beranda() {
 const Card = styled.div`
     box-sizing: border-box;
     float: center;
-    background-color:grey;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -359,38 +338,46 @@ const Card = styled.div`
 
 const Video = styled.div`
     box-sizing: border-box;
-    /* background-color:grey; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     cursor: pointer;
-    margin: 2vmin 0;
+    margin-bottom: 2vmin;
+    height: 24min;
+    padding: 2vmin;
     img{
         border-radius: 25px;
-        width: 14vw;
+        width: auto;
+        height: 20vmin;
     }
     div{
-        height: 100%;
+        height: 20vmin;
+        white-space: pre-wrap;
         overflow-y: hidden;
         padding: 0 10px;
         p{
-            margin: 0.2rem;
+            font-size: calc(0.5rem + 1.5vmin);
+            margin: 0;
             padding: 0;
         }
         .title{
             font-weight: bold;
+            margin-bottom: 0.5rem;
         }
     }
 
     @media(max-width: 1024px){
         img{
             width: 30vmin;
+            border-radius: 10px;
+        }
+        div{
+            p{
+                /* display: hidden; */
+            }
         }
     }
-
-
 `
-
 const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
@@ -502,13 +489,13 @@ const Container = styled.div`
             }
             @media (max-width: 768px) {
                 justify-content: flex-start;
+                padding: 20vmin 10vmin;
 
                 .batiks{
                     display: none;
                 }
 
                 .hero-content{
-                    /* margin-top: 18vmin; */
                     justify-content: flex-start;
                     width: 100%;
 
@@ -539,6 +526,7 @@ const Container = styled.div`
             background-color: var(--color-yellow);
             /* height: calc(0.5rem + 92vmin); */
             z-index: 2;
+            height: 110vh;
 
 
             .left-corner{
@@ -571,7 +559,7 @@ const Container = styled.div`
                 .video {
                     text-align: center;
                     margin: 10px;
-                    width: 60%;
+                    width: 80%;
                 }
             }
 
@@ -594,26 +582,38 @@ const Container = styled.div`
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    justify-content: space-between;
                     background-color: var(--color-white);
                     text-align: left;
                     width: 90%;
                     border-radius: 25px 0 0 25px;
-                    padding-left: 40px;
+                    padding: 10px 10px 10px 40px;
                     white-space: nowrap;
+                    height: auto;
 
                     .title{
-                        font-size: calc(0.5rem + 1.4vw);
-                        width:80%;
+                        width: auto;
                         z-index: 1;
-                        .font-indonesia-script{
-                            display: inline-block;
-                            transform: rotate(-18deg) translate(-40%, -10%);
-                            font-weight: lighter;
+                        margin: 0;
+                        padding: 0;
+                        h1{
+                            font-size: calc(0.5rem + 4vmin);
+                            .font-indonesia-script{
+                                display: inline-block;
+                                transform: rotate(-18deg) translate(-40%, -10%);
+                                font-weight: lighter;
+                            }
                         }
+
                         .red-stick{
-                            width: 40%;
-                            transform: translateY(-150%);
-                        }
+                                /* background-image: url(${RedStick});
+                                background-position: 0 1.06em; */
+                                width: 25vmin;
+                                transform: translateY(-150%);
+                            }
+
+                        
+                        
                     }
                     .batiks{
                         display: flex;
@@ -630,8 +630,9 @@ const Container = styled.div`
                     }
                 }
             }
-            @media (max-width: 576px) {
+            @media (max-width: 1024px) {
                 flex-direction: column;
+                height: auto;
 
                 .right {
                     order: 1;
@@ -639,7 +640,7 @@ const Container = styled.div`
                 }
                 .videos {
                     order: 2;
-                    width: 100vw;
+                    width: 100%;
                     margin-bottom: 25vmin;
                 }
 
@@ -660,6 +661,7 @@ const Container = styled.div`
             overflow: hidden;
             line-height: calc(0.5rem + 3.3vmin);
             max-width: 1440px;
+            min-height: 115vh;
 
             .desc{
                 h2{
@@ -722,10 +724,11 @@ const Container = styled.div`
             }
 
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1024px) {
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            /* min-height: 150vh; */
 
             padding: 10%;
 
@@ -764,9 +767,9 @@ const Container = styled.div`
             
             .title{
                 h2{
-                    span{
-                        font-size: calc(0.5rem + 4vmin);
-                    }
+                    margin: 0;
+                    padding: 0;
+                    font-size: calc(0.5rem + 4vmin);
                     .font-indonesia-script{
                         display: inline-block;
                         transform: rotate(-18deg) translate(-40%, -10%);
@@ -808,8 +811,7 @@ const Container = styled.div`
                 .daftar-video{
                     overflow-y: auto;
                     width: 40%;
-                    /* flex-grow:4; */
-                    height: 30vw;
+                    height: auto;
                     padding-left: 4px;
                     /* background-color: yellow; */
                 }
@@ -829,6 +831,7 @@ const Container = styled.div`
                         padding: 0;
                     }
                     .daftar-video{
+                        height: auto;
                         width: 100%;
                         padding: 0 0 5vmin 0;
                     }
