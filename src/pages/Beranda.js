@@ -61,7 +61,7 @@ export default function Beranda() {
                         <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
                     </Fade>
                     <div className='batiks'>
-                        <Spin duration={4000} count={5}>
+                        <Spin duration={4000} forever>
                             <img src={Batik} alt="" srcset="" className="batik" />
                             <img src={Batik} alt="" srcset="" className="batik" />
                             <img src={Batik} alt="" srcset="" className="batik" />
@@ -854,7 +854,8 @@ const Unit = styled.a`
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(${props => props.i} * 18deg)) translateZ(190px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    will-change: transform;
+    /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); */
 
     cursor: pointer;
     img{
