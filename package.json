@@ -1,5 +1,6 @@
 {
   "name": "ppsmb2021",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +13,9 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-grid-gallery": "^0.5.5",
     "react-helmet": "^6.1.0",
+    "react-image-lightbox": "^5.1.1",
+    "react-lite-youtube-embed": "^2.0.3",
     "react-modal": "^3.14.3",
     "react-photo-gallery": "^8.0.0",
     "react-reveal": "^1.2.2",

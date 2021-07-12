@@ -10,7 +10,7 @@ export const DaftarPPSMB = [
     },
     {
         title: 'PPSMB ORGANIK',
-        desc: 'PPSMB ORGANIK atau Orientasi Generatif Intelektual Kontributif merupakan kegiatan resmi pengenalan kampus Fakultas Pertanian. Tahun ini ORGANIK mengangkat tema "Sinergi Bersama dalam Memberdayakan Potensi Nusantara". PPSMB ORGANIK menyajikan kegiatan sinkronus dan asinkronus dengan materi yang dikemas secara interaktif dan menyenangkan. Amarta muda diharapkan menjadi generasi intelektual dan kontributif membangun masa depan pertanian dan perikanan Indonesia dengan memaksimalkan potensi daerahnya.',
+        desc: 'PPSMB ORGANIK atau Orientasi Generatif Intelektual Kontributif merupakan kegiatan resmi pengenalan kampus Fakultas Pertanian. Tahun ini, PPSMB ORGANIK mengangkat tema "Sinergi Bersama dalam Memberdayakan Potensi Nusantara". PPSMB ORGANIK menyajikan kegiatan sinkronus dan asinkronus dengan materi yang dikemas secara interaktif dan menyenangkan. Amarta muda diharapkan menjadi generasi intelektual dan kontributif membangun masa depan pertanian dan perikanan Indonesia dengan memaksimalkan potensi daerahnya.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Pertanian.webp').default,
         lineLink: 'http://line.me/ti/p/~wbe8960t',
         instaLink: "http://instagram.com/ppsmb_organik",
@@ -19,7 +19,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB PAPYRUS',
-        desc: 'PPSMB Papyrus adalah kegiatan orientasi mahasiswa baru Fakultas Farmasi UGM yang bertujuan untuk memperkenalkan nilai-nilai kefarmasian kepada mahasiswa baru agar dapat menjadi farmasis yang handal dan kompeten. PPSMB Papyrus 2021 mengangkat tema "Nature" yang merepresentasikan bahan-bahan alam yang merupakan faktor penting dari ilmu kefarmasian',
+        desc: 'PPSMB Papyrus adalah kegiatan orientasi mahasiswa baru Fakultas Farmasi UGM yang bertujuan untuk memperkenalkan nilai-nilai kefarmasian kepada mahasiswa baru agar dapat menjadi farmasis yang handal dan kompeten. PPSMB Papyrus 2021 mengangkat tema "Nature" yang merepresentasikan bahan-bahan alam yang merupakan faktor penting dari ilmu kefarmasian.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Farmasi.webp').default,
         lineLink: 'http://line.me/ti/p/~oss9427n',
         instaLink: "http://instagram.com/papyrusfaugm",
@@ -29,7 +29,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB SIMFONI',
-        desc: 'Pelatihan Pembelajar Sukses Bagi Mahasiswa Baru–Sosialisasi dan Inisiasi Mahasiswa Fakultas Ekonomika dan Bisnis Universitas Gadjah Mada. Pada tahun ini, PPSMB SIMFONI 2021 mengusung tema "Mewujudkan Insan yang Berkepedulian Sosial dan Berintegritas dalam Membangun Ibu Pertiwi" dengan tujuan membentuk kepribadian mahasiswa yang memiliki tingkat kepekaan dan kepedulian sosial yang tinggi dan menumbuhkan budaya integritas dalam membangun Indonesia.',
+        desc: 'Pelatihan Pembelajar Sukses Bagi Mahasiswa Baru–Sosialisasi dan Inisiasi Mahasiswa Fakultas Ekonomika dan Bisnis Universitas Gadjah Mada (PPSMB SIMFONI) 2021 mengusung tema "Mewujudkan Insan yang Berkepedulian Sosial dan Berintegritas dalam Membangun Ibu Pertiwi" dengan tujuan membentuk kepribadian mahasiswa yang memiliki tingkat kepekaan dan kepedulian sosial yang tinggi dan menumbuhkan budaya integritas dalam membangun Indonesia.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-EkonomikadanBisnis.webp').default,
         lineLink: 'http://line.me/ti/p/~157JKJCF',
         instaLink: "http://instagram.com/simfoni.febugm",
@@ -39,7 +39,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB KAMPUNG BUDAYA',
-        desc: 'PPSMB KAMPUNG BUDAYA merupakan nama dari PPSMB Fakultas Ilmu Budaya UGM yang mencerminkan FIB, di mana mahasiswa dengan berbagai latar belakang berdinamika. Tahun ini, kami mengusung tema ‘Gemilang Harmoni’ dengan tagline “Corak Rona Lukiskan Nirmana”. Harapannya, PPSMB Kampung Budaya dapat menjadi gerbang bagi mahasiswa supaya lebih berani berekspresi sesuai warna masing-masing, serta menciptakan kenangan di rumah dan keluarga yang baru.',
+        desc: 'PPSMB KAMPUNG BUDAYA merupakan nama dari PPSMB Fakultas Ilmu Budaya UGM yang mencerminkan FIB, di mana mahasiswa dengan berbagai latar belakang berdinamika. Tahun ini, kami mengusung tema “Gemilang Harmoni” dengan tagline “Corak Rona Lukiskan Nirmana”. Harapannya, PPSMB Kampung Budaya dapat menjadi gerbang bagi mahasiswa supaya lebih berani berekspresi sesuai warna masing-masing, serta menciptakan kenangan di rumah dan keluarga yang baru.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-IlmuBudaya.webp').default,
         lineLink: 'http://line.me/ti/p/~tfm0655d',
         instaLink: "http://instagram.com/ppsmb.fibugm",
@@ -59,7 +59,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB SOCIETY',
-        desc: 'PPSMB Society 2021 mengusung tema “Citra Nara Nusantara” dengan tagline “Gelora Karya Mencita Indonesia” yang menekankan pentingnya kontribusi karya dan prestasi mahasiswa terhadap kemajuan negara. Hadirnya 6 departemen di FISIPOL yang memiliki perspektif yang berbeda dalam melihat keberagaman kultur dan budaya masyarakat Indonesia juga membuat PPSMB Society 2021 bertekad untuk menyelaraskan tema besar ini di setiap penyelenggaraan orientasi mahasiswa baru di tingkat departemen. Harapannya, para mahasiswa baru FISIPOL akan berkembang menjadi figur-figur yang mencerminkan cerahnya potensi intelektual bangsa Indonesia dan turut serta berkontribusi melalui caranya masing-masing.',
+        desc: 'PPSMB Society 2021 mengusung tema “Citra Nara Nusantara” dengan tagline “Gelora Karya Mencita Indonesia” yang menekankan pentingnya kontribusi karya dan prestasi mahasiswa terhadap kemajuan negara. Hadirnya 6 departemen di FISIPOL yang memiliki perspektif berbeda dalam melihat keberagaman kultur dan budaya masyarakat Indonesia juga membuat PPSMB Society 2021 bertekad untuk menyelaraskan tema besar ini di setiap penyelenggaraan orientasi mahasiswa baru di tingkat departemen.  Harapannya, para mahasiswa baru FISIPOL akan berkembang menjadi figur-figur yang mencerminkan cerahnya potensi intelektual bangsa Indonesia dan turut serta berkontribusi melalui caranya masing-masing.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Fisipol.webp').default,
         instaLink: "http://instagram.com/ppsmb_society",
         youtubeLink: 'https://www.youtube.com/channel/UCl90Mt-QaysHNfIG-DbbqRw',
@@ -77,7 +77,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB VETEBRAE',
-        desc: 'Veterinarian, Building The Future! menjadi subtema yang diangkat pada PPSMB Vetebrae 2021 diharapkan Gadjah Mada Muda Fakultas Kedokteran Hewan mampu membangun masa depan gemilang dengan menjadi dokter hewan yang berguna bagi bangsa, juga diharapkan kegiatan PPSMB Vetebrae mampu melahirkan Gadjah Mada Muda yang kreatif-inovatif, kontributif, adaptif, berdedikasi, dan kekeluargaan serta mengedepankan semboyan “Manusya Mriga Satwa Sewaka”',
+        desc: 'Veterinarian, Building The Future! menjadi subtema yang diangkat pada PPSMB Vetebrae 2021 diharapkan Gadjah Mada Muda Fakultas Kedokteran Hewan mampu membangun masa depan gemilang dengan menjadi dokter hewan yang berguna bagi bangsa, juga diharapkan kegiatan PPSMB Vetebrae mampu melahirkan Gadjah Mada Muda yang kreatif-inovatif, kontributif, adaptif, berdedikasi, dan kekeluargaan serta mengedepankan semboyan “Manusya Mriga Satwa Sewaka.”',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-KedokteranHewan.webp').default,
         email: 'vetebraeppsmb@gmail.com',
         lineLink: 'http://line.me/ti/p/~971xhzim',
@@ -96,7 +96,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB AGROPHORIA',
-        desc: 'Young Agritechnopreneur Collaboration for A Greater Nation. PPSMB AGROPHORIA 2021 menciptakan wirausahawan muda dari TPB, TIP, dan TPHP yang berkolaborasi untuk mencapai suatu tujuan bersama memajukan ketahanan pangan bangsa. PPSMB AGROPHORIA 2021 dilaksanakan dalam dua hari. Pada hari pertama, kegiatan berkaitan dengan pengenalan fakultas. Pada hari kedua, kegiatan berkaitan dengan tema, seperti penyampaian materi setiap departemen mengenai “Agritechnopreneur Collaboration in The Service of Society”, dll.',
+        desc: 'PPSMB AGROPHORIA 2021 menciptakan wirausahawan muda dari TPB, TIP, dan TPHP yang berkolaborasi untuk mencapai suatu tujuan bersama yaitu memajukan ketahanan pangan bangsa. PPSMB AGROPHORIA 2021 dilaksanakan dalam dua hari. Kegiatan pada hari pertama berkaitan dengan pengenalan fakultas. Sedangkan, kegiatan pada hari kedua berkaitan dengan tema “Young Agritechnopreneur Collaboration for A Greater Nation”, seperti penyampaian materi setiap departemen mengenai “Agrotechnopreneur Collaboration in The Service of Society” dan kegiatan menarik lainnya.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Teknik.webp').default,
         email: 'ppsmbagrophoriaftp@gmail.com',
         lineLink: 'http://line.me/ti/p/~efr9757c',
@@ -106,7 +106,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB GEOSPACE',
-        desc: 'PPSMB Geospace 2021 mengangkat tema “Eksplorasi Peran Geografi untuk Indonesia”. Tema ini memiliki 2 poin utama yang ditonjolkan, yakni "Eksplorasi" dan “Peran Geografi”. Menurut KBBI, eksplorasi didefinisikan sebagai penjelajahan lapangan dengan tujuan memperoleh pengetahuan lebih banyak (tentang keadaan); kegiatan untuk memperoleh pengalaman baru dari situasi yang baru. Hal tersebut bermakna bahwa melalui PPSMB Geospace, mahasiswa baru dapat memperoleh pengetahuan dan pengalaman baru terkait lingkup kehidupan saat ini.  Peran geografi memiliki makna bahwa berbekal pengetahuan yang ada, mahasiswa baru dapat menjadi menjadi geograf yang mampu berperan aktif dalam memberikan berbagai solusi untuk menyelesaikan permasalahan yang ada di lingkungan sekitar. Oleh karena itu, dalam lingkup yang lebih luas diharapkan mahasiswa geografi mampu mengabdikan diri untuk Indonesia yang lebih baik.',
+        desc: 'PPSMB Geospace 2021 mengangkat tema “Eksplorasi Peran Geografi untuk Indonesia”. Tema ini memiliki dua poin utama yang ditonjolkan, yakni “Eksplorasi” dan “Peran Geografi”. PPSMB Geospace 2021 dilaksanakan selama dua hari. Pada hari pertama mahasiswa baru Fakultas Geografi angkatan 2021 akan mendapatkan materi mengenai fakultas geografi, materi keprodian, pengenalan sarana dan prasarana laboratorium, dan focus group discussion (FGD). Pada hari kedua geograf muda akan melakukan berupa mengikuti sesi webinar kegeografian, pemaparan hasil FGD, pengenalan Organisasi Kemahasiswaan Fakultas Geografi, dan tour online fakultas.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Geografi.webp').default,
         instaLink: "http://instagram.com/ppsmb_geospace",
         youtubeLink: "https://www.youtube.com/channel/UCmn23if3FILOfWFr9J3QGqw",
@@ -117,7 +117,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB Equality FH',
-        desc: 'Deskripsi Tema PPSMB: PPSMB EQUALITY FH UGM 2021 mengusung tema "Gelora Kemanusiaan Menjujung Tinggi Kesamaan, Kesetaraan, dan Keadilan di Tengah Keberagaman Masyarakat Indonesia". Melalui tema tersebut kami mengajak Justicia Muda untuk dapat berlaku adil kepada sesama dan memandang perbedaan sebagai kekuatan yang dapat mempersatukan kita. Justicia Muda diharapkan mampu menerapkan nilai-nilai yang menjunjung tinggi keseteraan demi terciptanya keadilan bagi seluruh rakyat Indonesia.',
+        desc: 'PPSMB EQUALITY FH UGM 2021 mengusung tema "Gelora Kemanusiaan Menjunjung Tinggi Kesamaan, Kesetaraan, dan Keadilan di Tengah Keberagaman Masyarakat Indonesia". Melalui tema tersebut, kami mengajak Justicia Muda untuk dapat berlaku adil kepada sesama dan memandang perbedaan sebagai kekuatan yang dapat mempersatukan kita. Justicia Muda diharapkan mampu menerapkan nilai-nilai yang menjunjung tinggi kesetaraan demi terciptanya keadilan bagi seluruh rakyat Indonesia.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Hukum.webp').default,
         email: 'ppsmb.law@mail.ugm.ac.id',
         lineLink: 'http://line.me/ti/p/~380iglss',
@@ -127,7 +127,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB PELESTARI',
-        desc: 'PPSMB Pelestari merupakan masa orientasi mahasiswa baru tingkat fakultas yang diselenggarakan oleh Fakultas Kehutanan. Rimbawan muda akan dibekali materi kefakultasan, agenda akademik, kontribusi alumni, dan mahasiswa berprestasi. Pada tahun ini, PPSMB Pelestari bertema Kebanggaan Menjadi Rimbawan. Rimbawan muda diharapkan memiliki rasa bangga menjadi bagian dari Kehutanan Indonesia. Rasa bangga ini diharapkan dapat ditanamkan bahkan hingga lulus dan mengabdi untuk masyarakat. ',
+        desc: 'PPSMB Pelestari merupakan masa orientasi mahasiswa baru tingkat fakultas yang diselenggarakan oleh Fakultas Kehutanan. Rimbawan muda akan dibekali materi kefakultasan, agenda akademik, kontribusi alumni, dan mahasiswa berprestasi. Pada tahun ini, PPSMB Pelestari mengangkat tema “Kebanggaan Menjadi Rimbawan”. Rimbawan muda diharapkan memiliki rasa bangga menjadi bagian dari Kehutanan Indonesia. Rasa bangga ini diharapkan dapat ditanamkan bahkan hingga lulus dan mengabdi untuk masyarakat.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Kehutanan.webp').default,
         lineLink: 'http://line.me/ti/p/~733ftdcl',
         instaLink: "http://instagram.com/ppsmbpelestari",
@@ -136,7 +136,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB PASCAL',
-        desc: 'PASCAL (Pengenalan kampus science awal kuliah) merupakan salah satu rangkaian kegiatan Pelatihan Pembelajar Sukses Mahasiswa Baru (PPSMB) yang diadakan oleh FMIPA UGM. Kegiatan PPSMB PASCAL ini diadakan dengan tujuan untuk mencetak, membentuk dan mengarahkan mahasiswa baru FMIPA UGM agar menjadi sebaik-baiknya insan dan mahasiswa yang unggul baik dalam berpikir maupun bersikap. Tema: Gemerlap Harmoni Pluralitas Bangsa',
+        desc: 'PASCAL (Pengenalan kampus science awal kuliah) merupakan pengenalan dan orientasi yang diadakan oleh FMIPA UGM. Tema yang diangkat pada tahun ini adalah “Gemerlap Harmoni Pluralitas Bangsa”. Kegiatan PPSMB PASCAL memiliki tujuan untuk mencetak, membentuk, dan mengarahkan mahasiswa baru FMIPA UGM agar menjadi insan dan mahasiswa yang unggul dalam berpikir maupun bersikap.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-MIPA.webp').default,
         lineLink: 'http://line.me/ti/p/~nha9154u',
         instaLink: "http://instagram.com/ppsmb_pascal",
@@ -145,7 +145,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB RANCHER',
-        desc: 'Pelatihan Pembelajaran Sukses bagi Mahasiswa Baru (PPSMB) Rancher merupakan PPSMB yang diadakan oleh Fakultas Peternakan Universitas Gadjah Mada. PPSMB Rancher berperan sebagai sarana bagi mahasiswa baru untuk lebih mengenal nilai-nilai, fasilitas, kegiatan kemahasiswaan, kegiatan akademik, dan berbagai macam hal yang ada di Fakultas Peternakan.”',
+        desc: 'Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) Rancher merupakan PPSMB yang diadakan oleh Fakultas Peternakan Universitas Gadjah Mada. PPSMB Rancher merupakan sarana bagi mahasiswa baru untuk lebih mengenal nilai-nilai, fasilitas, kegiatan kemahasiswaan, kegiatan akademik, dan berbagai macam hal yang ada di Fakultas Peternakan. Tema  PPSMB Rancher tahun ini adalah “Muda Berwawasan Sebagai Agen Perubahan Dalam Harmoni Dinamika Transisi.”',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-KedokteranHewan.webp').default,
         email: 'kmfapet.ppsmb@gmail.com',
         lineLink: 'http://line.me/ti/p/~npq8760g',
@@ -155,7 +155,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB PSIKOLOGI RUMAH KITA',
-        desc: 'ADIKARA BESTARI: Memiliki arti bahwa pemimpin adalah seseorang yang berkuasa dan berwibawa serta memiliki pengetahuan dan budi pekerti yang menyumbang besar dalam perjalanan kehidupan mereka (Adikara: kekuasaan dan kewibawaan; Bestari: berpendidikan dan memiliki budi pekerti). Adikara Bestari juga berarti bertaut berdaya guna, bahwa semua nilai kepemimpinan saling berhubungan. Tema ini akan disajikan dalam dua hari pelaksanaan. Pertama, GAMADA diajak menyelami potensi kepemimpinannya atau disebut sebagai Evolve (individual value). Untuk melengkapi evolve-nya, GAMADA diajak membentuk group value pada hari kedua.',
+        desc: 'Tema PPSMB Psikologi Rumah Kita “Adikara Bestari” memiliki arti bahwa pemimpin adalah seseorang yang berkuasa dan berwibawa serta memiliki pengetahuan dan budi pekerti yang berperan besar dalam perjalanan kehidupan mereka. Tema ini akan disajikan dalam dua hari pelaksanaan. Pertama, Gamada diajak menyelami potensi kepemimpinannya atau disebut sebagai Evolve (individual value). Untuk melengkapi evolve-nya, Gamada diajak membentuk group value pada hari kedua.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Psikologi.webp').default,
         email: 'ppsmbprk.psikologi@ugm.ac.id',
         lineLink: 'http://line.me/ti/p/~fxa2326g',
@@ -165,7 +165,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB PERMADANI',
-        desc: 'Berkarya Bersama Vokasi, Torehkan Prestasi Untuk Negeri. Memiliki arti bahwa dalam pendidikan vokasi, daya cipta atau kreasi digunakan sebagai sarana menghasilkan karya yang unggul dan bermanfaat bagi bangsa. Sesuai dengan visi dan misi Sekolah Vokasi UGM, mahasiswa akan dipersiapkan menjadi tenaga ahli yang profesional, berintegritas, dan berdaya saing di kancah global. Pengembangan yang berfokus pada kemampuan praktikal terapan, akan menjadi bekal dan nilai tambah mahasiswa dalam menciptakan suatu karya. Inovasi dan kreasi atas karya yang diciptakan tersebut, kedepanya akan membuka jalan besar dalam menorehkan prestasi dan mewujudkan mimpi di masa depan.',
+        desc: '“Berkarya Bersama Vokasi, Torehkan Prestasi Untuk Negeri” merupakan tema yang diusung oleh PPSMB Permadani 2021 yang memiliki arti bahwa dalam pendidikan vokasi, daya cipta atau kreasi digunakan sebagai sarana menghasilkan karya yang unggul dan bermanfaat bagi bangsa. PPSMB Permadani 2021 akan dilaksanakan selama dua hari. Gamada akan diberikan informasi terkait Sekolah Vokasi UGM dan departemen masing-masing. Selain itu, Gamada juga diberikan tempat untuk saling berkenalan, bertukar gagasan, dan berdiskusi merancang suatu karya. Rancangan tersebut nantinya dapat dikembangkan dan direalisasikan sebagai wujud torehan kreasi yang bermanfaat untuk negeri.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-SekolahVokasi.webp').default,
         email: 'ppsmb.permadani.sv@ugm.ac.id',
         lineLink: 'http://line.me/ti/p/~fhc8308p',
@@ -175,7 +175,7 @@ export const DaftarPPSMB = [
     {
         
         title: 'PPSMB KESATRIA',
-        desc: 'Tema yang diangkat pada PPSMB KESATRIA 2021 adalah “Humanizing Technology” yang merupakan suatu paradigma untuk menjadi tetap relevan dengan keadaan sekarang yang sedang dalam perkembangan teknologi yang begitu pesat dan pada akhirnya akan memanusiakan manusia. ',
+        desc: 'Tema yang diangkat pada PPSMB KESATRIA 2021 adalah “Humanizing Technology” yang merupakan suatu paradigma untuk menjadi tetap relevan dengan keadaan sekarang yang sedang dalam perkembangan teknologi yang begitu pesat dan pada akhirnya akan memanusiakan manusia.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-Teknik.webp').default,
         instaLink: "http://instagram.com/ppsmb_kesatria",
         youtubeLink: "https://www.youtube.com/channel/UCmv4fLH2lves3QtOS4V33PQ",

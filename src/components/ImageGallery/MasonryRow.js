@@ -1,48 +1,49 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
-// import Gallery from 'react-grid-gallery';
-import Modal from "react-modal";
-import styled from "styled-components";
-import Sliders from "../Slider";
-import { srcPhotos } from "./Photo-Thumbnail";
+
+import { srcPhotos, srlPhotos } from "./PhotoList";
+import {SRLWrapper, useLightbox} from 'simple-react-lightbox'
+import Fade from "react-reveal/Fade";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 export default function MasonryRow() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const { openLightbox, closeLightbox } = useLightbox()
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
+  const options = {
+    settings: {
+      autoplaySpeed: 1500,
+      transitionSpeed: 500,
+      hideControlsAfter: 1000,
+      slideAnimationType: 'both',
+      slideTransitionSpeed: 0.9,
+    },
+    buttons: {
+      backgroundColor: "#F31958",
+      iconColor: "#FFFFFF",
+      showDownloadButton: false,
+      showFullscreenButton: false,
+    },
+    caption: {
+      captionColor: "#a6cfa5",
+      captionFontFamily: "Raleway, sans-serif",
+      captionFontWeight: "300",
+      captionTextTransform: "uppercase",
+    },
+    thumbnails: {
+      showThumbnails: false,
+    }
   };
-  Modal.setAppElement("#root");
 
-  let imagesCarousel = srcPhotos.map(function (photo, index) {
-    console.log(photo.fwSrc);
-    return (
-      <div key={index} className="photo">
-        <img src={photo.fwSrc} alt="" />
-      </div>
-    );
-  });
+  const imageRenderer = useCallback(({ index, left, top, key, photo }) => (
+      <Fade>
+        <img alt={photo.alt} {...photo} onClick={() => openLightbox(index)} style={{padding: "0.5vmin", cursor: "pointer"}}/>
+      </Fade>
+  ));
 
   return (
-    <GalleryContainer>
-      <Gallery photos={srcPhotos} onClick={openLightbox}></Gallery>
-      <Modal
-        isOpen={viewerIsOpen}
-        onRequestClose={closeLightbox}
-        className="modalContent"
-      >
-        <Sliders>{imagesCarousel}</Sliders>
-      </Modal>
-      {/* <Gallery images={srcPhotos}></Gallery> */}
-    </GalleryContainer>
+    <>
+      <Gallery photos={srcPhotos} renderImage={imageRenderer}></Gallery>
+      <SRLWrapper elements={srlPhotos} options={options}/>
+    </>
   );
 }
-
-const GalleryContainer = styled.div``;

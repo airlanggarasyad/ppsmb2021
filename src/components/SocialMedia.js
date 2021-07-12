@@ -50,17 +50,20 @@ const SocialMediaContainer = styled.div`
 
   .social-media-icon a svg {
     color: ${props => props.mainColor};
-    border: 2px solid ${props => props.mainColor};
-    border-radius: 11px;
-    padding: 5px;
+    border: 0.2vmin solid ${props => props.mainColor};
+    border-radius: 100px;
+    padding: 1vmin;
     margin: 2px;
     transition: all 0.4s ease;
-    width: calc(0.5rem + 3vmin);
+    min-width: calc(0.5rem + 5vmin);
+    min-height: calc(0.5rem + 5vmin);
+    max-width: calc(0.5rem + 5vmin);
+    max-height: calc(0.5rem + 5vmin);
     height: auto;
   }
 
   .social-media-icon a:hover > div svg {
-    border: 2px solid ${props => props.secondaryColor};
+    border: 0.2vmin solid ${props => props.secondaryColor};
     color: ${props => props.secondaryColor};
   }
 

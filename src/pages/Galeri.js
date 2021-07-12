@@ -1,32 +1,20 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
+import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
+import Zoom from "react-reveal/Zoom";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 import VideoContainer from "../components/VideoContainer";
-import Sliders from "../components/Slider";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
+import Slider from "react-slick";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";
 import Batik from "../assets/img/batik-color.svg";
 import patternBlue from "../assets/img/pattern-bg-blue.webp";
 import whiteBatik from "../assets/img/white-batik-corner.webp";
 import videoUKMHeader from "../assets/img/galeri/ornament-ukm.webp";
-
-var photoImages = [
-  { id: 1, url: "1.webp" },
-  { id: 2, url: "2.webp" },
-  { id: 3, url: "3.webp" },
-  { id: 4, url: "4.webp" },
-  { id: 5, url: "5.webp" },
-  { id: 6, url: "6.webp" },
-  { id: 7, url: "7.webp" },
-  { id: 8, url: "8.webp" },
-  { id: 9, url: "9.webp" },
-  { id: 10, url: "10.webp" },
-  { id: 11, url: "11.webp" },
-  { id: 12, url: "12.webp" },
-  { id: 13, url: "13.webp" },
-];
 
 var ukmVideos = [
   {
@@ -83,23 +71,6 @@ var ukmVideos = [
   },
 ];
 
-var photo = photoImages.map(function (photoImage) {
-  return (
-    <div key={photoImage.id} className="photo">
-      <a href={process.env.PUBLIC_URL + "/assets/img/galeri/" + photoImage.url}>
-        <img
-          src={
-            process.env.PUBLIC_URL +
-            "/assets/img/galeri/thumbnail/" +
-            photoImage.url
-          }
-          alt=""
-        />
-      </a>
-    </div>
-  );
-});
-
 var video = ukmVideos.map(function (sekber) {
   let videosSekber = sekber.videoList.map(function (videoContent) {
     return (
@@ -120,7 +91,7 @@ var video = ukmVideos.map(function (sekber) {
     <div className="sekber">
       <h3>{sekber.sekberName}</h3>
       <div className="video-carousel">
-        <Sliders
+        <Slider
           slidesToShow={3}
           slidesToShowMobile={2}
           slidesToShowTablet={3}
@@ -128,7 +99,7 @@ var video = ukmVideos.map(function (sekber) {
           dots={false}
         >
           {videosSekber}
-        </Sliders>
+        </Slider>
       </div>
     </div>
   );
@@ -137,24 +108,28 @@ var video = ukmVideos.map(function (sekber) {
 export default class Galeri extends Component {
   render() {
     return (
-      <>
+      <SimpleReactLightbox>
         <Helmet>
           <title>Galeri | PPSMB UGM 2021</title>
         </Helmet>
         <GaleriContainer>
           <section className="galeri-hero pattern-bg pattern-bg-white">
             <div className="galeri-title">
-              <div className="batik">
-                <img src={Batik} alt="" />
-                <img src={Batik} alt="" />
-                <img src={Batik} alt="" />
-              </div>
-              <h1 className="font-indonesia-script font-normal ppsmb-redpink">
-                Galeri
-              </h1>
+              <Fade>
+                <div className="batik">
+                  <img src={Batik} alt="" />
+                  <img src={Batik} alt="" />
+                  <img src={Batik} alt="" />
+                </div>
+                <h1 className="font-indonesia-script font-normal ppsmb-redpink">
+                  Galeri
+                </h1>
+              </Fade>
             </div>
             <div>
-              <img className="hero-ornament" src={heroGaleriDesktop} alt="" />
+              <Fade right>
+                <img className="hero-ornament" src={heroGaleriDesktop} alt="" />
+              </Fade>
             </div>
           </section>
 
@@ -175,48 +150,42 @@ export default class Galeri extends Component {
 
           <section className="gadjah-mada-kita">
             <div className="title">
-              <h2 className="font-kollektif ppsmb-white font-normal">
-                Gadjah Mada
-              </h2>
-              <h2 className="font-indonesia-script font-normal   ppsmb-yellow">
-                Kita
-              </h2>
+              <Zoom>
+                <h2 className="font-kollektif ppsmb-white font-normal">
+                  Gadjah Mada
+                </h2>
+                <h2 className="font-indonesia-script font-normal   ppsmb-yellow">
+                  Kita
+                </h2>
+              </Zoom>
             </div>
             <div className="video-list">
-              <div className="video-item">
-                <VideoContainer
-                  title="Anthem PPSMB"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/4.webp"}
-                />
-              </div>
-              <div className="video-item">
-                <VideoContainer
-                  title="Aftermovie PPSMB"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/7.webp"}
-                />
-              </div>
-              <div className="video-item">
-                <VideoContainer
-                  title="Profil UGM"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/5.webp"}
-                />
-              </div>
-              <div className="video-item">
-                <VideoContainer
-                  title="Hymne UGM"
-                  bgurl={process.env.PUBLIC_URL + "/assets/img/galeri/11.webp"}
-                />
-              </div>
+              <Fade bottom delay={200}>
+                <div className="video-item">
+                  <VideoContainer id="AAtiYhMi_4o" title="Anthem PPSMB" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" />
+                </div>
+                <div className="video-item">
+                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" />
+                </div>
+              </Fade>
             </div>
-            <div className="white-batik">
-              <img src={whiteBatik} alt="" />
-            </div>
+            <Zoom delay={500}>
+              <div className="white-batik">
+                <img src={whiteBatik} alt="" />
+              </div>
+            </Zoom>
             <div className="white-batik">
               <img src={whiteBatik} alt="" />
             </div>
           </section>
 
-          <section className="video-ukm pattern-bg pattern-bg-white">
+          {/* <section className="video-ukm pattern-bg pattern-bg-white">
             <div className="head">
               <div className="header-image">
                 <img src={videoUKMHeader} alt="" />
@@ -229,9 +198,9 @@ export default class Galeri extends Component {
               </div>
             </div>
             <div className="video-list-ukm">{video}</div>
-          </section>
+          </section> */}
         </GaleriContainer>
-      </>
+      </SimpleReactLightbox>
     );
   }
 }
@@ -245,7 +214,7 @@ const GaleriContainer = styled.div`
     min-height: 100vh;
     width: 100%;
     overflow: clip;
-
+    box-shadow: 0px 0.2em 3em 0px rgba(0, 0, 0, 0.78);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -446,9 +415,10 @@ const GaleriContainer = styled.div`
     }
 
     .hero-ornament {
-      right: 0;
+      right: -20%;
       bottom: 0;
-      width: 65%;
+      width: auto;
+      height: 100%;
     }
 
     .gadjah-mada-kita {
@@ -491,6 +461,10 @@ const GaleriContainer = styled.div`
 
     .white-batik img {
       width: 60%;
+    }
+
+    .hero-ornament {
+      right: -10%;
     }
   }
 `;

@@ -31,7 +31,6 @@ import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 import Slider from "react-slick";
 
-
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
         title: "PPSMB UGM 2021",
@@ -61,7 +60,7 @@ export default function Beranda() {
                         <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
                     </Fade>
                     <div className='batiks'>
-                        <Spin duration={4000} count={5}>
+                        <Spin duration={4000} forever>
                             <img src={Batik} alt="" srcset="" className="batik" />
                             <img src={Batik} alt="" srcset="" className="batik" />
                             <img src={Batik} alt="" srcset="" className="batik" />
@@ -115,7 +114,7 @@ export default function Beranda() {
                                     titleColor='var(--color-white)'
                                     headerColor='var(--color-redpink)'
                                     shadow='rgba(255,190,0,0.4)'
-                                    link='www.facebook.com'>
+                                    link='www.'>
                                 </LiniMasa>
 
                                 {/* <LiniMasa
@@ -153,16 +152,7 @@ export default function Beranda() {
 
                         <Fade >
                             <div className="video">
-                                {/* <VideoContainer
-                                    bgurl={
-                                        process.env.PUBLIC_URL +
-                                        "/assets/img/galeri/" +
-                                        videoPlay.thumbnail
-                                    }
-                                    bgcolor={"var(--color-redpink)"}
-                                    noDecor
-                                ></VideoContainer> */}
-                                <YoutubeEmbed embedId='fGOamlnU_uI' />
+                                <VideoContainer id="fGOamlnU_uI" title="Selamat Datang Gamada!" />
                             </div>
 
                         </Fade>
@@ -271,7 +261,7 @@ export default function Beranda() {
                     <div className='main'>
                         <div className='video-utama'>
                             <Fade left spy={videoPlay}>
-                                <YoutubeEmbed embedId={videoPlay.embedId} />
+                            <VideoContainer id={videoPlay.embedId} title={videoPlay.title} />
                                 <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
                                 <p>{videoPlay.desc}</p>
                             </Fade>
@@ -867,7 +857,8 @@ const Unit = styled.a`
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(${props => props.i} * 18deg)) translateZ(190px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    will-change: transform;
+    /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); */
 
     cursor: pointer;
     img{
