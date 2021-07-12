@@ -7,7 +7,7 @@ export const DaftarVideo = [
     },
     {
         title: 'Tarian Selebrasi - PPSMB UGM 2021',
-        desc: 'Sudahkah Gamada menghafalkan lirik Anthem "Sinergi dalam Harmoni"?',
+        desc: 'Rasakan euforia PPSMB UGM 2021 melalui tarian selebrasi!',
         embedId: 'AAtiYhMi_4o',
         thumbnail: require('../assets/img/serba-serbi/tarianselebrasi.webp').default,
     },

@@ -17,6 +17,7 @@ import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
+import Helmet from "react-helmet";
 import mainBG from '../assets/img/pattern-bg-white.webp'
 import yellowBG from '../assets/img/pattern-bg-yellow.webp'
 import darkBlueBG from '../assets/img/pattern-bg-darkblue.webp'
@@ -52,6 +53,9 @@ export default function Beranda() {
     return (
         <>
             <GlobalStyle />
+            <Helmet>
+                <title>Beranda | PPSMB UGM 2021</title>
+            </Helmet>
             <Container url="./assets/img/main-bg.jpg">
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
@@ -110,11 +114,11 @@ export default function Beranda() {
                                     mainText='Surat Keputusan Rektor'
                                     mainTextColor='var(--color-white)'
                                     background={BgOne}
-                                    title='28 Jun 21'
+                                    title='6 Juli 2021'
                                     titleColor='var(--color-white)'
                                     headerColor='var(--color-redpink)'
                                     shadow='rgba(255,190,0,0.4)'
-                                    link='www.'>
+                                    link='https://drive.google.com/file/d/13T3NUwb61mp1FHDsNvte3YExBDjxZ00T/view?usp=sharing'>
                                 </LiniMasa>
 
                                 {/* <LiniMasa
@@ -345,10 +349,17 @@ const Video = styled.div`
     margin-bottom: 2vmin;
     height: 24min;
     padding: 2vmin;
+    transition: transform 500ms ease;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 500ms ease;
+    }
     img{
         border-radius: 25px;
         width: auto;
         height: 20vmin;
+        transition: transform 500ms ease;
     }
     div{
         height: 20vmin;
@@ -810,6 +821,7 @@ const Container = styled.div`
 
                 .daftar-video{
                     overflow-y: auto;
+                    overflow-x: hidden;
                     width: 40%;
                     height: auto;
                     padding-left: 4px;

@@ -214,6 +214,20 @@ const GlobalStyle = createGlobalStyle`
     }
     }
 
+
+    /*----------------------*\
+            Scrollbar
+    \*----------------------*/
+
+    body::-webkit-scrollbar {
+        width: 0.8em;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        border-radius: 5vmin;
+        background-color: var(--color-yellow);
+    }
+
     /*----------------------*\
             Modal
     \*----------------------*/
