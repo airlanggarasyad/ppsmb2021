@@ -13,6 +13,7 @@ import FAQ from "../../pages/FAQ";
 import Galeri from "../../pages/Galeri";
 import Modal from "react-modal";
 import Card from "../Card";
+import ComingSoon from "../../assets/img/maskot-comingsoon.png";
 // import {Link} from "../../Routes/RelativeRoute"
 
 export default class Navbar extends Component {
@@ -84,11 +85,13 @@ export default class Navbar extends Component {
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
+          closeTimeoutMS={500}
           parentSelector={() => document.querySelector("#nav")}
           className="blockModal"
-          overlayClassName="blockModalOverlay">
-          <div className="content-modal">
-            Coming Soon
+          overlayClassName="blockModalOverlay"
+        >
+          <div className="content-modal" onClick={this.closeModal}>
+            <img src={ComingSoon} alt="Maskot Coming Soon" />
           </div>
         </Modal>
       </Header>
@@ -186,7 +189,6 @@ const Header = styled.header`
     width: 80%;
     height: 70%;
     position: relative;
-    background: var(--color-blue);
     border-radius: 10vmin;
   }
 
@@ -199,7 +201,7 @@ const Header = styled.header`
     overflow: auto;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 200ms ease-in-out;
     opacity: 0;
   }
@@ -221,6 +223,19 @@ const Header = styled.header`
     align-content: center;
     justify-content: center;
     align-items: center;
+    transition: opacity 200ms ease-in-out;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    @media (min-width: 576px) {
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 `;
 const NavItemsStyled = styled.ul`
