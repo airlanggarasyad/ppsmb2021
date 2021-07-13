@@ -168,10 +168,10 @@ export default class Galeri extends Component {
                   <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
                 </div>
                 <div className="video-item">
-                  <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" />
+                  <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" nomaxres/>
                 </div>
                 <div className="video-item">
-                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" />
+                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" nomaxres/>
                 </div>
               </Fade>
             </div>

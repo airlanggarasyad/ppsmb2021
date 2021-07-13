@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    img {
+        user-drag: none;
+    }
+
     /*----------------------*\
                Font
     \*----------------------*/

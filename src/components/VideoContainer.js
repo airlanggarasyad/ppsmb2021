@@ -14,7 +14,7 @@ function VideoContainer(props) {
     <LiteYouTubeEmbed 
       id={props.id}
       title={props.title}
-      poster="maxresdefault"
+      poster={props.nomaxres ? "hqdefault":"maxresdefault"}
     />
       <div className={`title-decoration ${props.passClass}`}>
         <div className="title-text">
