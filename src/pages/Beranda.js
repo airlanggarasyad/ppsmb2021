@@ -101,7 +101,7 @@ export default function Beranda() {
                     >
                         <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
                         <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
-                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="480px" allow="autoplay"></iframe>
+                        <iframe title="Surat Keputusan Rektor" src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="480px" allow="autoplay"></iframe>
                     </Modal>
                 </div>
                 <section className='hero'>
