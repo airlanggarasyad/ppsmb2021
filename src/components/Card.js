@@ -22,8 +22,9 @@ export default function Card(props) {
                     mainText={props.mainText}
                     mainTextColor={props.mainTextColor}
                     link={props.link}
+                    
                 >
-                    <a style={{textDecoration:'none'}} href={props.link} target='_blank'>
+                    {/* <a style={{textDecoration:'none'}} href={props.link} target='_blank'> */}
                         <div className="card-header">
                             <h6>{props.title}</h6>
                         </div>
@@ -34,7 +35,7 @@ export default function Card(props) {
                         <div className="card-content">
                             <h6>{props.mainText}</h6>
                         </div>
-                    </a>
+                    {/* </a> */}
                 </CardStyle>
             </Flip>
         </div>

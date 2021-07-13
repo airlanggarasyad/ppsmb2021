@@ -11,10 +11,10 @@ import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
 import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
-import YoutubeEmbed from "../components/YoutubeEmbed"
 import { DaftarVideo } from "./DaftarVideo";
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
+import Slide from 'react-reveal/Slide';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
 import Helmet from "react-helmet";
@@ -22,7 +22,6 @@ import mainBG from '../assets/img/pattern-bg-white.webp'
 import yellowBG from '../assets/img/pattern-bg-yellow.webp'
 import darkBlueBG from '../assets/img/pattern-bg-darkblue.webp'
 import VideoContainer from "../components/VideoContainer";
-import DayCard from "../components/Agenda/DayCard";
 import LiniMasa from "../components/Card"
 import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
 import BgTwo from "../assets/images/agenda/DayCardContainer/two.png";
@@ -30,7 +29,26 @@ import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
 import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
 import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
-import Slider from "react-slick";
+import Modal from 'react-modal';
+import Button from "../components/main/Button";
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
+        borderRadius: '25px',
+        maxHeight: '90vh',
+        maxWidth: '90vw',
+    },
+    overlay: {zIndex: 1000},
+};
+
+Modal.setAppElement('body');
 
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
@@ -45,11 +63,27 @@ export default function Beranda() {
 
     });
     const [videoPlay, setVideoPlay] = useState({
-        title: 'Apa Itu PPSMB?',
-        desc: 'Pahami apa itu PPSMB di sini!',
+        title: 'Apa Itu PPSMB UGM?',
+        desc: 'Yuk, kenali lebih dalam tentang PPSMB UGM!',
         embedId: '_3uPoHK0XZk',
         // thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     });
+
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        // subtitle.style.color = '#f00';
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
     return (
         <>
             <GlobalStyle />
@@ -57,10 +91,23 @@ export default function Beranda() {
                 <title>Beranda | PPSMB UGM 2021</title>
             </Helmet>
             <Container url="./assets/img/main-bg.jpg">
+                <div>
+                    <Modal
+                        isOpen={modalIsOpen}
+                        onAfterOpen={afterOpenModal}
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Surat Keputusan Rektor"
+                    >
+                        <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
+                        <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
+                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="480px" allow="autoplay"></iframe>
+                    </Modal>
+                </div>
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
-                    <Fade >
+                    <Fade bottom left>
                         <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
                     </Fade>
                     <div className='batiks'>
@@ -100,8 +147,6 @@ export default function Beranda() {
                                 </Fade>
                             </div>
 
-
-
                         </div>
                         <div className='lini-masa text-center ppsmb-darkblue'>
                             <h2>Lini Masa</h2>
@@ -111,6 +156,8 @@ export default function Beranda() {
                                 slidesToShowTablet={1}
                                 slidesToScroll={1}
                                 infinite={false}>
+                                slidesToScroll={1}
+                                <div onClick={openModal}>
                                 <LiniMasa
                                     mainText='Surat Keputusan Rektor'
                                     mainTextColor='var(--color-white)'
@@ -121,6 +168,7 @@ export default function Beranda() {
                                     shadow='rgba(255,190,0,0.4)'
                                     link='https://drive.google.com/file/d/13T3NUwb61mp1FHDsNvte3YExBDjxZ00T/view?usp=sharing'>
                                 </LiniMasa>
+                                </div>
                                 <LiniMasa
                                     mainText='Segera Hadir'
                                     mainTextColor='var(--color-white)'
@@ -167,6 +215,10 @@ export default function Beranda() {
                     </div>
 
                 </section>
+                {/* <div>
+                    <button onClick={openModal}>Open Modal</button>
+                    
+                </div> */}
                 <section className='greeting'>
                     <div className='left-corner'>
                         <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
@@ -174,16 +226,16 @@ export default function Beranda() {
                     </div>
                     <div className='videos'>
 
-                        <Fade >
+                        <Slide left>
                             <div className="video">
                                 <VideoContainer id="fGOamlnU_uI" title="Selamat Datang Gamada!" />
                             </div>
 
-                        </Fade>
+                        </Slide>
                     </div>
                     <div className='right'>
                         <img src={Bulk1} alt="" srcset="" className="corner upper-right" />
-                        <Fade right >
+                        <Slide right >
                             <div className='title-box'>
 
                                 <Pulse delay={2500} forever={true}>
@@ -191,11 +243,11 @@ export default function Beranda() {
                                         <Lightspeed right>
                                             <h1 className='ppsmb-darkblue underline red-stick'>Selamat Datang
                                                 <Fade delay={500} left cascade >
-                                                    <span className='font-indonesia-script'> Gamada!</span>
+                                                    <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
                                                 </Fade>
                                             </h1>
                                         </Lightspeed>
-                                            <img src={RedStick} className='red-stick'></img>
+                                        <img src={RedStick} className='red-stick'></img>
                                     </div>
                                     <div className="batiks">
                                         <img src={Batik} alt="" srcset="" className="batik" />
@@ -206,7 +258,7 @@ export default function Beranda() {
 
 
                             </div>
-                        </Fade>
+                        </Slide>
                         <img src={Lean2} alt="" srcset="" className="corner bottom-right" />
 
 
@@ -283,7 +335,7 @@ export default function Beranda() {
                     <div className='main'>
                         <div className='video-utama'>
                             <Fade left spy={videoPlay}>
-                            <VideoContainer id={videoPlay.embedId} title={videoPlay.title} />
+                                <VideoContainer id={videoPlay.embedId} title={videoPlay.title} />
                                 <h2 className='ppsmb-yellow'>{videoPlay.title}</h2>
                                 <p>{videoPlay.desc}</p>
                             </Fade>
@@ -311,36 +363,8 @@ export default function Beranda() {
                                     </Fade>
                                 )
                             })}
-
-                            {/* <Sliders
-                            slidesToShow={4}
-                            slidesToShowMobile={2}
-                            slidesToShowTablet={2}
-                            vertical={true}>
-
-                                <div>
-                                    <Video>
-                                        <p>1</p>
-                                    </Video>
-                                </div>
-                                <div>
-                                    <Video><p>2</p></Video>
-                                </div>
-                                <div>
-                                    <Video><p>3</p></Video>
-                                </div>
-                                <div>
-                                    <Video><p>4</p></Video>
-                                </div>
-                                <div>
-                                    <Video><p>5</p></Video>
-                                </div>
-                            </Sliders> */}
                         </div>
                     </div>
-
-
-
                 </section>
             </Container>
         </>
@@ -886,7 +910,6 @@ const Unit = styled.a`
     transform-style: preserve-3d;
     transform: rotateY(calc(${props => props.i} * 18deg)) translateZ(190px);
     will-change: transform;
-    /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); */
 
     cursor: pointer;
     img{
