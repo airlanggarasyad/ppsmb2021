@@ -97,7 +97,7 @@ export const DaftarPPSMB = [
         
         title: 'PPSMB AGROPHORIA',
         desc: 'PPSMB AGROPHORIA 2021 menciptakan wirausahawan muda dari TPB, TIP, dan TPHP yang berkolaborasi untuk mencapai suatu tujuan bersama yaitu memajukan ketahanan pangan bangsa. PPSMB AGROPHORIA 2021 dilaksanakan dalam dua hari. Kegiatan pada hari pertama berkaitan dengan pengenalan fakultas. Sedangkan, kegiatan pada hari kedua berkaitan dengan tema “Young Agritechnopreneur Collaboration for A Greater Nation”, seperti penyampaian materi setiap departemen mengenai “Agrotechnopreneur Collaboration in The Service of Society” dan kegiatan menarik lainnya.',
-        src: require('../assets/img/ppsmb-fakultas/PPSMB-Teknik.webp').default,
+        src: require('../assets/img/ppsmb-fakultas/PPSMB-TeknologiPertanian.webp').default,
         email: 'ppsmbagrophoriaftp@gmail.com',
         lineLink: 'http://line.me/ti/p/~efr9757c',
         instaLink: "http://instagram.com/ppsmbagrophoria",

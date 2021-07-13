@@ -14,6 +14,7 @@ import SocialMedia from "../components/SocialMedia";
 import { DaftarVideo } from "./DaftarVideo";
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
+import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
@@ -45,7 +46,7 @@ const modalStyles = {
         width: '80vw',
         fontSize: 'calc(0.5rem + 1vmin)',
     },
-    overlay: {zIndex: 1000},
+    overlay: { zIndex: 1000 },
 };
 
 Modal.setAppElement('body');
@@ -96,9 +97,12 @@ export default function Beranda() {
                         style={modalStyles}
                         contentLabel="Surat Keputusan Rektor"
                     >
-                        <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
-                        <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
-                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="80%" allow="autoplay"></iframe>
+
+                        <Fade>
+                            <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
+                            <p className='ppsmb-red' onClick={closeModal} style={{ cursor: 'pointer' }}>Tutup</p>
+                            <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="80%" allow="autoplay"></iframe>
+                        </Fade>
                     </Modal>
                 </section>
                 <section className='hero'>
@@ -153,17 +157,20 @@ export default function Beranda() {
                                 slidesToShowTablet={1}
                                 slidesToScroll={1}>
                                 <div onClick={openModal}>
-                                <LiniMasa
-                                    mainText='Surat Keputusan Rektor'
-                                    mainTextColor='var(--color-white)'
-                                    background={BgOne}
-                                    title='6 Juli 2021'
-                                    titleColor='var(--color-white)'
-                                    headerColor='var(--color-redpink)'
-                                    shadow='rgba(255,190,0,0.4)'
-                                    link='https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing'>
-                                </LiniMasa>
+                                    <LiniMasa
+                                        onClick={openModal}
+                                        mainText='Surat Keputusan Rektor'
+                                        mainTextColor='var(--color-white)'
+                                        background={BgOne}
+                                        title='6 Juli 2021'
+                                        titleColor='var(--color-white)'
+                                        headerColor='var(--color-redpink)'
+                                        shadow='rgba(255,190,0,0.4)'
+                                        link='https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing'>
+                                    </LiniMasa>
+
                                 </div>
+
 
                                 {/* <LiniMasa
                                     mainText='Surat Keputusan Rektor'
@@ -330,7 +337,7 @@ export default function Beranda() {
                                 return (
                                     <Fade bottom>
                                         <Video onClick={onClickThumbnail}>
-                                            <img src={item.thumbnail} alt={item.title + ' thumbnail'} className='unselectable'/>
+                                            <img src={item.thumbnail} alt={item.title + ' thumbnail'} className='unselectable' />
                                             <div style={{ overflow: 'hidden' }}>
                                                 <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
                                                 <p>{item.desc}</p>
