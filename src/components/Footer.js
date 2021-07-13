@@ -21,7 +21,8 @@ function Footer() {
             rel="noopener noreferrer"
             classname="ppsmb-yellow"
           >
-            Jl. Asem Kranji Blok K-8 Sekip, Sendowo, Sinduadi, Mlati, Sleman, Yogyakarta 55281
+            Jl. Asem Kranji Blok K-8 Sekip, Sendowo, Sinduadi, Mlati, Sleman,
+            Yogyakarta 55281
           </a>
           <p>
             Jam kerja pukul:
@@ -37,36 +38,35 @@ function Footer() {
               name="Twitter"
               faIcon={["fab", "twitter"]}
               link="http://twitter.com/ppsmb_ugm"
-              secondaryColor='#ffffff'
+              secondaryColor="#ffffff"
             />
             <SocialMedia
               name="Instagram"
               faIcon={["fab", "instagram"]}
               link="http://instagram.com/ppsmb_ugm"
-              secondaryColor='#ffffff'
+              secondaryColor="#ffffff"
             />
             <SocialMedia
               name="Tiktok"
               faIcon={["fab", "tiktok"]}
               link="https://vt.tiktok.com/ZSJ2VX4kJ/"
-              secondaryColor='#ffffff'
+              secondaryColor="#ffffff"
             />
             <SocialMedia
               name="Facebook"
               faIcon={["fab", "facebook"]}
               link="https://www.facebook.com/PPSMB-UGM-325374494259950/"
-              secondaryColor='#ffffff'
+              secondaryColor="#ffffff"
             />
             <SocialMedia
               name="Youtube"
               faIcon={["fab", "youtube"]}
               link="https://www.youtube.com/user/ppsmbpalapa"
-              secondaryColor='#ffffff'
+              secondaryColor="#ffffff"
             />
           </div>
         </div>
       </div>
-      
     </FooterContainer>
   );
 }
@@ -85,7 +85,7 @@ const FooterContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, minmax(0px, 1fr));
     grid-template-rows: repeat(2, auto);
-    gap: 30px;
+    gap: 30px 25vmin;
   }
 
   .grid-container div:nth-child(1n) {
@@ -114,5 +114,9 @@ const FooterContainer = styled.div`
       grid-row: span 2;
       width: 100%;
     }
+  }
+
+  @media (min-width: 768px) {
+    font-size: calc(0.5rem + 1.5vmin);
   }
 `;
