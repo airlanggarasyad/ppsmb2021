@@ -232,10 +232,6 @@ const GlobalStyle = createGlobalStyle`
             Modal
     \*----------------------*/
 
-    .ReactModal__Body--open {
-        overflow: hidden;
-    }
-
     .modalOverlay {
         position: fixed;
         top: 0;

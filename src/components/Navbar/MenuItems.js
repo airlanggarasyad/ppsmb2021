@@ -1,7 +1,7 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: './'
+        url: '/2021'
     },
     // {
     //     title: 'Agenda Materi',
@@ -15,7 +15,7 @@ export const MenuItems = [
     // },
     {
         title: 'Galeri',
-        url: './galeri'
+        url: '/2021/galeri'
     },
     // {
     //     title: 'FAQ',

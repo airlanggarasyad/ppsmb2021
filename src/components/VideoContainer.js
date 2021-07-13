@@ -14,7 +14,6 @@ function VideoContainer(props) {
     <LiteYouTubeEmbed 
       id={props.id}
       title={props.title}
-      onClick={console.log("Clicked")}
     />
       <div className={`title-decoration ${props.passClass}`}>
         <div className="title-text">

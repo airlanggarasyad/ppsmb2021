@@ -402,7 +402,7 @@ const GaleriContainer = styled.div`
   @media (min-width: 576px) {
     .galeri-hero {
       background-size: 20%;
-      min-height: 91vh;
+      min-height: 100vmin;
       flex-direction: row;
       padding-top: 0;
     }

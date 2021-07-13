@@ -7,13 +7,13 @@ import GlobalStyle from "../../globalStyle";
 import LogoPPSMBOfficial from "../../assets/img/logo-ppsmb-official.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-// import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 import Beranda from "../../pages/Beranda";
 import FAQ from "../../pages/FAQ";
 import Galeri from "../../pages/Galeri";
 import Modal from "react-modal";
-import {Link} from "../../Routes/RelativeRoute"
-
+import Card from "../Card";
+// import {Link} from "../../Routes/RelativeRoute"
 
 export default class Navbar extends Component {
   state = { clicked: false, modalIsOpen: false };
@@ -25,26 +25,24 @@ export default class Navbar extends Component {
 
   openModal = (e) => {
     if (e.target.classList[1] != undefined) {
-      this.setState({clicked: this.clicked, modalIsOpen: true });
+      this.setState({ clicked: this.clicked, modalIsOpen: true });
+      console.log(this.state.modalIsOpen);
     }
-    // console.log(this.state);
   };
 
   closeModal = () => {
     this.setState({ modalIsOpen: false });
   };
 
-  
-
   render() {
-    Modal.setAppElement('#root');
+    Modal.setAppElement("#root");
 
     return (
-      <Header>
+      <Header id="nav">
         <nav className="navbar">
           {/* Left-corner: Logo PPSMB */}
           <Link
-            to="/"
+            to="/2021"
             relative
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
@@ -83,10 +81,13 @@ export default class Navbar extends Component {
           </NavIconStyled>
         </nav>
 
-        <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal}>
-          <div>
-            <h2>Coming Soon</h2>
-          </div>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          parentSelector={() => document.querySelector("#nav")}
+          className="blockModal"
+        >
+        <Card title="Coming Soon"/>
         </Modal>
       </Header>
     );
@@ -99,6 +100,8 @@ const Header = styled.header`
   width: 100%;
   box-sizing: border-box;
   height: calc(0.5rem + 7.5vmin);
+  z-index: 20;
+  position: relative;
 
   .navbar {
     //Container style
@@ -108,6 +111,7 @@ const Header = styled.header`
     padding: 0.6vmin;
     width: 100%;
     top: 0;
+    min-height: 12vmin;
 
     //Text style
     white-space: nowrap;
@@ -159,6 +163,31 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .navbar {
+      min-height: 0vmin;
+    }
+  }
+
+  .blockModal {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    right: auto;
+    bottom: auto;
+    margin-left: -40vw;
+    margin-top: -35vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    padding: 5vmin;
+    background: var(--color-blue);
+    border-radius: 10vmin;
+
   }
 `;
 const NavItemsStyled = styled.ul`

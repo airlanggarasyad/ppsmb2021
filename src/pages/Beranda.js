@@ -48,7 +48,7 @@ export default function Beranda() {
         title: 'Apa Itu PPSMB?',
         desc: 'Pahami apa itu PPSMB di sini!',
         embedId: '_3uPoHK0XZk',
-        thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
+        // thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     });
     return (
         <>
@@ -106,10 +106,11 @@ export default function Beranda() {
                         <div className='lini-masa text-center ppsmb-darkblue'>
                             <h2>Lini Masa</h2>
                             <Sliders
-                                slidesToShow={1}
+                                slidesToShow={3}
                                 slidesToShowMobile={1}
                                 slidesToShowTablet={1}
-                                slidesToScroll={1}>
+                                slidesToScroll={1}
+                                infinite={false}>
                                 <LiniMasa
                                     mainText='Surat Keputusan Rektor'
                                     mainTextColor='var(--color-white)'
@@ -120,6 +121,25 @@ export default function Beranda() {
                                     shadow='rgba(255,190,0,0.4)'
                                     link='https://drive.google.com/file/d/13T3NUwb61mp1FHDsNvte3YExBDjxZ00T/view?usp=sharing'>
                                 </LiniMasa>
+                                <LiniMasa
+                                    mainText='Segera Hadir'
+                                    mainTextColor='var(--color-white)'
+                                    background={BgThree}
+                                    title='PPSMB 2021'
+                                    titleColor='var(--color-white)'
+                                    headerColor='var(--color-redpink)'
+                                    shadow='rgba(255,190,0,0.4)'>
+                                </LiniMasa>
+                                <LiniMasa
+                                    mainText='Segera Hadir'
+                                    mainTextColor='var(--color-white)'
+                                    background={BgFour}
+                                    title='PPSMB 2021'
+                                    titleColor='var(--color-white)'
+                                    headerColor='var(--color-redpink)'
+                                    shadow='rgba(255,190,0,0.4)'>
+                                </LiniMasa>
+                                
 
                                 {/* <LiniMasa
                                     mainText='Surat Keputusan Rektor'
@@ -255,9 +275,7 @@ export default function Beranda() {
                                 Serba-Serbi
                                 <span className='font-indonesia-script ppsmb-white'> Palapa!</span>
                             </h2>
-                            <p>
-                                Video menarik seputar UGM buat mengisi harimu!
-                    </p>
+                            <p>Kreasi konten menarik untuk menemani hari-hari Gamada!</p>
                         </Fade>
                     </div>
 
@@ -671,7 +689,6 @@ const Container = styled.div`
 
             overflow: hidden;
             line-height: calc(0.5rem + 3.3vmin);
-            max-width: 1440px;
             min-height: 115vh;
 
             .desc{
@@ -702,8 +719,7 @@ const Container = styled.div`
                 padding: 10vmin;
                 width: 50%;
                 height: 130%;
-                margin-bottom: 100px;
-
+                margin-bottom: 15vmin;
             }
             .highlight{
                 display: block;
@@ -711,10 +727,10 @@ const Container = styled.div`
                 text-align: center;
 
                 img{
-                    height: 10em;
+                    height: 30vmin;
                     padding: 10px;
                     pointer-events: none;
-
+                    margin-bottom: 5vmin;
                 }
             }
 
@@ -755,12 +771,12 @@ const Container = styled.div`
             .logo2-ppsmb{
                 order: 1;
                 width: 100%;
-                margin-bottom: 100px;
+                margin-bottom: 15vmin;
             }
 
         }
         @media(min-width: 1440px){
-            align-self: center;
+            width: 100%;
         }
 
 
