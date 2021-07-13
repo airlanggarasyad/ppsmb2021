@@ -29,7 +29,7 @@ import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
 import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 import Modal from 'react-modal';
-// import { Document, Page } from 'react-pdf';
+import Button from "../components/main/Button";
 
 const customStyles = {
     content: {
@@ -39,9 +39,15 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
+        borderRadius: '25px',
+        maxHeight: '90vh',
+        maxWidth: '90vw',
     },
-    background: 'white',
+    overlay: {zIndex: 1000},
 };
+
+Modal.setAppElement('body');
 
 export default function Beranda() {
     const [highlight, setHighlight] = useState({
@@ -56,62 +62,49 @@ export default function Beranda() {
 
     });
     const [videoPlay, setVideoPlay] = useState({
-        title: 'Apa Itu PPSMB?',
-        desc: 'Pahami apa itu PPSMB di sini!',
+        title: 'Apa Itu PPSMB UGM?',
+        desc: 'Yuk, kenali lebih dalam tentang PPSMB UGM!',
         embedId: '_3uPoHK0XZk',
         thumbnail: require('../assets/img/serba-serbi/apaituppsmb.webp').default,
     });
 
-    // const [numPages, setNumPages] = useState(null);
-    // const [pageNumber, setPageNumber] = useState(1);
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = React.useState(false);
 
-    // let subtitle;
-    // const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
 
-    // function onDocumentLoadSuccess({ numPages }) {
-    //     setNumPages(numPages);
-    // }
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        // subtitle.style.color = '#f00';
+    }
 
-
-    // function openModal() {
-    //     setIsOpen(true);
-    // }
-
-    // function afterOpenModal() {
-    //     // references are now sync'd and can be accessed.
-    //     subtitle.style.color = '#f00';
-    // }
-
-    // function closeModal() {
-    //     setIsOpen(false);
-    // }
-
+    function closeModal() {
+        setIsOpen(false);
+    }
     return (
         <>
             <GlobalStyle />
             <Container url="./assets/img/main-bg.jpg">
-                {/* <div>
-                    <button onClick={openModal}>Open Modal</button>
+                <div>
                     <Modal
                         isOpen={modalIsOpen}
                         onAfterOpen={afterOpenModal}
                         onRequestClose={closeModal}
                         style={customStyles}
-                        contentLabel="Example Modal"
+                        contentLabel="Surat Keputusan Rektor"
                     >
-                        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-                        <button onClick={closeModal}>close</button>
-                        <div>I am a modal</div>
-                        <Document file='SK_Penyelenggaraan_PPSMB_2021_SALINAN.pdf' onLoadSuccess={setNumPages} />
-                        <Page pageNumber={pageNumber} />
-                        <p>Page {pageNumber} of {numPages}</p>
+                        <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
+                        <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
+                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="480px" allow="autoplay"></iframe>
                     </Modal>
-                </div> */}
+                </div>
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
                     <Fade bottom left >
-                        <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo"/>
+                        <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
                     </Fade >
                     <div className='batiks'>
                         <Spin duration={4000} forever>
@@ -150,8 +143,6 @@ export default function Beranda() {
                                 </Fade>
                             </div>
 
-
-
                         </div>
                         <div className='lini-masa text-center ppsmb-darkblue'>
                             <h2>Lini Masa</h2>
@@ -160,6 +151,7 @@ export default function Beranda() {
                                 slidesToShowMobile={1}
                                 slidesToShowTablet={1}
                                 slidesToScroll={1}>
+                                <div onClick={openModal}>
                                 <LiniMasa
                                     mainText='Surat Keputusan Rektor'
                                     mainTextColor='var(--color-white)'
@@ -170,6 +162,7 @@ export default function Beranda() {
                                     shadow='rgba(255,190,0,0.4)'
                                     link='https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing'>
                                 </LiniMasa>
+                                </div>
 
                                 {/* <LiniMasa
                                     mainText='Surat Keputusan Rektor'
@@ -197,6 +190,10 @@ export default function Beranda() {
                     </div>
 
                 </section>
+                {/* <div>
+                    <button onClick={openModal}>Open Modal</button>
+                    
+                </div> */}
                 <section className='greeting'>
                     <div className='left-corner'>
                         <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
