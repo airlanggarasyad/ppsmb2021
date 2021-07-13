@@ -14,6 +14,7 @@ import SocialMedia from "../components/SocialMedia";
 import { DaftarVideo } from "./DaftarVideo";
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
+import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Lightspeed from 'react-reveal/LightSpeed';
 import Pulse from 'react-reveal/Pulse';
@@ -45,7 +46,7 @@ const modalStyles = {
         width: '80vw',
         fontSize: 'calc(0.5rem + 1vmin)',
     },
-    overlay: {zIndex: 1000},
+    overlay: { zIndex: 1000 },
 };
 
 Modal.setAppElement('body');
@@ -96,18 +97,21 @@ export default function Beranda() {
                         style={modalStyles}
                         contentLabel="Surat Keputusan Rektor"
                     >
-                        <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
-                        <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
-                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="80%" allow="autoplay"></iframe>
+
+                        <Fade>
+                            <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
+                            <p className='ppsmb-red' onClick={closeModal} style={{ cursor: 'pointer' }}>Tutup</p>
+                            <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="80%" allow="autoplay"></iframe>
+                        </Fade>
                     </Modal>
                 </section>
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
                     <Fade bottom left >
-                        <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
+                        <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo unselectable" />
                     </Fade>
-                    <div className='batiks'>
+                    <div className='batiks unselectable'>
                         <Spin duration={4000} forever>
                             <img src={Batik} alt="" srcset="" className="batik" />
                             <img src={Batik} alt="" srcset="" className="batik" />
@@ -153,17 +157,20 @@ export default function Beranda() {
                                 slidesToShowTablet={1}
                                 slidesToScroll={1}>
                                 <div onClick={openModal}>
-                                <LiniMasa
-                                    mainText='Surat Keputusan Rektor'
-                                    mainTextColor='var(--color-white)'
-                                    background={BgOne}
-                                    title='6 Juli 2021'
-                                    titleColor='var(--color-white)'
-                                    headerColor='var(--color-redpink)'
-                                    shadow='rgba(255,190,0,0.4)'
-                                    link='https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing'>
-                                </LiniMasa>
+                                    <LiniMasa
+                                        onClick={openModal}
+                                        mainText='Surat Keputusan Rektor'
+                                        mainTextColor='var(--color-white)'
+                                        background={BgOne}
+                                        title='6 Juli 2021'
+                                        titleColor='var(--color-white)'
+                                        headerColor='var(--color-redpink)'
+                                        shadow='rgba(255,190,0,0.4)'
+                                        link='https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing'>
+                                    </LiniMasa>
+
                                 </div>
+
 
                                 {/* <LiniMasa
                                     mainText='Surat Keputusan Rektor'
@@ -196,7 +203,7 @@ export default function Beranda() {
                     
                 </div> */}
                 <section className='greeting'>
-                    <div className='left-corner'>
+                    <div className='left-corner unselectable'>
                         <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
                         <img src={Lean1} alt="" srcset="" className="corner bottom-left" />
                     </div>
@@ -210,14 +217,14 @@ export default function Beranda() {
                         </Slide>
                     </div>
                     <div className='right'>
-                        <img src={Bulk1} alt="" srcset="" className="corner upper-right" />
+                        <img src={Bulk1} alt="" srcset="" className="corner upper-right unselectable" />
                         <Slide right >
                             <div className='title-box'>
 
                                 <Pulse delay={2500} forever={true}>
                                     <div className='title'>
                                         <Lightspeed right>
-                                            <h1 className='ppsmb-darkblue underline red-stick'>Selamat Datang
+                                            <h1 className='ppsmb-darkblue underline red-stick unselectable'>Selamat Datang
                                                 <Fade delay={500} left cascade >
                                                     <span className='font-indonesia-script ppsmb-red'> Gamada!</span>
                                                 </Fade>
@@ -225,7 +232,7 @@ export default function Beranda() {
                                         </Lightspeed>
                                         <img src={RedStick} className='red-stick'></img>
                                     </div>
-                                    <div className="batiks">
+                                    <div className="batiks unselectable">
                                         <img src={Batik} alt="" srcset="" className="batik" />
                                         <img src={Batik} alt="" srcset="" className="batik" />
                                         <img src={Batik} alt="" srcset="" className="batik" />
@@ -235,7 +242,7 @@ export default function Beranda() {
 
                             </div>
                         </Slide>
-                        <img src={Lean2} alt="" srcset="" className="corner bottom-right" />
+                        <img src={Lean2} alt="" srcset="" className="corner bottom-right unselectable" />
 
 
                     </div>
@@ -330,7 +337,7 @@ export default function Beranda() {
                                 return (
                                     <Fade bottom>
                                         <Video onClick={onClickThumbnail}>
-                                            <img src={item.thumbnail} alt={item.title + ' thumbnail'} />
+                                            <img src={item.thumbnail} alt={item.title + ' thumbnail'} className='unselectable' />
                                             <div style={{ overflow: 'hidden' }}>
                                                 <p className='title' data-toggle="collapse" aria-expanded="true">{item.title}</p>
                                                 <p>{item.desc}</p>
@@ -378,7 +385,7 @@ const Video = styled.div`
         overflow-y: hidden;
         padding: 0 10px;
         p{
-            font-size: calc(0.5rem + 1.5vmin);
+            font-size: calc(0.5rem + 1.2vmin);
             margin: 0;
             padding: 0;
         }
@@ -410,6 +417,10 @@ const Container = styled.div`
   margin:0;
   display: flex;
   flex-direction: column;
+
+  .unselectable{
+            pointer-events: none;
+        }
 
     section{
         .corner{
@@ -478,12 +489,12 @@ const Container = styled.div`
                     white-space: nowrap;
 
                     .title {
-                        font-size: calc(0.5rem + 4vmin);
+                        font-size: calc(0.5rem + 3.5vmin);
                     }
 
                     .ppsmb {
                         margin-bottom: 4.5vmin;
-                        font-size: calc(0.5rem + 2.5vmin);
+                        font-size: calc(0.5rem + 2vmin);
                     }
 
                     .font-indonesia-script {
@@ -495,7 +506,7 @@ const Container = styled.div`
 
                 }
                 .lini-masa {
-                    font-size: calc(0.5rem + 2vmin);
+                    font-size: calc(0.5rem + 1.5vmin);
                     width: 85vmin;
                 }
             }
@@ -619,7 +630,7 @@ const Container = styled.div`
                         margin: 0;
                         padding: 0;
                         h1{
-                            font-size: calc(0.5rem + 4vmin);
+                            font-size: calc(0.5rem + 3.5vmin);
                             .font-indonesia-script{
                                 display: inline-block;
                                 transform: rotate(-18deg) translate(-40%, -10%);
@@ -687,10 +698,10 @@ const Container = styled.div`
 
             .desc{
                 h2{
-                    font-size: calc(0.5rem + 4vmin);
+                    font-size: calc(0.5rem + 3vmin);
                 }
                 p{
-                    font-size: calc(0.5rem + 2vmin);
+                    font-size: calc(0.5rem + 1.5vmin);
                 }
                 box-sizing: border-box;
                 float: center;
@@ -791,7 +802,7 @@ const Container = styled.div`
                 h2{
                     margin: 0;
                     padding: 0;
-                    font-size: calc(0.5rem + 4vmin);
+                    font-size: calc(0.5rem + 3.5vmin);
                     .font-indonesia-script{
                         display: inline-block;
                         transform: rotate(-18deg) translate(-40%, -10%);
@@ -800,7 +811,7 @@ const Container = styled.div`
                 }
 
                 p{
-                    font-size: calc(0.5rem + 2vmin);
+                    font-size: calc(0.5rem + 1.5vmin);
                 }
 
             }
@@ -821,10 +832,10 @@ const Container = styled.div`
                     padding-right: 20px;
                     /* flex-grow: 6; */
                     h2{
-                        font-size: calc(0.5rem + 3vmin);
+                        font-size: calc(0.5rem + 2vmin);
                     }
                     p{
-                        font-size: calc(0.5rem + 2vmin);
+                        font-size: calc(0.5rem + 1.5vmin);
                         padding-bottom: 5vmin;
                         border-bottom: 3px solid yellow;
                     }
