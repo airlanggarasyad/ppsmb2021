@@ -106,7 +106,7 @@ export default function Beranda() {
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
                     <Fade bottom left >
                         <img src={LogoPPSMB} alt="Logo Dekoratif PPSMB 2021" srcset="" className="hero-logo" />
-                    </Fade >
+                    </Fade>
                     <div className='batiks'>
                         <Spin duration={4000} forever>
                             <img src={Batik} alt="" srcset="" className="batik" />

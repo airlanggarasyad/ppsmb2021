@@ -9,7 +9,7 @@ import ScrollToTop from "./Routes/ScrollToTop";
 class App extends Component {
   render() {
     return (
-      <>
+      <div>
         <GlobalStyle />
         <Router>
           <Navbar />
@@ -17,7 +17,7 @@ class App extends Component {
           <Routes />
           <Footer />
         </Router>
-      </>
+      </div>
     );
   }
 }

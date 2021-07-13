@@ -86,8 +86,10 @@ export default class Navbar extends Component {
           onRequestClose={this.closeModal}
           parentSelector={() => document.querySelector("#nav")}
           className="blockModal"
-        >
-        <Card title="Coming Soon"/>
+          overlayClassName="blockModalOverlay">
+          <div className="content-modal">
+            Coming Soon
+          </div>
         </Modal>
       </Header>
     );
@@ -184,10 +186,41 @@ const Header = styled.header`
     width: 80%;
     height: 70%;
     position: relative;
-    padding: 5vmin;
     background: var(--color-blue);
     border-radius: 10vmin;
+  }
 
+  .blockModalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 200ms ease-in-out;
+    opacity: 0;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .content-modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
 `;
 const NavItemsStyled = styled.ul`

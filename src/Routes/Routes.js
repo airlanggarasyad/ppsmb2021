@@ -14,7 +14,7 @@ export default function Routes() {
     <Switch>
       <Route exact path="/2021" component={Beranda} />
       <Route path="/2021/beranda" component={Beranda} />
-      {/* <Route exact path="/faq" component={FAQ} /> */}
+      {/* <Route exact path="/2021/faq" component={FAQ} /> */}
       <Route path="/2021/galeri" component={Galeri} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
     </Switch>
