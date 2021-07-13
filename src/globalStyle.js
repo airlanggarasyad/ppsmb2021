@@ -313,7 +313,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (min-width: 576px) {
         .pattern-bg {
-            background-size: 20%;
+            background-size: 15%;
         }
 
         .modalContent img {

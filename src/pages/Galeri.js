@@ -140,7 +140,7 @@ export default class Galeri extends Component {
                 <span className="ppsmb-blue"> 2</span>
                 <span className="ppsmb-redpink">0</span>
                 <span className="ppsmb-orange">2</span>
-                <span className="ppsmb-yellow">1</span>
+                <span className="ppsmb-yellow">0</span>
               </h2>
             </div>
           </section>
@@ -208,12 +208,12 @@ export default class Galeri extends Component {
 const GaleriContainer = styled.div`
   width: 100%;
   position: relative;
-  overflow: clip;
+  overflow: hidden;
 
   .galeri-hero {
     min-height: 100vh;
     width: 100%;
-    overflow: clip;
+    overflow: hidden;
     box-shadow: 0px 0.2em 3em 0px rgba(0, 0, 0, 0.78);
     display: flex;
     flex-direction: column;

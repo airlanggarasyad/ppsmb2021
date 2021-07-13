@@ -87,7 +87,7 @@ export default function Beranda() {
   return (
     <>
       <GlobalStyle />
-      <Container url="./assets/img/main-bg.jpg">
+      <Container url="./assets/img/main-bg.jpg" className="pattern-bg">
         <section className="modal">
           <Modal
             isOpen={modalIsOpen}
@@ -194,7 +194,7 @@ export default function Beranda() {
                   headerColor="var(--color-redpink)"
                   shadow="rgba(255,190,0,0.4)"
                 />
-                                <LiniMasa
+                <LiniMasa
                   mainText="PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
                   background={BgTwo}
@@ -233,7 +233,7 @@ export default function Beranda() {
                     <button onClick={openModal}>Open Modal</button>
                     
                 </div> */}
-        <section className="greeting">
+        <section className="greeting pattern-bg">
           <div className="left-corner unselectable">
             <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
             <img src={Lean1} alt="" srcset="" className="corner bottom-left" />
@@ -356,7 +356,7 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        <section className="serba-serbi">
+        <section className="serba-serbi pattern-bg">
           <div className="title">
             <Fade left>
               <h2 className="ppsmb-yellow">
@@ -479,7 +479,6 @@ const Container = styled.div`
   box-sizing: border-box;
   background-image: url(${mainBG});
   background-repeat: repeat;
-  background-size: 15%;
   overflow: hidden;
   margin: 0;
   display: flex;
@@ -611,7 +610,6 @@ const Container = styled.div`
       margin: 0;
       background-image: url(${yellowBG});
       background-repeat: repeat;
-      background-size: 15%;
       justify-content: space-between;
       background-color: var(--color-yellow);
       /* height: calc(0.5rem + 92vmin); */
@@ -760,6 +758,11 @@ const Container = styled.div`
           display: flex;
           align-items: center;
         }
+
+        a {
+          text-decoration: none;
+          color: var(--color-darkblue);
+        }
       }
 
       .logo2-ppsmb {
@@ -832,7 +835,6 @@ const Container = styled.div`
     &.serba-serbi {
       background-image: url(${darkBlueBG});
       background-repeat: repeat;
-      background-size: 15%;
       padding: 10vmin;
       color: var(--color-white);
       display: flex;
@@ -960,7 +962,7 @@ function ShowSocialMedia(props) {
 }
 function ShowEmail(props) {
   if (props.email != null) {
-    return <p>Email: {props.email}</p>;
+    return <p>Email: <a href={"mailto:" + props.email}>{props.email}</a></p>;
   } else {
     return null;
   }
