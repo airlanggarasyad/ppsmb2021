@@ -12,6 +12,9 @@ import Beranda from "../../pages/Beranda";
 import FAQ from "../../pages/FAQ";
 import Galeri from "../../pages/Galeri";
 import Modal from "react-modal";
+import Card from "../Card";
+import ComingSoon from "../../assets/img/maskot-comingsoon.png";
+// import {Link} from "../../Routes/RelativeRoute"
 
 export default class Navbar extends Component {
   state = { clicked: false, modalIsOpen: false };
@@ -23,26 +26,25 @@ export default class Navbar extends Component {
 
   openModal = (e) => {
     if (e.target.classList[1] != undefined) {
-      this.setState({clicked: this.clicked, modalIsOpen: true });
+      this.setState({ clicked: this.clicked, modalIsOpen: true });
+      console.log(this.state.modalIsOpen);
     }
-    console.log(this.state);
   };
 
   closeModal = () => {
     this.setState({ modalIsOpen: false });
   };
 
-  
-
   render() {
-    Modal.setAppElement('#root');
+    Modal.setAppElement("#root");
 
     return (
-      <Header>
+      <Header id="nav">
         <nav className="navbar">
           {/* Left-corner: Logo PPSMB */}
           <Link
-            to="./"
+            to="/2021"
+            relative
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
           >
@@ -62,6 +64,7 @@ export default class Navbar extends Component {
                     className={item.block ? "nav-links block" : "nav-links"}
                     to={item.block ? {} : item.url}
                     onClick={this.openModal}
+                    relative
                   >
                     {item.title}
                   </Link>
@@ -79,9 +82,16 @@ export default class Navbar extends Component {
           </NavIconStyled>
         </nav>
 
-        <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal}>
-          <div>
-            <h2>Coming Soon</h2>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          closeTimeoutMS={500}
+          parentSelector={() => document.querySelector("#nav")}
+          className="blockModal"
+          overlayClassName="blockModalOverlay"
+        >
+          <div className="content-modal" onClick={this.closeModal}>
+            <img src={ComingSoon} alt="Maskot Coming Soon" />
           </div>
         </Modal>
       </Header>
@@ -95,6 +105,8 @@ const Header = styled.header`
   width: 100%;
   box-sizing: border-box;
   height: calc(0.5rem + 7.5vmin);
+  z-index: 20;
+  position: relative;
 
   .navbar {
     //Container style
@@ -104,6 +116,7 @@ const Header = styled.header`
     padding: 0.6vmin;
     width: 100%;
     top: 0;
+    min-height: 12vmin;
 
     //Text style
     white-space: nowrap;
@@ -155,6 +168,74 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .navbar {
+      min-height: 0vmin;
+    }
+  }
+
+  .blockModal {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    right: auto;
+    bottom: auto;
+    margin-left: -40vw;
+    margin-top: -35vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    border-radius: 10vmin;
+  }
+
+  .blockModalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 200ms ease-in-out;
+    opacity: 0;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .content-modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 200ms ease-in-out;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    @media (min-width: 576px) {
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 `;
 const NavItemsStyled = styled.ul`

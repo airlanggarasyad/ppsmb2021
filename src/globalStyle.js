@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    img {
+        user-drag: none;
+    }
+
     /*----------------------*\
                Font
     \*----------------------*/
@@ -214,10 +218,23 @@ const GlobalStyle = createGlobalStyle`
     }
     }
 
+
+    /*----------------------*\
+            Scrollbar
+    \*----------------------*/
+
+    body::-webkit-scrollbar {
+        width: 0.8em;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        border-radius: 5vmin;
+        background-color: var(--color-yellow);
+    }
+
     /*----------------------*\
             Modal
     \*----------------------*/
-
     .ReactModal__Body--open {
         overflow: hidden;
     }

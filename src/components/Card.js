@@ -111,6 +111,7 @@ const CardStyle = styled.div`
   .card-background > img {
     height: 30vmin;
     width: 30vmin;
+    transition: transform 500ms ease;
   }
   .card-shadow {
     height: 30vmin;
@@ -118,6 +119,7 @@ const CardStyle = styled.div`
     position: absolute;
     z-index: -1;
     background: ${(props) => `linear-gradient(180deg, rgba(0,0,0,0) 0%,` + props.shadow + `75%,` + props.shadow + `100%)`};
+    transition: transform 500ms ease;
   }
   
 `;

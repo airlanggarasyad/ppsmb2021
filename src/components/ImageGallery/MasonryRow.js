@@ -11,7 +11,7 @@ export default function MasonryRow() {
 
   const options = {
     settings: {
-      autoplaySpeed: 1500,
+      autoplaySpeed: 4000,
       transitionSpeed: 500,
       hideControlsAfter: 1000,
       slideAnimationType: 'both',

@@ -1,25 +1,25 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: './'
+        url: '/2021'
     },
-    // {
-    //     title: 'Agenda Materi',
-    //     url: './agenda',
-    //     block: true,
-    // },
-    // {
-    //     title: 'Peta UGM',
-    //     url: './peta',
-    //     block: true,
-    // },
+    {
+        title: 'Agenda Materi',
+        url: './agenda',
+        block: true,
+    },
+    {
+        title: 'Peta UGM',
+        url: './peta',
+        block: true,
+    },
     {
         title: 'Galeri',
-        url: './galeri'
+        url: '/2021/galeri'
     },
-    // {
-    //     title: 'FAQ',
-    //     url: './faq',
-    //     block: true,
-    // },
+    {
+        title: 'FAQ',
+        url: './faq',
+        block: true,
+    },
 ]

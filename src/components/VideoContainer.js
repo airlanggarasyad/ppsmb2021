@@ -14,7 +14,7 @@ function VideoContainer(props) {
     <LiteYouTubeEmbed 
       id={props.id}
       title={props.title}
-      onClick={console.log("Clicked")}
+      poster={props.nomaxres ? "hqdefault":"maxresdefault"}
     />
       <div className={`title-decoration ${props.passClass}`}>
         <div className="title-text">
@@ -22,28 +22,6 @@ function VideoContainer(props) {
         </div>
         <img src={titleDecoration} alt="" />
       </div>
-      {/* <div className="play-button">
-        <div className="bg"></div>
-        <div className="triangle">
-          <svg
-            width="80%"
-            height="80%"
-            viewBox="0 0 96 96"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M79 46.268C80.3333 47.0378 80.3333 48.9623 79 49.7321L34 75.7128C32.6667 76.4826 31 75.5204 31 73.9808L31 22.0192C31 20.4796 32.6667 19.5174 34 20.2872L79 46.268Z"
-              fill="white"
-            />
-            <path
-              d="M85 53.1962L34 82.641C30 84.9504 25 82.0637 25 77.4449L25 18.5551C25 13.9363 30 11.0496 34 13.359L85 42.8039C89 45.1133 89 50.8868 85 53.1962Z"
-              stroke="white"
-              stroke-width="2"
-            />
-          </svg>
-        </div>
-      </div> */}
     </VideoSectionContainer>
   );
 }

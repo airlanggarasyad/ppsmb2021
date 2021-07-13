@@ -14,7 +14,10 @@ library.add(faTwitter, faInstagram, faFacebook, faTiktok, faYoutube, faLine);
 
 function SocialMedia(props) {
   return (
-    <SocialMediaContainer mainColor={props.mainColor} secondaryColor={props.secondaryColor}>
+    <SocialMediaContainer
+      mainColor={props.mainColor}
+      secondaryColor={props.secondaryColor}
+    >
       <div className="social-media-icon">
         <a href={props.link} target="_blank" rel="noopener noreferrer">
           <div>
@@ -49,8 +52,8 @@ const SocialMediaContainer = styled.div`
   }
 
   .social-media-icon a svg {
-    color: ${props => props.mainColor};
-    border: 0.2vmin solid ${props => props.mainColor};
+    color: ${(props) => props.mainColor};
+    border: 0.2vmin solid ${(props) => props.mainColor};
     border-radius: 100px;
     padding: 1vmin;
     margin: 2px;
@@ -59,15 +62,28 @@ const SocialMediaContainer = styled.div`
     min-height: calc(0.5rem + 5vmin);
     max-width: calc(0.5rem + 5vmin);
     max-height: calc(0.5rem + 5vmin);
+    margin-right: 5px;
     height: auto;
   }
 
   .social-media-icon a:hover > div svg {
-    border: 0.2vmin solid ${props => props.secondaryColor};
-    color: ${props => props.secondaryColor};
+    border: 0.2vmin solid ${(props) => props.secondaryColor};
+    color: ${(props) => props.secondaryColor};
   }
 
   .social-media-icon a:hover > div span {
-    color: ${props => props.secondaryColor};
+    color: ${(props) => props.secondaryColor};
+  }
+
+  @media (min-width: 576px) {
+    .social-media-icon a {
+      margin-bottom: 0.2vmin;
+    }
+    .social-media-icon a svg {
+      min-width: calc(0.5rem + 3.5vmin);
+      min-height: calc(0.5rem + 3.5vmin);
+      max-width: calc(0.5rem + 3.5vmin);
+      max-height: calc(0.5rem + 3.5vmin);
+    }
   }
 `;
