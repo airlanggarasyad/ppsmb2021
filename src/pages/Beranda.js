@@ -31,7 +31,7 @@ import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 import Modal from 'react-modal';
 import Button from "../components/main/Button";
 
-const customStyles = {
+const modalStyles = {
     content: {
         top: '50%',
         left: '50%',
@@ -41,8 +41,9 @@ const customStyles = {
         transform: 'translate(-50%, -50%)',
         textAlign: 'center',
         borderRadius: '25px',
-        maxHeight: '90vh',
-        maxWidth: '90vw',
+        height: '90vh',
+        width: '80vw',
+        fontSize: 'calc(0.5rem + 1vmin)',
     },
     overlay: {zIndex: 1000},
 };
@@ -87,19 +88,19 @@ export default function Beranda() {
         <>
             <GlobalStyle />
             <Container url="./assets/img/main-bg.jpg">
-                <div>
+                <section className='modal'>
                     <Modal
                         isOpen={modalIsOpen}
                         onAfterOpen={afterOpenModal}
                         onRequestClose={closeModal}
-                        style={customStyles}
+                        style={modalStyles}
                         contentLabel="Surat Keputusan Rektor"
                     >
                         <h2 className='ppsmb-darkblue'>Surat Keputusan Penyelenggaran PPSMB UGM 2021</h2>
                         <p className='ppsmb-red' onClick={closeModal} style={{cursor:'pointer'}}>Tutup</p>
-                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="480px" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview" width="100%" height="80%" allow="autoplay"></iframe>
                     </Modal>
-                </div>
+                </section>
                 <section className='hero'>
                     <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
                     <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
