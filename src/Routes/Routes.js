@@ -13,7 +13,6 @@ export default function Routes() {
   return (
     <Switch>
       <Route exact path="/2021" component={Beranda} />
-      <Route path="/2021/beranda" component={Beranda} />
       {/* <Route exact path="/2021/faq" component={FAQ} /> */}
       <Route path="/2021/galeri" component={Galeri} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
