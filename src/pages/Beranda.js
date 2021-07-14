@@ -69,6 +69,7 @@ export default function Beranda() {
     tiktokLink: "https://tiktok.com/@ppsmb_ugm",
     facebookLink: "https://www.facebook.com/PPSMB-UGM-325374494259950",
     twitterLink: "http://twitter.com/ppsmb_ugm",
+    webLink: "https://ppsmb.ugm.ac.id/",
   });
   const [videoPlay, setVideoPlay] = useState({
     title: "Apa Itu PPSMB UGM?",
@@ -119,6 +120,7 @@ export default function Beranda() {
                 Tutup
               </p>
               <iframe
+                title="PDF Linimasa"
                 src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview"
                 width="100%"
                 height="80%"
@@ -198,7 +200,7 @@ export default function Beranda() {
                 <LiniMasa
                   mainText="PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
-                  background={BgFour}
+                  background={BgTwo}
                   title="Segera Hadir"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
@@ -207,34 +209,12 @@ export default function Beranda() {
                 <LiniMasa
                   mainText="PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
-                  background={BgTwo}
+                  background={BgThree}
                   title="Segera Hadir"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
                   shadow="rgba(255,190,0,0.4)"
                 />
-
-                {/* <LiniMasa
-                                    mainText='Surat Keputusan Rektor'
-                                    mainTextColor='var(--color-white)'
-                                    background={BgTwo}
-                                    title='28 Des 01'
-                                    titleColor='var(--color-white)'
-                                    headerColor='var(--color-redpink)'
-                                    shadow='rgba(1,56,94,0.8)'
-                                    link='www.facebook.com'>
-                                </LiniMasa>
-
-                                <LiniMasa
-                                    mainText='Surat Keputusan Rektor'
-                                    mainTextColor='var(--color-white)'
-                                    background={BgThree}
-                                    title='30 Sept 1965'
-                                    titleColor='var(--color-white)'
-                                    headerColor='var(--color-redpink)'
-                                    shadow='rgba(197,0,52,0.4)'
-                                    link='www.facebook.com'>
-                                </LiniMasa> */}
               </Sliders>
             </div>
           </div>
@@ -325,6 +305,7 @@ export default function Beranda() {
                     link={highlight.facebookLink}
                   />
                   <ShowSocialMedia icon="tiktok" link={highlight.tiktokLink} />
+                  <ShowWebsite icon="globe" link={highlight.webLink} />
                 </div>
               </Fade>
             </div>
@@ -355,6 +336,7 @@ export default function Beranda() {
                     youtubeLink: item.youtubeLink,
                     facebookLink: item.facebookLink,
                     email: item.email,
+                    webLink: item.webLink,
                   });
                 };
                 return (
@@ -970,6 +952,22 @@ function ShowSocialMedia(props) {
     return null;
   }
 }
+
+function ShowWebsite(props) {
+  if (props.link != null) {
+    return (
+      <SocialMedia
+        mainColor="#01385E"
+        secondaryColor="#C50034"
+        faIcon={["fas", props.icon]}
+        link={props.link}
+      />
+    );
+  } else {
+    return null;
+  }
+}
+
 function ShowEmail(props) {
   if (props.email != null) {
     return (

@@ -182,6 +182,7 @@ export const DaftarPPSMB = [
         tiktokLink: "https://tiktok.com/@ppsmb_kesatria",
         twitterLink: "http://twitter.com/ppsmb_kesatria",
         lineLink: 'http://line.me/ti/p/~@NRB2565A',
+        webLink: 'https://ppsmb.ft.ugm.ac.id/',
         email: 'ppsmb.teknik@gmail.com',
     },
     {
