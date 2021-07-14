@@ -9,8 +9,9 @@ import {
   faYoutube,
   faLine,
 } from "@fortawesome/free-brands-svg-icons";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons"
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(faTwitter, faInstagram, faFacebook, faTiktok, faYoutube, faLine);
+library.add(faTwitter, faInstagram, faFacebook, faTiktok, faYoutube, faLine, faGlobe);
 
 function SocialMedia(props) {
   return (

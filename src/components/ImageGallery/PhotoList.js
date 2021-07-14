@@ -146,18 +146,11 @@ export const srlPhotos = [{
         height: 9,
     },
     {
-        src: `${process.env.PUBLIC_URL + "/assets/img/galeri/full-width/21.jpg"}`,
-        thumbnail: `${process.env.PUBLIC_URL + "/assets/img/galeri/thumbnail/21.webp"}`,
-        alt: "",
-        width: 16,
-        height: 9,
-    },
-    {
         src: `${process.env.PUBLIC_URL + "/assets/img/galeri/full-width/22.jpg"}`,
         thumbnail: `${process.env.PUBLIC_URL + "/assets/img/galeri/thumbnail/22.webp"}`,
         alt: "",
-        width: 3,
-        height: 2,
+        width: 16,
+        height: 9,
     },
     {
         src: `${process.env.PUBLIC_URL + "/assets/img/galeri/full-width/23.jpg"}`,
