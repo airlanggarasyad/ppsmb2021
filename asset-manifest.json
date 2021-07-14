@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/2021/static/js/main.0572b25c.chunk.js",
-    "main.js.map": "/2021/static/js/main.0572b25c.chunk.js.map",
+    "main.js": "/2021/static/js/main.0eca7dff.chunk.js",
+    "main.js.map": "/2021/static/js/main.0eca7dff.chunk.js.map",
     "runtime-main.js": "/2021/static/js/runtime-main.2a885090.js",
     "runtime-main.js.map": "/2021/static/js/runtime-main.2a885090.js.map",
     "static/css/2.d8e2a883.chunk.css": "/2021/static/css/2.d8e2a883.chunk.css",
-    "static/js/2.11a2ad56.chunk.js": "/2021/static/js/2.11a2ad56.chunk.js",
-    "static/js/2.11a2ad56.chunk.js.map": "/2021/static/js/2.11a2ad56.chunk.js.map",
+    "static/js/2.9fe3015e.chunk.js": "/2021/static/js/2.9fe3015e.chunk.js",
+    "static/js/2.9fe3015e.chunk.js.map": "/2021/static/js/2.9fe3015e.chunk.js.map",
     "index.html": "/2021/index.html",
     "static/css/2.d8e2a883.chunk.css.map": "/2021/static/css/2.d8e2a883.chunk.css.map",
-    "static/js/2.11a2ad56.chunk.js.LICENSE.txt": "/2021/static/js/2.11a2ad56.chunk.js.LICENSE.txt",
+    "static/js/2.9fe3015e.chunk.js.LICENSE.txt": "/2021/static/js/2.9fe3015e.chunk.js.LICENSE.txt",
     "static/media/Arrow.850497d5.png": "/2021/static/media/Arrow.850497d5.png",
     "static/media/Indonesia-Script.241a9023.woff": "/2021/static/media/Indonesia-Script.241a9023.woff",
     "static/media/Kollektif.f40b6345.woff": "/2021/static/media/Kollektif.f40b6345.woff",
@@ -21,7 +21,7 @@
     "static/media/PPSMB-Geografi.webp": "/2021/static/media/PPSMB-Geografi.a641c288.webp",
     "static/media/PPSMB-Hukum.webp": "/2021/static/media/PPSMB-Hukum.00779fe9.webp",
     "static/media/PPSMB-IlmuBudaya.webp": "/2021/static/media/PPSMB-IlmuBudaya.fd1e2fd4.webp",
-    "static/media/PPSMB-KKMK.webp": "/2021/static/media/PPSMB-KKMK.b9e5e3a7.webp",
+    "static/media/PPSMB-KKMK.webp": "/2021/static/media/PPSMB-KKMK.ce37c72b.webp",
     "static/media/PPSMB-KedokteranGigi.webp": "/2021/static/media/PPSMB-KedokteranGigi.0f47accd.webp",
     "static/media/PPSMB-KedokteranHewan.webp": "/2021/static/media/PPSMB-KedokteranHewan.3dffbd60.webp",
     "static/media/PPSMB-Kehutanan.webp": "/2021/static/media/PPSMB-Kehutanan.0564dff7.webp",
@@ -69,7 +69,7 @@
   "entrypoints": [
     "static/js/runtime-main.2a885090.js",
     "static/css/2.d8e2a883.chunk.css",
-    "static/js/2.11a2ad56.chunk.js",
-    "static/js/main.0572b25c.chunk.js"
+    "static/js/2.9fe3015e.chunk.js",
+    "static/js/main.0eca7dff.chunk.js"
   ]
 }
