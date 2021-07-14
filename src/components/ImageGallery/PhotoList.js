@@ -6,8 +6,8 @@ export const srlPhotos = [{
         height: 2,
     },
     {
-        src: `${process.env.PUBLIC_URL + "/assets/img/galeri/full-width/24.jpg"}`,
-        thumbnail: `${process.env.PUBLIC_URL + "/assets/img/galeri/thumbnail/24.webp"}`,
+        src: `${process.env.PUBLIC_URL + "/assets/img/galeri/full-width/21.jpg"}`,
+        thumbnail: `${process.env.PUBLIC_URL + "/assets/img/galeri/thumbnail/21.webp"}`,
         alt: "",
         width: 16,
         height: 9,

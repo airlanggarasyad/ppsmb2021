@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import GlobalStyle from "../globalStyle";
+import Helmet from "react-helmet";
+
 import LogoPPSMB from "../assets/img/logo-ppsmb-decorative.svg";
 import Bulk1 from "../assets/img/corner-bulk1.webp";
 import Bulk2 from "../assets/img/corner-bulk2.webp";
@@ -9,26 +11,32 @@ import Sliders from "../components/Slider";
 import Lean1 from "../assets/img/corner-lean1.webp";
 import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
+
 import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
 import { DaftarVideo } from "./DaftarVideo";
+
 import Fade from "react-reveal/Fade";
 import Spin from "react-reveal/Spin";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Lightspeed from "react-reveal/LightSpeed";
 import Pulse from "react-reveal/Pulse";
+
 import mainBG from "../assets/img/pattern-bg-white.webp";
 import yellowBG from "../assets/img/pattern-bg-yellow.webp";
 import darkBlueBG from "../assets/img/pattern-bg-darkblue.webp";
+
 import VideoContainer from "../components/VideoContainer";
 import LiniMasa from "../components/Card";
+
 import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
 import BgTwo from "../assets/images/agenda/DayCardContainer/two.png";
 import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
 import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
 import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
+
 import Modal from "react-modal";
 import Button from "../components/main/Button";
 
@@ -53,7 +61,7 @@ Modal.setAppElement("body");
 
 export default function Beranda() {
   const [highlight, setHighlight] = useState({
-    title: "PPSMB UGM 2021",
+    title: "PPSMB UGM",
     src: require("../assets/img/logo-ppsmb-official.webp").default,
     desc: "Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) adalah kegiatan resmi orientasi dan pengenalan kampus bagi mahasiswa baru di lingkungan UGM. “Ragam Kreasi UGM Pancarkan Pesona Pertiwi” sebagai tema PPSMB UGM 2021 merupakan sebuah langkah awal bagi Gadjah Mada Muda untuk menumbuhkan semangat serta keberanian berkreasi. Harapannya, buah kreasi Gadjah Mada Muda dapat memancarkan pesona kreasi Indonesia ke kancah yang lebih luas. Tidak hanya itu, tema yang dipadukan dengan berbagai rangkaian kegiatan PPSMB UGM 2021 diharapkan dapat melahirkan insan-insan yang kreatif, inovatif, dan adaptif sebagai modal menuju Indonesia maju.",
     instaLink: "http://instagram.com/ppsmb_ugm",
@@ -86,7 +94,9 @@ export default function Beranda() {
   }
   return (
     <>
-      <GlobalStyle />
+      <Helmet>
+        <title>Beranda | PPSMB UGM 2021</title>
+      </Helmet>
       <Container url="./assets/img/main-bg.jpg" className="pattern-bg">
         <section className="modal">
           <Modal
@@ -962,7 +972,11 @@ function ShowSocialMedia(props) {
 }
 function ShowEmail(props) {
   if (props.email != null) {
-    return <p>Email: <a href={"mailto:" + props.email}>{props.email}</a></p>;
+    return (
+      <p>
+        Email: <a href={"mailto:" + props.email}>{props.email}</a>
+      </p>
+    );
   } else {
     return null;
   }
