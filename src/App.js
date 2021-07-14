@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./Routes/ScrollToTop";
+import ScrollTop from "./components/ScrollTop";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Navbar />
           <ScrollToTop />
           <Routes />
+          <ScrollTop />
           <Footer />
         </Router>
       </div>
