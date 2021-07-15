@@ -90,7 +90,7 @@ export const DaftarPPSMB = [
         desc: 'Morfogenesis memiliki makna awal mula pembentukan organisme dalam proses biologi. PPSMB Morfogenesis diharapkan menjadi tahap awal proses pembentukan mahasiswa FK-KMK untuk menjadi pribadi yang lebih baik dan berkarakter. Tema “Harmoni Budaya Nusantara” merepresentasikan kecintaan terhadap keberagaman budaya Nusantara yang membentuk tatanan yang harmonis. Kegiatan PPSMB Morfogenesis 2021 mencakup pembekalan mengenai pengenalan kampus, kegiatan fakultas, dan gambaran besar profesi tenaga kesehatan.',
         src: require('../assets/img/ppsmb-fakultas/PPSMB-KKMK.webp').default,
         instaLink: "http://instagram.com/morfogenesisfkkmkugm",
-        youtubeLink: 'https://www.youtube.com/channel/UCUJlvSbS1Ad5RPshn1RgoaQ',
+        youtubeLink: 'https://youtube.com/channel/UCZ7ZX_A4neMcyoq2XD8hdwQ',
         lineLink: 'http://line.me/ti/p/~@buy7156u',
     },
     {
