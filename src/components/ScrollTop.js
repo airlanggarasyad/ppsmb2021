@@ -156,6 +156,7 @@ const ScrollToTopContainer = styled.div`
     width: 8vmin;
     height: 8vmin;
     border-radius: 20px;
+    background-color: var(--color-white);
     cursor: pointer;
 
     svg {

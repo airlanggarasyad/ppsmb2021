@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import GlobalStyle from "../globalStyle";
 import Helmet from "react-helmet";
 
 import LogoPPSMB from "../assets/img/logo-ppsmb-decorative.svg";
@@ -18,7 +17,6 @@ import { DaftarVideo } from "./DaftarVideo";
 
 import Fade from "react-reveal/Fade";
 import Spin from "react-reveal/Spin";
-import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Lightspeed from "react-reveal/LightSpeed";
 import Pulse from "react-reveal/Pulse";
@@ -38,7 +36,6 @@ import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 
 import Modal from "react-modal";
-import Button from "../components/main/Button";
 
 const modalStyles = {
   content: {
@@ -78,7 +75,6 @@ export default function Beranda() {
     thumbnail: require("../assets/img/serba-serbi/apaituppsmb.webp").default,
   });
 
-  let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -260,7 +256,7 @@ export default function Beranda() {
                         </Fade>
                       </h1>
                     </Lightspeed>
-                    <img src={RedStick} className="red-stick"></img>
+                    <img src={RedStick} className="red-stick" alt=""></img>
                   </div>
                   <div className="batiks unselectable">
                     <img src={Batik} alt="" srcset="" className="batik" />
@@ -348,7 +344,7 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        <section className="serba-serbi pattern-bg">
+        <section id="serba-serbi-palapa" className="serba-serbi pattern-bg">
           <div className="title">
             <Fade left>
               <h2 className="ppsmb-yellow">
@@ -876,7 +872,17 @@ const Container = styled.div`
           width: 40%;
           height: auto;
           padding-left: 4px;
+          overflow-x: hidden;
           /* background-color: yellow; */
+
+          div div {
+            transition: all 0.25s ease-in-out;
+          }
+
+          div div:hover {
+            transition: all 0.25s ease-in-out;
+            transform: scale(1.05);
+          }
         }
       }
 

@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
         user-drag: none;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     /*----------------------*\
                Font
     \*----------------------*/
@@ -116,6 +120,7 @@ const GlobalStyle = createGlobalStyle`
     .p-5 {
         padding: calc(var(--spacer) * 3);
     }
+
 
 
     /*----------------------*\
