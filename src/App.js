@@ -6,6 +6,10 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./Routes/ScrollToTop";
 import ScrollTop from "./components/ScrollTop";
+import TawkTo from "./components/TawkTo"
+
+const tawkToPropertyId = "60f0f124d6e7610a49ab832e";  
+const tawkToKey = "5fda6c5c0ca68dbfb7b8881c9de9369f47e9a61d";
 
 class App extends Component {
   render() {
