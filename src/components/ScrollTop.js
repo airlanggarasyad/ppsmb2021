@@ -138,8 +138,8 @@ export default function ScrollTop() {
 
 const ScrollToTopContainer = styled.div`
   position: fixed;
-  bottom: 2vmin;
-  right: 2vmin;
+  bottom: 14vmin;
+  right: 3vmin;
   z-index: 20;
   visibility: hidden;
   opacity: 0;
