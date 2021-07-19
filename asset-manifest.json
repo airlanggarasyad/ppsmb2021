@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/2021/static/js/main.da377615.chunk.js",
-    "main.js.map": "/2021/static/js/main.da377615.chunk.js.map",
+    "main.js": "/2021/static/js/main.395171a8.chunk.js",
+    "main.js.map": "/2021/static/js/main.395171a8.chunk.js.map",
     "runtime-main.js": "/2021/static/js/runtime-main.2a885090.js",
     "runtime-main.js.map": "/2021/static/js/runtime-main.2a885090.js.map",
     "static/css/2.d8e2a883.chunk.css": "/2021/static/css/2.d8e2a883.chunk.css",
-    "static/js/2.80794316.chunk.js": "/2021/static/js/2.80794316.chunk.js",
-    "static/js/2.80794316.chunk.js.map": "/2021/static/js/2.80794316.chunk.js.map",
+    "static/js/2.6da10d03.chunk.js": "/2021/static/js/2.6da10d03.chunk.js",
+    "static/js/2.6da10d03.chunk.js.map": "/2021/static/js/2.6da10d03.chunk.js.map",
     "index.html": "/2021/index.html",
     "static/css/2.d8e2a883.chunk.css.map": "/2021/static/css/2.d8e2a883.chunk.css.map",
-    "static/js/2.80794316.chunk.js.LICENSE.txt": "/2021/static/js/2.80794316.chunk.js.LICENSE.txt",
+    "static/js/2.6da10d03.chunk.js.LICENSE.txt": "/2021/static/js/2.6da10d03.chunk.js.LICENSE.txt",
     "static/media/Arrow.850497d5.png": "/2021/static/media/Arrow.850497d5.png",
     "static/media/Indonesia-Script.241a9023.woff": "/2021/static/media/Indonesia-Script.241a9023.woff",
     "static/media/Kollektif.f40b6345.woff": "/2021/static/media/Kollektif.f40b6345.woff",
@@ -69,7 +69,7 @@
   "entrypoints": [
     "static/js/runtime-main.2a885090.js",
     "static/css/2.d8e2a883.chunk.css",
-    "static/js/2.80794316.chunk.js",
-    "static/js/main.da377615.chunk.js"
+    "static/js/2.6da10d03.chunk.js",
+    "static/js/main.395171a8.chunk.js"
   ]
 }
