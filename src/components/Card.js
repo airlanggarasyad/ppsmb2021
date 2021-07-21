@@ -6,43 +6,118 @@ import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
 import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
 import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
-import Flip from 'react-reveal/Flip';
+import Flip from "react-reveal/Flip";
+import Fade from "react-reveal/Fade";
+import Modal from "react-modal";
+
+const modalStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
+    borderRadius: "25px",
+    height: "90vh",
+    width: "80vw",
+    fontSize: "calc(0.5rem + 1vmin)",
+  },
+  overlay: { zIndex: 1000 },
+};
+
+Modal.setAppElement("body");
 
 export default function Card(props) {
-    const { background, shadow, headerColor, title, titleColor, mainText, mainTextColor, link } = props;
-    return (
-        <div style={{ padding: '0 2px', display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <Flip right>
-                <CardStyle
-                    background={props.background}
-                    shadow={props.shadow}
-                    headerColor={props.headerColor}
-                    title={props.title}
-                    titleColor={props.titleColor}
-                    mainText={props.mainText}
-                    mainTextColor={props.mainTextColor}
-                    link={props.link}
-                    
-                >
-                    {/* <a style={{textDecoration:'none'}} href={props.link} target='_blank'> */}
-                        <div className="card-header">
-                            <h6>{props.title}</h6>
-                        </div>
-                        <div className="card-background">
-                            <img src={props.background} alt="" />
-                        </div>
-                        <div className="card-shadow"></div>
-                        <div className="card-content">
-                            <h6>{props.mainText}</h6>
-                        </div>
-                    {/* </a> */}
-                </CardStyle>
-            </Flip>
-        </div>
+  const {
+    background,
+    shadow,
+    headerColor,
+    title,
+    titleColor,
+    mainText,
+    mainTextColor,
+    link,
+  } = props;
+  const [modalIsOpen, setIsOpen] = useState(false);
 
+  function openModal() {
+    setIsOpen(true);
+  }
 
-    )
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
 
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  return (
+    <div
+      style={{
+        padding: "0 2px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Flip right>
+        <CardStyle
+          background={props.background}
+          shadow={props.shadow}
+          headerColor={props.headerColor}
+          title={props.title}
+          titleColor={props.titleColor}
+          mainText={props.mainText}
+          mainTextColor={props.mainTextColor}
+          link={props.link}
+          onClick={openModal}
+        >
+          <div className="card-header">
+            <h6>{props.title}</h6>
+          </div>
+          <div className="card-background">
+            <img src={props.background} alt="" />
+          </div>
+          <div className="card-shadow"></div>
+          <div className="card-content">
+            <h6>{props.mainText}</h6>
+          </div>
+        </CardStyle>
+      </Flip>
+      <section className="modal">
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          closeTimeoutMS={500}
+          onRequestClose={closeModal}
+          style={modalStyles}
+          contentLabel={props.mainText}
+        >
+          <Fade>
+            <h2 className="ppsmb-darkblue">{props.mainText}</h2>
+            <p
+              className="ppsmb-red"
+              onClick={closeModal}
+              style={{ cursor: "pointer" }}
+            >
+              Tutup
+            </p>
+            <iframe
+              title="PDF Linimasa"
+              src={props.link}
+              width="100%"
+              height="80%"
+              allow="autoplay"
+            ></iframe>
+          </Fade>
+        </Modal>
+      </section>
+    </div>
+  );
 }
 const CardStyle = styled.div`
   height: 30vmin;
@@ -79,7 +154,6 @@ const CardStyle = styled.div`
     background-color: ${(props) => props.headerColor};
     border-radius: 2vmin 0;
     padding: 1vmin 5vmin 1vmin 5vmin;
-    
   }
   .card-content {
     height: 100%;
@@ -91,14 +165,13 @@ const CardStyle = styled.div`
   }
 
   .card-content > h6 {
-    width:80%;
+    width: 80%;
     text-align: right;
-    font-size: calc(0.5rem + 1.8vmin);
+    font-size: calc(0.5rem + 1.6vmin);
     color: white;
     color: ${(props) => props.mainTextColor};
     margin: 0 3vmin 3vmin 0;
     text-decoration: none;
-
   }
   .card-background {
     height: 30vmin;
@@ -118,8 +191,12 @@ const CardStyle = styled.div`
     width: 27vmin;
     position: absolute;
     z-index: -1;
-    background: ${(props) => `linear-gradient(180deg, rgba(0,0,0,0) 0%,` + props.shadow + `75%,` + props.shadow + `100%)`};
+    background: ${(props) =>
+      `linear-gradient(180deg, rgba(0,0,0,0) 0%,` +
+      props.shadow +
+      `75%,` +
+      props.shadow +
+      `100%)`};
     transition: transform 500ms ease;
   }
-  
 `;
