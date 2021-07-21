@@ -76,6 +76,8 @@ export default function Beranda() {
     thumbnail: require("../assets/img/serba-serbi/apaituppsmb.webp").default,
   });
 
+  const [modalLink, setModalLink] = useState();
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -96,7 +98,7 @@ export default function Beranda() {
         <title>Beranda | PPSMB UGM 2021</title>
       </Helmet>
       <Container url="./assets/img/main-bg.jpg" className="pattern-bg">
-        <section className="modal">
+        {/* <section className="modal">
           <Modal
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
@@ -118,14 +120,14 @@ export default function Beranda() {
               </p>
               <iframe
                 title="PDF Linimasa"
-                src="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview"
+                src={modalLink}
                 width="100%"
                 height="80%"
                 allow="autoplay"
               ></iframe>
             </Fade>
           </Modal>
-        </section>
+        </section> */}
         <section className="hero">
           <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
           <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
@@ -182,44 +184,40 @@ export default function Beranda() {
                 slidesToScroll={1}
                 infinite={false}
               >
-                <div onClick={openModal}>
-                  <LiniMasa
-                    mainText="Surat Keputusan Rektor"
-                    mainTextColor="var(--color-white)"
-                    background={BgOne}
-                    title="6 Juli 2021"
-                    titleColor="var(--color-white)"
-                    headerColor="var(--color-redpink)"
-                    shadow="rgba(255,190,0,0.4)"
-                    link="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/view?usp=sharing"
-                  ></LiniMasa>
-                </div>
                 <LiniMasa
-                  mainText="PPSMB UGM 2021"
+                  mainText="Mekanisme Perizinan PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
-                  background={BgTwo}
-                  title="Segera Hadir"
+                  background={BgSix}
+                  title="21 Juli 2021"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
                   shadow="rgba(255,190,0,0.4)"
+                  link="https://drive.google.com/file/d/1ei2oy6RgBi2dF1CAstmJvV30zcH2UxWA/preview?usp=sharing"
                 />
                 <LiniMasa
-                  mainText="PPSMB UGM 2021"
+                  mainText="Ketentuan Keikutsertaan Mahasiswa PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
                   background={BgThree}
-                  title="Segera Hadir"
+                  title="13 Juli 2021"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
                   shadow="rgba(255,190,0,0.4)"
+                  link="https://drive.google.com/file/d/1Jl4PWBpZ5EhLTGyIMfyhEotdE3mbkqeE/preview?usp=sharing"
                 />
+                <LiniMasa
+                  mainText="Surat Keputusan Rektor"
+                  mainTextColor="var(--color-white)"
+                  background={BgOne}
+                  title="6 Juli 2021"
+                  titleColor="var(--color-white)"
+                  headerColor="var(--color-redpink)"
+                  shadow="rgba(255,190,0,0.4)"
+                  link="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview?usp=sharing"
+                ></LiniMasa>
               </Sliders>
             </div>
           </div>
         </section>
-        {/* <div>
-                    <button onClick={openModal}>Open Modal</button>
-                    
-                </div> */}
         <section className="greeting pattern-bg">
           <div className="left-corner unselectable">
             <img src={Bulk2} alt="" srcset="" className="corner upper-left" />
