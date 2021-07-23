@@ -160,7 +160,7 @@ export default function Beranda() {
 
       }
     })
-  };//moment(day.dateString).format(_format)
+  };
 
 
   const [modalLink, setModalLink] = useState();
@@ -169,11 +169,6 @@ export default function Beranda() {
 
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
   }
 
   function closeModal() {
@@ -185,36 +180,6 @@ export default function Beranda() {
         <title>Beranda | PPSMB UGM 2021</title>
       </Helmet>
       <Container url="./assets/img/main-bg.jpg" className="pattern-bg">
-        {/* <section className="modal">
-          <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            closeTimeoutMS={500}
-            onRequestClose={closeModal}
-            style={modalStyles}
-            contentLabel="Surat Keputusan Rektor"
-          >
-            <Fade>
-              <h2 className="ppsmb-darkblue">
-                Surat Keputusan Penyelenggaran PPSMB UGM 2021
-              </h2>
-              <p
-                className="ppsmb-red"
-                onClick={closeModal}
-                style={{ cursor: "pointer" }}
-              >
-                Tutup
-              </p>
-              <iframe
-                title="PDF Linimasa"
-                src={modalLink}
-                width="100%"
-                height="80%"
-                allow="autoplay"
-              ></iframe>
-            </Fade>
-          </Modal>
-        </section> */}
         <section className="hero">
           <img src={Bulk1} alt="" srcset="" className="corner upper-left" />
           <img src={Bulk2} alt="" srcset="" className="corner upper-right" />
@@ -278,7 +243,7 @@ export default function Beranda() {
                   title="21 Juli 2021"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
-                  shadow="rgba(255,190,0,0.4)"
+                  shadow="rgba(1,56,94,0.4)"
                   link="https://drive.google.com/file/d/1ei2oy6RgBi2dF1CAstmJvV30zcH2UxWA/preview?usp=sharing"
                 />
                 <LiniMasa
@@ -288,7 +253,7 @@ export default function Beranda() {
                   title="13 Juli 2021"
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
-                  shadow="rgba(255,190,0,0.4)"
+                  shadow="rgba(197,0,52,0.4)"
                   link="https://drive.google.com/file/d/1Jl4PWBpZ5EhLTGyIMfyhEotdE3mbkqeE/preview?usp=sharing"
                 />
                 <LiniMasa
@@ -446,13 +411,15 @@ export default function Beranda() {
 
             <div className='agenda-desc ppsmb-darkblue'>
               <p>PPSMB UGM 2021 diselenggarakan secara daring tanggal 2-14 Agustus 2021. Materi pembelajaran disampaikan selama 6 hari berturut-turut, diikuti dengan penugasan mandiri yang salah satunya action plan sebagai bentuk penerapan pelajaran.</p>
-              <h4>{activeDate.title}</h4>
-              <p>{activeDate.desc}</p>
-              <div className='quick-access'>
-                <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Kelas Elok' />
-                <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Penugasan' />
-                <Button bg="var(--color-white)" color="var(--color-darkblue)" text='Selengkapnya' />
-              </div>
+              <Fade spy={activeDate}>
+                <h4>{activeDate.title}</h4>
+                <p>{activeDate.desc}</p>
+                <div className='quick-access'>
+                  <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Kelas Elok' />
+                  <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Penugasan' />
+                  <Button bg="var(--color-white)" color="var(--color-darkblue)" text='Selengkapnya' />
+                </div>
+              </Fade>
             </div>
 
             <div className='agenda-access ppsmb-darkblue'>

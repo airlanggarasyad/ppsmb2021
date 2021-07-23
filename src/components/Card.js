@@ -30,25 +30,11 @@ const modalStyles = {
 Modal.setAppElement("body");
 
 export default function Card(props) {
-  const {
-    background,
-    shadow,
-    headerColor,
-    title,
-    titleColor,
-    mainText,
-    mainTextColor,
-    link,
-  } = props;
+
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
   }
 
   function closeModal() {
@@ -91,7 +77,6 @@ export default function Card(props) {
       <section className="modal">
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           closeTimeoutMS={500}
           onRequestClose={closeModal}
           style={modalStyles}
