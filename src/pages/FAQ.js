@@ -220,7 +220,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
     useEffect(() => {
         setIsShown(false)
         item.question.map((question, index) => {
-            if (question.title.toLowerCase().includes(input.toLowerCase())) {
+            if (question.title.toString().toLowerCase().includes(input.toLowerCase())) {
                 setIsShown(true)
             }
         })
@@ -233,7 +233,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
                     {item.question.map((question, index) => {
                         return (
                             <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
-                                show={question.title.toLowerCase().includes(input.toLowerCase())} />
+                                show={question.title.toString().toLowerCase().includes(input.toLowerCase())} />
                         )
                     })}
                 </div>
@@ -257,8 +257,16 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
             {show &&
                 <div class="accordion" key={key}>
                     <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
+                    
                     <Fade spy={isActive}>
-                        {isActive && <p onClick={() => setIsActive(!isActive)} ><FontAwesomeIcon icon={faChevronRight} />    {content}</p>}
+                        {isActive && 
+                        <div style={{display:'flex'}}>
+                            <FontAwesomeIcon icon={faChevronRight} />
+                            <div>
+                                {content}
+                            </div>
+                        </div>}
+
                     </Fade>
                     <div className="line"></div>
                 </div>
