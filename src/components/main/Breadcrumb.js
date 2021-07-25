@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 export default function Breadcrumb(props) {
-  const { primer, data, secondary } = props;
+  const { primer, data, secondary, back } = props;
   const linkData = data;
+
   return (
     <BreadcrumStyle color={primer} colorHover={secondary}>
+        <Link to={back}>
       <div className="back">
         <svg
           width="100%"
@@ -19,19 +22,26 @@ export default function Breadcrumb(props) {
           />
         </svg>
       </div>
+      </Link>
       <div className="breadcrumb-content">
         {linkData.map((item, index) => (
           <>
             {index === index.length - 1 ? (
+             
               <div className="breadcrumb-link">
-                {" "}
-                <a href="">{item.text}</a>
+                {" "} <Link to={item.link}>
+                {item.text}</Link>
               </div>
+             
             ) : (
+             
               <div className="breadcrumb-link">
                 {" "}
-                <a href="">{item.text}</a> <span> / </span>
+                <Link to={item.link}>
+              {item.text}
+                </Link> <span> / </span>
               </div>
+           
             )}
           </>
         ))}

@@ -82,11 +82,36 @@ const CardStyle = styled.div`
   border-radius: 2.5vmin;
   box-shadow: 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: 500ms ease;
+  transition:  500ms ease;
+  .card-background {
+    height: 45vmin;
+    width: 33vmin;
+    position: absolute;
+    z-index: -2;
+  }
+  .card-background > img {
+    height: 45vmin;
+    width: 45vmin;
+    transform: ${(props) =>
+      props.day === "one"
+        ? `translate(0vmin,0vmin)`
+        : props.day === "two"
+        ? `translate(-6vmin,0vmin)`
+        : props.day === "three"
+        ? `translate(0vmin,0vmin)`
+        : props.day === "four"
+        ? `translate(-6vmin,0vmin)`
+        : props.day === "five"
+        ? `translate(-12vmin,0vmin)`
+        : props.day === "six"
+        ? `translate(0vmin,0vmin)`
+        : `translate(0vmin,0vmin)`};
+  }
 
   &:hover .card-background > img {
     transform: scale(1.25);
     transition: transform 500ms ease;
+
   }
   &:hover .card-shadow {
     transform: scale(1, 2);
@@ -134,30 +159,7 @@ const CardStyle = styled.div`
     color: white;
     margin: 0 3vmin 3vmin 0;
   }
-  .card-background {
-    height: 45vmin;
-    width: 33vmin;
-    position: absolute;
-    z-index: -2;
-  }
-  .card-background > img {
-    height: 45vmin;
-    width: 45vmin;
-    transform: ${(props) =>
-      props.day === "one"
-        ? `translate(0vmin,0vmin)`
-        : props.day === "two"
-        ? `translate(-6vmin,0vmin)`
-        : props.day === "three"
-        ? `translate(0vmin,0vmin)`
-        : props.day === "four"
-        ? `translate(-6vmin,0vmin)`
-        : props.day === "five"
-        ? `translate(-12vmin,0vmin)`
-        : props.day === "six"
-        ? `translate(0vmin,0vmin)`
-        : `translate(0vmin,0vmin)`};
-  }
+
   .card-shadow {
     height: 45vmin;
     width: 45vmin;

@@ -63,8 +63,10 @@ const ButtonLink = styled.button`
   border-style: none;
   border-width: 0.5vmin;
   font-size: 2.5vmin;
+  
   display: flex;
   align-items: center;
+  text-decoration: none;
   justify-content: center;
   color: ${(props) =>
     props.textColor === "red"

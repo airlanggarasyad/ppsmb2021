@@ -1,14 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import styled, { keyframes } from "styled-components";
 import Button from "../main/Button";
 import GeoOne from "../../assets/images/agenda/Carousel/geo-one.png";
 import GeoTwo from "../../assets/images/agenda/Carousel/geo-two.png";
 import Batik from "../../assets/images/agenda/Carousel/batik.png";
-import Agenda from "../../assets/images/agenda/Carousel/agenda.png";
+import Agenda from "../../assets/images/agenda/Carousel/agenda_img.png"
+import Ketentuan from "../../assets/images/agenda/Carousel/ketentuan_img.png"
+import Materi from "../../assets/images/agenda/Carousel/materi_img.png"
+
+
 import Fade from "react-reveal/Fade"
+import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
 export default function CarouselCard(props) {
   const { title, text, image, link } = props;
+  // const { source, setSource} = useState();
+  // // const Agenda = require("../../assets/images/agenda/Carousel/agenda_img.png")
+  // console.log(image);
+
+  
+    // switch (image) {
+    //   case "agenda":
+    //     setSource("");
+    //     break;
+    //   default:
+    //     break;
+    // }
+   
+
   return (
     <CarouselStyle>
       <div className="batik">
@@ -30,7 +49,7 @@ export default function CarouselCard(props) {
         <div className="card-one">
           <div className="image-container">
             <Fade bottom>
-            <img src={Agenda} alt="" />
+            <img src={image === "agenda" ? Agenda : (image === "ketentuan" ? Ketentuan : Materi)} alt="" />
             </Fade>
             
           </div>
@@ -40,7 +59,7 @@ export default function CarouselCard(props) {
           <h3>{title}</h3>
           </Fade>
           <div className="image-card">
-            <img src={Agenda} alt="" />
+            <img src={image} alt="" />
           </div>
           <Fade left>
           <p>{text}</p>
@@ -48,8 +67,9 @@ export default function CarouselCard(props) {
           <div className="button-container">
             <div className="more-button">
             <Fade bottom>
+              <Link to={link}>
               <Button text="Selengkapnya" color="yellow" borderColor="yellow" />
-              </Fade>
+              </Link>  </Fade>
             </div>
           </div>
         </div>

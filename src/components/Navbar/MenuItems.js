@@ -5,8 +5,8 @@ export const MenuItems = [
     },
     {
         title: 'Agenda Materi',
-        url: './agenda',
-        block: true,
+        url: '/2021/agenda',
+    
     },
     {
         title: 'Peta UGM',
