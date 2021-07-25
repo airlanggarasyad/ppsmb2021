@@ -30,7 +30,11 @@ export default function FAQ() {
     return (
         <Container>
             <div className='top'>
-                {/* <Breadcrumbs></Breadcrumbs> */}
+                <div className='breadcumb'>
+                    <Breadcrumbs 
+                        navigations={["Beranda", "FAQ"]}
+                    ></Breadcrumbs>
+                </div>
                 <img src={UpperRight} alt="" srcset="" className="upper-right" />
             </div>
             <Fade >
@@ -44,11 +48,13 @@ export default function FAQ() {
 
                 <div className='content'>
                     <div className='choose-category' >
-                        <p className={((chosenCategory == 'Semua') ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
+                        <div>
+                            <p className={((chosenCategory == 'Semua') ? "ppsmb-white block" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
+                        </div>
                         {QuestionItems.map((item, index) => {
                             return (
                                 <div key={index} >
-                                    <p className={((chosenCategory == item.category) ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
+                                    <p className={((chosenCategory == item.category) ? "ppsmb-white block" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
                                 </div>
                             )
                         })}
@@ -84,15 +90,26 @@ const Container = styled.div`
     background-size: 15%;
 
     p{
+        font-size: calc(0.5rem + 1.2vmin);
+    }
+    h2{
+        font-size: calc(0.5rem + 2vmin);
+    }
+
+    h4{
         font-size: calc(0.5rem + 1.4vmin);
     }
 
     .top{
         width: 100vw;
         display: flex;
-        height: 14vh;
+        min-height: 12vh;
         position: relative;
         top: 0;
+
+        .breadcumb{
+            padding: 10vmin 0 0 10vmin;
+        }
 
         .upper-right {
             position: absolute;
@@ -104,22 +121,21 @@ const Container = styled.div`
 
     .title{
         text-align: center;
-        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10vmin;
         h2{
-            font-size: calc(0.5rem + 4vmin);
+            font-size: calc(0.5rem + 3.5vmin);
         }
 
         .search-bar{
-            margin: 1%;
-            width: 50%;
+            width: 90%;
             input{
                 font-family: 'Kollektif Regular';
-                padding: 10px;
-                font-size: calc(0.5rem + 1.4vmin);
+                padding: 2vmin;
+                font-size: calc(0.5rem + 1vmin);
                 width: 100%;
                 border-radius: 7px;
 
@@ -138,20 +154,26 @@ const Container = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: 0 10% 5% 10%;
 
         .choose-category{
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
-
-            cursor: pointer;
+            width: 25%;
             p{
+                cursor: pointer;
                 display: inline-block;
                 width: auto;
-                line-height: 3vmin;
+                padding: 2vmin;
+                border-radius: 5px;
+                margin: 1vmin 0;
                 &:hover{
                     color: var(--color-red);
+                }
+            }
+            .block{
+                background-color: var(--color-red);
+                &:hover{
+                    color: var(--color-white);
                 }
             }
         }
@@ -159,28 +181,41 @@ const Container = styled.div`
 
         .questions{
             display: flex;
-            flex-grow: 7;
+            width: 75%;
             flex-direction: column;
             .per-category{
-                margin-bottom: 1%;
-                padding: 1% 3%;
+                margin-bottom: 5vmin;
+                padding: 3vmin;
                 background-color: var(--color-white);
                 display: block;
                 border-radius: 20px;
-                div{
-                    margin-bottom: 2%;
-                    .qs:hover{
+                h4{
+                    margin: 0;
+                }
+                p{
+                    line-height: 1.2rem;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+                .qs:hover{
                         color: var(--color-red);
                     }
+                .line{
+                    height: 2px;
+                    background-color: var(--color-red);
+                }
+                .accordion-item{
+                    margin: 10px;
+                    display: flex;
+                    align-items: flex-start;
+                    .chevron{
+                        padding-right: 5px;
+                    }
+
                     p{
-                        margin: 4px 0px;
-                        cursor: pointer;
+                        margin: 0;
                     }
-                    .line{
-                        height: 2px;
-                        width: 100%;
-                        background-color: var(--color-red);
-                    }
+
                 }
                 
                 
@@ -190,13 +225,10 @@ const Container = styled.div`
          
     }
     @media (max-width: 768px){
-        .top{
-            height: 12vh;
-        }
         .title{
             .search-bar{
-                width: 100%;
-            }
+            width: 70%;
+        }
         }
         
         .content{
@@ -205,9 +237,16 @@ const Container = styled.div`
                 justify-content: space-around;
                 flex-direction: row;
                 flex-wrap: wrap;
-                p{
-                    padding: 0 2px;
+                width: 100%;
+                margin-bottom: 5vmin;
+            }
+
+            .questions{
+                width: 100%;
+                .per-category{
+                    border-radius: 10px;
                 }
+
             }
         }
         
@@ -229,7 +268,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
         <>
             {isShown &&
                 <div className="per-category">
-                    <h4 className="ppsmb-red">{item.category}</h4>
+                    <h4 className="ppsmb-darkblue">{item.category}</h4>
                     {item.question.map((question, index) => {
                         return (
                             <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
@@ -255,15 +294,16 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
     return (
         <>
             {show &&
-                <div class="accordion" key={key}>
-                    <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
-                    
+                <div onClick={() => setIsActive(!isActive)} class="accordion" key={key}>
+                    <p className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
                     <Fade spy={isActive}>
                         {isActive && 
-                        <div style={{display:'flex'}}>
-                            <FontAwesomeIcon icon={faChevronRight} />
+                        <div className='accordion-item ppsmb-black'>
+                            <div className='chevron'>
+                                <p><FontAwesomeIcon icon={faChevronRight} /></p>
+                            </div>
                             <div>
-                                {content}
+                                <p>{content}</p>
                             </div>
                         </div>}
 
