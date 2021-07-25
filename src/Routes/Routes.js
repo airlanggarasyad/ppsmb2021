@@ -18,7 +18,7 @@ export default function Routes() {
   //       tawkTo(tawkToPropertyId, email, fullName)
   //   }
   // }, [email, firstName, lastName]);
-  const day = [
+  const days = [
     { id: 1, day: 'one'},
     { id: 2, day: 'two'},
     { id: 3, day: 'three'},
@@ -50,13 +50,15 @@ export default function Routes() {
       {/* <Route exact path="/2021/faq" component={FAQ} /> */}
       <Route path="/2021/galeri" component={Galeri} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
-      <Route exact path="/2021/agenda" component={AgendaMateri} />
-      <Route path="/2021/agenda/agenda" component={Agenda} />
-      <Route path="/2021/agenda/materi" component={Agenda} />
-      <Route path="/2021/agenda/ketentuan" component={Agenda} />
-      <Route exact path="/2021/agenda/materi/:id" render={({match})=>(
-<Materi day={day.find(p => p.id === match.params.id)} />
-      )}></Route>
+      {/* Agenda Section */}
+      <Route exact path="/2021/modul-ketentuan" component={AgendaMateri} />
+      <Route exact path="/2021/modul-ketentuan/agenda" component={Agenda} />
+      <Route path="/2021/modul-ketentuan/materi" component={Agenda} />
+      <Route path="/2021/modul-ketentuan/ketentuan" component={Materi} />
+      {/* Agenda-materi */}
+      <Route path="/2021/modul-ketentuan/agenda/ppsmb-universitas" component={Materi} />
+      <Route path="/2021/modul-ketentuan/agenda/ppsmb-softskill" component={Materi} />
+      <Route path="/2021/modul-ketentuan/agenda/ppsmb-fakultas" component={Materi} />
       <Route  component={error} />
     </Switch>
   );
