@@ -30,7 +30,11 @@ export default function FAQ() {
     return (
         <Container>
             <div className='top'>
-                {/* <Breadcrumbs></Breadcrumbs> */}
+                <div className='breadcumb'>
+                    <Breadcrumbs 
+                        navigations={["Beranda", "FAQ"]}
+                    ></Breadcrumbs>
+                </div>
                 <img src={UpperRight} alt="" srcset="" className="upper-right" />
             </div>
             <Fade >
@@ -90,9 +94,13 @@ const Container = styled.div`
     .top{
         width: 100vw;
         display: flex;
-        height: 14vh;
+        /* height: 16vh; */
         position: relative;
         top: 0;
+
+        .breadcumb{
+            padding: 10vmin 0 0 10vmin;
+        }
 
         .upper-right {
             position: absolute;
@@ -103,23 +111,24 @@ const Container = styled.div`
     }
 
     .title{
+        padding: 5vmin;
         text-align: center;
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         h2{
-            font-size: calc(0.5rem + 4vmin);
+            font-size: calc(0.5rem + 3.5vmin);
+            margin: 4vmin;
         }
 
         .search-bar{
-            margin: 1%;
             width: 50%;
             input{
                 font-family: 'Kollektif Regular';
                 padding: 10px;
-                font-size: calc(0.5rem + 1.4vmin);
+                font-size: calc(0.5rem + 1vmin);
                 width: 100%;
                 border-radius: 7px;
 
@@ -138,15 +147,14 @@ const Container = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: 0 10% 5% 10%;
 
         .choose-category{
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
-
-            cursor: pointer;
+            width: 25%;
+            padding: 2vmin;
             p{
+                cursor: pointer;
                 display: inline-block;
                 width: auto;
                 line-height: 3vmin;
@@ -159,28 +167,40 @@ const Container = styled.div`
 
         .questions{
             display: flex;
-            flex-grow: 7;
+            width: 75%;
             flex-direction: column;
             .per-category{
-                margin-bottom: 1%;
-                padding: 1% 3%;
+                margin-bottom: 5vmin;
+                padding: 3vmin;
                 background-color: var(--color-white);
                 display: block;
                 border-radius: 20px;
-                div{
-                    margin-bottom: 2%;
-                    .qs:hover{
+                h4{
+                    margin: 0;
+                }
+                p{
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+                .qs:hover{
                         color: var(--color-red);
                     }
+                .line{
+                    height: 2px;
+                    background-color: var(--color-red);
+                }
+                .accordion-item{
+                    margin: 10px;
+                    display: flex;
+                    align-items: flex-start;
+                    .chevron{
+                        padding-right: 5px;
+                    }
+
                     p{
-                        margin: 4px 0px;
-                        cursor: pointer;
+                        margin: 0;
                     }
-                    .line{
-                        height: 2px;
-                        width: 100%;
-                        background-color: var(--color-red);
-                    }
+
                 }
                 
                 
@@ -190,9 +210,6 @@ const Container = styled.div`
          
     }
     @media (max-width: 768px){
-        .top{
-            height: 12vh;
-        }
         .title{
             .search-bar{
                 width: 100%;
@@ -205,9 +222,14 @@ const Container = styled.div`
                 justify-content: space-around;
                 flex-direction: row;
                 flex-wrap: wrap;
+                width: 100%;
                 p{
-                    padding: 0 2px;
+                    padding: 0 2vmin;
                 }
+            }
+
+            .questions{
+                width: 100%;
             }
         }
         
@@ -255,13 +277,14 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
     return (
         <>
             {show &&
-                <div class="accordion" key={key}>
-                    <p onClick={() => setIsActive(!isActive)} className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
-                    
+                <div onClick={() => setIsActive(!isActive)} class="accordion" key={key}>
+                    <p className={((isActive) ? 'ppsmb-red qs' : 'ppsmb-black qs')} >{title}</p>
                     <Fade spy={isActive}>
                         {isActive && 
-                        <div style={{display:'flex'}}>
-                            <FontAwesomeIcon icon={faChevronRight} />
+                        <div className='accordion-item ppsmb-black'>
+                            <div className='chevron'>
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </div>
                             <div>
                                 {content}
                             </div>
