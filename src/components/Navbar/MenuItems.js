@@ -6,7 +6,6 @@ export const MenuItems = [
     {
         title: 'Agenda Materi',
         url: '/2021/agenda',
-    
     },
     {
         title: 'Peta UGM',
@@ -19,7 +18,6 @@ export const MenuItems = [
     },
     {
         title: 'FAQ',
-        url: './faq',
-        block: true,
+        url: '/2021/faq',
     },
 ]
