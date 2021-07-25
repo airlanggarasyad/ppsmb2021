@@ -9,9 +9,18 @@ import six from "../../assets/images/agenda/DayContainer/six.png";
 import Button from "../main/Button";
 import Breadcrumb from "../main/Breadcrumb";
 import Fade from "react-reveal/Fade"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
+
 
 export default function Day(props) {
-  const { day } = props;
+  // const { day } = props;
+
+  const {day} = useParams();
 
   const [BreadcrumbText, setBreadcrumbText] = useState(
     day === "one"

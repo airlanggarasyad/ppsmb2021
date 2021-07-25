@@ -112,7 +112,6 @@ export default function Agenda({match}) {
           <Link to="/2021/modul-ketentuan/agenda/ppsmb-fakultas">
           <Card day="three"></Card> 
           </Link>
-          
         </div>
       </div>
     </AgendaStyle>

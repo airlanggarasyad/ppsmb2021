@@ -51,18 +51,16 @@ export default function Routes() {
       <Route exact path="/2021/faq" component={FAQ} />
       <Route path="/2021/galeri" component={Galeri} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
-      <Route exact path="/2021/agenda" component={AgendaMateri} />
-      <Route path="/2021/agenda/agenda" component={Agenda} />
-      <Route path="/2021/agenda/materi" component={Agenda} />
-      <Route path="/2021/agenda/ketentuan" component={Agenda} />
-      <Route
-        exact
-        path="/2021/agenda/materi/:id"
-        render={({ match }) => (
-          <Materi day={day.find((p) => p.id === match.params.id)} />
-        )}
-      ></Route>
-      <Route component={error} />
+      {/* Agenda Section */}
+      <Route exact path="/2021/materi-ketentuan" component={AgendaMateri} />
+      <Route exact path="/2021/materi-ketentuan/agenda" component={Agenda} />
+      <Route path="/2021/materi-ketentuan/materi" component={Agenda} />
+      <Route path="/2021/materi-ketentuan/ketentuan" component={Materi} />
+      {/* Agenda-materi */}
+      <Route path="/2021/materi-ketentuan/agenda/ppsmb-universitas" component={Materi} />
+      <Route path="/2021/materi-ketentuan/agenda/ppsmb-softskill" component={Materi} />
+      <Route path="/2021/materi-ketentuan/agenda/ppsmb-fakultas" component={Materi} />
+      <Route  component={error} />
     </Switch>
   );
 }

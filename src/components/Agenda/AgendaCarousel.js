@@ -19,19 +19,19 @@ export default class AgendaPenugasan extends Component {
         title: "Agenda",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
         image: "agenda",
-        link: "/2021/agenda/agenda",
+        link: "/2021/modul-ketentuan/agenda",
       },
       {
         title: "Ketentuan & Panduan Penugasan",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
-        link: "/2021/agenda/ketentuan",
+        link: "/2021/modul-ketentuan/ketentuan",
         image: "ketentuan",
         // link: "/Competition/CompetitiveProgramming",
       },
       {
         title: "Materi Tambahan",
         text: "berisikan materi-materi PPSMB UGM sebagai penunjang untuk pengerjaan penugasan. Untuk mengaksesnya, Gamada harus login menggunakan email UGM masing-masing.",
-        link: "/2021/agenda/materi",
+        link: "/2021/modul-ketentuan/materi",
         image: "materi",
         // link: "/Competition/CompetitiveProgramming",
       },
@@ -43,8 +43,8 @@ export default class AgendaPenugasan extends Component {
      
       },
       {
-        text: "Agenda & Materi ",
-        link: "/2021/agenda"
+        text: "Modul & Ketentuan",
+        link: "/2021/modul-ketentuan"
       },
   
     ];

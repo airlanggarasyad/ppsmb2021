@@ -5,7 +5,8 @@ export const MenuItems = [
     },
     {
         title: 'Agenda Materi',
-        url: '/2021/agenda',
+        url: '/2021/materi-ketentuan',
+    
     },
     {
         title: 'Peta UGM',
