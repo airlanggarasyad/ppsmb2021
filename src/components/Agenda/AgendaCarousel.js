@@ -18,34 +18,35 @@ export default class AgendaPenugasan extends Component {
       {
         title: "Agenda",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
-        // image: require("../../public/LandingPage/CpLanding.jpg"),
-        // link: "/Competition/CompetitiveProgramming",
+        image: "agenda",
+        link: "/2021/agenda/agenda",
       },
       {
         title: "Ketentuan & Panduan Penugasan",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
-
-        // image: require("../../public/LandingPage/CpLanding.jpg"),
+        link: "/2021/agenda/ketentuan",
+        image: "ketentuan",
         // link: "/Competition/CompetitiveProgramming",
       },
       {
         title: "Materi Tambahan",
         text: "berisikan materi-materi PPSMB UGM sebagai penunjang untuk pengerjaan penugasan. Untuk mengaksesnya, Gamada harus login menggunakan email UGM masing-masing.",
-
-        // image: require("../../public/LandingPage/CpLanding.jpg"),
+        link: "/2021/agenda/materi",
+        image: "materi",
         // link: "/Competition/CompetitiveProgramming",
       },
     ];
     const DataBreadcrumb = [
       {
         text: "PPSMB UGM 2021 ",
+        link: "/2021"
+     
       },
       {
-        text: "Agenda & Penugasan ",
+        text: "Agenda & Materi ",
+        link: "/2021/agenda"
       },
-      {
-        text: "Agenda",
-      },
+  
     ];
     const SlickArrowLeft = ({ ...props }) => (
       <div {...props} className={"slick-prev"} type="button">
@@ -152,7 +153,7 @@ export default class AgendaPenugasan extends Component {
         </div>
         <div className="breadcrumb-container">
           <div className="breadcrumb">
-            <Breadcrumb data={DataBreadcrumb} secondary="black" />
+            <Breadcrumb data={DataBreadcrumb} secondary="black" back="/2021"/>
           </div>
         </div>
         <div className="batik-bg">
@@ -163,15 +164,23 @@ export default class AgendaPenugasan extends Component {
             return (
               <div className="card-carousel-container">
                 {" "}
-                <Card key={index} text={item.text} title={item.title}></Card>
+                
+                <Card key={index} text={item.text} title={item.title} link={item.link} image={item.image} ></Card>
               </div>
             );
-          })}
+           
+          } 
+          )}
+
+        
         </Slider>
       </AgendaStyle>
     );
   }
+ 
 }
+
+
 const AgendaStyle = styled.div`
   height: 100vmin;
   width: 100%;

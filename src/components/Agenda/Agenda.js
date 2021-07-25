@@ -5,18 +5,23 @@ import Card from "./DayCard";
 import Arrow from "../../assets/images/agenda/AgendaContainer/Arrow.png";
 import batikRight from "../../assets/images/agenda/AgendaContainer/batikRight.png";
 import batikLeft from "../../assets/images/agenda/AgendaContainer/batikLeft.png";
+import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
 export default function Agenda() {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
+      link: "/2021"
     },
     {
-      text: "Agenda & Penugasan",
+      text: "Agenda & Materi",
+      link: "/2021/agenda"
     },
     {
-      text: "Agenda",
+      text: "Agenda ",
+      link: "/2021/agenda/agenda"
     },
+  
   ];
   return (
     <AgendaStyle>
@@ -34,7 +39,7 @@ export default function Agenda() {
         </div>
       </div>
       <div className="agenda-container">
-        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" />
+        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/agenda" />
         <div className="agenda-title">
           <h1>Agenda</h1>
           <div className="flower-icon">
