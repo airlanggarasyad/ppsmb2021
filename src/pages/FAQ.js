@@ -48,11 +48,13 @@ export default function FAQ() {
 
                 <div className='content'>
                     <div className='choose-category' >
-                        <p className={((chosenCategory == 'Semua') ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
+                        <div>
+                            <p className={((chosenCategory == 'Semua') ? "ppsmb-white block" : "ppsmb-black")} onClick={() => setChosenCategory("Semua")}>Semua</p>
+                        </div>
                         {QuestionItems.map((item, index) => {
                             return (
                                 <div key={index} >
-                                    <p className={((chosenCategory == item.category) ? "ppsmb-red" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
+                                    <p className={((chosenCategory == item.category) ? "ppsmb-white block" : "ppsmb-black")} onClick={() => setChosenCategory(item.category)}>{item.category} </p>
                                 </div>
                             )
                         })}
@@ -88,13 +90,20 @@ const Container = styled.div`
     background-size: 15%;
 
     p{
+        font-size: calc(0.5rem + 1.2vmin);
+    }
+    h2{
+        font-size: calc(0.5rem + 2vmin);
+    }
+
+    h4{
         font-size: calc(0.5rem + 1.4vmin);
     }
 
     .top{
         width: 100vw;
         display: flex;
-        /* height: 16vh; */
+        min-height: 12vh;
         position: relative;
         top: 0;
 
@@ -111,23 +120,21 @@ const Container = styled.div`
     }
 
     .title{
-        padding: 5vmin;
         text-align: center;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10vmin;
         h2{
             font-size: calc(0.5rem + 3.5vmin);
-            margin: 4vmin;
         }
 
         .search-bar{
-            width: 50%;
+            width: 90%;
             input{
                 font-family: 'Kollektif Regular';
-                padding: 10px;
+                padding: 2vmin;
                 font-size: calc(0.5rem + 1vmin);
                 width: 100%;
                 border-radius: 7px;
@@ -152,14 +159,21 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             width: 25%;
-            padding: 2vmin;
             p{
                 cursor: pointer;
                 display: inline-block;
                 width: auto;
-                line-height: 3vmin;
+                padding: 2vmin;
+                border-radius: 5px;
+                margin: 1vmin 0;
                 &:hover{
                     color: var(--color-red);
+                }
+            }
+            .block{
+                background-color: var(--color-red);
+                &:hover{
+                    color: var(--color-white);
                 }
             }
         }
@@ -179,6 +193,7 @@ const Container = styled.div`
                     margin: 0;
                 }
                 p{
+                    line-height: 1.2rem;
                     margin-bottom: 5px;
                     cursor: pointer;
                 }
@@ -212,8 +227,8 @@ const Container = styled.div`
     @media (max-width: 768px){
         .title{
             .search-bar{
-                width: 100%;
-            }
+            width: 70%;
+        }
         }
         
         .content{
@@ -223,13 +238,15 @@ const Container = styled.div`
                 flex-direction: row;
                 flex-wrap: wrap;
                 width: 100%;
-                p{
-                    padding: 0 2vmin;
-                }
+                margin-bottom: 5vmin;
             }
 
             .questions{
                 width: 100%;
+                .per-category{
+                    border-radius: 10px;
+                }
+
             }
         }
         
@@ -251,7 +268,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
         <>
             {isShown &&
                 <div className="per-category">
-                    <h4 className="ppsmb-red">{item.category}</h4>
+                    <h4 className="ppsmb-darkblue">{item.category}</h4>
                     {item.question.map((question, index) => {
                         return (
                             <Accordion key={index} chosenCategory={chosenCategory} title={question.title} content={question.answer}
@@ -283,10 +300,10 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
                         {isActive && 
                         <div className='accordion-item ppsmb-black'>
                             <div className='chevron'>
-                                <FontAwesomeIcon icon={faChevronRight} />
+                                <p><FontAwesomeIcon icon={faChevronRight} /></p>
                             </div>
                             <div>
-                                {content}
+                                <p>{content}</p>
                             </div>
                         </div>}
 
