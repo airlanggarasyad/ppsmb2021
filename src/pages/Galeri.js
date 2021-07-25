@@ -16,94 +16,94 @@ import patternBlue from "../assets/img/pattern-bg-blue.webp";
 import whiteBatik from "../assets/img/white-batik-corner.webp";
 import videoUKMHeader from "../assets/img/galeri/ornament-ukm.webp";
 
-// var ukmVideos = [
-//   {
-//     id: 1,
-//     sekberName: "Sekber Olahraga",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     sekberName: "Sekber Kerohanian",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 3,
-//     sekberName: "Sekber Kesenian",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 4,
-//     sekberName: "Sekber Khusus",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-// ];
+var ukmVideos = [
+  {
+    id: 1,
+    sekberName: "Sekber Olahraga",
+    videoList: [
+      { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
+      { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
+      { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
+      { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
+      { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
+      { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
+      { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
+    ],
+  },
+  {
+    id: 2,
+    sekberName: "Sekber Kerohanian",
+    videoList: [
+      { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
+      { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
+      { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
+      { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
+      { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
+      { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
+      { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
+    ],
+  },
+  {
+    id: 3,
+    sekberName: "Sekber Kesenian",
+    videoList: [
+      { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
+      { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
+      { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
+      { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
+      { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
+      { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
+      { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
+    ],
+  },
+  {
+    id: 4,
+    sekberName: "Sekber Khusus",
+    videoList: [
+      { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
+      { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
+      { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
+      { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
+      { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
+      { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
+      { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
+    ],
+  },
+];
 
-// var video = ukmVideos.map(function (sekber) {
-//   let videosSekber = sekber.videoList.map(function (videoContent) {
-//     return (
-//       <div key={videoContent.id} className="video">
-//         <VideoContainer
-//           bgurl={
-//             process.env.PUBLIC_URL +
-//             "/assets/img/galeri/" +
-//             videoContent.thumbnailUrl
-//           }
-//           bgcolor={"var(--color-redpink)"}
-//           noDecor
-//         ></VideoContainer>
-//       </div>
-//     );
-//   });
-//   return (
-//     <div className="sekber">
-//       <h3>{sekber.sekberName}</h3>
-//       <div className="video-carousel">
-//         <Slider
-//           slidesToShow={3}
-//           slidesToShowMobile={2}
-//           slidesToShowTablet={3}
-//           arrows={false}
-//           dots={false}
-//         >
-//           {videosSekber}
-//         </Slider>
-//       </div>
-//     </div>
-//   );
-// });
+var video = ukmVideos.map(function (sekber) {
+  let videosSekber = sekber.videoList.map(function (videoContent) {
+    return (
+      <div key={videoContent.id} className="video">
+        <VideoContainer
+          bgurl={
+            process.env.PUBLIC_URL +
+            "/assets/img/galeri/" +
+            videoContent.thumbnailUrl
+          }
+          bgcolor={"var(--color-redpink)"}
+          noDecor
+        ></VideoContainer>
+      </div>
+    );
+  });
+  return (
+    <div className="sekber">
+      <h3>{sekber.sekberName}</h3>
+      <div className="video-carousel">
+        <Slider
+          slidesToShow={3}
+          slidesToShowMobile={2}
+          slidesToShowTablet={3}
+          arrows={false}
+          dots={false}
+        >
+          {videosSekber}
+        </Slider>
+      </div>
+    </div>
+  );
+});
 
 export default class Galeri extends Component {
   render() {
@@ -185,7 +185,7 @@ export default class Galeri extends Component {
             </div>
           </section>
 
-          {/* <section className="video-ukm pattern-bg pattern-bg-white">
+          <section className="video-ukm pattern-bg pattern-bg-white">
             <div className="head">
               <div className="header-image">
                 <img src={videoUKMHeader} alt="" />
@@ -198,7 +198,7 @@ export default class Galeri extends Component {
               </div>
             </div>
             <div className="video-list-ukm">{video}</div>
-          </section> */}
+          </section>
         </GaleriContainer>
       </SimpleReactLightbox>
     );

@@ -116,6 +116,11 @@ const Container = styled.div`
   background-repeat: repeat;
   background-size: 15%;
 
+  a {
+      text-decoration: none;
+      color: var(--color-redpink);
+  }
+
   p {
     font-size: calc(0.5rem + 1.2vmin);
   }
@@ -165,6 +170,7 @@ const Container = styled.div`
         font-size: calc(0.5rem + 1vmin);
         width: 100%;
         border-radius: 7px;
+        border: 0.3vmin solid var(--color-darkblue);
 
         &:focus {
           outline: none;

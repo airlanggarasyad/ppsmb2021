@@ -14,10 +14,6 @@ export const QuestionItems = [
                 title: 'Bagaimana saya bisa mengetahui alur kegiatan pada  PPSMB UGM 2021?',
                 answer: <p>Gamada dapat memperhatikan <i>lesson learning</i> dan melaksanakan semua misi sebagai bekal Gamada dalam perkuliahan dan kelulusan PPSMB UGM  2021.</p>,
             },
-            {
-                title: <p>Saya berada di daerah T3, apakah ada sebuah kelonggaran?</p>,
-                answer: <p>Gamada diharapkan dapat melaksanakan ketentuan yang telah ditetapkan secara umum.</p>,
-            },
         ]
     },
     {
@@ -53,7 +49,7 @@ export const QuestionItems = [
             },
             {
                 title: <p>Bagaimana cara <em>login</em> eLOK?</p>,
-                answer: <p>Silakan akses &quot;Ketentuan &amp; Panduan&quot; pada tautan berikut <a href="http://a" rel="noopener noreferrer" target="_blank"><em>login</em> eLOK</a> </p>,
+                answer: <p>Silakan akses &quot;Ketentuan &amp; Panduan&quot; pada tautan berikut <a href="http://elok.ugm.ac.id" rel="noopener noreferrer" target="_blank"><em>login</em> eLOK</a> </p>,
             },
             {
                 title: <p>Bagaimana jika tidak bisa melakukan <em>login</em> eLOK dengan akun SSO dikarenakan sudah terlanjur melakukan registrasi mandiri pada <em>platform</em> eLOK?</p>,
