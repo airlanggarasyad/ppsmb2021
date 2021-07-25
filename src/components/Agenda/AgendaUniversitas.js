@@ -14,12 +14,12 @@ export default function Agenda({match}) {
       link: "/2021"
     },
     {
-      text: "Modul & Ketentuan",
-      link: "/2021/modul-ketentuan"
+      text: "Materi & Ketentuan",
+      link: "/2021/materi-ketentuan"
     },
     {
       text: "Agenda ",
-      link: "/2021/modul-ketentuan/agenda"
+      link: "/2021/materi-ketentuan/agenda"
     },
   
   ];

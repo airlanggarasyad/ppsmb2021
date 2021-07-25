@@ -5,7 +5,7 @@ export const MenuItems = [
     },
     {
         title: 'Agenda Materi',
-        url: '/2021/modul-ketentuan',
+        url: '/2021/materi-ketentuan',
     
     },
     {
@@ -19,7 +19,6 @@ export const MenuItems = [
     },
     {
         title: 'FAQ',
-        url: './faq',
-        block: true,
+        url: '/2021/faq',
     },
 ]

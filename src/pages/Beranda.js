@@ -395,10 +395,10 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        <section className='vmap pattern-bg'>
+        {/* <section className='vmap pattern-bg'>
 
-        </section>
-        <section className='agenda'>
+        </section> */}
+        {/* <section className='agenda'>
           <div className='agenda-title'>
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
             <div className='batiks'>
@@ -470,7 +470,7 @@ export default function Beranda() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section id="serba-serbi-palapa" className="serba-serbi pattern-bg">
           <div className="title">
             <Fade left>
