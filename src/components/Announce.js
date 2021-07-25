@@ -167,8 +167,18 @@ const AnnounceContainer = styled.div`
   border-radius: 50%;
   width: 6vmin;
   height: 6vmin;
+  padding: 4vmin;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: 2px solid var(--color-white);
+
+  :hover {
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 768px) {
+    padding: 0vmin;
+  }
 `;

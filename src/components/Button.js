@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
-import GlobalStyle from "../globalStyle";
 
 function Button(props) {
     return (
         <>
-            <GlobalStyle/>  
             <ButtonStyled color={props.color} bg={props.bg}>{props.text}</ButtonStyled>          
         </>
     )
