@@ -119,17 +119,17 @@ export default function Day(props) {
 
   const [Elok, setElok] = useState(
     day === "one"
-    ? "https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? "https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : day === "two"
-    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? " https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : day === "three"
-    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? " https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : day === "four"
-    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? " https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : day === "five"
-    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? " https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : day === "six"
-    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    ? " https://elok.ugm.ac.id/course/index.php?categoryid=52"
     : "PPSMB"
   );
 
@@ -167,17 +167,15 @@ export default function Day(props) {
   );
   const [Text, setText] = useState(
     day === "one"
-      ? "Diawali dengan modul atau course “Introductory”, Gamada memperoleh gambaran awal yang berisi informasi lengkap tentang proses pembelajaran yang akan dilakukan oleh Gamada selama PPSMB UGM 2021 berlangsung. Di dalamnya juga terdapat alur dan capaian pembelajaran dari PPSMB UGM 2021."
+      ? "Diawali dengan modul “Introductory”, Gamada memperoleh gambaran awal yang berisi informasi lengkap tentang proses pembelajaran yang akan dilakukan oleh Gamada selama PPSMB UGM 2021 berlangsung. Di dalamnya juga terdapat alur dan capaian pembelajaran dari PPSMB UGM 2021."
       : day === "two"
-      ? "Modul atau course kedua dengan judul “Jati Diri UGM Bangun Karakterku” mengenalkan sejarah, filosofi, dan nilai-nilai luhur Universitas. Selain itu, dibahas juga mengenai peraturan tertulis yang berlaku di Universitas Gadjah Mada sehingga sebagai mahasiswa, Gamada dapat memperoleh informasi mengenai tata cara berkegiatan dalam lingkungan Universitas Gadjah Mada."
+      ? "Modul kedua dengan judul “Jati Diri UGM Bangun Karakterku” mengenalkan sejarah, filosofi, dan nilai-nilai luhur Universitas Gadjah Mada. Selain itu, dibahas juga mengenai peraturan tertulis yang berlaku di Universitas Gadjah Mada sehingga sebagai mahasiswa, Gamada dapat memperoleh informasi mengenai tata cara berkegiatan dalam lingkungan Universitas Gadjah Mada."
       : day === "three"
-      ? "Modul atau course ketiga, “Peran Aktifku dalam Masyarakat”, mengajak Gamada untuk mempelajari mengenai empat pokok bahasan, yaitu kesehatan mental dan fisik, isu gender dan kekerasan seksual, multikulturalisme dan Jiwa Pancasila, serta social awareness dan antikorupsi. Empat pokok bahasan tersebut berkaitan erat dengan pengembangan diri Gamada sebagai salah satu faktor penentu keberhasilan karena Gamada merupakan bagian dari akademisi dan komunitas. "
+      ? "Modul ketiga, “Peran Aktifku dalam Masyarakat”, mengajak Gamada untuk mempelajari mengenai empat pokok bahasan, yaitu kesehatan mental dan fisik, isu gender dan kekerasan seksual, multikulturalisme dan jiwa Pancasila, serta kesadaran sosial dan antikorupsi. Empat pokok bahasan tersebut berkaitan erat dengan pengembangan diri Gamada sebagai salah satu faktor penentu keberhasilan karena Gamada merupakan bagian dari akademisi dan komunitas. "
       : day === "four"
-      ? "Modul atau course “Aku Mahasiswa Adaptif dan Sukses” yang akan dibahas pada sesi PPSMB Soft-skills. Melalui modul ini, Gamada diharapkan dapat memperluas wawasan intrapersonal dan interpersonal sebagai bekal untuk menghadapi perkuliahan. Keterampilan-keterampilan tersebut tentu diperlukan oleh Gamada untuk menjadi pembelajar yang sukses di berbagai bidang yang diminati."
+      ? "Modul “Aku Mahasiswa Adaptif dan Sukses” yang akan dibahas pada sesi PPSMB Softskills. Melalui modul ini, Gamada diharapkan dapat memperluas wawasan intrapersonal dan interpersonal sebagai bekal untuk menghadapi perkuliahan. Keterampilan-keterampilan tersebut tentu diperlukan oleh Gamada untuk menjadi pembelajar yang sukses di berbagai bidang yang diminati."
       : day === "five"
-      ? "Modul atau course “Aksi Nyataku untuk Masyarakat”. Modul tersebut mengupas secara tuntas bagaimana pelaksanaan Action Plan sebagai implementasi atas social awareness dan poin ketiga Tri Dharma Perguruan Tinggi, yaitu pengabdian kepada masyarakat."
-      : day === "six"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Modul “Aksi Nyataku untuk Masyarakat”. Modul tersebut mengupas secara tuntas bagaimana pelaksanaan Action Plan sebagai implementasi atas social awareness dan poin ketiga Tri Dharma Perguruan Tinggi, yaitu pengabdian kepada masyarakat."
       : ""
   );
 
@@ -225,7 +223,7 @@ export default function Day(props) {
           <Fade bottom>
             <div className="back-button">
               <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas" >
-              <Button text="kembali" textColor={TextColor}>
+              <Button text="Kembali" textColor={TextColor}>
         
                 <div className="back-icon">
                   <svg

@@ -5,29 +5,32 @@ import Card from "./FakultasCard";
 
 import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
-export default function Agenda({match}) {
+export default function Agenda({ match }) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021"
+      link: "/2021",
     },
     {
       text: "Materi",
-      link: "/2021/materi-ketentuan/materi"
+      link: "/2021/materi-ketentuan/materi",
     },
     {
       text: "PPSMB Fakultas ",
-      link: "/2021/materi-ketentuan/materi/ppsmb-fakultas"
+      link: "/2021/materi-ketentuan/materi/ppsmb-fakultas",
     },
-  
   ];
   return (
     <AgendaStyle>
-     
       <div className="agenda-container">
-        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/materi-ketentuan/materi" />
+        <Breadcrumb
+          data={DataBreadcrumb}
+          primer="black"
+          secondary="red"
+          back="/2021/materi-ketentuan/materi"
+        />
         <div className="agenda-title">
-          <h1>Modul</h1>
+          <h1>Modul PPSMB Fakultas</h1>
           <div className="flower-icon">
             <svg
               width="100%"
@@ -89,67 +92,159 @@ export default function Agenda({match}) {
         </div>
 
         <div className="card-grid">
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1" >
-          <Card day="one"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=6599"
+          >
+            <Card day="one"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2">
-          <Card day="two"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
+          >
+            <Card day="two"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3">
-          <Card day="three"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6627"
+          >
+            <Card day="three"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4" >
-          <Card day="four"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=2316"
+          >
+            <Card day="four"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="five"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6725"
+          >
+            <Card day="five"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="six"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6676"
+          >
+            <Card day="six"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1" >
-          <Card day="seven"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=6668"
+          >
+            <Card day="seven"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2">
-          <Card day="eight"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
+          >
+            <Card day="eight"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3">
-          <Card day="nine"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=2352"
+          >
+            <Card day="nine"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4" >
-          <Card day="ten"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6677"
+          >
+            <Card day="ten"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="eleven"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=6675"
+          >
+            <Card day="eleven"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="twelve"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="http://gamel.fk.ugm.ac.id/enrol/index.php?id=726"
+          >
+            <Card day="twelve"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1" >
-          <Card day="thirteen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=6699"
+          >
+            <Card day="thirteen"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2">
-          <Card day="fourteen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=2290"
+          >
+            <Card day="fourteen"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3">
-          <Card day="fivteen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6665"
+          >
+            <Card day="fivteen"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4" >
-          <Card day="sixteen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
+          >
+            <Card day="sixteen"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="seventeen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
+          >
+            <Card day="seventeen"></Card>
           </a>
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="eighteen"></Card> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/view.php?id=6700"
+          >
+            <Card day="eighteen"></Card>
           </a>
-     
-          <a style={{ textDecoration: 'none' }} href="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
-          <Card day="nineteen"></Card> 
-          </a>
-          
 
-
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/course/index.php?categoryid=71"
+          >
+            <Card day="nineteen"></Card>
+          </a>
         </div>
       </div>
     </AgendaStyle>

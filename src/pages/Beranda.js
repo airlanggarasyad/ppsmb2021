@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
+import {Link} from "react-router-dom";
 
 import LogoPPSMB from "../assets/img/logo-ppsmb-decorative.svg";
 import Bulk1 from "../assets/img/corner-bulk1.webp";
@@ -80,12 +81,10 @@ export default function Beranda() {
   });
   const [activeDate, setActiveDate] = useState({
     date: new Date(2021, 7, 2),
-    desc: 'Pada hari pertama, blablabla.',
-    title: 'PPSMB Universitas Hari Pertama',
+    desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok.',
+    title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
     linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
-    linkLengkap: 'https://ppsmb.ugm.ac.id/2021/agenda',
-    linkTugas: 'https://simpan.ugm.ac.id/s/CBN21EkVVmugT9C#pdfviewer',
-    linkSimaster: 'https://simaster.ugm.ac.id/kemahasiswaan/ppsmb/',
+    linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2',
   });
 
   const [today, setToday] = useState(new Date());
@@ -96,9 +95,9 @@ export default function Beranda() {
       setActiveDate({
         date: new Date(2021, 7, 2),
         desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok.',
-        title: "PPSMB Universitas Hari Pertama",
-        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
-        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+        title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
+        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+        linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2',
       });
     } else if (new Date() < new Date(2021, 7, 15)) {
       setToday(new Date());
@@ -120,8 +119,8 @@ export default function Beranda() {
       setToday(new Date(2021, 7, 14));
       setActiveDate({
         date: new Date(2021, 7, 14),
-        title: "Penutupan",
-        desc: "Seluruh rangkaian PPSMB UGM 2021 telah usai. Selamat, Gamada, kamu telah menyelesaikan PPSMB UGM 2021 dan siap untuk menjalani dinamika kehidupan di Universitas Gadjah Mada! Terima kasih atas perjuanganmu.",
+        title: "Penutupan PPSMB UGM 2021",
+        desc: "Upacara penutupan seluruh rangkaian acara PPSMB UGM 2021.",
         linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
         linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
       });
@@ -381,9 +380,8 @@ export default function Beranda() {
         {/* <section className='vmap pattern-bg'>
 
         </section> */}
-        <section className='agenda'>
-          <div className='border' />
-          <div className='agenda-title'>
+        <section className="agenda">
+          <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
             <div className="batiks">
               <img src={Batik} alt="" srcset="" className="batik" />
@@ -393,7 +391,7 @@ export default function Beranda() {
           </div>
           <div className="agenda-content">
             <div className="agenda-desc ppsmb-darkblue">
-              <p style={{marginTop: '0'}}>
+              <p style={{ marginTop: "0" }}>
                 Dengan membawa nilai-nilai luhur dan jati diri Universitas,
                 PPSMB UGM 2021 dilaksanakan untuk membentuk Gamada sebagai
                 pembelajar sukses yang siap menjadi pemimpin bangsa intelektual
@@ -407,74 +405,171 @@ export default function Beranda() {
               </p>
               <Fade spy={activeDate}>
                 <p>
-                  <small>{activeDate.date.toLocaleDateString('id-ID', {weekday:'long', year:'numeric', month: 'long', day:'numeric'})}</small>
-                    <br /><h4 style={{margin: '0 0 2vmin 0'}}>{activeDate.title}</h4>
-                    {activeDate.desc}
+                  <small>
+                    {activeDate.date.toLocaleDateString("id-ID", {
+                      weekday: "long",
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </small>
+                  <br />
+                  <h4 style={{ margin: "0 0 2vmin 0" }}>{activeDate.title}</h4>
+                  {activeDate.desc}
                 </p>
                 <div className="quick-access">
-                  <ShowQuickAccess                       
-                      bg="var(--color-darkblue)"
-                      color="var(--color-white)"
-                      text="Kelas Elok" 
-                      link={activeDate.linkElok}/>
-                  <ShowQuickAccess                       
-                      bg="var(--color-white)"
-                      color="var(--color-darkblue)"
-                      text="Selengkapnya"
-                      link={activeDate.linkLengkap}/>
+                  <ShowQuickAccess
+                    bg="var(--color-darkblue)"
+                    color="var(--color-white)"
+                    text="Kelas Elok"
+                    link={activeDate.linkElok}
+                  />
+                  <ShowQuickAccessLinkTo
+                    bg="var(--color-white)"
+                    color="var(--color-darkblue)"
+                    text="Selengkapnya"
+                    link={activeDate.linkLengkap}
+                  />
                 </div>
               </Fade>
             </div>
 
-            <div className='agenda-access ppsmb-darkblue'>
-              <div className='calendar'>
-                <div style={{ boxShadow: '0px 0px 9px -2px rgba(0, 0, 0, 0.5)', borderRadius: '20px' }}>
+            <div className="agenda-access ppsmb-darkblue">
+              <div className="calendar">
+                <div
+                  style={{
+                    boxShadow: "0px 0px 9px -2px rgba(0, 0, 0, 0.5)",
+                    borderRadius: "20px",
+                  }}
+                >
                   <Calendar
                     activeStartDate={activeDate.date}
                     defaultView={"month"}
-                    prevLabel={''}
-                    prev2Label={''}
-                    nextLabel={''}
-                    next2Label={''}
+                    prevLabel={""}
+                    prev2Label={""}
+                    nextLabel={""}
+                    next2Label={""}
                     minDetail={"month"}
                     minDate={new Date(2021, 7, 2)}
                     maxDate={new Date(2021, 7, 14)}
                     locale="id-ID"
                     onClickDay={changeInfo}
                     tileClassName={({ date, view }) =>
-                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 2 ? 'today upacara-universitas' :
-                        view === 'month' && date.getMonth() === 7 && date.getDate() === 2 ? 'upacara-universitas' :
-                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 3 ? 'today universitas' :
-                            view === 'month' && date.getMonth() === 7 && date.getDate() === 3 ? 'universitas' :
-                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 4 ? 'today fakultas' :
-                                view === 'month' && date.getMonth() === 7 && date.getDate() === 4 ? 'fakultas' :
-                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 5 ? 'today fakultas' :
-
-                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 5 ? 'fakultas' :
-                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 6 ? 'today softskills' :
-                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 6 ? 'softskills' :
-                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 7 ? 'today softskills' :
-                                            view === 'month' && date.getMonth() === 7 && date.getDate() === 7 ? 'softskills' :
-                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 8 ? 'today action' :
-                                                view === 'month' && date.getMonth() === 7 && date.getDate() === 8 ? 'action' :
-                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 9 ? 'today action' :
-                                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 9 ? 'action' :
-                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 10 ? 'today action' :
-                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 10 ? 'action' :
-                                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 11 ? 'today ' :
-                                                            view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 12 ? 'today ' :
-                                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 13 ? 'today' :
-                                                                view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 14 ? 'today upacara' :
-                                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
-                                                                    null}
+                      view === "month" &&
+                      date.getMonth() === 7 &&
+                      date.getDate() === today.getDate() &&
+                      date.getDate() === 2
+                        ? "today upacara-universitas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 2
+                        ? "upacara-universitas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 3
+                        ? "today universitas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 3
+                        ? "universitas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 4
+                        ? "today fakultas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 4
+                        ? "fakultas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 5
+                        ? "today fakultas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 5
+                        ? "fakultas"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 6
+                        ? "today softskills"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 6
+                        ? "softskills"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 7
+                        ? "today softskills"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 7
+                        ? "softskills"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 8
+                        ? "today action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 8
+                        ? "action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 9
+                        ? "today action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 9
+                        ? "action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 10
+                        ? "today action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 10
+                        ? "action"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 11
+                        ? "today "
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 12
+                        ? "today "
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 13
+                        ? "today"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === today.getDate() &&
+                          date.getDate() === 14
+                        ? "today upacara"
+                        : view === "month" &&
+                          date.getMonth() === 7 &&
+                          date.getDate() === 14
+                        ? "upacara"
+                        : null
+                    }
                   />
                 </div>
-                <div className='calendar-desc'>
-                  <li className='ppsmb-red'>Pembukaan / Penutupan</li>
-                  <li className='ppsmb-blue'>PPSMB Universitas</li>
-                  <li className='ppsmb-redpink'>PPSMB Fakultas</li>
-                  <li className='ppsmb-footerblue'>PPSMB Soft Skills</li>
-                  <li className='ppsmb-orange'>Action Plan</li>
+                <div className="calendar-desc">
+                  <li className="ppsmb-red">Pembukaan / Penutupan</li>
+                  <li className="ppsmb-blue">PPSMB Universitas</li>
+                  <li className="ppsmb-redpink">PPSMB Fakultas</li>
+                  <li className="ppsmb-footerblue">PPSMB Soft Skills</li>
+                  <li className="ppsmb-orange">Action Plan</li>
                 </div>
               </div>
             </div>
@@ -1111,9 +1206,9 @@ const Container = styled.div`
       line-height: calc(0.5rem + 3.3vmin);
       position: relative;
 
-      .border{
+      .border {
         position: absolute;
-        content: '';
+        content: "";
         left: 0;
         top: 0;
         height: 4px;
@@ -1386,18 +1481,25 @@ function ShowEmail(props) {
 }
 
 function ShowQuickAccess(props) {
-  if (props.link != null){
-    return(
+  if (props.link != null) {
+    return (
       <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <Button
-          bg={props.bg}
-          color={props.color}
-          text={props.text}
-        />
+        <Button bg={props.bg} color={props.color} text={props.text} />
       </a>
-    )
-  }else{
+    );
+  } else {
     return null;
   }
+}
 
+function ShowQuickAccessLinkTo(props) {
+  if (props.link != null) {
+    return (
+      <Link to={props.link}>
+        <Button bg={props.bg} color={props.color} text={props.text} />
+      </Link>
+    );
+  } else {
+    return null;
+  }
 }

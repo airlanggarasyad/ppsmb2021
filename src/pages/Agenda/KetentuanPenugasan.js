@@ -229,7 +229,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/1-Btvz_AUoWOfQUkO0XlDN0voNrK6HoQ4/preview"frameborder="0" cellspacing="0"></iframe>
+        <iframe id="pdf" src="https://drive.google.com/file/d/1gRnKMX0Vs6InISV2GbiY1GnXAsTBSgxq/preview" frameborder="0" cellspacing="0"></iframe>
         </div>
         
         <div className="ketentuan-title">
