@@ -82,7 +82,7 @@ export default function Beranda() {
     thumbnail: require("../assets/img/serba-serbi/apaituppsmb.webp").default,
   });
   const [activeDate, setActiveDate] = useState({
-    date: new Date(2021, 7, 3),
+    date: new Date(2021, 7, 2),
     desc: 'Pada hari pertama, blablabla.',
     title: 'PPSMB Universitas Hari Pertama',
     linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
@@ -109,7 +109,7 @@ export default function Beranda() {
     } else if (new Date() < new Date(2021, 7, 15)) {
       setToday(new Date())
       DaftarAgenda.map((item, index) => {
-        if (new Date() === item.date()) {
+        if (new Date() === item.date) {
           console.log('item setted: ', item.date.toString())
           setActiveDate({
             date: item.date,
@@ -398,7 +398,8 @@ export default function Beranda() {
         {/* <section className='vmap pattern-bg'>
 
         </section> */}
-        {/* <section className='agenda'>
+        <section className='agenda'>
+          <div className='border'/>
           <div className='agenda-title'>
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
             <div className='batiks'>
@@ -412,8 +413,7 @@ export default function Beranda() {
             <div className='agenda-desc ppsmb-darkblue'>
               <p>PPSMB UGM 2021 diselenggarakan secara daring tanggal 2-14 Agustus 2021. Materi pembelajaran disampaikan selama 6 hari berturut-turut, diikuti dengan penugasan mandiri yang salah satunya action plan sebagai bentuk penerapan pelajaran.</p>
               <Fade spy={activeDate}>
-                <h4>{activeDate.title}</h4>
-                <p>{activeDate.desc}</p>
+                <p>{activeDate.date.toLocaleDateString()}<br/><strong>{activeDate.title}</strong></p>
                 <div className='quick-access'>
                   <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Kelas Elok' />
                   <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Penugasan' />
@@ -424,42 +424,47 @@ export default function Beranda() {
 
             <div className='agenda-access ppsmb-darkblue'>
               <div className='calendar'>
-                <div style={{boxShadow: '0px 0px 9px -2px rgba(0, 0, 0, 0.5)', borderRadius:'20px'}}>
-                <Calendar
-                  activeStartDate={activeDate.date}
-                  defaultView={"month"}
-                  prevLabel={''}
-                  prev2Label={''}
-                  nextLabel={''}
-                  next2Label={''}
-                  minDetail={"month"}
-                  minDate={new Date(2021, 7, 2)}
-                  maxDate={new Date(2021, 7, 20)}
-                  locale="id-ID"
-                  onClickDay={changeInfo}
-                  tileClassName={({ date, view }) =>
-                    view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today upacara-universitas' :
-                      view === 'month' && date.getMonth() === 7 && date.getDate() === 2 ? 'upacara-universitas' :
-                        view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today universitas' :
-                          view === 'month' && date.getMonth() === 7 && date.getDate() === 3 ? 'universitas' :
-                            view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today fakultas' :
-                              view === 'month' && date.getMonth() === 7 && date.getDate() === 4 ? 'fakultas' :
-                                view === 'month' && date.getMonth() === 7 && date.getDate() === 5 ? 'fakultas' :
-                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today softskills' :
-                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 6 ? 'softskills' :
-                                      view === 'month' && date.getMonth() === 7 && date.getDate() === 7 ? 'softskills' :
-                                        view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today action' :
-                                          view === 'month' && date.getMonth() === 7 && date.getDate() === 8 ? 'action' :
-                                            view === 'month' && date.getMonth() === 7 && date.getDate() === 9 ? 'action' :
-                                              view === 'month' && date.getMonth() === 7 && date.getDate() === 10 ? 'action' :
-                                                view === 'month' && date.getMonth() === 7 && date.getDate() === 11 ? 'action' :
-                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === 12 ? 'action' :
-                                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 13 ? 'action' :
-                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() ? 'today upacara' :
-                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
-                                                          null}
-                />
-              </div>
+                <div style={{ boxShadow: '0px 0px 9px -2px rgba(0, 0, 0, 0.5)', borderRadius: '20px' }}>
+                  <Calendar
+                    activeStartDate={activeDate.date}
+                    defaultView={"month"}
+                    prevLabel={''}
+                    prev2Label={''}
+                    nextLabel={''}
+                    next2Label={''}
+                    minDetail={"month"}
+                    minDate={new Date(2021, 7, 2)}
+                    maxDate={new Date(2021, 7, 14)}
+                    locale="id-ID"
+                    onClickDay={changeInfo}
+                    tileClassName={({ date, view }) =>
+                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 2 ? 'today upacara-universitas' :
+                        view === 'month' && date.getMonth() === 7 && date.getDate() === 2 ? 'upacara-universitas' :
+                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 3 ? 'today universitas' :
+                            view === 'month' && date.getMonth() === 7 && date.getDate() === 3 ? 'universitas' :
+                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 4 ? 'today fakultas' :
+                                view === 'month' && date.getMonth() === 7 && date.getDate() === 4 ? 'fakultas' :
+                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 5 ? 'today fakultas' :
+
+                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 5 ? 'fakultas' :
+                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 6 ? 'today softskills' :
+                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 6 ? 'softskills' :
+                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 7 ? 'today softskills' :
+                                            view === 'month' && date.getMonth() === 7 && date.getDate() === 7 ? 'softskills' :
+                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 8 ? 'today action' :
+                                                view === 'month' && date.getMonth() === 7 && date.getDate() === 8 ? 'action' :
+                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 9 ? 'today action' :
+                                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 9 ? 'action' :
+                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 10 ? 'today action' :
+                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 10 ? 'action' :
+                                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 11 ? 'today ' :
+                                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 12 ? 'today ' :
+                                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 13 ? 'today' :
+                                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 14 ? 'today upacara' :
+                                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
+                                                                          null}
+                  />
+                </div>
                 <div className='calendar-desc'>
                   <li className='ppsmb-red'>Pembukaan / Penutupan</li>
                   <li className='ppsmb-blue'>PPSMB Universitas</li>
@@ -470,7 +475,7 @@ export default function Beranda() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
         <section id="serba-serbi-palapa" className="serba-serbi pattern-bg">
           <div className="title">
             <Fade left>
@@ -1083,6 +1088,17 @@ const Container = styled.div`
       min-height: 100vh;
       padding: 10vmin;
       line-height: calc(0.5rem + 3.3vmin);
+      position: relative;
+
+      .border{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 4px;
+        width: 20%;
+        background: var(--color-blue);
+      }
 
       .agenda-title{
         display: flex;
@@ -1144,9 +1160,6 @@ const Container = styled.div`
             width: 50%;
             flex-direction: column;
             align-items: flex-start;
-            p{
-              margin: 0;
-            }
             .quick-access{
               width: 100%;
               display: flex;
