@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import Breadcrumb from "../main/Breadcrumb";
 import Card from "./FakultasCard";
+import Modal from "react-modal";
+import ComingSoon from "../../assets/img/maskot-comingsoon.png";
 
 import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
@@ -20,6 +22,20 @@ export default function Agenda({ match }) {
       link: "/2021/materi-ketentuan/materi/ppsmb-fakultas",
     },
   ];
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = (e) => {
+    console.log(e);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  Modal.setAppElement("#root");
+
   return (
     <AgendaStyle>
       <div className="agenda-container">
@@ -101,10 +117,8 @@ export default function Agenda({ match }) {
             <Card day="one"></Card>
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openModal}
             style={{ textDecoration: "none" }}
-            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
           >
             <Card day="two"></Card>
           </a>
@@ -141,18 +155,14 @@ export default function Agenda({ match }) {
             <Card day="six"></Card>
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openModal}
             style={{ textDecoration: "none" }}
-            href="https://elok.ugm.ac.id/course/view.php?id=6668"
           >
             <Card day="seven"></Card>
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openModal}
             style={{ textDecoration: "none" }}
-            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
           >
             <Card day="eight"></Card>
           </a>
@@ -213,18 +223,14 @@ export default function Agenda({ match }) {
             <Card day="fivteen"></Card>
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openModal}
             style={{ textDecoration: "none" }}
-            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
           >
             <Card day="sixteen"></Card>
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openModal}
             style={{ textDecoration: "none" }}
-            href="https://elok.ugm.ac.id/course/index.php?categoryid=34"
           >
             <Card day="seventeen"></Card>
           </a>
@@ -247,6 +253,19 @@ export default function Agenda({ match }) {
           </a>
         </div>
       </div>
+      
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        closeTimeoutMS={500}
+        parentSelector={() => document.querySelector("#nav")}
+        className="blockModal"
+        overlayClassName="blockModalOverlay"
+      >
+        <div className="content-modal" onClick={closeModal}>
+          <img src={ComingSoon} alt="Maskot Coming Soon" />
+        </div>
+      </Modal>
     </AgendaStyle>
   );
 }
@@ -334,6 +353,7 @@ const AgendaStyle = styled.div`
     justify-items: center;
     align-items: center;
   }
+
   @media screen and (max-width: 1200px) {
     height: auto;
     .bg-container {

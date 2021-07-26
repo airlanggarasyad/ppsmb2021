@@ -176,7 +176,7 @@ const Header = styled.header`
   }
 
   .blockModal {
-    position: absolute;
+    position: fixed;
     top: 50vh;
     left: 50vw;
     right: auto;
@@ -193,7 +193,7 @@ const Header = styled.header`
   }
 
   .blockModalOverlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
