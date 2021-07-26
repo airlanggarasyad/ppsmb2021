@@ -20,7 +20,7 @@ export default class AgendaPenugasan extends Component {
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
         image: "agenda",
         link: "/2021/materi-ketentuan/materi",
-        button:"selengkapnya",
+        button:"Selengkapnya",
         color:"yellow",
         hover :"none"
       },
@@ -29,10 +29,9 @@ export default class AgendaPenugasan extends Component {
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
         link: "/2021/materi-ketentuan/ketentuan",
         image: "ketentuan",
-        button:"selengkapnya",
+        button:"Selengkapnya",
         color:"yellow",
         hover :"none"
-        // link: "/Competition/CompetitiveProgramming",
       },
       {
         title: "Materi Tambahan",
@@ -42,7 +41,6 @@ export default class AgendaPenugasan extends Component {
         button:"Segera Hadir",
         color:"grey",
         hover :"none"
-        // link: "/Competition/CompetitiveProgramming",
       },
     ];
     const DataBreadcrumb = [
