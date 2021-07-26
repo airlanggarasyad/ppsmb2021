@@ -105,6 +105,14 @@ const CardStyle = styled.div`
         ? `translate(0vmin,0vmin)`
         : `translate(0vmin,0vmin)`};
   }
+  & .card-background > img {
+    transition: transform 500ms ease;
+
+  }
+  
+  & .card-shadow {
+    transition: transform 500ms ease;
+  }
 
   &:hover .card-background > img {
     transform: scale(1.25);

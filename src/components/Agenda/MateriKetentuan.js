@@ -17,7 +17,7 @@ export default class AgendaPenugasan extends Component {
     const dataCard = [
       {
         title: "Materi",
-        text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
+        text: 'Bagian "Materi" berisi mengenai penjelasan singkat tentang modul-modul yang ada dalam PPSMB UGM 2021 serta akses ke eLok untuk masing-masing modul.',
         image: "agenda",
         link: "/2021/materi-ketentuan/materi",
         button:"Selengkapnya",
@@ -26,7 +26,7 @@ export default class AgendaPenugasan extends Component {
       },
       {
         title: "Ketentuan & Panduan Penugasan",
-        text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
+        text: "Bagian ini berisi ketentuan pengerjaan penugasaan serta panduan untuk mengakses penugasan, peta penugasan, serta cara akses eLok dan Simaster",
         link: "/2021/materi-ketentuan/ketentuan",
         image: "ketentuan",
         button:"Selengkapnya",
@@ -35,7 +35,7 @@ export default class AgendaPenugasan extends Component {
       },
       {
         title: "Materi Tambahan",
-        text: "berisikan materi-materi PPSMB UGM sebagai penunjang untuk pengerjaan penugasan. Untuk mengaksesnya, Gamada harus login menggunakan email UGM masing-masing.",
+        text: 'Bagian "Materi Tambahan" berisi materi-materi suplementer untuk Gamada dalam mengikuti rangkaian proses PPSMB UGM 2021 sebagai penunjang untuk pengerjaan penugasan.',
         link: "/2021/materi-ketentuan",
         image: "materi",
         button:"Segera Hadir",
