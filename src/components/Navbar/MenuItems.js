@@ -4,7 +4,7 @@ export const MenuItems = [
         url: '/2021'
     },
     {
-        title: 'Agenda Materi',
+        title: 'Materi & Ketentuan',
         url: '/2021/materi-ketentuan',
     
     },
