@@ -24,7 +24,7 @@ export const QuestionItems = [
                 answer: <p>SSO (<i>Single Sign On</i>) merupakan sistem terintegrasi dengan <i>e-mail</i> UGM yang dimiliki oleh seluruh mahasiswa. Mahasiswa dapat memiliki SSO ketika sudah melakukan registrasi ulang.</p>,
             },
             {
-                title: <p>Bagaimana jika tidak bisa melakukan <i>login</i> SSO padahal sudah memiliki akun tersebut?</p>,
+                title: 'Bagaimana jika tidak bisa melakukan <i>login</i> SSO padahal sudah memiliki akun tersebut?',
                 answer: <p>Jika mengalami kesulitan <i>login</i> dengan SSO silakan hubungi DSSDI (Direktorat Sistem dan Sumber Daya Informasi) dengan nomor +62 (274) 515660 atau +62 (274) 515664 atau <i>e-mail</i> <a href="mailto:dssdi@ugm.ac.id">dssdi@ugm.ac.id</a></p>,
             },
             {
@@ -36,11 +36,11 @@ export const QuestionItems = [
                 answer: <p>Simaster merupakan sistem terintegrasi yang memuat seluruh kebutuhan mahasiswa UGM seperti pengelolaan perkuliahan, kemahasiswaan, administrasi, hingga tugas akhir.</p>,
             },
             {
-                title: <p>Bagaimana cara <em>login</em> ke Simaster?</p>,
+                title: 'Bagaimana cara login ke Simaster?',
                 answer: <p>Silakan akses "Ketentuan dan Panduan" pada tautan berikut <a href="" target="_blank">cara <i>login</i> Simaster</a>.</p>,
             },
             {
-                title: <p>Apa yang akan Gamada peroleh setelah berhasil <em>login</em> ke Simaster?</p>,
+                title: 'Apa yang akan Gamada peroleh setelah berhasil login ke Simaster?',
                 answer: <p>Gamada akan mendapatkan data administrasi, pembagian gugus kelas, dan <em>enrollment key</em> atau kode tertentu untuk mengakses platform terkait.</p>,
             },
             {
@@ -48,23 +48,23 @@ export const QuestionItems = [
                 answer: <p>eLOK (<em>e-Learning: Open for Knowledge Sharing</em>) adalah sebuah sistem <em>e-Learning</em> yang digunakan untuk implementasi MOOC (<em>Massive Open Online Course</em>) di Universitas Gadjah Mada.</p>,
             },
             {
-                title: <p>Bagaimana cara <em>login</em> eLOK?</p>,
+                title: 'Bagaimana cara login eLOK?',
                 answer: <p>Silakan akses &quot;Ketentuan &amp; Panduan&quot; pada tautan berikut <a href="http://elok.ugm.ac.id" rel="noopener noreferrer" target="_blank"><em>login</em> eLOK</a> </p>,
             },
             {
-                title: <p>Bagaimana jika tidak bisa melakukan <em>login</em> eLOK dengan akun SSO dikarenakan sudah terlanjur melakukan registrasi mandiri pada <em>platform</em> eLOK?</p>,
+                title: 'Bagaimana jika tidak bisa melakukan <em>login</em> eLOK dengan akun SSO dikarenakan sudah terlanjur melakukan registrasi mandiri pada platform eLOK?',
                 answer: <p>Silahkan hubungi PIKA (Pusat Inovasi dan Kajian Akademik) melalui kontak berikut:<br/>E-mail&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<a href="mailto: pika@ugm.ac.id"> pika@ugm.ac.id</a> .<br/>Telepon&nbsp; &nbsp; : (0274) 6491850.</p>,
             },
             {
-                title: <p>Apakah fungsi dari <em>enrollment</em> key?</p>,
+                title: "Apakah fungsi dari <em>enrollment</em> key?",
                 answer: <p><em>Enrollment key</em> digunakan untuk dapat mengakses dan masuk pada <em>course</em> atau modul &ldquo;<em>Introductory</em>&rdquo;, <em>course</em> atau modul &ldquo;Jati Diri UGM Bangun Karakterku&rdquo;, <em>course </em>atau modul &ldquo;Peran Aktifku dalam Masyarakat&rdquo;, <em>course </em>atau modul &ldquo;Aku Mahasiswa Adaptif dan Sukses&rdquo;, dan <em>course </em>atau modul &ldquo;Aksi Nyataku untuk Masyarakat&rdquo;.</p>,
             },
             {
-                title: <p>Dimanakah saya bisa mendapatkan <em>enrollment key?</em></p>,
+                title: 'Dimanakah saya bisa mendapatkan enrollment key?',
                 answer: <p>Gamada dapat mengakses Simaster dan memilih bagian kemahasiswaan, lalu bagian PPSMB untuk mendapatkan <em>enrollment key</em>.</p>,
             },
             {
-                title: <p>Apa yang perlu Gamada lakukan setelah mendapatkan <em>enrollment key</em>?</p>,
+                title: 'Apa yang perlu Gamada lakukan setelah mendapatkan enrollment key',
                 answer: <p>Gamada menginput <em>enrollment key</em> ke dalam kolom teks yang tertera di eLOK. Setelah itu, Gamada dapat memperhatikan prosedur yang terdapat pada tautan berikut<em> <a href="enrollment key" target="_blank">enrollment key</a></em></p>,
             },
         ]
@@ -77,7 +77,7 @@ export const QuestionItems = [
                 answer: <p><em>Video Conference</em> atau pembelajaran dalam jaringan (daring) dalam waktu yang bersamaan.</p>,
             },
             {
-                title: <p><em>Platform</em> apa saja yang digunakan selama sesi sinkronus?</p>,
+                title: 'Platform apa saja yang digunakan selama sesi sinkronus',
                 answer: <p><em>Platform</em> yang akan digunakan pada sesi sinkronus PPSMB Universitas dan <em>Soft-skills</em> adalah Google Meet, <em>group </em>Line, dan beberapa<em> platform</em> pendukung lainnya, sedangkan untuk PPSMB Fakultas akan menggunakan berbagai <em>platform</em> yang ditentukan oleh fakultas masing-masing seperti Google Meet, Google Jamboard, Webex, Youtube Streaming, dan atau Zoom.</p>,
             },
 
@@ -121,27 +121,27 @@ export const QuestionItems = [
                 answer: 'Penugasan dikerjakan dengan cara diketik, kecuali ada ketentuan khusus yang diminta dalam penugasan.',
             },
             {
-                title: <p>Apa format <em>file</em> jawaban penugasan?</p>,
+                title: 'Apa format file jawaban penugasan?',
                 answer: <p>Format pengumpulan file berupa .pdf, kecuali ada ketentuan khusus yang diminta dalam penugasan.</p>,
             },
             {
-                title: <p>Berapa ukuran maksimal <em>file</em> untuk jawaban penugasan?</p>,
+                title: 'Berapa ukuran maksimal file untuk jawaban penugasan?',
                 answer: <p>Ukuran maksimal <em>file</em> jawaban penugasan adalah 20 mb.</p>,
             },
             {
-                title: <p>Apa format penamaan file jawaban penugasan?</p>,
+                title: 'Apa format penamaan file jawaban penugasan?',
                 answer: <p>Format penamaan file adalah sebagai berikut:<br />NIU_GUGUS KELAS_NAMA<br />(contoh: 123456_Kertanegara 5_Luqman Al-Hakim) .</p>,
             },
             {
-                title: <p>Apa perbedaan NIF dan NIU?</p>,
+                title: 'Apa perbedaan NIF dan NIU?',
                 answer: <p>NIM adalah nomor induk mahasiswa sebagai contohnya, yaitu sebagai berikut 19-444444-EK-12345 yang terdiri dari susunan Angkatan-NIF-Fakultas-NIU.</p>,
             },
             {
-                title: <p>Apabila koneksi terputus saat mengerjakan penugasan melalui <em>online text, </em>apakah pekerjaan akan terhapus?</p>,
+                title: 'Apabila koneksi terputus saat mengerjakan penugasan melalui online text, apakah pekerjaan akan terhapus?',
                 answer: <p>Hasil pekerjaan yang telah dituliskan akan terhapus sehingga diharapkan Gamada dapat menggunakan koneksi yang stabil dan memiliki cadangan jawaban.</p>,
             },
             {
-                title: <p>Dapatkah Gamada melakukan pengumpulan atau pengunggahan penugasan lebih dari satu kali?</p>,
+                title: 'Dapatkah Gamada melakukan pengumpulan atau pengunggahan penugasan lebih dari satu kali?',
                 answer: <p>Pengumpulan atau pengunggahan penugasan sesuai dengan ketentuan yang tertera di masing-masing <em>platform</em>.</p>,
             },
         ]
