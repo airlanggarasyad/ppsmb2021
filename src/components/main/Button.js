@@ -38,6 +38,8 @@ const ButtonFrame = styled.div`
       ? "#FFBE00"
       : props.borderColor === "orange"
       ? "#FF7C02"
+      : props.borderColor === "grey"
+      ? "#F0F0F0"
       : "white"};
   border-radius: 5vmin;
   height: 100%;
@@ -55,7 +57,7 @@ const ButtonFrame = styled.div`
 
 const ButtonLink = styled.button`
   cursor: pointer;
-  margin: 0.2vmin 0.7vmin;
+  margin: 0.7vmin 0.7vmin;
   height: auto;
   width: 100%;
   padding: 1vmin 3vmin;
@@ -74,9 +76,11 @@ const ButtonLink = styled.button`
       : props.textColor === "blue"
       ? "#0593F7"
       : props.textColor === "yellow"
-      ? "#FFBE00"
+      ? "white"
       : props.textColor === "orange"
       ? "#FF7C02"
+      : props.textColor === "grey"
+      ? "white"
       : "white"};
 
   background: ${(props) =>
@@ -88,6 +92,8 @@ const ButtonLink = styled.button`
       ? "#FFBE00"
       : props.color === "orange"
       ? "#FF7C02"
+      : props.color === "grey"
+      ? "#C0C0C0"
       : "white"};
 
   &:hover {
@@ -100,6 +106,8 @@ const ButtonLink = styled.button`
         ? "#FFBE00"
         : props.textColor === "orange"
         ? "#FF7C02"
+        : props.textColor === "grey"
+      ? "white"
         : "#F0F0F0"};
 
     background: ${(props) =>
@@ -111,6 +119,8 @@ const ButtonLink = styled.button`
         ? "#FE9F10"
         : props.color === "orange"
         ? "#FF5810"
+        : props.color === "grey"
+      ? "#C0C0C0"
         : "#F0F0F0"};
   }
   @media screen and (max-width: 1200px) {

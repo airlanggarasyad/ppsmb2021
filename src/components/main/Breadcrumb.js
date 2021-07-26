@@ -7,7 +7,7 @@ export default function Breadcrumb(props) {
 
   return (
     <BreadcrumStyle color={primer} colorHover={secondary}>
-        <Link to={back}>
+        <Link style={{ textDecoration: 'none' }} to={back}>
       <div className="back">
         <svg
           width="100%"
@@ -29,7 +29,7 @@ export default function Breadcrumb(props) {
             {index === index.length - 1 ? (
              
               <div className="breadcrumb-link">
-                {" "} <Link to={item.link}>
+                {" "} <Link style={{ textDecoration: 'none' }} to={item.link}>
                 {item.text}</Link>
               </div>
              
@@ -37,7 +37,7 @@ export default function Breadcrumb(props) {
              
               <div className="breadcrumb-link">
                 {" "}
-                <Link to={item.link}>
+                <Link style={{ textDecoration: 'none' }} to={item.link}>
               {item.text}
                 </Link> <span> / </span>
               </div>

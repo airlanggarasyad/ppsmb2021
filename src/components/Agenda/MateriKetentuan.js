@@ -16,23 +16,32 @@ export default class AgendaPenugasan extends Component {
   render() {
     const dataCard = [
       {
-        title: "Agenda",
+        title: "Materi",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
         image: "agenda",
-        link: "/2021/modul-ketentuan/agenda",
+        link: "/2021/materi-ketentuan/materi",
+        button:"selengkapnya",
+        color:"yellow",
+        hover :"none"
       },
       {
         title: "Ketentuan & Panduan Penugasan",
         text: "PPSMB UGM ditampilkan dalam bentuk slides , dan video untuk memudahkan Gamada dalam mengerjakan penugasan PPSMB UGM. ",
-        link: "/2021/modul-ketentuan/ketentuan",
+        link: "/2021/materi-ketentuan/ketentuan",
         image: "ketentuan",
+        button:"selengkapnya",
+        color:"yellow",
+        hover :"none"
         // link: "/Competition/CompetitiveProgramming",
       },
       {
         title: "Materi Tambahan",
         text: "berisikan materi-materi PPSMB UGM sebagai penunjang untuk pengerjaan penugasan. Untuk mengaksesnya, Gamada harus login menggunakan email UGM masing-masing.",
-        link: "/2021/modul-ketentuan/materi",
+        link: "/2021/materi-ketentuan",
         image: "materi",
+        button:"Segera Hadir",
+        color:"grey",
+        hover :"none"
         // link: "/Competition/CompetitiveProgramming",
       },
     ];
@@ -43,8 +52,8 @@ export default class AgendaPenugasan extends Component {
      
       },
       {
-        text: "Modul & Ketentuan",
-        link: "/2021/modul-ketentuan"
+        text: "Materi & Ketentuan",
+        link: "/2021/materi-ketentuan"
       },
   
     ];
@@ -165,7 +174,7 @@ export default class AgendaPenugasan extends Component {
               <div className="card-carousel-container">
                 {" "}
                 
-                <Card key={index} text={item.text} title={item.title} link={item.link} image={item.image} ></Card>
+                <Card key={index} text={item.text} color={item.color} button={item.button} title={item.title} link={item.link} image={item.image} ></Card>
               </div>
             );
            
@@ -182,7 +191,8 @@ export default class AgendaPenugasan extends Component {
 
 
 const AgendaStyle = styled.div`
-  height: 100vmin;
+  height: auto;
+  
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -332,7 +342,10 @@ const AgendaStyle = styled.div`
     }
   }
   @media screen and (max-width: 992px) {
-    height: 130vmin;
+    height: auto;
+    .breadcrumb {
+      margin-top: 10vmin;
+    }
     .batik-bg {
       position: absolute;
       height: 130vmin;
@@ -345,7 +358,7 @@ const AgendaStyle = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    height: 200vmin;
+    height: auto;
     .breadcrumb {
       margin-top: 10vmin;
     }
@@ -374,7 +387,7 @@ const AgendaStyle = styled.div`
     }
   }
   @media screen and (max-width: 500px) {
-    height: 220vmin;
+    height: auto;
     .batik-bg {
       position: absolute;
       height: 220vmin;

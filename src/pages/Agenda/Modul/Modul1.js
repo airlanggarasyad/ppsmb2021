@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import DayCard from "../components/Agenda/Agenda";
+import Modul from "../../../components/Agenda/Modul";
 import Helmet from "react-helmet";
 
 export default function landingPage() {
   return (
     <>
      <Helmet>
-        <title>Agenda | PPSMB UGM 2021</title>
+        <title>Modul | PPSMB UGM 2021</title>
       </Helmet>
     <div>
-      <DayCard/>
+      <Modul day="one"/>
     </div>
     </>
   );

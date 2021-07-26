@@ -12,40 +12,61 @@ import Fade from "react-reveal/Fade"
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route,Link,
   useParams
 } from "react-router-dom";
 
 
 export default function Day(props) {
-  // const { day } = props;
+  const { day } = props;
 
-  const {day} = useParams();
+  // const {day} = useParams();
 
   const [BreadcrumbText, setBreadcrumbText] = useState(
     day === "one"
-      ? "Hari Ke-1"
-      : day === "two"
-      ? "Hari Ke-2"
-      : day === "three"
-      ? "Hari Ke-3"
-      : day === "four"
-      ? "Hari Ke-4"
-      : day === "five"
-      ? "Hari Ke-5"
-      : day === "six"
-      ? "Hari Ke-6"
-      : "Hari Ke-1"
+    ? "Introductory"
+    : day === "two"
+    ? "Jati Diri UGM Bangun Karakterku"
+    : day === "three"
+    ? "Peran Aktifku dalam Masyarakat"
+    : day === "four"
+    ? "Aku Mahasiswa Adaptif dan Sukses"
+    : day === "five"
+    ? "Aksi Nyataku untuk Masyarakat"
+    : day === "six"
+    ? "PPSMB Fakultas"
+    : "PPSMB"
   );
+
+  const [LinkText, setLinkText] = useState(
+    day === "one"
+    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1"
+    : day === "two"
+    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2"
+    : day === "three"
+    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3"
+    : day === "four"
+    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4"
+    : day === "five"
+    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5"
+    : day === "six"
+    ? "PPSMB Fakultas"
+    : "PPSMB"
+  );
+  
+  
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
+      link: "/2021"
     },
     {
-      text: "Agenda",
+      text: "PPSMB Universitas",
+      link: "/2021/materi-ketentuan/materi/ppsmb-universitas"
     },
     {
       text: `${BreadcrumbText}`,
+      link: `${LinkText}`
     },
   ];
   const [BreadcrumbPrimer, setBreadcrumbPrimer] = useState(
@@ -82,19 +103,36 @@ export default function Day(props) {
 
   const [Title, setTitle] = useState(
     day === "one"
-      ? "Hari Ke-1"
-      : day === "two"
-      ? "Hari Ke-2"
-      : day === "three"
-      ? "Hari Ke-3"
-      : day === "four"
-      ? "Hari Ke-4"
-      : day === "five"
-      ? "Hari Ke-5"
-      : day === "six"
-      ? "Hari Ke-6"
-      : "Hari Ke-7"
+    ? "Introductory"
+    : day === "two"
+    ? "Jati Diri UGM Bangun Karakterku"
+    : day === "three"
+    ? "Peran Aktifku dalam Masyarakat"
+    : day === "four"
+    ? "Aku Mahasiswa Adaptif dan Sukses"
+    : day === "five"
+    ? "Aksi Nyataku untuk Masyarakat"
+    : day === "six"
+    ? "PPSMB Fakultas"
+    : "PPSMB"
   );
+
+  const [Elok, setElok] = useState(
+    day === "one"
+    ? "https://elok.ugm.ac.id/course/view.php?id=6717"
+    : day === "two"
+    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    : day === "three"
+    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    : day === "four"
+    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    : day === "five"
+    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    : day === "six"
+    ? " https://elok.ugm.ac.id/course/view.php?id=6717"
+    : "PPSMB"
+  );
+
 
   const [TextColor, setTextColor] = useState(
     day === "one"
@@ -127,17 +165,17 @@ export default function Day(props) {
       ? "red"
       : "orange"
   );
-  const [Pdf, setPdf] = useState(
+  const [Text, setText] = useState(
     day === "one"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Diawali dengan modul atau course “Introductory”, Gamada memperoleh gambaran awal yang berisi informasi lengkap tentang proses pembelajaran yang akan dilakukan oleh Gamada selama PPSMB UGM 2021 berlangsung. Di dalamnya juga terdapat alur dan capaian pembelajaran dari PPSMB UGM 2021."
       : day === "two"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Modul atau course kedua dengan judul “Jati Diri UGM Bangun Karakterku” mengenalkan sejarah, filosofi, dan nilai-nilai luhur Universitas. Selain itu, dibahas juga mengenai peraturan tertulis yang berlaku di Universitas Gadjah Mada sehingga sebagai mahasiswa, Gamada dapat memperoleh informasi mengenai tata cara berkegiatan dalam lingkungan Universitas Gadjah Mada."
       : day === "three"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Modul atau course ketiga, “Peran Aktifku dalam Masyarakat”, mengajak Gamada untuk mempelajari mengenai empat pokok bahasan, yaitu kesehatan mental dan fisik, isu gender dan kekerasan seksual, multikulturalisme dan Jiwa Pancasila, serta social awareness dan antikorupsi. Empat pokok bahasan tersebut berkaitan erat dengan pengembangan diri Gamada sebagai salah satu faktor penentu keberhasilan karena Gamada merupakan bagian dari akademisi dan komunitas. "
       : day === "four"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Modul atau course “Aku Mahasiswa Adaptif dan Sukses” yang akan dibahas pada sesi PPSMB Soft-skills. Melalui modul ini, Gamada diharapkan dapat memperluas wawasan intrapersonal dan interpersonal sebagai bekal untuk menghadapi perkuliahan. Keterampilan-keterampilan tersebut tentu diperlukan oleh Gamada untuk menjadi pembelajar yang sukses di berbagai bidang yang diminati."
       : day === "five"
-      ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
+      ? "Modul atau course “Aksi Nyataku untuk Masyarakat”. Modul tersebut mengupas secara tuntas bagaimana pelaksanaan Action Plan sebagai implementasi atas social awareness dan poin ketiga Tri Dharma Perguruan Tinggi, yaitu pengabdian kepada masyarakat."
       : day === "six"
       ? "https://drive.google.com/file/d/13sra5N2F8C38bRfwIQrbrlOwpMWZ1Vow/preview"
       : ""
@@ -150,10 +188,11 @@ export default function Day(props) {
           data={DataBreadcrumb}
           primer={BreadcrumbPrimer}
           secondary={BreadcrumbSecondary}
+          back="/2021/materi-ketentuan/materi/ppsmb-universitas"
         />
         <Fade bottom>
         <div className="title-container">
-          <h1>Agenda </h1>
+          <h1>Modul </h1>
           <div className="diamond">
             <svg
               width="100%"
@@ -171,21 +210,13 @@ export default function Day(props) {
               />
             </svg>
           </div>
-          <h3>{Title}</h3>
+          <h3 className="font-indonesia-script">{Title}</h3>
         </div>
         </Fade>
 
-        <div className="pdf-container">
-          <div className="pdf-content">
-          <Fade >
-            <iframe id="pdf" src={Pdf} frameborder="0" cellspacing="0"></iframe>
-            </Fade>
-            <Fade bottom>
-            <p className="noted">
-              *Login menggunakan akun SSO UGM untuk melihat dokumen-dokumen di
-              atas
-            </p>
-            </Fade>
+        <div className="text-container">
+          <div className="text-content">
+        <p >{Text}</p>
           </div>
 
         </div>
@@ -193,7 +224,9 @@ export default function Day(props) {
           <div className="button-content">
           <Fade bottom>
             <div className="back-button">
+              <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas" >
               <Button text="kembali" textColor={TextColor}>
+        
                 <div className="back-icon">
                   <svg
                     width="100%"
@@ -208,31 +241,22 @@ export default function Day(props) {
                     />
                   </svg>
                 </div>
-              </Button>
+              </Button>      </Link>
             </div>
             </Fade>
             <Fade bottom>
             <div className="download-button">
-              <Button text="Download" color={Color}>
+              <a style={{ textDecoration: 'none' }} href={Elok} target="_blank">
+              <Button text="Akses Elok" color={Color}>
                 <div className="download-icon">
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 464 464"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M215.029 360.97C217.258 363.199 219.904 364.967 222.815 366.173C225.727 367.379 228.848 368 232 368C235.152 368 238.273 367.379 241.185 366.173C244.097 364.967 246.742 363.199 248.971 360.97L339.48 270.461C343.981 265.96 346.509 259.856 346.509 253.491C346.509 247.125 343.981 241.021 339.48 236.52C334.979 232.019 328.875 229.491 322.51 229.491C316.144 229.491 310.04 232.019 305.539 236.52L256 286.059V24C256 17.6348 253.472 11.5303 248.971 7.02944C244.47 2.52856 238.365 0 232 0C225.635 0 219.53 2.52856 215.03 7.02944C210.529 11.5303 208 17.6348 208 24V286.059L158.461 236.52C153.96 232.019 147.856 229.491 141.491 229.491C135.125 229.491 129.021 232.019 124.52 236.52C120.019 241.021 117.491 247.125 117.491 253.491C117.491 259.856 120.019 265.96 124.52 270.461L215.029 360.97Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M440 208C433.635 208 427.53 210.529 423.029 215.029C418.529 219.53 416 225.635 416 232V416H48V232C48 225.635 45.4714 219.53 40.9706 215.029C36.4697 210.529 30.3652 208 24 208C17.6348 208 11.5303 210.529 7.02944 215.029C2.52856 219.53 0 225.635 0 232V424C0 434.609 4.21427 444.783 11.7157 452.284C19.2172 459.786 29.3913 464 40 464H424C434.609 464 444.783 459.786 452.284 452.284C459.786 444.783 464 434.609 464 424V232C464 225.635 461.471 219.53 456.971 215.029C452.47 210.529 446.365 208 440 208Z"
-                      fill="white"
-                    />
-                  </svg>
+                <svg width="100%" height="100%" viewBox="0 0 163 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0125 82.1168C10.4983 85.2898 6.31673 84.6631 6.21853 79.2481C6.17674 76.9275 5.92531 68.0656 6.66566 66.4995C8.03597 63.6005 12.3729 63.9268 12.4366 69.5147C12.4683 72.2894 12.9022 80.2526 12.0125 82.1168ZM18.7829 27.955C19.1234 27.6274 19.0305 27.6636 19.6611 27.2747C20.3151 26.8715 19.7969 27.1487 20.6316 26.7932L67.5588 10.9599C71.4938 9.67584 80.5779 5.62196 84.9274 6.81135C102.996 11.7524 124.809 19.9507 143.085 25.171L150.893 28.0348C149.712 28.7029 138.595 32.8843 136.661 33.2359C133.864 33.745 132.428 31.3606 130.335 30.1012C128.253 28.8485 125.981 27.9512 123.583 27.1998C102.436 20.576 67.5643 21.083 46.5041 27.0637C37.5022 29.62 35.7531 33.8557 33.0083 33.5388C32.5677 33.488 19.9958 29.243 18.7829 27.955ZM7.60137 25.9882C6.53751 29.5657 7.08807 39.171 7.08807 43.43C7.08807 46.3314 7.08807 49.2331 7.08807 52.1345C7.08807 54.1181 7.9893 59.1741 6.10291 60.0665C2.21034 61.8742 1.20359 64.254 1.01101 69.0367C0.876943 72.3722 0.608805 79.8658 1.26627 82.8755C3.13281 91.4185 15.1121 91.611 17.4498 82.6405C18.1553 79.934 17.9882 71.7121 17.8367 68.5565C17.5282 62.1434 13.9194 61.4832 12.6835 59.7336C11.0437 57.4123 11.8975 36.7585 12.0006 32.2533C14.8993 32.0361 20.6665 34.7735 23.2343 35.6808C25.3704 36.4353 31.9775 38.2724 32.9139 40.0335C35.0009 44.3638 31.3907 76.0052 34.4674 78.6399C38.0883 81.7404 38.1127 75.6984 38.9446 74.1257C39.8897 72.3392 42.4064 71.1846 44.5791 70.1199C63.3058 60.9425 102.119 61.3154 122.189 68.7132C124.519 69.5718 126.475 71.6038 129.017 71.334C131.576 66.8264 128.479 65.3062 124.26 63.7826C102.975 56.0968 70.0525 55.9478 48.5378 62.5361C45.5576 63.4487 41.0535 66.2404 38.5776 66.6683C38.4655 61.385 37.3051 57.0178 41.4826 54.4896C59.5532 43.5536 98.3874 44.3206 118.445 50.2286C123.95 51.8501 126.689 54.2229 129.064 54.0032C131.421 49.097 128.389 48.1882 124.101 46.4633C114.136 42.454 97.9155 40.686 87.0318 40.6978C49.7316 40.7378 43.5553 48.5886 38.6295 49.2791C37.8258 35.7832 38.3053 35.9883 44.4812 33.7926C62.111 27.5254 80.8074 26.8896 100.109 28.3666C108.204 28.9857 118.957 30.7948 126.386 34.0566C133.37 37.123 126.845 42.4641 139.841 37.708C145.716 35.5576 158.542 31.8822 162.618 29.1002L162.521 26.3673C159.208 24.1682 148.059 21.1404 143.151 19.6836L84.4346 1.04615C80.6946 -0.162041 69.0861 4.81522 64.8102 6.23998C58.535 8.3315 51.8847 10.5679 45.7439 12.6974C40.4403 14.5365 9.45293 24.1438 7.60137 25.9882Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.09647 60.0663C7.98287 59.1739 7.08163 54.1176 7.08163 52.1344C7.08163 49.233 7.08163 46.3312 7.08163 43.4298C7.08163 39.1712 6.53142 29.5656 7.59493 25.988C5.70958 27.0002 6.37715 29.8413 6.37715 33.758C6.3775 39.7555 6.76195 56.2206 6.09647 60.0663Z" fill="white"/>
+</svg>
+
                 </div>
               </Button>
+              </a>
             </div>
             </Fade>
           </div>
@@ -243,7 +267,8 @@ export default function Day(props) {
 }
 
 const DayStyle = styled.div`
-  height: 150vmin;
+  height: auto;
+  padding:10vmin 0 10vmin 0;
   width: 100%;
   background-image: ${(props) =>
     props.day === "one"
@@ -296,16 +321,16 @@ const DayStyle = styled.div`
   }
   .title-container > h3 {
     color: white;
-    font-size: 7vmin;
+    font-size: 5vmin;
   }
-  .pdf-container {
-    width: 80%;
+  .text-container {
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .pdf-content {
-    padding: 5% 5% 2.5% 5%;
+  .text-content {
+    padding: 2.5% 5% 2.5% 5%;
     width: 90%;
     height: auto;
     display: flex;
@@ -333,6 +358,13 @@ const DayStyle = styled.div`
         : "black"};
   }
 
+  .text-content > p {
+    color: white;
+    font-size: 2.5vh;
+    line-height: 2;
+ 
+    text-align:center;
+  }
   .noted {
     color: white;
     width: 100%;
@@ -365,8 +397,8 @@ const DayStyle = styled.div`
   }
 
   .download-icon {
-    height: 3vmin;
-    width: 3vmin;
+    height: 4vmin;
+    width: 4vmin;
     margin-right: 2vmin;
   }
   .back-icon > svg > path {
@@ -401,6 +433,7 @@ const DayStyle = styled.div`
       font-size: 5vmin;
     }
     .title-container > h3 {
+      line-height: 1.3;
       font-size: 5vmin;
     }
     .noted {
@@ -416,6 +449,12 @@ const DayStyle = styled.div`
       width: 90%;
       justify-content: space-between;
     }
+    .text-content > p {
+    color: white;
+    font-size: 2vh;
+    line-height: 2;
+    text-align:center;
+  }
   }
   @media screen and (max-width: 768px) {
     height: 200vmin;
@@ -475,7 +514,7 @@ const DayStyle = styled.div`
     .back-button {
       margin-top: 6vmin;
     }
-    .download-button {
+    .download-button > a { text-decoration:none;
     }
   }
   @media screen and (max-width: 500px) {

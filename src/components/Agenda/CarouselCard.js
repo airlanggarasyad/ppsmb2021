@@ -13,7 +13,7 @@ import Fade from "react-reveal/Fade"
 import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
 export default function CarouselCard(props) {
-  const { title, text, image, link } = props;
+  const { title, text, image, link, button,color } = props;
   // const { source, setSource} = useState();
   // // const Agenda = require("../../assets/images/agenda/Carousel/agenda_img.png")
   // console.log(image);
@@ -59,7 +59,7 @@ export default function CarouselCard(props) {
           <h3>{title}</h3>
           </Fade>
           <div className="image-card">
-            <img src={image} alt="" />
+          <img src={image === "agenda" ? Agenda : (image === "ketentuan" ? Ketentuan : Materi)} alt="" />
           </div>
           <Fade left>
           <p>{text}</p>
@@ -67,8 +67,8 @@ export default function CarouselCard(props) {
           <div className="button-container">
             <div className="more-button">
             <Fade bottom>
-              <Link to={link}>
-              <Button text="Selengkapnya" color="yellow" borderColor="yellow" />
+              <Link style={{ textDecoration: 'none' }} to={link}>
+              <Button text={button} color={color} borderColor={color} textColor={color} />
               </Link>  </Fade>
             </div>
           </div>
