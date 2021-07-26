@@ -79,11 +79,13 @@ export default function Beranda() {
     thumbnail: require("../assets/img/serba-serbi/apaituppsmb.webp").default,
   });
   const [activeDate, setActiveDate] = useState({
-    date: new Date(2021, 7, 3),
-    desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok',
-    title: "PPSMB Universitas Hari Pertama",
-    linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
-    linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+    date: new Date(2021, 7, 2),
+    desc: 'Pada hari pertama, blablabla.',
+    title: 'PPSMB Universitas Hari Pertama',
+    linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+    linkLengkap: 'https://ppsmb.ugm.ac.id/2021/agenda',
+    linkTugas: 'https://simpan.ugm.ac.id/s/CBN21EkVVmugT9C#pdfviewer',
+    linkSimaster: 'https://simaster.ugm.ac.id/kemahasiswaan/ppsmb/',
   });
 
   const [today, setToday] = useState(new Date());
@@ -128,7 +130,6 @@ export default function Beranda() {
 
   function changeInfo(clikedDay) {
     DaftarAgenda.map((item, index) => {
-      // console.log('item: ', item.date)
       if (clikedDay.toString() === item.date.toString()) {
         console.log("item setted: ", item.date.toString());
         setActiveDate({
@@ -380,8 +381,9 @@ export default function Beranda() {
         {/* <section className='vmap pattern-bg'>
 
         </section> */}
-        <section className="agenda">
-          <div className="agenda-title">
+        <section className='agenda'>
+          <div className='border' />
+          <div className='agenda-title'>
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
             <div className="batiks">
               <img src={Batik} alt="" srcset="" className="batik" />
@@ -391,7 +393,7 @@ export default function Beranda() {
           </div>
           <div className="agenda-content">
             <div className="agenda-desc ppsmb-darkblue">
-              <p>
+              <p style={{marginTop: '0'}}>
                 Dengan membawa nilai-nilai luhur dan jati diri Universitas,
                 PPSMB UGM 2021 dilaksanakan untuk membentuk Gamada sebagai
                 pembelajar sukses yang siap menjadi pemimpin bangsa intelektual
@@ -404,132 +406,75 @@ export default function Beranda() {
                 Religius, dan Andal)
               </p>
               <Fade spy={activeDate}>
-                <h4>{activeDate.title}</h4>
-                <p>{activeDate.desc}</p>
+                <p>
+                  <small>{activeDate.date.toLocaleDateString('id-ID', {weekday:'long', year:'numeric', month: 'long', day:'numeric'})}</small>
+                    <br /><h4 style={{margin: '0 0 2vmin 0'}}>{activeDate.title}</h4>
+                    {activeDate.desc}
+                </p>
                 <div className="quick-access">
-                  <a href={activeDate.linkElok} target="_blank" rel="noopener noreferrer">
-                    <Button
+                  <ShowQuickAccess                       
                       bg="var(--color-darkblue)"
                       color="var(--color-white)"
-                      text="Kelas Elok"
-                    />
-                  </a>
-                  <Button
-                    bg="var(--color-white)"
-                    color="var(--color-darkblue)"
-                    text="Selengkapnya"
-                  />
+                      text="Kelas Elok" 
+                      link={activeDate.linkElok}/>
+                  <ShowQuickAccess                       
+                      bg="var(--color-white)"
+                      color="var(--color-darkblue)"
+                      text="Selengkapnya"
+                      link={activeDate.linkLengkap}/>
                 </div>
               </Fade>
             </div>
 
-            <div className="agenda-access ppsmb-darkblue">
-              <div className="calendar">
-                <div
-                  style={{
-                    boxShadow: "0px 0px 9px -2px rgba(0, 0, 0, 0.5)",
-                    borderRadius: "20px",
-                  }}
-                >
+            <div className='agenda-access ppsmb-darkblue'>
+              <div className='calendar'>
+                <div style={{ boxShadow: '0px 0px 9px -2px rgba(0, 0, 0, 0.5)', borderRadius: '20px' }}>
                   <Calendar
                     activeStartDate={activeDate.date}
                     defaultView={"month"}
-                    prevLabel={""}
-                    prev2Label={""}
-                    nextLabel={""}
-                    next2Label={""}
+                    prevLabel={''}
+                    prev2Label={''}
+                    nextLabel={''}
+                    next2Label={''}
                     minDetail={"month"}
                     minDate={new Date(2021, 7, 2)}
-                    maxDate={new Date(2021, 7, 20)}
+                    maxDate={new Date(2021, 7, 14)}
                     locale="id-ID"
                     onClickDay={changeInfo}
                     tileClassName={({ date, view }) =>
-                      view === "month" &&
-                      date.getMonth() === 7 &&
-                      date.getDate() === today.getDate()
-                        ? "today upacara-universitas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 2
-                        ? "upacara-universitas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === today.getDate()
-                        ? "today universitas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 3
-                        ? "universitas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === today.getDate()
-                        ? "today fakultas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 4
-                        ? "fakultas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 5
-                        ? "fakultas"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === today.getDate()
-                        ? "today softskills"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 6
-                        ? "softskills"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 7
-                        ? "softskills"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === today.getDate()
-                        ? "today action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 8
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 9
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 10
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 11
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 12
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 13
-                        ? "action"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === today.getDate()
-                        ? "today upacara"
-                        : view === "month" &&
-                          date.getMonth() === 7 &&
-                          date.getDate() === 14
-                        ? "upacara"
-                        : null
-                    }
+                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 2 ? 'today upacara-universitas' :
+                        view === 'month' && date.getMonth() === 7 && date.getDate() === 2 ? 'upacara-universitas' :
+                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 3 ? 'today universitas' :
+                            view === 'month' && date.getMonth() === 7 && date.getDate() === 3 ? 'universitas' :
+                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 4 ? 'today fakultas' :
+                                view === 'month' && date.getMonth() === 7 && date.getDate() === 4 ? 'fakultas' :
+                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 5 ? 'today fakultas' :
+
+                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 5 ? 'fakultas' :
+                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 6 ? 'today softskills' :
+                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 6 ? 'softskills' :
+                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 7 ? 'today softskills' :
+                                            view === 'month' && date.getMonth() === 7 && date.getDate() === 7 ? 'softskills' :
+                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 8 ? 'today action' :
+                                                view === 'month' && date.getMonth() === 7 && date.getDate() === 8 ? 'action' :
+                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 9 ? 'today action' :
+                                                    view === 'month' && date.getMonth() === 7 && date.getDate() === 9 ? 'action' :
+                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 10 ? 'today action' :
+                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 10 ? 'action' :
+                                                          view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 11 ? 'today ' :
+                                                            view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 12 ? 'today ' :
+                                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 13 ? 'today' :
+                                                                view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 14 ? 'today upacara' :
+                                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
+                                                                    null}
                   />
                 </div>
-                <div className="calendar-desc">
-                  <li className="ppsmb-red">Pembukaan / Penutupan</li>
-                  <li className="ppsmb-blue">PPSMB Universitas</li>
-                  <li className="ppsmb-redpink">PPSMB Fakultas</li>
-                  <li className="ppsmb-footerblue">PPSMB Soft Skills</li>
-                  <li className="ppsmb-orange">Action Plan</li>
+                <div className='calendar-desc'>
+                  <li className='ppsmb-red'>Pembukaan / Penutupan</li>
+                  <li className='ppsmb-blue'>PPSMB Universitas</li>
+                  <li className='ppsmb-redpink'>PPSMB Fakultas</li>
+                  <li className='ppsmb-footerblue'>PPSMB Soft Skills</li>
+                  <li className='ppsmb-orange'>Action Plan</li>
                 </div>
               </div>
             </div>
@@ -1161,9 +1106,20 @@ const Container = styled.div`
     }
 
     &.agenda {
-      min-height: 100vh;
+      min-height: 130vh;
       padding: 10vmin;
       line-height: calc(0.5rem + 3.3vmin);
+      position: relative;
+
+      .border{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 4px;
+        width: 20%;
+        background: var(--color-blue);
+      }
 
       .agenda-title {
         display: flex;
@@ -1222,13 +1178,14 @@ const Container = styled.div`
           width: 50%;
           flex-direction: column;
           align-items: flex-start;
+          align-self: flex-end;
           p {
             text-align: justify;
-            margin: 0;
           }
           .quick-access {
             width: 100%;
             display: flex;
+            align-items: center;
             justify-content: flex-end;
           }
         }
@@ -1426,4 +1383,21 @@ function ShowEmail(props) {
   } else {
     return null;
   }
+}
+
+function ShowQuickAccess(props) {
+  if (props.link != null){
+    return(
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
+        <Button
+          bg={props.bg}
+          color={props.color}
+          text={props.text}
+        />
+      </a>
+    )
+  }else{
+    return null;
+  }
+
 }
