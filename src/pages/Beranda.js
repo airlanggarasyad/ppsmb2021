@@ -236,7 +236,7 @@ export default function Beranda() {
                   titleColor="var(--color-white)"
                   headerColor="var(--color-redpink)"
                   shadow="rgba(197,0,52,0.4)"
-                  link="https://drive.google.com/file/d/1Jl4PWBpZ5EhLTGyIMfyhEotdE3mbkqeE/preview?usp=sharing"
+                  link="https://drive.google.com/file/d/1ftvTBcrI2oW37ZU1lPsCklg39KmVZ8K-/preview?usp=sharing"
                 />
                 <LiniMasa
                   mainText="Surat Keputusan Rektor"
