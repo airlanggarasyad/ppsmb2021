@@ -5,6 +5,7 @@ import AgendaMateri from "../pages/Agenda/MateriKetentuan";
 import { Switch, Route, useHistory, useParams } from "react-router-dom";
 import gaTracker from './gaTracker'
 import error from '../pages/404'
+import FAQ from '../pages/FAQ'
 import Materi from '../pages/Agenda/Materi'
 import Universitas from "../pages/Agenda/Universitas"
 import Fakultas from "../pages/Agenda/Fakultas"
@@ -17,7 +18,7 @@ import Modul4 from "../pages/Agenda/Modul/Modul4"
 import Modul5 from "../pages/Agenda/Modul/Modul5"
 // import {Switch, Route} from "./RelativeRoute"
 import tawkTo from "tawkto-react";
-import TawkTo from "../components/TawkTo"
+import TawkTo from "../components/TawkTo";
 
 export default function Routes() {
   // const tawkToPropertyId = "60f0f124d6e7610a49ab832e"
@@ -26,28 +27,28 @@ export default function Routes() {
   //       tawkTo(tawkToPropertyId, email, fullName)
   //   }
   // }, [email, firstName, lastName]);
-  const days = [
-    { id: 1, day: 'one'},
-    { id: 2, day: 'two'},
-    { id: 3, day: 'three'},
-    { id: 4, day: 'four'},
-    { id: 5, day: 'five'},
-    { id: 6, day: 'six'}
-  ]
+  const day = [
+    { id: 1, day: "one" },
+    { id: 2, day: "two" },
+    { id: 3, day: "three" },
+    { id: 4, day: "four" },
+    { id: 5, day: "five" },
+    { id: 6, day: "six" },
+  ];
 
   useEffect(() => {
-    const script = document.createElement('script');
-  
+    const script = document.createElement("script");
+
     script.src = "https://embed.tawk.to/60f433d2649e0a0a5cccc803/1fasuksoa";
     script.async = true;
-    script.charset='UTF-8';
-    script.setAttribute('crossorigin','*');
-  
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+
     document.body.appendChild(script);
-  
+
     return () => {
       document.body.removeChild(script);
-    }
+    };
   }, []);
 
   gaTracker();
@@ -55,7 +56,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route exact path="/2021" component={Beranda} />
-      {/* <Route exact path="/2021/faq" component={FAQ} /> */}
+      <Route exact path="/2021/faq" component={FAQ} />
       <Route path="/2021/galeri" component={Galeri} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
       {/* Agenda Section */}
@@ -79,4 +80,3 @@ export default function Routes() {
     </Switch>
   );
 }
-

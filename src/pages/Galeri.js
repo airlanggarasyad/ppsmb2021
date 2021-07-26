@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import Fade from "react-reveal/Fade";
-import Pulse from "react-reveal/Pulse";
 import Zoom from "react-reveal/Zoom";
+import Slider from "react-slick";
 import SimpleReactLightbox from "simple-react-lightbox";
 
 import VideoContainer from "../components/VideoContainer";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
-import Slider from "react-slick";
+import Button from "../components/Button";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";
 import Batik from "../assets/img/batik-color.svg";
@@ -16,94 +16,135 @@ import patternBlue from "../assets/img/pattern-bg-blue.webp";
 import whiteBatik from "../assets/img/white-batik-corner.webp";
 import videoUKMHeader from "../assets/img/galeri/ornament-ukm.webp";
 
-// var ukmVideos = [
-//   {
-//     id: 1,
-//     sekberName: "Sekber Olahraga",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     sekberName: "Sekber Kerohanian",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 3,
-//     sekberName: "Sekber Kesenian",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-//   {
-//     id: 4,
-//     sekberName: "Sekber Khusus",
-//     videoList: [
-//       { id: 1, thumbnailUrl: "2.webp", videoUrl: "" },
-//       { id: 2, thumbnailUrl: "5.webp", videoUrl: "" },
-//       { id: 3, thumbnailUrl: "1.webp", videoUrl: "" },
-//       { id: 4, thumbnailUrl: "6.webp", videoUrl: "" },
-//       { id: 5, thumbnailUrl: "8.webp", videoUrl: "" },
-//       { id: 6, thumbnailUrl: "7.webp", videoUrl: "" },
-//       { id: 7, thumbnailUrl: "1.webp", videoUrl: "" },
-//     ],
-//   },
-// ];
+var ukmVideos = [
+  {
+    id: 1,
+    sekberName: "Sekber Olahraga",
+    videoList: [
+      { id: 1, videoUrl: "-d5vg_bPJsQ", nomaxres: true },
+      { id: 2, videoUrl: "2F_0uMhJ18A" },
+      { id: 3, videoUrl: "7g8IBGEld_o" },
+      { id: 4, videoUrl: "2aONghp1G7Q", nomaxres: true },
+      { id: 5, videoUrl: "yXhzdZ10r_Q", nomaxres: true },
+      { id: 6, videoUrl: "7eMMqe1nISM" },
+      { id: 7, videoUrl: "XJFD7QqLneg" },
+      { id: 8, videoUrl: "6rDgqIED3tE", nomaxres: true },
+      { id: 9, videoUrl: "hnFw7HtV1x8" },
+      { id: 10, videoUrl: "7stdniIO7vE", nomaxres: true },
+      { id: 11, videoUrl: "W-Nroh3eSCc", nomaxres: true },
+      { id: 12, videoUrl: "Nn6vP3suuHo" },
+      { id: 13, videoUrl: "HXXNU0S25KE", nomaxres: true },
+      { id: 14, videoUrl: "ZFps1HXOeWM", nomaxres: true },
+      { id: 15, videoUrl: "ttjB8j_LXjk" },
+      { id: 16, videoUrl: "YDBdnCna2VI" },
+      { id: 17, videoUrl: "pZ9UrIqRwdA" },
+      { id: 18, videoUrl: "G7WDOmKnfnU" },
+      { id: 19, videoUrl: "TCSEQPjZOSI" },
+      { id: 20, videoUrl: "JZITiXiv0rM" },
+      { id: 21, videoUrl: "era-mHJI9lM" },
+      { id: 22, videoUrl: "BG8UECGV9NE" },
+      { id: 23, videoUrl: "bnTZ8B4vHLM" },
+      { id: 24, videoUrl: "G9bYM7kGl3k", nomaxres: true },
+    ],
+  },
+  {
+    id: 2,
+    sekberName: "Sekber Kerohanian",
+    videoList: [
+      { id: 1, videoUrl: "2a6e7v-79NU", nomaxres: true },
+      { id: 2, videoUrl: "scGJGCiOOjQ", nomaxres: true },
+      { id: 3, videoUrl: "rGu695dqRHo", nomaxres: true },
+      { id: 4, videoUrl: "XYCIJcFgask", nomaxres: true },
+      { id: 5, videoUrl: "6-fseeLdI3k", nomaxres: true },
+    ],
+  },
+  {
+    id: 3,
+    sekberName: "Sekber Kesenian",
+    videoList: [
+      { id: 1, videoUrl: "RIaKNVhISwc", nomaxres: true },
+      { id: 2, videoUrl: "hWi2LSU-9vk", nomaxres: true },
+      { id: 3, videoUrl: "wj3Ut5niIOk", nomaxres: true },
+      { id: 4, videoUrl: "Ccb0K7soHEA", nomaxres: true },
+      { id: 5, videoUrl: "z4FnNjEL0Rc", nomaxres: true },
+      { id: 6, videoUrl: "5u8mmRHc2BY", nomaxres: true },
+      { id: 7, videoUrl: "KMbbq0lUDeU", nomaxres: true },
+      { id: 8, videoUrl: "uYDbVVWDx18", nomaxres: true },
+      { id: 9, videoUrl: "RDAN9o-zmrY", nomaxres: true },
+      { id: 10, videoUrl: "TaCpCgFd8Ig", nomaxres: true },
+    ],
+  },
+  {
+    id: 4,
+    sekberName: "Sekber Khusus",
+    videoList: [
+      { id: 1, videoUrl: "WS4BmfXuKTo" },
+      { id: 2, videoUrl: "Z7eHX551YJI", nomaxres: true },
+      { id: 3, videoUrl: "LPHkuvcnQ18", nomaxres: true },
+      { id: 4, videoUrl: "aYvlSEt6M64" },
+      { id: 5, videoUrl: "Zd8zhmti5BM" },
+      { id: 6, videoUrl: "_P1Zya81JSw" },
+      { id: 7, videoUrl: "4QdpjhZ4Edw" },
+      { id: 8, videoUrl: "CGWW7afCJsk" },
+      { id: 9, videoUrl: "ZTxvLcdbcpU" },
+      { id: 10, videoUrl: "Pfc6FUGFYyg", nomaxres: true },
+      { id: 11, videoUrl: "GmGtH9OOGiw", nomaxres: true },
+      { id: 12, videoUrl: "_KhMR9j6la0", nomaxres: true },
+      { id: 13, videoUrl: "YzDxXwpXe7s" },
+    ],
+  },
+];
 
-// var video = ukmVideos.map(function (sekber) {
-//   let videosSekber = sekber.videoList.map(function (videoContent) {
-//     return (
-//       <div key={videoContent.id} className="video">
-//         <VideoContainer
-//           bgurl={
-//             process.env.PUBLIC_URL +
-//             "/assets/img/galeri/" +
-//             videoContent.thumbnailUrl
-//           }
-//           bgcolor={"var(--color-redpink)"}
-//           noDecor
-//         ></VideoContainer>
-//       </div>
-//     );
-//   });
-//   return (
-//     <div className="sekber">
-//       <h3>{sekber.sekberName}</h3>
-//       <div className="video-carousel">
-//         <Slider
-//           slidesToShow={3}
-//           slidesToShowMobile={2}
-//           slidesToShowTablet={3}
-//           arrows={false}
-//           dots={false}
-//         >
-//           {videosSekber}
-//         </Slider>
-//       </div>
-//     </div>
-//   );
-// });
+var video = ukmVideos.map(function (sekber) {
+  let videosSekber = sekber.videoList.map(function (videoContent) {
+    let noMaxRes = videoContent.nomaxres;
+    return (
+      <div key={videoContent.id} className="video">
+        <VideoContainer
+          bgcolor={"var(--color-redpink)"}
+          id={videoContent.videoUrl}
+          noDecor
+          nomaxres={noMaxRes}
+        ></VideoContainer>
+      </div>
+    );
+  });
+
+  return (
+    <div className="sekber">
+      <h3>{sekber.sekberName}</h3>
+      <div className="video-carousel">
+        <Slider
+          slidesToShow={3}
+          slidesToScroll={3}
+          arrows={true}
+          dots={true}
+          responsive={[
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+                dots: false,
+              },
+            },
+          ]}
+        >
+          {videosSekber}
+        </Slider>
+      </div>
+    </div>
+  );
+});
 
 export default class Galeri extends Component {
   render() {
@@ -168,10 +209,14 @@ export default class Galeri extends Component {
                   <VideoContainer id="kDgYQXrew60" title="Aftermovie PPSMB" />
                 </div>
                 <div className="video-item">
-                  <VideoContainer id="t5ZSQgH1eBs" title="Profil UGM" nomaxres/>
+                  <VideoContainer
+                    id="t5ZSQgH1eBs"
+                    title="Profil UGM"
+                    nomaxres
+                  />
                 </div>
                 <div className="video-item">
-                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" nomaxres/>
+                  <VideoContainer id="0u6uIPKv5zk" title="Hymne UGM" nomaxres />
                 </div>
               </Fade>
             </div>
@@ -185,7 +230,7 @@ export default class Galeri extends Component {
             </div>
           </section>
 
-          {/* <section className="video-ukm pattern-bg pattern-bg-white">
+          <section className="video-ukm pattern-bg pattern-bg-white">
             <div className="head">
               <div className="header-image">
                 <img src={videoUKMHeader} alt="" />
@@ -197,8 +242,24 @@ export default class Galeri extends Component {
                 </h2>
               </div>
             </div>
+            <div className="gelex">
+              <div>
+                <VideoContainer id="aBPs10-1it4" noDecor />
+              </div>
+              <a
+                href="https://ukm.ugm.ac.id/comingsoon/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  text="Laman Gelex"
+                  color="var(--color-redpink)"
+                  bg="var(--color-white)"
+                />
+              </a>
+            </div>
             <div className="video-list-ukm">{video}</div>
-          </section> */}
+          </section>
         </GaleriContainer>
       </SimpleReactLightbox>
     );
@@ -257,7 +318,6 @@ const GaleriContainer = styled.div`
   .photos {
     position: relative;
     width: 100%;
-
     padding: 10vmin 10vmin 0vmin 10vmin;
   }
 
@@ -343,6 +403,23 @@ const GaleriContainer = styled.div`
     min-height: 100vh;
   }
 
+  .video-ukm .gelex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0vmin 10vmin;
+    width: 100%;
+    margin-top: 10vmin;
+
+    > div {
+      width: 50%;
+    }
+    button {
+      font-weight: 400;
+    }
+  }
+
   .video-ukm .head .title {
     position: absolute;
     z-index: 1;
@@ -362,6 +439,7 @@ const GaleriContainer = styled.div`
     margin: 0;
     line-height: 1;
     font-weight: normal;
+    font-size: calc(0.5rem + 3.5vmin);
   }
 
   .video-ukm .head .header-image {
@@ -388,15 +466,27 @@ const GaleriContainer = styled.div`
     padding-right: 5vmin;
   }
 
+  .video-list-ukm .sekber {
+    h3 {
+      font-size: calc(0.5rem + 3vmin);
+    }
+  }
+
   .video-list-ukm .video-carousel {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: -10vmin;
+    /* left: -10vmin; */
   }
 
   .video-list-ukm .video-carousel > div {
-    width: 120vw;
+    /* width: 120vw; */
     justify-content: flex-start;
+
+    .slick-arrow {
+    }
+    .slick-arrow::before {
+      color: var(--color-redpink);
+    }
   }
 
   @media (min-width: 576px) {

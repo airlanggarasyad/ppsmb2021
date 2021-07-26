@@ -19,7 +19,6 @@ export const MenuItems = [
     },
     {
         title: 'FAQ',
-        url: './faq',
-        block: true,
+        url: '/2021/faq',
     },
 ]

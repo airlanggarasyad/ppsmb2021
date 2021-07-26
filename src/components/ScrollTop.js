@@ -138,7 +138,7 @@ export default function ScrollTop() {
 
 const ScrollToTopContainer = styled.div`
   position: fixed;
-  bottom: 14vmin;
+  bottom: 22vmin;
   right: 3vmin;
   z-index: 20;
   visibility: hidden;
@@ -163,5 +163,9 @@ const ScrollToTopContainer = styled.div`
       width: 100%;
       height: 100%;
     }
+  }
+
+  @media (min-width: 996px){
+    bottom: 15vmin;
   }
 `;
