@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import Fade from "react-reveal/Fade";
-import Pulse from "react-reveal/Pulse";
 import Zoom from "react-reveal/Zoom";
 import Slider from "react-slick";
 import SimpleReactLightbox from "simple-react-lightbox";
