@@ -32,15 +32,12 @@ import VideoContainer from "../components/VideoContainer";
 import LiniMasa from "../components/Card";
 
 import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
-import BgTwo from "../assets/images/agenda/DayCardContainer/two.png";
 import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
-import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
-import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 
 import Modal from "react-modal";
 // import 'react-calendar/dist/Calendar.css';
-import MonthView from 'react-calendar';
+import MonthView from "react-calendar";
 import tawkTo from "tawkto-react";
 import Calendar from "react-calendar";
 
@@ -95,22 +92,18 @@ export default function Beranda() {
 
   useEffect(() => {
     if (new Date() < new Date(2021, 7, 2)) {
-      setToday(new Date(2021, 7, 2))
+      setToday(new Date(2021, 7, 2));
       setActiveDate({
         date: new Date(2021, 7, 2),
-        desc: 'Pada hari pertama, blablabla.',
-        title: 'PPSMB Universitas Hari Pertama',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
-        linkLengkap: 'https://ppsmb.ugm.ac.id/2021/agenda',
-        linkTugas: 'https://simpan.ugm.ac.id/s/CBN21EkVVmugT9C#pdfviewer',
-        linkSimaster: 'https://simaster.ugm.ac.id/kemahasiswaan/ppsmb/',
-      })
-
+        desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok.',
+        title: "PPSMB Universitas Hari Pertama",
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
+        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+      });
     } else if (new Date() < new Date(2021, 7, 15)) {
-      setToday(new Date())
+      setToday(new Date());
       DaftarAgenda.map((item, index) => {
-        if (new Date() === item.date) {
-          console.log('item setted: ', item.date.toString())
+        if (new Date() === item.date()) {
           setActiveDate({
             date: item.date,
             title: item.title,
@@ -119,33 +112,26 @@ export default function Beranda() {
             linkLengkap: item.linkLengkap,
             linkTugas: item.linkTugas,
             linkSimaster: item.linkSimaster,
-          })
-          console.log('activeDate after: ', activeDate.date)
+          });
+          console.log("activeDate after: ", activeDate.date);
         }
-      })
+      });
     } else {
-      setToday(new Date(2021, 7, 14))
+      setToday(new Date(2021, 7, 14));
       setActiveDate({
         date: new Date(2021, 7, 14),
-        title: 'Penutupan',
-        desc: 'Pada penerapan penutupan, blablabla.',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
-        linkLengkap: 'https://ppsmb.ugm.ac.id/2021/agenda',
-        linkTugas: 'https://simpan.ugm.ac.id/s/CBN21EkVVmugT9C#pdfviewer',
-        linkSimaster: 'https://simaster.ugm.ac.id/kemahasiswaan/ppsmb/',
-      })
+        title: "Penutupan",
+        desc: "Seluruh rangkaian PPSMB UGM 2021 telah usai. Selamat, Gamada, kamu telah menyelesaikan PPSMB UGM 2021 dan siap untuk menjalani dinamika kehidupan di Universitas Gadjah Mada! Terima kasih atas perjuanganmu.",
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
+        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+      });
     }
   }, []);
 
   function changeInfo(clikedDay) {
-    console.log('clicked date: ', clikedDay.toString())
-    console.log('activeDate before: ', activeDate.date.toString())
-    console.log('coba: ', activeDate.date.getDate())
     DaftarAgenda.map((item, index) => {
-
-      // console.log('item: ', item.date)
       if (clikedDay.toString() === item.date.toString()) {
-        console.log('item setted: ', item.date.toString())
+        console.log("item setted: ", item.date.toString());
         setActiveDate({
           date: item.date,
           title: item.title,
@@ -154,14 +140,11 @@ export default function Beranda() {
           linkLengkap: item.linkLengkap,
           linkTugas: item.linkTugas,
           linkSimaster: item.linkSimaster,
-
-        })
-        console.log('activeDate after: ', activeDate.date)
-
+        });
+        console.log("activeDate after: ", activeDate.date);
       }
-    })
-  };
-
+    });
+  }
 
   const [modalLink, setModalLink] = useState();
 
@@ -399,25 +382,46 @@ export default function Beranda() {
 
         </section> */}
         <section className='agenda'>
-          <div className='border'/>
+          <div className='border' />
           <div className='agenda-title'>
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
-            <div className='batiks'>
+            <div className="batiks">
               <img src={Batik} alt="" srcset="" className="batik" />
               <img src={Batik} alt="" srcset="" className="batik" />
               <img src={Batik} alt="" srcset="" className="batik" />
             </div>
           </div>
-          <div className='agenda-content'>
-
-            <div className='agenda-desc ppsmb-darkblue'>
-              <p>PPSMB UGM 2021 diselenggarakan secara daring tanggal 2-14 Agustus 2021. Materi pembelajaran disampaikan selama 6 hari berturut-turut, diikuti dengan penugasan mandiri yang salah satunya action plan sebagai bentuk penerapan pelajaran.</p>
+          <div className="agenda-content">
+            <div className="agenda-desc ppsmb-darkblue">
+              <p style={{marginTop: '0'}}>
+                Dengan membawa nilai-nilai luhur dan jati diri Universitas,
+                PPSMB UGM 2021 dilaksanakan untuk membentuk Gamada sebagai
+                pembelajar sukses yang siap menjadi pemimpin bangsa intelektual
+                yang mengandalkan kecerdasan berpikir, kedewasaan dalam bertutur
+                kata dan bertindak, anti kekerasan, berbudaya, bermartabat,
+                inspiratif, serta menjunjung tinggi nilai-nilai Pancasila. PPSMB
+                secara khusus juga bertujuan untuk mengembangkan karakter
+                mahasiswa menjadi manusia susila yang siap menjadi ‘SANG JUARA’
+                (Santun, Adil, Nasionalis, Gembira, Jujur, Unggul, Amanah,
+                Religius, dan Andal)
+              </p>
               <Fade spy={activeDate}>
-                <p>{activeDate.date.toLocaleDateString()}<br/><strong>{activeDate.title}</strong></p>
-                <div className='quick-access'>
-                  <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Kelas Elok' />
-                  <Button bg="var(--color-darkblue)" color="var(--color-white)" text='Penugasan' />
-                  <Button bg="var(--color-white)" color="var(--color-darkblue)" text='Selengkapnya' />
+                <p>
+                  <small>{activeDate.date.toLocaleDateString('id-ID', {weekday:'long', year:'numeric', month: 'long', day:'numeric'})}</small>
+                    <br /><h4 style={{margin: '0 0 2vmin 0'}}>{activeDate.title}</h4>
+                    {activeDate.desc}
+                </p>
+                <div className="quick-access">
+                  <ShowQuickAccess                       
+                      bg="var(--color-darkblue)"
+                      color="var(--color-white)"
+                      text="Kelas Elok" 
+                      link={activeDate.linkElok}/>
+                  <ShowQuickAccess                       
+                      bg="var(--color-white)"
+                      color="var(--color-darkblue)"
+                      text="Selengkapnya"
+                      link={activeDate.linkLengkap}/>
                 </div>
               </Fade>
             </div>
@@ -458,11 +462,11 @@ export default function Beranda() {
                                                       view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 10 ? 'today action' :
                                                         view === 'month' && date.getMonth() === 7 && date.getDate() === 10 ? 'action' :
                                                           view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 11 ? 'today ' :
-                                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 12 ? 'today ' :
-                                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 13 ? 'today' :
-                                                                      view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 14 ? 'today upacara' :
-                                                                        view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
-                                                                          null}
+                                                            view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 12 ? 'today ' :
+                                                              view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 13 ? 'today' :
+                                                                view === 'month' && date.getMonth() === 7 && date.getDate() === today.getDate() && date.getDate() === 14 ? 'today upacara' :
+                                                                  view === 'month' && date.getMonth() === 7 && date.getDate() === 14 ? 'upacara' :
+                                                                    null}
                   />
                 </div>
                 <div className='calendar-desc'>
@@ -608,67 +612,83 @@ const Container = styled.div`
     pointer-events: none;
   }
 
-//CALENDAR
+  //CALENDAR
   .react-calendar {
     width: 100%;
     background: white;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2em;
     border-radius: 20px;
-    
-    .today{
+
+    .today {
       border: 2px solid var(--color-darkblue);
     }
-    .universitas{
+    .universitas {
       color: var(--color-blue);
 
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         background-color: var(--color-blue);
         color: var(--color-white);
       }
     }
-    .softskills{
+    .softskills {
       color: var(--color-footerblue);
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         background-color: var(--color-footerblue);
         color: var(--color-white);
       }
     }
-    .fakultas{
+    .fakultas {
       color: var(--color-redpink);
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         background-color: var(--color-redpink);
         color: var(--color-white);
       }
     }
-    .action{
+    .action {
       color: var(--color-orange);
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         background-color: var(--color-orange);
         color: var(--color-white);
       }
     }
-    .upacara{
+    .upacara {
       color: var(--color-red);
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         background-color: var(--color-red);
         color: var(--color-white);
       }
     }
-    .upacara-universitas{
-      background: rgb(197,0,52);
-      background: linear-gradient(90deg, rgba(197,0,52,1) 50%, rgba(5,147,247,1) 50%);
+    .upacara-universitas {
+      background: rgb(197, 0, 52);
+      background: linear-gradient(
+        90deg,
+        rgba(197, 0, 52, 1) 50%,
+        rgba(5, 147, 247, 1) 50%
+      );
       background-size: 100%;
       background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
-      &:active, &:focus, &:hover{
+      &:active,
+      &:focus,
+      &:hover {
         color: var(--color-white);
-      -webkit-background-clip: initial;
-      -webkit-text-fill-color: initial;
-      -moz-background-clip: initial;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        -moz-background-clip: initial;
       }
     }
   }
@@ -695,7 +715,7 @@ const Container = styled.div`
   .react-calendar__navigation button {
     min-width: 44px;
     background: none;
-    &.react-calendar__navigation__arrow{
+    &.react-calendar__navigation__arrow {
       display: none;
     }
   }
@@ -713,8 +733,8 @@ const Container = styled.div`
   .react-calendar__month-view__weekdays__weekday {
     padding: 0.5em;
   }
-  .react-calendar__month-view__days__day{
-    color:grey;
+  .react-calendar__month-view__days__day {
+    color: grey;
     box-sizing: border-box;
   }
   .react-calendar__tile {
@@ -729,7 +749,8 @@ const Container = styled.div`
     background-color: #f0f0f0;
   }
 
-  .react-calendar__tile--hasActive,  .react-calendar__tile:enabled:hover{
+  .react-calendar__tile--hasActive,
+  .react-calendar__tile:enabled:hover {
     box-sizing: border-box;
   }
   section {
@@ -1074,7 +1095,7 @@ const Container = styled.div`
       }
     }
 
-    &.vmap{
+    &.vmap {
       display: flex;
       position: relative;
       margin: 0;
@@ -1085,7 +1106,7 @@ const Container = styled.div`
     }
 
     &.agenda {
-      min-height: 100vh;
+      min-height: 130vh;
       padding: 10vmin;
       line-height: calc(0.5rem + 3.3vmin);
       position: relative;
@@ -1100,7 +1121,7 @@ const Container = styled.div`
         background: var(--color-blue);
       }
 
-      .agenda-title{
+      .agenda-title {
         display: flex;
         align-items: center;
         margin: 0 2vmin 1em 0;
@@ -1115,87 +1136,87 @@ const Container = styled.div`
       }
 
       h2 {
-          font-size: calc(0.5rem + 3vmin);
-        }
-        p {
-          font-size: calc(0.5rem + 1.5vmin);
-        }
-        h3{
-          font-size: calc(0.5rem + 2vmin);
-        }
+        font-size: calc(0.5rem + 3vmin);
+      }
+      p {
+        font-size: calc(0.5rem + 1.5vmin);
+      }
+      h3 {
+        font-size: calc(0.5rem + 2vmin);
+      }
 
-      .agenda-content{
+      .agenda-content {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        .agenda-access{
+        .agenda-access {
           display: flex;
           flex-direction: column;
           width: 40%;
           text-align: left;
-          .calendar{
+          .calendar {
             display: flex;
             flex-direction: column;
             /* border-radius: 20px; */
             /* background-color: green; */
-            .calendar-desc{
+            .calendar-desc {
               /* background-color: aquamarine; */
               margin-top: 5vmin;
               display: flex;
               flex-wrap: wrap;
-              li{
+              li {
                 font-size: calc(0.5rem + 1vmin);
                 font-weight: lighter;
                 margin: 0 0 0.1vmin 0;
                 width: 50%;
               }
-
             }
           }
-
-
         }
-        .agenda-desc{
+        .agenda-desc {
+          display: flex;
+          width: 50%;
+          flex-direction: column;
+          align-items: flex-start;
+          align-self: flex-end;
+          p {
+            text-align: justify;
+          }
+          .quick-access {
+            width: 100%;
             display: flex;
-            width: 50%;
-            flex-direction: column;
-            align-items: flex-start;
-            .quick-access{
-              width: 100%;
-              display: flex;
-              justify-content: flex-end;
-            }
+            align-items: center;
+            justify-content: flex-end;
+          }
         }
       }
-      @media (max-width: 1024px){
-        .agenda-title{
+      @media (max-width: 1024px) {
+        .agenda-title {
           width: 100%;
         }
-        .agenda-content{
-            flex-direction: column;
-            align-items: center;
-            text-align: justify;
-            width: 100%;
+        .agenda-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: justify;
+          width: 100%;
 
-            .agenda-access{
-              width: 100%;
-              flex-direction: row;
-              flex-wrap: wrap;
-              .calendar{
+          .agenda-access {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .calendar {
               margin-top: 5vmin;
             }
-            }
+          }
 
-            .agenda-desc{
-              width: 100%;
-              span{
-                display: none;
-              }
+          .agenda-desc {
+            width: 100%;
+            span {
+              display: none;
             }
           }
         }
-
-
+      }
     }
 
     &.serba-serbi {
@@ -1362,4 +1383,21 @@ function ShowEmail(props) {
   } else {
     return null;
   }
+}
+
+function ShowQuickAccess(props) {
+  if (props.link != null){
+    return(
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
+        <Button
+          bg={props.bg}
+          color={props.color}
+          text={props.text}
+        />
+      </a>
+    )
+  }else{
+    return null;
+  }
+
 }
