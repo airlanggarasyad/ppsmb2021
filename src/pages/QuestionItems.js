@@ -56,7 +56,7 @@ export const QuestionItems = [
                 answer: <p>Silahkan hubungi PIKA (Pusat Inovasi dan Kajian Akademik) melalui kontak berikut:<br/>E-mail&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<a href="mailto: pika@ugm.ac.id"> pika@ugm.ac.id</a> .<br/>Telepon&nbsp; &nbsp; : (0274) 6491850.</p>,
             },
             {
-                title: 'Apakah fungsi dari enrollment key?',
+                title: "Apakah fungsi dari <em>enrollment</em> key?",
                 answer: <p><em>Enrollment key</em> digunakan untuk dapat mengakses dan masuk pada <em>course</em> atau modul &ldquo;<em>Introductory</em>&rdquo;, <em>course</em> atau modul &ldquo;Jati Diri UGM Bangun Karakterku&rdquo;, <em>course </em>atau modul &ldquo;Peran Aktifku dalam Masyarakat&rdquo;, <em>course </em>atau modul &ldquo;Aku Mahasiswa Adaptif dan Sukses&rdquo;, dan <em>course </em>atau modul &ldquo;Aksi Nyataku untuk Masyarakat&rdquo;.</p>,
             },
             {

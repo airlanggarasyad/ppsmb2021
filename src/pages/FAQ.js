@@ -324,9 +324,10 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
   return (
     <>
       {show && (
-        <div onClick={() => setIsActive(!isActive)} class="accordion" key={key}>
+        <div onClick={() => setIsActive(!isActive)} class="accordion " key={key}>
           <p className={isActive ? "ppsmb-red qs" : "ppsmb-black qs"}>
-            {title}
+          <div dangerouslySetInnerHTML={{ __html: title  }} />
+          
           </p>
           <Fade spy={isActive}>
             {isActive && (
@@ -336,7 +337,7 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
                     <FontAwesomeIcon icon={faChevronRight} />
                   </p>
                 </div>
-                <div>
+                <div >
                   <p>{content}</p>
                 </div>
               </div>
