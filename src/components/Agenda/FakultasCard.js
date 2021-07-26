@@ -241,6 +241,13 @@ const CardStyle = styled.div`
 
      
   }
+  & .card-background > img {
+    transition: transform 500ms ease;
+
+  }
+  & .card-shadow {
+    transition: transform 500ms ease;
+  }
 
   &:hover .card-background > img {
     transform: scale(1.25);
