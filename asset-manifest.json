@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/2021/static/js/main.8ed73875.chunk.js",
-    "main.js.map": "/2021/static/js/main.8ed73875.chunk.js.map",
+    "main.js": "/2021/static/js/main.1e4e88b5.chunk.js",
+    "main.js.map": "/2021/static/js/main.1e4e88b5.chunk.js.map",
     "runtime-main.js": "/2021/static/js/runtime-main.2a885090.js",
     "runtime-main.js.map": "/2021/static/js/runtime-main.2a885090.js.map",
     "static/css/2.d8e2a883.chunk.css": "/2021/static/css/2.d8e2a883.chunk.css",
-    "static/js/2.d406cdb8.chunk.js": "/2021/static/js/2.d406cdb8.chunk.js",
-    "static/js/2.d406cdb8.chunk.js.map": "/2021/static/js/2.d406cdb8.chunk.js.map",
+    "static/js/2.bbc40cb7.chunk.js": "/2021/static/js/2.bbc40cb7.chunk.js",
+    "static/js/2.bbc40cb7.chunk.js.map": "/2021/static/js/2.bbc40cb7.chunk.js.map",
     "index.html": "/2021/index.html",
     "static/css/2.d8e2a883.chunk.css.map": "/2021/static/css/2.d8e2a883.chunk.css.map",
-    "static/js/2.d406cdb8.chunk.js.LICENSE.txt": "/2021/static/js/2.d406cdb8.chunk.js.LICENSE.txt",
+    "static/js/2.bbc40cb7.chunk.js.LICENSE.txt": "/2021/static/js/2.bbc40cb7.chunk.js.LICENSE.txt",
     "static/media/Arrow.850497d5.png": "/2021/static/media/Arrow.850497d5.png",
     "static/media/Indonesia-Script.241a9023.woff": "/2021/static/media/Indonesia-Script.241a9023.woff",
     "static/media/Kollektif.f40b6345.woff": "/2021/static/media/Kollektif.f40b6345.woff",
@@ -32,7 +32,7 @@
     "static/media/PPSMB-SekolahVokasi.webp": "/2021/static/media/PPSMB-SekolahVokasi.27ae7243.webp",
     "static/media/PPSMB-Teknik.webp": "/2021/static/media/PPSMB-Teknik.0e6fe674.webp",
     "static/media/PPSMB-TeknologiPertanian.webp": "/2021/static/media/PPSMB-TeknologiPertanian.d3af85ef.webp",
-    "static/media/agenda.0d24bb4e.png": "/2021/static/media/agenda.0d24bb4e.png",
+    "static/media/agenda_img.2bedb52a.png": "/2021/static/media/agenda_img.2bedb52a.png",
     "static/media/apaituppsmb.webp": "/2021/static/media/apaituppsmb.242cdd40.webp",
     "static/media/background.7625c2b0.png": "/2021/static/media/background.7625c2b0.png",
     "static/media/batik-color.95b39907.svg": "/2021/static/media/batik-color.95b39907.svg",
@@ -42,13 +42,18 @@
     "static/media/corner-bulk2.4facdaa6.webp": "/2021/static/media/corner-bulk2.4facdaa6.webp",
     "static/media/corner-lean1.656ca4ac.webp": "/2021/static/media/corner-lean1.656ca4ac.webp",
     "static/media/corner-lean2.cc43a020.webp": "/2021/static/media/corner-lean2.cc43a020.webp",
+    "static/media/decorative-cornerL-1.d7edd9ed.svg": "/2021/static/media/decorative-cornerL-1.d7edd9ed.svg",
+    "static/media/decorative-cornerL-2.524aeb06.svg": "/2021/static/media/decorative-cornerL-2.524aeb06.svg",
     "static/media/desktop-ornament-galeri.1585b944.webp": "/2021/static/media/desktop-ornament-galeri.1585b944.webp",
     "static/media/five.a653bc5f.png": "/2021/static/media/five.a653bc5f.png",
     "static/media/four.86fc017b.png": "/2021/static/media/four.86fc017b.png",
     "static/media/geo-two.51372d3d.png": "/2021/static/media/geo-two.51372d3d.png",
+    "static/media/ketentuan_img.a697ea9e.png": "/2021/static/media/ketentuan_img.a697ea9e.png",
+    "static/media/logo-UGM-PPSMB.02c43acd.png": "/2021/static/media/logo-UGM-PPSMB.02c43acd.png",
     "static/media/logo-ppsmb-decorative.6bb9834e.svg": "/2021/static/media/logo-ppsmb-decorative.6bb9834e.svg",
     "static/media/logo-ppsmb-official.webp": "/2021/static/media/logo-ppsmb-official.ac5e5b23.webp",
     "static/media/maskot-comingsoon.64d41e8d.png": "/2021/static/media/maskot-comingsoon.64d41e8d.png",
+    "static/media/materi_img.047dbc3f.png": "/2021/static/media/materi_img.047dbc3f.png",
     "static/media/one.029ceb5e.png": "/2021/static/media/one.029ceb5e.png",
     "static/media/ornament-ukm.b3d6b693.webp": "/2021/static/media/ornament-ukm.b3d6b693.webp",
     "static/media/pattern-bg-blue.a33bd49b.webp": "/2021/static/media/pattern-bg-blue.a33bd49b.webp",
@@ -69,7 +74,7 @@
   "entrypoints": [
     "static/js/runtime-main.2a885090.js",
     "static/css/2.d8e2a883.chunk.css",
-    "static/js/2.d406cdb8.chunk.js",
-    "static/js/main.8ed73875.chunk.js"
+    "static/js/2.bbc40cb7.chunk.js",
+    "static/js/main.1e4e88b5.chunk.js"
   ]
 }
