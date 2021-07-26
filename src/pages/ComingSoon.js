@@ -35,7 +35,7 @@ export default function ComingSoon() {
             </h1>
             {/* <div className="button-comingsoon">
               <Button>Tentang PPSMB</Button>
-              <Link to="/informasi">
+              <Link style={{ textDecoration: 'none' }} to="/informasi">
                 <Button
                   color="white"
                   bg="var(--color-darkblue)"

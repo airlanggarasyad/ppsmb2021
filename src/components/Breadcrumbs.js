@@ -66,7 +66,7 @@ function Breadcrumbs(props) {
   return (
     <BreadCrumbsContainer key={location.pathname} color={props.color}>
       <div className="back-button">
-        <Link to={crumbsLinks[crumbsLinks.length - 2]}>
+        <Link style={{ textDecoration: 'none' }} to={crumbsLinks[crumbsLinks.length - 2]}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </Link>
       </div>

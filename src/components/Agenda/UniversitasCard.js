@@ -11,15 +11,15 @@ export default function Card(props) {
   const { day } = props;
   const [Text, setText] = useState(
     day === "one"
-      ? "PPSMB Universitas"
+      ? "Introductory"
       : day === "two"
-      ? "PPSMB Universitas"
+      ? "Jati Diri UGM Bangun Karakterku"
       : day === "three"
-      ? "PPSMB Soft Skill"
+      ? "Peran Aktifku dalam Masyarakat"
       : day === "four"
-      ? "PPSMB Soft Skill"
+      ? "Aku Mahasiswa Adaptif dan Sukses"
       : day === "five"
-      ? "PPSMB Fakultas"
+      ? "Aksi Nyataku untuk Masyarakat"
       : day === "six"
       ? "PPSMB Fakultas"
       : "PPSMB"
@@ -42,9 +42,7 @@ export default function Card(props) {
 
   return (
     <CardStyle day={day}>
-      <div className="card-header">
-        <h6>{Title}</h6>
-      </div>
+     
       <div className="card-background">
         {day === "one" ? (
           <img src={BgOne} alt="" />

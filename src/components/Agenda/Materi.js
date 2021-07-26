@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Breadcrumb from "../main/Breadcrumb";
-import Card from "./AgendaCard";
+import Card from "./MateriCard";
 import Arrow from "../../assets/images/agenda/AgendaContainer/Arrow.png";
 import batikRight from "../../assets/images/agenda/AgendaContainer/batikRight.png";
 import batikLeft from "../../assets/images/agenda/AgendaContainer/batikLeft.png";
@@ -14,12 +14,12 @@ export default function Agenda({match}) {
       link: "/2021"
     },
     {
-      text: "Modul & Ketentuan",
-      link: "/2021/modul-ketentuan"
+      text: "Materi & Ketentuan",
+      link: "/2021/materi-ketentuan"
     },
     {
-      text: "Agenda ",
-      link: "/2021/modul-ketentuan/agenda"
+      text: "Materi ",
+      link: "/2021/materi-ketentuan/materi"
     },
   
   ];
@@ -39,9 +39,9 @@ export default function Agenda({match}) {
         </div>
       </div>
       <div className="agenda-container">
-        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/modul-ketentuan" />
+        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/materi-ketentuan" />
         <div className="agenda-title">
-          <h1>Agenda</h1>
+          <h1>Materi</h1>
           <div className="flower-icon">
             <svg
               width="100%"
@@ -98,18 +98,18 @@ export default function Agenda({match}) {
                 d="M51 50.9839C44.2472 50.9839 37.7709 48.3013 32.9959 43.5264C28.2209 38.7514 25.5384 32.2751 25.5384 25.5223C32.2912 25.5223 38.7675 28.2048 43.5425 32.9798C48.3174 37.7548 51 44.231 51 50.9839V50.9839Z"
                 fill="#F31958"
               />
+              
             </svg>
+            
           </div>
         </div>
 
         <div className="card-grid">
-          <Link to="/2021/modul-ketentuan/agenda/ppsmb-universitas" >
+          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas" >
           <Card day="one"></Card> 
           </Link>
-          <Link to="/2021/modul-ketentuan/agenda/ppsmb-softskill">
-          <Card day="two"></Card> 
-          </Link>
-          <Link to="/2021/modul-ketentuan/agenda/ppsmb-fakultas">
+        
+          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-fakultas">
           <Card day="three"></Card> 
           </Link>
           
@@ -120,7 +120,8 @@ export default function Agenda({match}) {
 }
 
 const AgendaStyle = styled.div`
-  height: 100vmin;
+  height: auto;
+  padding:10vmin 0 10vmin 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -197,12 +198,12 @@ const AgendaStyle = styled.div`
     width: 80%;
     grid-row-gap: 5vmin;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
   @media screen and (max-width: 1200px) {
-    height: 150vmin;
+    height: auto;
     .bg-container {
       height: 100%;
     }
@@ -226,7 +227,7 @@ const AgendaStyle = styled.div`
     }
   }
   @media screen and (max-width: 992px) {
-    height: 150vmin;
+    height: auto;
     .card-grid {
       height: auto;
       overflow: hidden;
@@ -239,7 +240,7 @@ const AgendaStyle = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    height: 265vmin;
+    height: auto;
     .agenda-title {
       width: 90%;
     }
