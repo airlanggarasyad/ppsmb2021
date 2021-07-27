@@ -229,8 +229,10 @@ export default function Agenda({ match }) {
             <Card day="sixteen"></Card>
           </a>
           <a
-            onClick={openModal}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
+            href="https://simaster.ugm.ac.id"
           >
             <Card day="seventeen"></Card>
           </a>
