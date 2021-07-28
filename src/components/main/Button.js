@@ -10,6 +10,7 @@ export default function Button(props) {
     textColor,
     children,
     borderColor,
+    href,
     colorHover,
     textColorHover,
   } = props;
@@ -17,15 +18,19 @@ export default function Button(props) {
 
   return (
     <>
+
       <ButtonFrame color={color} borderColor={borderColor}>
         <ButtonLink href={link} color={color} textColor={textColor}>
           {children}
           {text}
         </ButtonLink>
       </ButtonFrame>
+  
     </>
+    
   );
 }
+
 
 const ButtonFrame = styled.div`
   border: solid 0.3vmin;

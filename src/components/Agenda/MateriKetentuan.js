@@ -22,7 +22,8 @@ export default class AgendaPenugasan extends Component {
         link: "/2021/materi-ketentuan/materi",
         button:"Selengkapnya",
         color:"yellow",
-        hover :"none"
+        hover :"none",
+        isAnchor: "false"
       },
       {
         title: "Ketentuan & Panduan Penugasan",
@@ -31,16 +32,18 @@ export default class AgendaPenugasan extends Component {
         image: "ketentuan",
         button:"Selengkapnya",
         color:"yellow",
-        hover :"none"
+        hover :"none",
+        isAnchor: "false"
       },
       {
         title: "Materi Tambahan",
         text: 'Bagian "Materi Tambahan" berisi materi-materi suplementer untuk Gamada dalam mengikuti rangkaian proses PPSMB UGM 2021 sebagai penunjang untuk pengerjaan penugasan.',
-        link: "/2021/materi-ketentuan",
+        link:"https://drive.google.com/drive/folders/1Ri1S7E_e_-IhjZCB_31r2EHkjqQoBYqi?usp=sharing",
         image: "materi",
-        button:"Segera Hadir",
-        color:"grey",
-        hover :"none"
+        button:"Selengkapnya",
+        color:"yellow",
+        hover :"none",
+        isAnchor: "true"
       },
     ];
     const DataBreadcrumb = [
@@ -171,11 +174,9 @@ export default class AgendaPenugasan extends Component {
             return (
               <div className="card-carousel-container">
                 {" "}
-                
-                <Card key={index} text={item.text} color={item.color} button={item.button} title={item.title} link={item.link} image={item.image} ></Card>
+                <Card key={index} href={item.href} text={item.text} color={item.color} button={item.button} title={item.title} link={item.link} image={item.image} isAnchor={item.isAnchor} ></Card>
               </div>
             );
-           
           } 
           )}
 
