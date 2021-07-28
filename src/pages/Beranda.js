@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import LogoPPSMB from "../assets/img/logo-ppsmb-decorative.svg";
 import Bulk1 from "../assets/img/corner-bulk1.webp";
@@ -33,6 +33,7 @@ import VideoContainer from "../components/VideoContainer";
 import LiniMasa from "../components/Card";
 
 import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
+import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
 import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
 import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 
@@ -83,8 +84,8 @@ export default function Beranda() {
     date: new Date(2021, 7, 2),
     desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
     title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
-    linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
-    linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2',
+    linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
+    linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
   });
 
   const [today, setToday] = useState(new Date());
@@ -96,8 +97,8 @@ export default function Beranda() {
         date: new Date(2021, 7, 2),
         desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
         title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
-        linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2',
+        linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
+        linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
       });
     } else if (new Date() < new Date(2021, 7, 15)) {
       setToday(new Date());
@@ -218,6 +219,16 @@ export default function Beranda() {
                 slidesToScroll={1}
                 infinite={false}
               >
+                <LiniMasa
+                  mainText="Pengumuman Perpanjangan Pretest"
+                  mainTextColor="var(--color-white)"
+                  background={BgFive}
+                  title="27 Juli 2021"
+                  titleColor="var(--color-white)"
+                  headerColor="var(--color-redpink)"
+                  shadow="rgba(1,56,94,0.4)"
+                  link="https://drive.google.com/file/d/1Cq7bjF0SPlUPTqhEK4GRGeXtXqhDl011/preview"
+                />
                 <LiniMasa
                   mainText="Mekanisme Perizinan PPSMB UGM 2021"
                   mainTextColor="var(--color-white)"
