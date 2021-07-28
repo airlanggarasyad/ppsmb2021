@@ -23,7 +23,7 @@ const ButtonStyled = styled.button`
 
   font-size: 2.3vmin;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
   cursor: pointer;
 

@@ -13,7 +13,7 @@ import Fade from "react-reveal/Fade"
 import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
 
 export default function CarouselCard(props) {
-  const { title, text, image, link, button,color } = props;
+  const { title, text, image, link, button,color,href, isAnchor} = props;
   // const { source, setSource} = useState();
   // // const Agenda = require("../../assets/images/agenda/Carousel/agenda_img.png")
   // console.log(image);
@@ -27,7 +27,6 @@ export default function CarouselCard(props) {
     //     break;
     // }
    
-
   return (
     <CarouselStyle>
       <div className="batik">
@@ -67,9 +66,17 @@ export default function CarouselCard(props) {
           <div className="button-container">
             <div className="more-button">
             <Fade bottom>
+            {isAnchor == "true"
+              ?
+              <a style={{ textDecoration: 'none' }} href={link} target="_blank" rel="noopener noreferrer" >
+                <Button href={href} text={button} color={color} borderColor={color} textColor={color} />
+              </a> 
+              :
               <Link style={{ textDecoration: 'none' }} to={link}>
-              <Button text={button} color={color} borderColor={color} textColor={color} />
-              </Link>  </Fade>
+                <Button href={href} text={button} color={color} borderColor={color} textColor={color} />
+              </Link> 
+            } 
+            </Fade>
             </div>
           </div>
         </div>

@@ -82,7 +82,7 @@ export default function Beranda() {
   });
   const [activeDate, setActiveDate] = useState({
     date: new Date(2021, 7, 2),
-    desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok.',
+    desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
     title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
     linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
     linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
@@ -95,7 +95,7 @@ export default function Beranda() {
       setToday(new Date(2021, 7, 2));
       setActiveDate({
         date: new Date(2021, 7, 2),
-        desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLok.',
+        desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
         title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
         linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
         linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
@@ -432,7 +432,7 @@ export default function Beranda() {
                   <ShowQuickAccess
                     bg="var(--color-darkblue)"
                     color="var(--color-white)"
-                    text="Kelas Elok"
+                    text="Kelas eLOK"
                     link={activeDate.linkElok}
                   />
                   <ShowQuickAccessLinkTo

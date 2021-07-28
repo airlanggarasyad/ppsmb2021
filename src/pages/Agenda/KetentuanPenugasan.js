@@ -258,11 +258,11 @@ export default function KetentuanPenugasan() {
               />
             </svg>
           </div>{" "}
-          <h1>Panduan Akses E-lok</h1>
+          <h1>Panduan Akses eLOK</h1>
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/1gRnKMX0Vs6InISV2GbiY1GnXAsTBSgxq/preview" frameborder="0" cellspacing="0"></iframe>
+        <iframe id="pdf" src="https://drive.google.com/file/d/1T__QWRHp-8uY9PJTrnGNiX0YpiCkMNuW/preview?usp=sharing" frameborder="0" cellspacing="0"></iframe>
         </div>
         
         <div className="ketentuan-title">
