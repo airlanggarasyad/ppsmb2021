@@ -197,6 +197,7 @@ const CardStyle = styled.div`
   .card-background > img {
     height: 30vmin;
     width: 30vmin;
+
     transform: ${(props) =>
     props.day === "one"
       ? `translate(0vmin,0vmin)`

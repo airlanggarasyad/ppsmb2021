@@ -83,7 +83,7 @@ const CardStyle = styled.div`
   transition:  500ms ease;
   .card-background {
     height: 45vmin;
-    width: 33vmin;
+
     position: absolute;
     z-index: -2;
   }
