@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/2021/test-subfolder/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/2021/test-subfolder/static/js/main.ecb563a5.chunk.js",
+    "main.js.map": "/2021/test-subfolder/static/js/main.ecb563a5.chunk.js.map",
+    "runtime-main.js": "/2021/test-subfolder/static/js/runtime-main.99fdc103.js",
+    "runtime-main.js.map": "/2021/test-subfolder/static/js/runtime-main.99fdc103.js.map",
+    "static/js/2.1b62020e.chunk.js": "/2021/test-subfolder/static/js/2.1b62020e.chunk.js",
+    "static/js/2.1b62020e.chunk.js.map": "/2021/test-subfolder/static/js/2.1b62020e.chunk.js.map",
+    "static/js/3.eb13d5ec.chunk.js": "/2021/test-subfolder/static/js/3.eb13d5ec.chunk.js",
+    "static/js/3.eb13d5ec.chunk.js.map": "/2021/test-subfolder/static/js/3.eb13d5ec.chunk.js.map",
+    "index.html": "/2021/test-subfolder/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/2021/test-subfolder/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.1b62020e.chunk.js.LICENSE.txt": "/2021/test-subfolder/static/js/2.1b62020e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/2021/test-subfolder/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99fdc103.js",
+    "static/js/2.1b62020e.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.ecb563a5.chunk.js"
+  ]
+}
