@@ -11,4 +11,10 @@ export const DaftarVideo = [
         embedId: 'AAtiYhMi_4o',
         thumbnail: require('../assets/img/serba-serbi/tarianselebrasi.webp').default,
     },
+    {
+        title: 'Gamada Harus Tahu!',
+        desc: 'Apakah Gamada sudah tahu informasi-informasi unik ini mengenai kampus idaman kita?',
+        embedId: 'PksxNSQpjME',
+        thumbnail: require('../assets/img/serba-serbi/gamadaharustahu.webp').default,
+    },
 ]
