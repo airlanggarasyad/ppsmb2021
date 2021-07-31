@@ -11,6 +11,7 @@ import Sliders from "../components/Slider";
 import Lean1 from "../assets/img/corner-lean1.webp";
 import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
+import VmapDecor from "../assets/img/vmap-decor.webp";
 
 import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
@@ -274,7 +275,12 @@ export default function Beranda() {
                 <VideoContainer
                   id="fGOamlnU_uI"
                   title="Selamat Datang Gamada!"
+                />                
+                <VideoContainer
+                  id="spDx6be8FHY"
+                  title="Sambutan Rektor UGM"
                 />
+                
               </div>
             </Slide>
           </div>
@@ -388,9 +394,27 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        {/* <section className='vmap pattern-bg'>
-
-        </section> */}
+        <section className='vmap pattern-bg'>
+          <img src={RedStick} className='red-stick'></img>
+          <div className="vmap-content">
+            <img src="http://lorempixel.com/400/400/nightlife/4" alt="city"/> 
+            <div className="vmap-btn">
+              <Button color="var(--color-red)" bg="var(--color-white)" text="Gas!" />
+            </div>
+          </div>
+          <div className='title'>
+            <img src={VmapDecor} ></img>
+            <div className="title-box">
+              <h1 className="ppsmb-darkblue unselectable">
+                Ayo Jelajahi
+                  <span className="font-indonesia-script ppsmb-red">
+                    {" "}
+                    Kampus!
+                  </span>
+              </h1>
+            </div>
+          </div>
+        </section>
         <section className="agenda">
           <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
@@ -1011,8 +1035,8 @@ const Container = styled.div`
 
         .video {
           text-align: center;
-          margin: 10px;
-          width: 80%;
+          margin: 4vmin;
+          width: 60%;
         }
       }
 
@@ -1059,8 +1083,6 @@ const Container = styled.div`
             }
 
             .red-stick {
-              /* background-image: url(${RedStick});
-                                background-position: 0 1.06em; */
               width: 25vmin;
               transform: translateY(-150%);
             }
@@ -1207,8 +1229,101 @@ const Container = styled.div`
       margin: 0;
       background-image: url(${blueBG});
       background-repeat: repeat;
-      justify-content: space-between;
-      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 10vmin;
+
+      .title{        
+        position: absolute;
+        height: 60vmin;
+        top: 0;
+        left: 0;
+        img{
+          height: 100%;
+        }
+        .title-box{
+          height: 30%;
+          width: 92%;
+          padding: 0 0 0 10vmin;
+          background-color: white;
+          position: absolute;
+          top: 26%;
+          border-radius: 0 999px 999px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          h1 {
+            white-space: nowrap;
+              margin: 0;
+              font-size: calc(0.5rem + 3.5vmin);
+              .font-indonesia-script {
+                display: inline-block;
+                transform: rotate(-18deg) translate(-40%, -10%);
+                font-weight: lighter;
+              }
+            }
+        }
+      }
+
+      .vmap-content{
+        position: relative;
+        background-color: yellow;
+        border: 10px solid var(--color-yellow);  
+        float: left;
+        width: 80vw;
+        height: 40vw;
+        margin: 20px;
+        overflow: hidden;
+        box-shadow: 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+          border-radius: 25px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+      }
+      
+      .vmap-content img {
+        position: relative;
+        width: 120vw;
+        height: 70vw;
+      
+        -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+                transition: all 1s ease;
+      }
+ 
+      .vmap-content:hover{
+        img{
+          width: 80vw;
+          height: 40vw;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .vmap-btn{
+        position: absolute;
+        margin: 5vmin;
+      }
+
+      .red-stick{
+        position: absolute;
+        transform: rotate(90deg) translateX(-100%);
+        transform-origin: left bottom;
+        bottom: 0;
+        left: 5vmin;
+        width: 25vmin;
+      }
+
+      @media(max-width: 1024px){
+        .vmap-content{
+          margin-top: 40vmin;
+        }
+      }
+
+
     }
 
     &.agenda {
