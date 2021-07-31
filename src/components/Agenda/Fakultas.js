@@ -161,8 +161,10 @@ export default function Agenda({ match }) {
             <Card day="seven"></Card>
           </a>
           <a
-            onClick={openModal}
-            style={{ textDecoration: "none" }}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+          href="https://simaster.ugm.ac.id/"
           >
             <Card day="eight"></Card>
           </a>
