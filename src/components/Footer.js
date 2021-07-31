@@ -19,7 +19,7 @@ function Footer() {
             href="https://goo.gl/maps/NPeetPpr5vVcRTXr5"
             target="_blank"
             rel="noopener noreferrer"
-            classname="ppsmb-yellow"
+            className="ppsmb-yellow"
           >
             Jl. Asem Kranji Blok K-8 Sekip, Sendowo, Sinduadi, Mlati, Sleman,
             Yogyakarta 55281

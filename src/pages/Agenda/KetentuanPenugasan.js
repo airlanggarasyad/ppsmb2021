@@ -126,7 +126,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe src="https://prezi.com/embed/gxsxdd2k4uuy/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="100%" width="100%"></iframe></div>
+        <iframe title="lesson-map "src="https://prezi.com/embed/gxsxdd2k4uuy/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="100%" width="100%"></iframe></div>
 
         <div className="ketentuan-title">
           <div className="flower">
@@ -159,7 +159,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/1FCRakOtwWP3SErJbYNKXPI33Q805yiKd/preview" frameborder="0" cellspacing="0"></iframe>
+        <iframe title="alur-prosedur" id="pdf" src="https://drive.google.com/file/d/1FCRakOtwWP3SErJbYNKXPI33Q805yiKd/preview" frameborder="0" cellspacing="0"></iframe>
    
         </div>
 
@@ -194,7 +194,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/15Y2zrTB8ebOwL1oV2wdIwEG3HVhPR5a2/preview?usp=sharing" frameborder="0" cellspacing="0"></iframe>
+        <iframe title="ketentuan-umum" id="pdf" src="https://drive.google.com/file/d/15Y2zrTB8ebOwL1oV2wdIwEG3HVhPR5a2/preview?usp=sharing" frameborder="0" cellspacing="0"></iframe>
         </div>
 
         <div className="ketentuan-title">
@@ -228,7 +228,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/1-Btvz_AUoWOfQUkO0XlDN0voNrK6HoQ4/preview" frameborder="0" cellspacing="0"></iframe>
+        <iframe title="panduan-simaster" id="pdf" src="https://drive.google.com/file/d/1-Btvz_AUoWOfQUkO0XlDN0voNrK6HoQ4/preview" frameborder="0" cellspacing="0"></iframe>
         </div>
 
         <div className="ketentuan-title">
@@ -262,7 +262,7 @@ export default function KetentuanPenugasan() {
         </div>
         <hr/>
         <div className="pdf-container">
-        <iframe id="pdf" src="https://drive.google.com/file/d/1T__QWRHp-8uY9PJTrnGNiX0YpiCkMNuW/preview?usp=sharing" frameborder="0" cellspacing="0"></iframe>
+        <iframe title="panduan-elok" id="pdf" src="https://drive.google.com/file/d/1T__QWRHp-8uY9PJTrnGNiX0YpiCkMNuW/preview?usp=sharing" frameborder="0" cellspacing="0"></iframe>
         </div>
         
         <div className="ketentuan-title">

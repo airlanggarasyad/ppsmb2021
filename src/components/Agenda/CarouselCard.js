@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import styled, { keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import Button from "../main/Button";
 import GeoOne from "../../assets/images/agenda/Carousel/geo-one.png";
 import GeoTwo from "../../assets/images/agenda/Carousel/geo-two.png";
@@ -10,7 +10,7 @@ import Materi from "../../assets/images/agenda/Carousel/materi_img.png"
 
 
 import Fade from "react-reveal/Fade"
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function CarouselCard(props) {
   const { title, text, image, link, button,color,href, isAnchor} = props;
@@ -66,7 +66,7 @@ export default function CarouselCard(props) {
           <div className="button-container">
             <div className="more-button">
             <Fade bottom>
-            {isAnchor == "true"
+            {isAnchor === "true"
               ?
               <a style={{ textDecoration: 'none' }} href={link} target="_blank" rel="noopener noreferrer" >
                 <Button href={href} text={button} color={color} borderColor={color} textColor={color} />

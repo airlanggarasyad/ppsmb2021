@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const QuestionItems = [
     {
         category: 'Umum',
@@ -29,7 +31,7 @@ export const QuestionItems = [
             },
             {
                 title: 'Bagaimana jika belum memiliki akun SSO padahal sudah melakukan registrasi ulang?',
-                answer: <p>Silahkan hubungi DPP (Direktorat Pendidikan dan Pengajaran) melalui kontak, berikut:<br/>WA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="https://wa.me/6285709559730" target="_blank">085709559730</a> atau <a href="https://wa.me/6285156358683" target="_blank">085156358683</a><br/>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="mailto:umugm@ugm.ac.id.">umugm@ugm.ac.id</a><br/>Instagram : <a href="https://www.instagram.com/admisiugm/" target="_blank">@admisiugm</a><br/>Twitter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="https://twitter.com/admisiugm" target="_blank">@admisiugm</a><br/>Facebook &nbsp;: <a href="https://web.facebook.com/ujianmasukugm/" target="_blank">Admisi Universitas Gadjah Mada</a></p>,
+                answer: <p>Silahkan hubungi DPP (Direktorat Pendidikan dan Pengajaran) melalui kontak, berikut:<br/>WA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="https://wa.me/6285709559730" target="_blank" rel="noreferrer">085709559730</a> atau <a href="https://wa.me/6285156358683" target="_blank" rel="noreferrer">085156358683</a><br/>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="mailto:umugm@ugm.ac.id.">umugm@ugm.ac.id</a><br/>Instagram : <a href="https://www.instagram.com/admisiugm/" target="_blank" rel="noreferrer">@admisiugm</a><br/>Twitter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="https://twitter.com/admisiugm" target="_blank" rel="noreferrer">@admisiugm</a><br/>Facebook &nbsp;: <a href="https://web.facebook.com/ujianmasukugm/" target="_blank" rel="noreferrer">Admisi Universitas Gadjah Mada</a></p>,
             },
             {
                 title: 'Apa itu Simaster?',
@@ -37,7 +39,7 @@ export const QuestionItems = [
             },
             {
                 title: 'Bagaimana cara login ke Simaster?',
-                answer: <p>Silakan akses "Ketentuan dan Panduan" pada tautan berikut <a href="" target="_blank">cara <i>login</i> Simaster</a>.</p>,
+                answer: <p>Silakan akses "Ketentuan dan Panduan" pada tautan berikut <Link to="/2021/materi-ketentuan/ketentuan/">cara <i>login</i> Simaster</Link>.</p>,
             },
             {
                 title: 'Apa yang akan Gamada peroleh setelah berhasil login ke Simaster?',
@@ -49,7 +51,7 @@ export const QuestionItems = [
             },
             {
                 title: 'Bagaimana cara login eLOK?',
-                answer: <p>Silakan akses &quot;Ketentuan &amp; Panduan&quot; pada tautan berikut <a href="http://elok.ugm.ac.id" rel="noopener noreferrer" target="_blank"><em>login</em> eLOK</a> </p>,
+                answer: <p>Silakan akses &quot;Ketentuan &amp; Panduan&quot; pada tautan berikut <a href="http://elok.ugm.ac.id" rel="noopener noreferrer" target="_blank" rel="noreferrer"><em>login</em> eLOK</a> </p>,
             },
             {
                 title: 'Bagaimana jika tidak bisa melakukan <em>login</em> eLOK dengan akun SSO dikarenakan sudah terlanjur melakukan registrasi mandiri pada platform eLOK?',
@@ -65,7 +67,7 @@ export const QuestionItems = [
             },
             {
                 title: 'Apa yang perlu Gamada lakukan setelah mendapatkan enrollment key',
-                answer: <p>Gamada menginput <em>enrollment key</em> ke dalam kolom teks yang tertera di eLOK. Setelah itu, Gamada dapat memperhatikan prosedur yang terdapat pada tautan berikut<em> <a href="enrollment key" target="_blank">enrollment key</a></em></p>,
+                answer: <p>Gamada menginput <em>enrollment key</em> ke dalam kolom teks yang tertera di eLOK. Setelah itu, Gamada dapat memperhatikan prosedur yang terdapat pada tautan berikut<em> <a href="enrollment key" target="_blank" rel="noreferrer">enrollment key</a></em></p>,
             },
         ]
     },

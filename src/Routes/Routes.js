@@ -1,8 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import Galeri from "../pages/Galeri";
 import Beranda from "../pages/Beranda";
 import AgendaMateri from "../pages/Agenda/MateriKetentuan";
-import { Switch, Route, useHistory, useParams } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import gaTracker from './gaTracker'
 import error from '../pages/404'
 import FAQ from '../pages/FAQ'
@@ -17,8 +17,6 @@ import Modul3 from "../pages/Agenda/Modul/Modul3"
 import Modul4 from "../pages/Agenda/Modul/Modul4"
 import Modul5 from "../pages/Agenda/Modul/Modul5"
 // import {Switch, Route} from "./RelativeRoute"
-import tawkTo from "tawkto-react";
-import TawkTo from "../components/TawkTo";
 
 export default function Routes() {
   // const tawkToPropertyId = "60f0f124d6e7610a49ab832e"

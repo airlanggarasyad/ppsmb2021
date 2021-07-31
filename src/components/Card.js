@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
-import BgOne from "../assets/images/agenda/DayCardContainer/one.png";
-import BgTwo from "../assets/images/agenda/DayCardContainer/two.png";
-import BgThree from "../assets/images/agenda/DayCardContainer/three.png";
-import BgFour from "../assets/images/agenda/DayCardContainer/four.png";
-import BgFive from "../assets/images/agenda/DayCardContainer/five.png";
-import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
+import styled from "styled-components";
 import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";

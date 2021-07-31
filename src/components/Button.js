@@ -12,6 +12,7 @@ function Button(props) {
 export default Button
 
 const ButtonStyled = styled.button`
+  font-family: 'Kollektif Regular';
   border-radius: 100px;
   border: 2px solid ${props => props.bg};
 

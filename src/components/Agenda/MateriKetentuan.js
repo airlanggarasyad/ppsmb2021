@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Slider from "react-slick";
 import Card from "./CarouselCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Batik from "../../assets/images/agenda/Carousel/background.png";
 import Breadcrumb from "../main/Breadcrumb";
-import Fade from "react-reveal/Fade"
 
 export default class AgendaPenugasan extends Component {
   state = {
@@ -133,6 +132,7 @@ export default class AgendaPenugasan extends Component {
             >
               {" "}
               <img
+                alt=""
                 src={
                   require(`../../assets/images/agenda/Icon/icon-carousel-${
                     i + 1

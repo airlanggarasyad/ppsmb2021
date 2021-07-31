@@ -8,17 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet";
 import Fade from "react-reveal/Fade";
-import Spin from "react-reveal/Spin";
-import Lightspeed from "react-reveal/LightSpeed";
-import Pulse from "react-reveal/Pulse";
 
 export default function FAQ() {
   const [input, setInput] = useState("");
   const [chosenCategory, setChosenCategory] = useState("Semua");
 
-  if (chosenCategory != "Semua") {
+  if (chosenCategory !== "Semua") {
     var questions = QuestionItems.filter(
-      (item) => item.category == chosenCategory
+      (item) => item.category === chosenCategory
     );
   } else {
     questions = QuestionItems;
@@ -59,7 +56,7 @@ export default function FAQ() {
             <div>
               <p
                 className={
-                  chosenCategory == "Semua"
+                  chosenCategory === "Semua"
                     ? "ppsmb-white block"
                     : "ppsmb-black"
                 }
@@ -73,7 +70,7 @@ export default function FAQ() {
                 <div key={index}>
                   <p
                     className={
-                      chosenCategory == item.category
+                      chosenCategory === item.category
                         ? "ppsmb-white block"
                         : "ppsmb-black"
                     }
@@ -286,6 +283,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
       ) {
         setIsShown(true);
       }
+      return(null)
     });
   }, [input, item]);
   return (

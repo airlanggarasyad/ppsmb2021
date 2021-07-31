@@ -10,10 +10,7 @@ import Button from "../main/Button";
 import Breadcrumb from "../main/Breadcrumb";
 import Fade from "react-reveal/Fade"
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,Link,
-  useParams
+  Link,
 } from "react-router-dom";
 
 
@@ -244,7 +241,7 @@ export default function Day(props) {
             </Fade>
             <Fade bottom>
             <div className="download-button">
-              <a style={{ textDecoration: 'none' }} href={Elok} target="_blank">
+              <a style={{ textDecoration: 'none' }} href={Elok} target="_blank" rel="noreferrer">
               <Button text="Akses Elok" color={Color}>
                 <div className="download-icon">
                 <svg width="100%" height="100%" viewBox="0 0 163 90" fill="none" xmlns="http://www.w3.org/2000/svg">
