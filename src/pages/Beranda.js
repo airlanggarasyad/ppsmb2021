@@ -399,7 +399,9 @@ export default function Beranda() {
           <div className="vmap-content">
             <img src="http://lorempixel.com/400/400/nightlife/4" alt="city"/> 
             <div className="vmap-btn">
-              <Button color="var(--color-red)" bg="var(--color-white)" text="Gas!" />
+              <Link to="/peta">
+                <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta" />
+              </Link>
             </div>
           </div>
           <div className='title'>
