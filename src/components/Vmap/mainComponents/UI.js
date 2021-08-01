@@ -14,11 +14,7 @@ import Joyride, { STATUS } from "react-joyride";
 import TutorialPC from "../assets/tutorial/desktop.png";
 import TutorialMobile from "../assets/tutorial/mobile.png";
 
-const width =  window.screen.width 
-
-const height = window.screen.height 
-
-const device = window.screen.width >= 500 && window.screen.height >= 500 ? "desktop" : "mobile";
+const device = window.screen.width >= 500 ? "desktop" : "mobile";
 
 //step intro
 const steps = [
@@ -26,31 +22,37 @@ const steps = [
     target: "body",
     placement: "center",
     title: <h2>Tutorial</h2>,
-    styles:{
+    styles: {
       floater: {
-        width: device === "desktop" ? '100vmin' :'70vmin',
-        maxHeight: '70vh',
-        overflow:'scroll'
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
       },
       tooltip: {
-        width: device === "desktop" ? '100vmin' :'70vmin',
-        maxHeight: '70vh',
-        overflow:'scroll'
-      }
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
+      },
     },
     content: (
       <div>
         <p style={{ textAlign: "center" }}>
-          Selamat datang Gadjah Mada Muda!<br />
-          Selamat menjelajahi Kembara Loka.<br />
+          Selamat datang Gadjah Mada Muda!
           <br />
-          Sebentar lagi kita akan bersama-sama berkeliling dan menyusuri lingkungan Universitas Gadjah Mada. 
-          Gadjah Mada Muda dapat melihat informasi tentang fakultas dan fasilitas universitas melalui gambar 360, gambar lingkungan sekitar dan penjelasan terkait, serta pengenalan lingkungan kampus berupa video. 
+          Selamat menjelajahi Kembara Loka.
           <br />
           <br />
-          Selamat menjelajahi dengan gembira dari rumah saja dan gunakan komputer untuk perjalanan yang lebih nyaman.
-          Kami harap pengalaman perjalananmu menyenangkan dan membekas di setiap hati Gadjah Mada Muda.
-          Selamat berkreasi di lingkungan yang indah, nyaman, dan memukau.
+          Sebentar lagi kita akan bersama-sama berkeliling dan menyusuri
+          lingkungan Universitas Gadjah Mada. Gadjah Mada Muda dapat melihat
+          informasi tentang fakultas dan fasilitas universitas melalui gambar
+          360, gambar lingkungan sekitar dan penjelasan terkait, serta
+          pengenalan lingkungan kampus berupa video.
+          <br />
+          <br />
+          Selamat menjelajahi dengan gembira dari rumah saja dan gunakan
+          komputer untuk perjalanan yang lebih nyaman. Kami harap pengalaman
+          perjalananmu menyenangkan dan membekas di setiap hati Gadjah Mada
+          Muda. Selamat berkreasi di lingkungan yang indah, nyaman, dan memukau.
         </p>
       </div>
     ),
@@ -61,7 +63,8 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "center" }}>
-          Gadjah Mada Muda dapat menekan tombol berikut untuk menampilkan atau menyembunyikan tombol navigasi.
+          Gadjah Mada Muda dapat menekan tombol berikut untuk menampilkan atau
+          menyembunyikan tombol navigasi.
         </p>
       </div>
     ),
@@ -71,8 +74,9 @@ const steps = [
     title: <h4>Putar atau Jeda</h4>,
     content: (
       <div>
-       <p style={{ textAlign: "center" }}>
-          Untuk kenyamanan dalam menjelajah dengan lagu maupun tidak, Gadjah Mada Muda dapat menekan tombol berikut.
+        <p style={{ textAlign: "center" }}>
+          Untuk kenyamanan dalam menjelajah dengan lagu maupun tidak, Gadjah
+          Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
     ),
@@ -84,7 +88,8 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "center" }}>
-          Gadjah Mada Muda dapat menekan tombol berikut untuk melihat video profil Universitas Gadjah Mada.
+          Gadjah Mada Muda dapat menekan tombol berikut untuk melihat video
+          profil Universitas Gadjah Mada.
         </p>
       </div>
     ),
@@ -94,8 +99,9 @@ const steps = [
     title: <h4>Lokasi UGM</h4>,
     content: (
       <div>
-      <p style={{ textAlign: "center" }}>
-          Gadjah Mada Muda dapat melihat lokasi dan rute melalui Google Maps dengan tombol berikut.
+        <p style={{ textAlign: "center" }}>
+          Gadjah Mada Muda dapat melihat lokasi dan rute melalui Google Maps
+          dengan tombol berikut.
         </p>
       </div>
     ),
@@ -106,7 +112,8 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "center" }}>
-          Untuk melihat gambar lingkungan fakultas dan fasilitas universitas, Gadjah Mada Muda dapat menekan tombol berikut.
+          Untuk melihat gambar lingkungan fakultas dan fasilitas universitas,
+          Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
     ),
@@ -116,7 +123,7 @@ const steps = [
     title: <h4>Jamboard</h4>,
     content: (
       <div>
- <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center" }}>
           Tombol ini digunakan untuk pergi ke laman Jamboard resmi dari Kembara
           Loka.
         </p>
@@ -126,37 +133,36 @@ const steps = [
   {
     target: "body",
     placement: "center",
-    styles:{
+    styles: {
       floater: {
-        width: '80vw',
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
       },
       tooltip: {
-        width: '80vw',
-      }
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
+      },
     },
     content: (
-      <img
-        Width="100%"
-        height="100%"
-        src={TutorialPC}
-        alt="Tutorial PC"
-      />
+      <img Width="100%" height="100%" src={TutorialPC} alt="Tutorial PC" />
     ),
   },
   {
     target: "body",
     placement: "center",
-    styles:{
+    styles: {
       floater: {
-        width: device === "desktop" ? '100vmin' :'70vmin',
-        maxHeight: '70vh',
-        overflow:'scroll'
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
       },
       tooltip: {
-        width: device === "desktop" ? '100vmin' :'70vmin',
-        maxHeight: '70vh',
-        overflow:'scroll'
-      }
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
+      },
     },
     content: (
       <img
@@ -170,7 +176,7 @@ const steps = [
   {
     target: "body",
     placement: "center",
-    styles:{
+    styles: {
       floater: {
         width: '80vw',
       },
