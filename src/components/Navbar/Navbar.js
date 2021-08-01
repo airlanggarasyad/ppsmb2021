@@ -54,20 +54,22 @@ export default class Navbar extends Component {
               let today = new Date();
               let rilis = new Date("2021-08-02T06:00:00+07:00");
 
-              if(item.url === "/2021/kembaraloka"){ 
-                if(today >= rilis ){ 
+              if (item.url === "/2021/kembaraloka") {
+                if (today >= rilis) {
                   return (
                     <li key={index}>
-                      <Link
+                      <a
                         className={item.block ? "nav-links block" : "nav-links"}
                         to={item.block ? {} : item.url}
                         relative
+                        href="/2021/kembaraloka"
+                        target="_blank"
                       >
                         {item.title}
-                      </Link>
+                      </a>
                     </li>
                   );
-                }  else {
+                } else {
                   return (
                     <li key={index}>
                       <Link

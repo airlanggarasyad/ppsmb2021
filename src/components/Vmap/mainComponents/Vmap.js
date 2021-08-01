@@ -27,7 +27,7 @@ import { infografis as dataInfografis } from "../subComponents/DataInfografis";
 // set variable config
 
 const config = {
-  camStartPosition: new THREE.Vector3(0, 5, 3),
+  camStartPosition: new THREE.Vector3(0, 2.5, 3),
   camFov: 50,
   camSBAwalFov: 55, //storyboard
   camSBAkhirFov: 100, //storyboard
@@ -73,8 +73,18 @@ export default function Vmap(props) {
           <SpriteObject imageSource='/images/discord.png' position = {[0.4, 0.55, -2]}/> */}
             {/* <AddGrass /> */}
             <Model scale={0.04} showModal={showModal} />
-            <Computer scale={0.75} position={[-5.6,1.6,-4.6]} rotation={[0,1,0]} rocket={rocket} setRocket={setRocket} />
-            <Rocket scale={0.75} position={[-5.825,1.6,-4.4]} rocket={rocket}/>
+            <Computer
+              scale={0.75}
+              position={[-5.6, 1.6, -4.6]}
+              rotation={[0, 1, 0]}
+              rocket={rocket}
+              setRocket={setRocket}
+            />
+            <Rocket
+              scale={0.75}
+              position={[-5.825, 1.6, -4.4]}
+              rocket={rocket}
+            />
             <Controls
               storyboard={props.storyboard}
               modalShow={showInfografis}

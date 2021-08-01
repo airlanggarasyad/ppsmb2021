@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 import Galeri from "../pages/Galeri";
 import Beranda from "../pages/Beranda";
-import KembaraLoka from "../components/Vmap/KembaraLoka"
+import KembaraLoka from "../components/Vmap/KembaraLoka";
 import AgendaMateri from "../pages/Agenda/MateriKetentuan";
-import { Switch, Route } from "react-router-dom";
-import gaTracker from './gaTracker'
-import error from '../pages/404'
-import FAQ from '../pages/FAQ'
-import Materi from '../pages/Agenda/Materi'
-import Universitas from "../pages/Agenda/Universitas"
-import Fakultas from "../pages/Agenda/Fakultas"
-import Ketentuan from "../pages/Agenda/KetentuanPenugasan"
+import { Switch, Route, useLocation } from "react-router-dom";
+import gaTracker from "./gaTracker";
+import error from "../pages/404";
+import FAQ from "../pages/FAQ";
+import Materi from "../pages/Agenda/Materi";
+import Universitas from "../pages/Agenda/Universitas";
+import Fakultas from "../pages/Agenda/Fakultas";
+import Ketentuan from "../pages/Agenda/KetentuanPenugasan";
 //Modul
-import Modul1 from "../pages/Agenda/Modul/Modul1"
-import Modul2 from "../pages/Agenda/Modul/Modul2"
-import Modul3 from "../pages/Agenda/Modul/Modul3"
-import Modul4 from "../pages/Agenda/Modul/Modul4"
-import Modul5 from "../pages/Agenda/Modul/Modul5"
+import Modul1 from "../pages/Agenda/Modul/Modul1";
+import Modul2 from "../pages/Agenda/Modul/Modul2";
+import Modul3 from "../pages/Agenda/Modul/Modul3";
+import Modul4 from "../pages/Agenda/Modul/Modul4";
+import Modul5 from "../pages/Agenda/Modul/Modul5";
 // import {Switch, Route} from "./RelativeRoute"
 
 export default function Routes() {
@@ -35,20 +35,24 @@ export default function Routes() {
     { id: 6, day: "six" },
   ];
 
+  const location = useLocation();
+
   useEffect(() => {
-    const script = document.createElement("script");
+    if (location.pathname !== "/2021/kembaraloka") {
+      const script = document.createElement("script");
 
-    script.src = "https://embed.tawk.to/60f433d2649e0a0a5cccc803/1fasuksoa";
-    script.async = true;
-    script.charset = "UTF-8";
-    script.setAttribute("crossorigin", "*");
+      script.src = "https://embed.tawk.to/60f433d2649e0a0a5cccc803/1fasuksoa";
+      script.async = true;
+      script.charset = "UTF-8";
+      script.setAttribute("crossorigin", "*");
 
-    document.body.appendChild(script);
+      document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [location.pathname]);
 
   gaTracker();
 
@@ -65,18 +69,38 @@ export default function Routes() {
 
       <Route path="/2021/materi-ketentuan/ketentuan" component={Ketentuan} />
       {/* Agenda-materi */}
-      <Route exact path="/2021/materi-ketentuan/materi/ppsmb-universitas" component={Universitas} />
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-fakultas" component={Fakultas} />
-      
+      <Route
+        exact
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas"
+        component={Universitas}
+      />
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-fakultas"
+        component={Fakultas}
+      />
 
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1"
+        component={Modul1}
+      />
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2"
+        component={Modul2}
+      />
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3"
+        component={Modul3}
+      />
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4"
+        component={Modul4}
+      />
+      <Route
+        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5"
+        component={Modul5}
+      />
 
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1" component={Modul1} />
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2" component={Modul2} />
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3"component={Modul3} />
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4" component={Modul4} />
-      <Route path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5" component={Modul5} />
-
-      <Route  component={error} />
+      <Route component={error} />
     </Switch>
   );
 }
