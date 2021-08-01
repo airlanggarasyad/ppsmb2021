@@ -20,11 +20,27 @@ const steps = [
     target: "body",
     placement: "center",
     title: <h2>Tutorial</h2>,
+    styles:{
+      floater: {
+        width: '40vw',
+      },
+      tooltip: {
+        width: '40vw',
+      }
+    },
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Selamat Datang Gamada di Kembara Loka. Gunakanlah komputer untuk
-          pengalaman pengguna yang lebih baik.
+          Selamat datang Gadjah Mada Muda!<br />
+          Selamat menjelajahi Kembara Loka.<br />
+          <br />
+          Sebentar lagi kita akan bersama-sama berkeliling dan menyusuri lingkungan Universitas Gadjah Mada. 
+          Gadjah Mada Muda dapat melihat informasi tentang fakultas dan fasilitas universitas melalui gambar 360, gambar lingkungan sekitar dan penjelasan terkait, serta pengenalan lingkungan kampus berupa video. 
+          <br />
+          <br />
+          Selamat menjelajahi dengan gembira dari rumah saja dan gunakan komputer untuk perjalanan yang lebih nyaman.
+          Kami harap pengalaman perjalananmu menyenangkan dan membekas di setiap hati Gadjah Mada Muda.
+          Selamat berkreasi di lingkungan yang indah, nyaman, dan memukau.
         </p>
       </div>
     ),
@@ -35,8 +51,7 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk menampilkan atau menyembunyikan tombol
-          navigasi.{" "}
+          Gadjah Mada Muda dapat menekan tombol berikut untuk menampilkan atau menyembunyikan tombol navigasi.
         </p>
       </div>
     ),
@@ -47,8 +62,7 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk memutar atau menjeda lagu latar belakang
-          Kembara Loka.
+          Untuk kenyamanan dalam menjelajah dengan lagu maupun tidak, Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
     ),
@@ -60,7 +74,7 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk melihat video profil UGM.
+          Gadjah Mada Muda dapat menekan tombol berikut untuk melihat video profil Universitas Gadjah Mada.
         </p>
       </div>
     ),
@@ -71,7 +85,7 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk melihat lokasi UGM.
+          Gadjah Mada Muda dapat melihat lokasi dan rute melalui google maps dengan tombol berikut.
         </p>
       </div>
     ),
@@ -82,14 +96,13 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk melihat kumpulan foto-foto spot menarik
-          yang berada di lingkungan UGM.
+          Untuk melihat gambar lingkungan fakultas dan fasilitas universitas, Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
     ),
   },
   {
-    target: ".tour-miro-list",
+    target: ".tour-jamboard-list",
     title: <h4>Miro</h4>,
     content: (
       <div>
@@ -143,7 +156,26 @@ const steps = [
   {
     target: "body",
     placement: "center",
-    content: "Selamat Menjelajahi UGM!",
+    styles:{
+      floater: {
+        width: '30vw',
+      },
+      tooltip: {
+        width: '30vw',
+      }
+    },
+    content: (
+      <div>
+        <p style={{ textAlign: "justify" }}>
+        Selamat menjelajah, Gadjah Mada Muda.<br />
+        Gunakan tempat ini sebagai wadah untuk berkreasi.<br />
+        <br />
+        Credits:<br />
+        - Tree, Rock, and Houses Model: Quarternius.<br />
+        - Video Profil UGM : UGM Yogyakarta.<br />
+        </p>
+      </div>
+    ),
   },
 ];
 
@@ -324,17 +356,17 @@ function Right(props) {
                 />
               </Button>
             </Row>
-            <Row className="row-right tour-miro-list">
+            <Row className="row-right tour-jamboard-list">
               <a
-                href="https://miro.com/welcomeonboard/V2FrclZLVVNrcmhlQ3BaRXY3OVJWZE9TaWhOaUVwREhieE5Mb1hBZGpWa1JqMFNTQTl4cUt1WmpYeGkwOTZKZnwzMDc0NDU3MzYxOTc2NTM4MDkw"
+                href="https://jamboard.google.com/d/1ZaW5JRGAvS92jvXgstCSDh18R7l7wI-aEWWxW25uqBs/edit?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Button className="btn-circle">
                   <img
                     className="icn"
-                    src="./assets/icon/miro.webp"
-                    alt="Icon Panorama List"
+                    src="./assets/icon/jamboard.webp"
+                    alt="Icon Jamboard"
                   />
                 </Button>
               </a>

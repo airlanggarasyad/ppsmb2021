@@ -6,12 +6,14 @@ import "../ImageModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "react-bootstrap";
 import { faExpand, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import ButtonWeb from "./ButtonWeb";
 import GenerateImage from "./Generate360Images.js";
 // import Loading from "./Loading";
 
 function MyVerticallyCenteredModal(props) {
   const [isFullScreen, setFullScreen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <>
       <style type="text/css">
@@ -79,14 +81,17 @@ function MyVerticallyCenteredModal(props) {
                 />
                 {!isFullScreen && (
                   <Button
-                    className={
-                      isFullScreen
-                        ? "btn-circle btn-on-full-screen"
-                        : "btn-circle tour-panel"
-                    }
+                    className="btn-circle tour-panel"
                     variant="primary"
                     onClick={() => setFullScreen(!isFullScreen)}
-                    style={{ margin: "0 0.5vw", height: "54px", width: "54px" }}
+                    style={{
+                      margin: "0 0.5vw",
+                      height: "54px",
+                      width: "54px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
                     <FontAwesomeIcon icon={faExpand} />
                   </Button>
@@ -98,11 +103,48 @@ function MyVerticallyCenteredModal(props) {
             className="image-360-container"
             style={{ width: "100%", height: "100%", position: "absolute" }}
           >
-            <GenerateImage
-              class="image-360"
-              myImage={props.imageLocation}
-              style={{ zIndex: 10 }}
-            />
+            {Array.isArray(props.imageLocation) ? (
+              <>
+                <Button
+                  className={"btn-circle angle-left"}
+                  variant="primary"
+                  onClick={() =>
+                    setCurrentIndex(
+                      (((currentIndex - 1) % props.imageLocation.length) +
+                        props.imageLocation.length) %
+                        props.imageLocation.length
+                    )
+                  }
+                  // style={{ margin: "0 0.5vw", height: "54px", width: "54px" }}
+                >
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </Button>
+                <Button
+                  className={"btn-circle angle-right"}
+                  variant="primary"
+                  onClick={() =>
+                    setCurrentIndex(
+                      (currentIndex + 1) % props.imageLocation.length
+                    )
+                  }
+                  // style={{ margin: "0 0.5vw", height: "54px", width: "54px" }}
+                >
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </Button>
+                <GenerateImage
+                  class="image-360"
+                  myImage={props.imageLocation[currentIndex]}
+                  style={{ zIndex: 10 }}
+                />
+              </>
+            ) : (
+              <GenerateImage
+                class="image-360"
+                myImage={props.imageLocation}
+                style={{ zIndex: 10 }}
+              />
+            )}
+
             {isFullScreen && (
               <Button
                 className={"btn-circle btn-on-full-screen"}
@@ -125,7 +167,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Body>
         <Modal.Footer>
           <ButtonWeb
-            className="introButton mulai"
+            className="introButton kembali"
             startVmap={props.onHide}
             color="var(--color-redpink)"
             bg="var(--color-white)"
@@ -139,7 +181,6 @@ function MyVerticallyCenteredModal(props) {
 
 function ImageModal(props) {
   const [modalShow, setModalShow] = React.useState(false);
-  console.log(props);
   return (
     <>
       <style type="text/css">
