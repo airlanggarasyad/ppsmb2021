@@ -44,7 +44,7 @@ export default function KembaraLoka() {
         load={true}
         loading={loading}
       />
-      <audio ref={myRef} src="/anthem.mp3" />
+      <audio ref={myRef} src="/2021/anthem.mp3" />
       {/* <Fade in={storyboard && !loading}>
       </Fade> */}
       <Storyboard

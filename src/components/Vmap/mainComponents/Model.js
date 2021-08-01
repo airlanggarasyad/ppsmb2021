@@ -12,17 +12,13 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF("/2021/model.glb");
   const [object, setObject] = useState();  
   const [atas, setAtas] = useState(); 
-  const [terbang, setTerbang] = useState();
+  // const [terbang, setTerbang] = useState();
 
   const kapalRef = useRef();
   useFrame(() => {
     if (kapalRef) {
       let posisi = kapalRef.current.position.y;
 
-      if(terbang){
-        console.log("test")
-        kapalRef.current.position.y += 0.5;
-      } else {
         if (!atas) {
           kapalRef.current.position.y -= 0.01;
         } else {
@@ -35,7 +31,6 @@ export default function Model(props) {
           setAtas(true);
         }
       }
-    }
   });
 
 
@@ -148,9 +143,7 @@ export default function Model(props) {
           position={[121.23643, -1.33839, 35.43839]}
           rotation={[Math.PI / 2, 0, 0.4622]}
           scale={[7.2399, 7.2399, 8.10905]}
-          ref={kapalRef}
-          onPointerDown={() => {setTerbang(true)}}
-          onClick={() => {setTerbang(true)}}>
+          ref={kapalRef}>
           <mesh name="Sail_Cube001" geometry={nodes.Sail_Cube001.geometry} material={materials['DarkWood.001']} />
           <mesh name="Sail_Cube001_1" geometry={nodes.Sail_Cube001_1.geometry} material={materials['Sail.001']} />
           <mesh name="Sail_Cube001_2" geometry={nodes.Sail_Cube001_2.geometry} material={materials['LightWood.002']} />
@@ -860,7 +853,7 @@ export default function Model(props) {
         </group>
         <group
           name="Fakultas_Teknik"
-          position={[-86.18576, -0.11704, -47.57822]}
+          position={[-86.18576, -1.28841, -47.57822]}
           rotation={[Math.PI / 2, 0, 0.17753]}
           scale={[0.59647, 0.59647, 0.59647]}
           onPointerOver={(e) => handleHover(e)}
@@ -1068,7 +1061,7 @@ export default function Model(props) {
         </group>
         <group name="Play_Video" 
           position={[-0.09465, 1.52805, 16.72853]} 
-          onClick={() => {window.open("https://youtube.com")}}
+          onClick={() => {window.open("https://www.youtube.com/user/ppsmbpalapa")}}
           onPointerOver={(e) => handleHover(e)}
           onPointerOut={(e) => clearHover(e)}>
           <mesh name="Cube003" geometry={nodes.Cube003.geometry} material={materials.Play_Red} />
@@ -1590,6 +1583,29 @@ export default function Model(props) {
             geometry={nodes.Fakultas_Teknologi_Pertanian002_5.geometry}
             material={materials['FTP_LightSteel.001']}
           />
+        </group>	
+        <group	
+          name="Fakultas_Ilmu_Sosial_dan_Politik"	
+          position={[11.08782, 2.01637, -21.30253]}	
+          rotation={[1.56989, -0.01813, 1.59044]}	
+          scale={[0.02162, 0.02162, 0.02162]}
+          onPointerOver={(e) => handleHover(e)}
+          onPointerOut={(e) => clearHover(e)}>
+          <mesh	
+            name="Fakultas_Ilmu_Sosial_dan_Politik002"	
+            geometry={nodes.Fakultas_Ilmu_Sosial_dan_Politik002.geometry}	
+            material={materials['Fisipol_Body.001']}	
+          />	
+          <mesh	
+            name="Fakultas_Ilmu_Sosial_dan_Politik002_1"	
+            geometry={nodes.Fakultas_Ilmu_Sosial_dan_Politik002_1.geometry}	
+            material={materials['Fisipol_FireBrick.001']}	
+          />	
+          <mesh	
+            name="Fakultas_Ilmu_Sosial_dan_Politik002_2"	
+            geometry={nodes.Fakultas_Ilmu_Sosial_dan_Politik002_2.geometry}	
+            material={materials['Fisipol_DarkGray.001']}	
+          />	
         </group>
       </group>
       </group>

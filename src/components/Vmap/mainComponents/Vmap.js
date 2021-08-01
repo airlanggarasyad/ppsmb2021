@@ -10,6 +10,8 @@ import { OrbitControls, useProgress, Html } from "@react-three/drei";
 import { useSpring } from "react-spring";
 import * as THREE from "three";
 import Model from "./Model";
+import Computer from "./Tambahan/Computer";
+import Rocket from "./Tambahan/Rocket";
 import Background from "../subComponents/Background";
 import AddGrass from "./instancedComponents/AddGrass";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -33,6 +35,7 @@ const config = {
 export default function Vmap(props) {
   const [showInfografis, setShowInfografis] = useState(false);
   const [object, setObject] = useState(false);
+  const [rocket, setRocket] = useState(false);
 
   const showModal = (e) => {
     const data = dataInfografis.find((obj) => obj.objectName === e.name);
@@ -66,6 +69,8 @@ export default function Vmap(props) {
           <SpriteObject imageSource='/images/discord.png' position = {[0.4, 0.55, -2]}/> */}
             {/* <AddGrass /> */}
             <Model scale={0.04} showModal={showModal} />
+            <Computer scale={0.75} position={[-5.6,1.6,-4.6]} rotation={[0,1,0]} setRocket={setRocket} />
+            <Rocket scale={0.75} position={[-5.825,1.6,-4.4]} rocket={rocket}/>
             <Controls
               storyboard={props.storyboard}
               modalShow={showInfografis}

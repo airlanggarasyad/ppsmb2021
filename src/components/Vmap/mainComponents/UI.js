@@ -103,11 +103,11 @@ const steps = [
   },
   {
     target: ".tour-jamboard-list",
-    title: <h4>Miro</h4>,
+    title: <h4>Jamboard</h4>,
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Tombol ini digunakan untuk pergi ke laman Miro resmi dari Kembara
+          Tombol ini digunakan untuk pergi ke laman Jamboard resmi dari Kembara
           Loka.
         </p>
       </div>
