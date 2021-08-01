@@ -15,7 +15,7 @@ export default function KembaraLoka() {
   const [freeControl, setFreeControl] = useState(false);
   const [music, setMusic] = useState(true);
   const myRef = useRef();
-  const audio = new Audio("/anthem.mp3");
+  const audio = new Audio("/2021/anthem.mp3");
 
   // useEffect(() => {
   //   console.log('audio')
