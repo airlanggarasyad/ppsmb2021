@@ -103,7 +103,7 @@ const infografis = [
     camera: { x: 5.75, y: 0.5, z: -0.25 },
   },
   {
-    objectName: "Hospital",
+    objectName: "Gadjah_Mada_Medical_Center",
     name: "Gadjah Mada Medical Center (GMC)",
     isFakultas: false,
     gambarFakultas: "/images/gambarInfografis/gmc.jpg",
@@ -113,6 +113,8 @@ const infografis = [
             `,
     image360Location: "./images/image360/GMC 360.webp",
     voiceOver: "./assets/voice-over/27 GMC.mp3",
+    target: { x: -1.25, z: 1.5 },
+    camera: { x: 0.75, y: 1.35, z: -1 },
   },
   // Start Kelas 2
   {
@@ -261,8 +263,8 @@ const infografis = [
             `,
     image360Location: "./images/image360/HUKUM 360.webp",
     voiceOver: "./assets/voice-over/10 Hukum.mp3",
-    target: { x: 1.7, z: -0.5 },
-    camera: { x: 2.5, y: 0.75, z: -3 },
+    target: { x: 1.7, z: -0.75 },
+    camera: { x: 4, y:1, z: -0.5 },
   },
   {
     objectName: "Fakultas_Kedokteran_Hewan",
@@ -353,7 +355,7 @@ const infografis = [
             `,
     image360Location: "./images/image360/KEHUTANAN 360.webp",
     voiceOver: "./assets/voice-over/7 Kehutanan.mp3",
-    target: { x: 0.5, z: -2.4 },
+    target: { x: 0.5, z: -2.575},
     camera: { x: 5.0, y: 1.75, z: 0.0 },
   },
   {
@@ -382,7 +384,9 @@ const infografis = [
     bermacam-macam laboratorium guna mendukung proses akademik.
             `,
     image360Location: "./images/image360/PERTANIAN 360.webp",
-    voiceOver: "./assets/voice-over/8 Pertanian.mp3",
+    voiceOver: "./assets/voice-over/8 Pertanian.mp3",    
+    target: { x: 2.25, z: -1.5},
+    camera: { x: -2, y: 2.5, z: -5},
   },
   {
     objectName: "Fakultas_Teknik",
@@ -495,7 +499,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 7,
     listProdi: ["Ilmu dan Industri Peternakan"],
-    gambarFakultas: "/images/gambarInfografis/pertanian-min.jpg",
+    gambarFakultas: "/images/gambarInfografis/peternakan-min.jpg",
     narasi: `
     Fakultas Peternakan Universitas Gadjah Mada pada mulanya bergabung dengan Fakultas Kedokteran Hewan dan berpisah mulai 
     tanggal 1 September 1966. Fakultas Peternakan diresmikan pada 10 November 1969 dengan menyelenggarakan satu program studi 
@@ -505,6 +509,8 @@ const infografis = [
             `,
     image360Location: "./images/image360/FAPET 360.webp",
     voiceOver: "./assets/voice-over/17 Peternakan.mp3",
+    target: { x: 4.15, z: -3.2 },
+    camera: { x: 1.15, y: 1.35, z: -2 },
   },
   {
     objectName: "Fakultas_Teknologi_Pertanian",
@@ -524,16 +530,15 @@ const infografis = [
     antara lain perpustakaan dan berbagai jenis laboratorium.
             `,
     image360Location: "./images/image360/FTP 360.webp",
-    voiceOver: "./assets/voice-over/9 FTP.mp3",
-    target: { x: 0.6, z: -2.25 },
-    camera: { x: 2.5, y: 1, z: 1.5 },
+    voiceOver: "./assets/voice-over/9 FTP.mp3", 
+    target: { x: 1, z: -2},
+    camera: { x: -2, y: 2, z: 1.5},
   },
   {
     objectName: "Sekolah_Pascasarjana",
-    name: "Fakultas Pascasarjana",
+    name: "Sekolah Pascasarjana",
     isFakultas: true,
-    jumlahProdi: "-",
-    listProdi: ["-"],
+    jumlahProdi: 0,
     gambarFakultas: "/images/gambarInfografis/pau.jpg",
     narasi: `
     Berawal dengan nama Lembaga Pendidikan Doktor (LPD), Sekolah Pascasarjana Universitas Gadjah Mada memulai sejarahnya pada 
@@ -551,8 +556,7 @@ const infografis = [
     objectName: "Sekolah_Vokasi",
     name: "Sekolah Vokasi",
     isFakultas: true,
-    jumlahProdi: 1,
-    listProdi: ["-"],
+    jumlahProdi: 0,
     gambarFakultas: "/images/gambarInfografis/sv.jpg",
     narasi: `
     Pelaksanaan kegiatan belajar mengajar program diploma dari tahun 1992 pada mulanya dilaksanakan di dalam fakultas 

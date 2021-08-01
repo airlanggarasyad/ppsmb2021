@@ -9,6 +9,7 @@ import Loading from "./Loading";
 import { infografis } from "./DataInfografis";
 
 export default function ExampleModal(props) {
+  console.log(props.object.j);
   return (
     <>
       <style type="text/css">
@@ -106,18 +107,22 @@ export default function ExampleModal(props) {
                     alt=""
                   />
                   <div className="paragraph-container">
-                    <p>
-                      Jumlah Program Studi S1: {props.object.listProdi.length}{" "}
-                      <br />
-                      Program Studi: <br />
-                      <ol className="listProdi">
-                        {props.object.listProdi &&
-                          props.object.listProdi.map(function (prodi, idx) {
-                            return <li key={idx}>{prodi}</li>;
-                          })}
-                        {/* {props.object.listProdi} */}
-                      </ol>
-                    </p>
+                    {props.object.jumlahProdi > 0 ? (
+                      <p>
+                        Jumlah Program Studi S1: {props.object.listProdi.length}{" "}
+                        <br />
+                        Program Studi: <br />
+                        <ol className="listProdi">
+                          {props.object.listProdi &&
+                            props.object.listProdi.map(function (prodi, idx) {
+                              return <li key={idx}>{prodi}</li>;
+                            })}
+                          {/* {props.object.listProdi} */}
+                        </ol>
+                      </p>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
                 </div>
                 <div className="secondRow">
@@ -128,7 +133,7 @@ export default function ExampleModal(props) {
               <div>
                 <img
                   className="gambarMain"
-                  src={ "/2021" + props.object.gambarFakultas}
+                  src={"/2021" + props.object.gambarFakultas}
                   alt=""
                 />
                 <p style={{ textAlign: "justify" }}>{props.object.narasi}</p>
