@@ -114,8 +114,8 @@ const Container = styled.div`
   background-size: 15%;
 
   a {
-      text-decoration: none;
-      color: var(--color-redpink);
+    text-decoration: none;
+    color: var(--color-redpink);
   }
 
   p {
@@ -157,6 +157,7 @@ const Container = styled.div`
     margin-bottom: 10vmin;
     h2 {
       font-size: calc(0.5rem + 3.5vmin);
+      font-weight: bold;  
     }
 
     .search-bar {
@@ -188,6 +189,7 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       width: 25%;
+      font-weight: bold;
       p {
         cursor: pointer;
         display: inline-block;
@@ -218,6 +220,7 @@ const Container = styled.div`
         display: block;
         border-radius: 20px;
         h4 {
+          font-weight: bold;
           margin: 0;
         }
         p {
@@ -231,6 +234,9 @@ const Container = styled.div`
         .line {
           height: 2px;
           background-color: var(--color-red);
+        }
+        .accordions {
+          margin-top: 2vmin;
         }
         .accordion-item {
           margin: 10px;
@@ -283,7 +289,7 @@ const Kategori = ({ item, input, chosenCategory }) => {
       ) {
         setIsShown(true);
       }
-      return(null)
+      return null;
     });
   }, [input, item]);
   return (
@@ -322,10 +328,13 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
   return (
     <>
       {show && (
-        <div onClick={() => setIsActive(!isActive)} class="accordion " key={key}>
+        <div
+          onClick={() => setIsActive(!isActive)}
+          class="accordions "
+          key={key}
+        >
           <p className={isActive ? "ppsmb-red qs" : "ppsmb-black qs"}>
-          <div dangerouslySetInnerHTML={{ __html: title  }} />
-          
+            <div dangerouslySetInnerHTML={{ __html: title }} />
           </p>
           <Fade spy={isActive}>
             {isActive && (
@@ -335,7 +344,7 @@ const Accordion = ({ show, title, content, chosenCategory, key }) => {
                     <FontAwesomeIcon icon={faChevronRight} />
                   </p>
                 </div>
-                <div >
+                <div>
                   <p>{content}</p>
                 </div>
               </div>
