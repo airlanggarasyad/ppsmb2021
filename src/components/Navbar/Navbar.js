@@ -51,18 +51,48 @@ export default class Navbar extends Component {
             onClick={this.handleClick}
           >
             {MenuItems.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link
-                    className={item.block ? "nav-links block" : "nav-links"}
-                    to={item.block ? {} : item.url}
-                    onClick={this.openModal}
-                    relative
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
+              let today = new Date();
+              let rilis = new Date("2021-08-02T06:00:00+07:00");
+
+              if(item.url === "/2021/kembaraloka"){ 
+                if(today >= rilis ){ 
+                  return (
+                    <li key={index}>
+                      <Link
+                        className={item.block ? "nav-links block" : "nav-links"}
+                        to={item.block ? {} : item.url}
+                        relative
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  );
+                }  else {
+                  return (
+                    <li key={index}>
+                      <Link
+                        className={"nav-links block"}
+                        relative
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  );
+                }
+              } else {
+                return (
+                  <li key={index}>
+                    <Link
+                      className={item.block ? "nav-links block" : "nav-links"}
+                      to={item.block ? {} : item.url}
+                      onClick={this.openModal}
+                      relative
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              }
             })}
           </NavItemsStyled>
 
