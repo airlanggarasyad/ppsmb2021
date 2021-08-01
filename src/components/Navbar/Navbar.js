@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import { useState } from "react";
 import { MenuItems } from "./MenuItems";
 import styled from "styled-components";
-import GlobalStyle from "../../globalStyle";
 
 import LogoPPSMBOfficial from "../../assets/img/logo-ppsmb-official.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
-import Beranda from "../../pages/Beranda";
-import FAQ from "../../pages/FAQ";
-import Galeri from "../../pages/Galeri";
+import { Link } from "react-router-dom";
 import Modal from "react-modal";
-import Card from "../Card";
 import ComingSoon from "../../assets/img/maskot-comingsoon.png";
-// import {Link} from "../../Routes/RelativeRoute"
 
 export default class Navbar extends Component {
   state = { clicked: false, modalIsOpen: false };
@@ -25,7 +18,7 @@ export default class Navbar extends Component {
   nothing = () => {};
 
   openModal = (e) => {
-    if (e.target.classList[1] != undefined) {
+    if (e.target.classList[1] !== undefined) {
       this.setState({ clicked: this.clicked, modalIsOpen: true });
       console.log(this.state.modalIsOpen);
     }

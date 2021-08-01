@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronLeft, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Sliders(props) {
   const settings = {

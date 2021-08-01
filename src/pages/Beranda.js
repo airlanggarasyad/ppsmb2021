@@ -12,6 +12,7 @@ import Lean1 from "../assets/img/corner-lean1.webp";
 import Lean2 from "../assets/img/corner-lean2.webp";
 import RedStick from "../assets/img/red-stick.webp";
 import VmapDecor from "../assets/img/vmap-decor.webp";
+import VmapSS from "../assets/img/vmapSS.webp";
 
 import { DaftarPPSMB } from "./DaftarPPSMB";
 import SocialMedia from "../components/SocialMedia";
@@ -40,26 +41,25 @@ import BgSix from "../assets/images/agenda/DayCardContainer/six.png";
 
 import Modal from "react-modal";
 // import 'react-calendar/dist/Calendar.css';
-import MonthView from "react-calendar";
-import tawkTo from "tawkto-react";
+// import tawkTo from "tawkto-react";
 import Calendar from "react-calendar";
 
-const modalStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    borderRadius: "25px",
-    height: "90vh",
-    width: "80vw",
-    fontSize: "calc(0.5rem + 1vmin)",
-  },
-  overlay: { zIndex: 1000 },
-};
+// const modalStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//     textAlign: "center",
+//     borderRadius: "25px",
+//     height: "90vh",
+//     width: "80vw",
+//     fontSize: "calc(0.5rem + 1vmin)",
+//   },
+//   overlay: { zIndex: 1000 },
+// };
 
 Modal.setAppElement("body");
 
@@ -101,10 +101,11 @@ export default function Beranda() {
         linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
         linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
       });
-    } else if (new Date() < new Date(2021, 7, 15)) {
+    } else if (new Date() < new Date(2021, 7, 11)) {
       setToday(new Date());
       DaftarAgenda.map((item, index) => {
-        if (new Date() === item.date()) {
+        let waktu = new Date();
+        if (waktu.getDate() === item.date.getDate() && waktu.getMonth() === item.date.getMonth()) {
           setActiveDate({
             date: item.date,
             title: item.title,
@@ -114,8 +115,17 @@ export default function Beranda() {
             linkTugas: item.linkTugas,
             linkSimaster: item.linkSimaster,
           });
-          console.log("activeDate after: ", activeDate.date);
         }
+        return(null)
+      });
+    } else if (new Date() < new Date(2021, 7, 14)) {
+      setToday(new Date());
+      setActiveDate({
+        date: new Date(2021, 7, 14),
+        title: "Penutupan PPSMB UGM 2021",
+        desc: "Upacara penutupan seluruh rangkaian acara PPSMB UGM 2021.",
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
+        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
       });
     } else {
       setToday(new Date(2021, 7, 14));
@@ -144,20 +154,21 @@ export default function Beranda() {
         });
         console.log("activeDate after: ", activeDate.date);
       }
+      return(null)
     });
   }
 
-  const [modalLink, setModalLink] = useState();
+  // const [modalLink, setModalLink] = useState();
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  // const [modalIsOpen, setIsOpen] = React.useState(false);
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  // function openModal() {
+  //   setIsOpen(true);
+  // }
 
-  function closeModal() {
-    setIsOpen(false);
-  }
+  // function closeModal() {
+  //   setIsOpen(false);
+  // }
   return (
     <>
       <Helmet>
@@ -306,7 +317,7 @@ export default function Beranda() {
                         </Fade>
                       </h1>
                     </Lightspeed>
-                    <img src={RedStick} className="red-stick" alt=""></img>
+                      <img src={RedStick} className="red-stick" alt=""></img>
                   </div>
                   <div className="batiks unselectable">
                     <img src={Batik} alt="" srcset="" className="batik" />
@@ -394,18 +405,27 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        <section className='vmap pattern-bg'>
-          <img src={RedStick} className='red-stick'></img>
-          <div className="vmap-content">
-            <img src="http://lorempixel.com/400/400/nightlife/4" alt="city"/> 
+        {/* <section className='vmap pattern-bg'>
+        <Fade bottom>
+          <div className="red-stick">
+            <img src={RedStick} className='red-stick' alt=""></img>
+          </div>
+        </Fade>
+        <Fade right>
+        <div className="vmap-content">
+            <img src={VmapSS} alt="peta ugm"/> 
             <div className="vmap-btn">
-              <Link to="/peta">
-                <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta" />
+              <Link to="/2021/peta">
+                <div className='beranda-button'>
+                  <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta UGM" />
+                </div>
               </Link>
             </div>
           </div>
+        </Fade>
           <div className='title'>
-            <img src={VmapDecor} ></img>
+            <img src={VmapDecor} alt=""></img>
+            <Slide left>
             <div className="title-box">
               <h1 className="ppsmb-darkblue unselectable">
                 Ayo Jelajahi
@@ -415,8 +435,9 @@ export default function Beranda() {
                   </span>
               </h1>
             </div>
+            </Slide>
           </div>
-        </section>
+        </section> */}
         <section className="agenda">
           <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
@@ -677,16 +698,6 @@ export default function Beranda() {
     </>
   );
 }
-const Card = styled.div`
-  box-sizing: border-box;
-  float: center;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vmin;
-  margin: 10px;
-`;
 
 const Video = styled.div`
   box-sizing: border-box;
@@ -739,6 +750,10 @@ const Container = styled.div`
   margin: 0;
   display: flex;
   flex-direction: column;
+
+  .beranda-button{
+    font-size: calc(0.5rem + 1.5vmin);
+  }
 
   .unselectable {
     pointer-events: none;
@@ -1270,7 +1285,7 @@ const Container = styled.div`
 
       .vmap-content{
         position: relative;
-        background-color: yellow;
+        background-color: var(--color-darkblue);
         border: 10px solid var(--color-yellow);  
         float: left;
         width: 80vw;
@@ -1287,7 +1302,9 @@ const Container = styled.div`
       .vmap-content img {
         position: relative;
         width: 120vw;
-        height: 70vw;
+        height: 60vw;
+        right: -10vw;
+        bottom: -10vw;
       
         -webkit-transition: all 1s ease;
           -moz-transition: all 1s ease;
@@ -1300,8 +1317,8 @@ const Container = styled.div`
         img{
           width: 80vw;
           height: 40vw;
-          top: 0;
-          left: 0;
+          right: 0;
+          bottom: 0;
         }
       }
 
@@ -1611,9 +1628,11 @@ function ShowEmail(props) {
 function ShowQuickAccess(props) {
   if (props.link != null) {
     return (
-      <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <Button bg={props.bg} color={props.color} text={props.text} />
-      </a>
+      <div className="beranda-button">
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
+          <Button bg={props.bg} color={props.color} text={props.text} />
+        </a>
+      </div>
     );
   } else {
     return null;
