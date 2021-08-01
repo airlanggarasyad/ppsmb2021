@@ -3,6 +3,7 @@ import Storyboard from "./mainComponents/Storyboard";
 import UI from "./mainComponents/UI";
 import Vmap from "./mainComponents/Vmap";
 import Fade from "./subComponents/Fade";
+import GlobalStyle from "./theme/globalStyle";
 import Loading from "./subComponents/Loading";
 // import { FadeVmap } from "./subComponents/Fade"
 // import { Fade as FadeTransition } from "react-reveal";
@@ -36,9 +37,10 @@ export default function KembaraLoka() {
   useEffect(() => console.log("mounted"), []);
 
   return (
-    <>
+    <div style={{width: "100vw", height: "100vh"}}>
+      <GlobalStyle />
       <Loading
-        style={{ width: "100%"}}
+        style={{ width: "100vh !important" }}
         load={true}
         loading={loading}
       />
@@ -64,7 +66,6 @@ export default function KembaraLoka() {
           freeControl={freeControl}
         />
       </Fade>
-      
       <Vmap
         storyboard={storyboard}
         intro={intro}
@@ -79,6 +80,6 @@ export default function KembaraLoka() {
           intro={intro} setIntro={setIntro}
           freeControl={freeControl} setFreeControl={setFreeControl} />
       </FadeVmap> */}
-    </>
+    </div>
   );
 }

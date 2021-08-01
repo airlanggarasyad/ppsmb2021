@@ -13,23 +13,17 @@ export default function ExampleModal(props) {
     <>
       <style type="text/css">
         {`
-              ol.listProdi {
-                height: 26vh;
-                overflow:hidden; 
-                overflow-y:scroll;
-                padding-right: 50px;
-              }
               
               .image-txt-container {
                 display: flex;
                 align-items: center;
-                flex-direction: row;
+                flex-direction: column;
               }
               
               
               .fotoFakultas{
-                padding-right: 10px;
-                width: 50%;
+                width: 95%;
+                margin-bottom: 10px;
               }
 
               .gambarMain {
@@ -37,6 +31,11 @@ export default function ExampleModal(props) {
                 padding-bottom: 10px;
                 display:block;
                 margin:auto;
+              }
+
+              .paragraph-container {
+                display: flex;
+                width: 100%;
               }
 
               .modal-backdrop-transparent {
@@ -58,6 +57,7 @@ export default function ExampleModal(props) {
                 }
 
                 .modal-dialog-left {
+                  max-width: 100vw;
                   height: 100%;
                   display: flex;
                   align-items: center;
@@ -66,16 +66,6 @@ export default function ExampleModal(props) {
 
                 .body-modal-infografis {
                   max-height: 50vh;
-                }
-    
-                ol.listProdi {
-                  overflow: visible;
-                  height: 100%;
-                }
-    
-                .fotoFakultas {
-                  padding-right: 0px;
-                  width: 100%;
                 }
 
                 .gambarMain {
@@ -103,7 +93,7 @@ export default function ExampleModal(props) {
         </Modal.Header>
         <Modal.Body
           className="body-modal-infografis"
-          style={{ overflowX: "hidden" }}
+          style={{ overflowY: "scroll", height: "80vh" }}
         >
           <Loading />
           <div className="content" style={{ margin: "1.5vmin 2.5vmin" }}>
@@ -112,21 +102,23 @@ export default function ExampleModal(props) {
                 <div className="image-txt-container">
                   <img
                     className="fotoFakultas"
-                    src={props.object.gambarFakultas}
+                    src={"/2021" + props.object.gambarFakultas}
                     alt=""
                   />
-                  <p>
-                    Jumlah Program Studi S1: {props.object.listProdi.length}{" "}
-                    <br />
-                    Program Studi: <br />
-                    <ol className="listProdi">
-                      {props.object.listProdi &&
-                        props.object.listProdi.map(function (prodi, idx) {
-                          return <li key={idx}>{prodi}</li>;
-                        })}
-                      {/* {props.object.listProdi} */}
-                    </ol>
-                  </p>
+                  <div className="paragraph-container">
+                    <p>
+                      Jumlah Program Studi S1: {props.object.listProdi.length}{" "}
+                      <br />
+                      Program Studi: <br />
+                      <ol className="listProdi">
+                        {props.object.listProdi &&
+                          props.object.listProdi.map(function (prodi, idx) {
+                            return <li key={idx}>{prodi}</li>;
+                          })}
+                        {/* {props.object.listProdi} */}
+                      </ol>
+                    </p>
+                  </div>
                 </div>
                 <div className="secondRow">
                   <p style={{ textAlign: "justify" }}>{props.object.narasi}</p>
@@ -136,7 +128,7 @@ export default function ExampleModal(props) {
               <div>
                 <img
                   className="gambarMain"
-                  src={props.object.gambarFakultas}
+                  src={ "/2021" + props.object.gambarFakultas}
                   alt=""
                 />
                 <p style={{ textAlign: "justify" }}>{props.object.narasi}</p>

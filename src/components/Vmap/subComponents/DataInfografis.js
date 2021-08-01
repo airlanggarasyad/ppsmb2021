@@ -12,6 +12,7 @@ const infografis = [
     berbagai literatur dan fasilitas yang dimilikinya. Terdapat dua kategori fasilitas yakni Fasilitas Belajar Mandiri 
     (Quiet Area) dan Fasilitas Belajar Ruang Diskusi (Noisy Area).
             `,
+    image360Location: "./images/image360/PERPUSAT 360.webp",
     voiceOver: "./assets/voice-over/24 Perpus.mp3",
     target: { x: -0.15, z: -1.35 },
     camera: { x: -1.5, y: 1.75, z: 3 },
@@ -30,7 +31,7 @@ const infografis = [
     19 Desember 1959. Karakter konstruksi Balairung merepresentasikan bangunan modern awal yang ada di Indonesia. Sosok 
     arsitek dibalik kemegahan Balairung yaitu GPH Hadinegoro.
           `,
-    image360Location: "./images/image360/balairung_360.webp",
+    image360Location: "./images/image360/BALAIRUNG 360.webp",
     voiceOver: "./assets/voice-over/24 Balairung.mp3",
     target: { x: 0.35, z: -2.5 },
     camera: { x: -1.5, y: 1.75, z: -5 },
@@ -47,7 +48,7 @@ const infografis = [
     Universitas Gadjah Mada. Selain memiliki tempat shalat, Masjid Kampus Universitas Gadjah Mada juga dilengkapi dengan 
     tempat wudhu, kelas, sekretariat, perpustakaan, lanskap, lahan parkir, serta menara.
             `,
-    image360Location: "./images/image360/maskam_360.webp",
+    image360Location: "./images/image360/MASKAM 360.webp",
     voiceOver: "./assets/voice-over/23 Masjid Kampus.mp3",
     target: { x: 1.6, z: 1.25 },
     camera: { x: 6, y: 2.5, z: 6 },
@@ -66,6 +67,7 @@ const infografis = [
     job fair, hingga acara hiburan seperti konser musik. Gedung Grha Sabha Pramana mulai didirikan pada 1 Mei 1993 dan selesai 
     pada 8 September 1994. Peresmian GSP diselenggarakan pada 20 Desember 1994 oleh Presiden Soeharto.
             `,
+    image360Location: "./images/image360/GSP 360.webp",
     voiceOver: "./assets/voice-over/21 GSP.mp3",
     target: { x: -0.4, z: -0.2 },
     camera: { x: -2.5, y: 2, z: 4 },
@@ -80,7 +82,7 @@ const infografis = [
     antara bagian luar dan bagian dalam. Gapura UGM terbuat dari Stainless maksudnya berpijak di masa lalu tetapi juga harus 
     berkembang dan terinspirasi ke masa depan.
             `,
-    image360Location: "./images/image360/bulevard_360.webp",
+    image360Location: "./images/image360/BUNDERAN 360.webp",
     voiceOver: "./assets/voice-over/26 Gerbang UGM.mp3",
     target: { x: -0.5, z: 2.25 },
     camera: { x: 0, y: 2.5, z: 8 },
@@ -95,7 +97,10 @@ const infografis = [
     UGM dan digunakan untuk kegiatan olahraga sepak bola,  atletik, hoki, serta kegiatan-kegiatan lain yang diizinkan oleh 
     Rektor UGM.
             `,
+    image360Location: "./images/image360/STAD PANCAS 360.webp",
     voiceOver: "./assets/voice-over/25 Stadion Pancasila.mp3",
+    target: { x: 3.6, z: -1.925 },
+    camera: { x: 5.75, y: 0.5, z: -0.25 },
   },
   {
     objectName: "Hospital",
@@ -106,6 +111,7 @@ const infografis = [
     GMC adalah badan pengelola santunan kesehatan sivitas akademika UGM yang bersifat not for profit. GMC terletak di Jalan 
     SEKIP Blok L3, Sendowo, Sinduadi, Mlati, Sinduadi, Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta .
             `,
+    image360Location: "./images/image360/GMC 360.webp",
     voiceOver: "./assets/voice-over/27 GMC.mp3",
   },
   // Start Kelas 2
@@ -124,6 +130,7 @@ const infografis = [
     Program Studi Biologi. Fakultas Biologi juga dilengkapi dengan berbagai laboratorium penelitian, perpustakaan, auditorium, 
     museum biologi, dan kebun biologi untuk menunjang pengembangan ilmu biologi.
             `,
+    image360Location: "./images/image360/BIOLOGI 360.webp",
     voiceOver: "./assets/voice-over/11 Biologi.mp3",
     target: { x: -1.7, z: -2.1 },
     camera: { x: 1, y: 1.5, z: -4 },
@@ -146,6 +153,7 @@ const infografis = [
     yang dimiliki guna mendukung kelancaran proses studi antara lain berbagai jenis laboratorium, studio, perpustakaan, 
     auditorium, sarana olahraga, taman, serta kantor sekretariat kegiatan mahasiswa.
             `,
+    image360Location: "./images/image360/GEOGRAFI 360.webp",
     voiceOver: "./assets/voice-over/1 Fakultas Geografi.mp3",
     target: { x: -1.15, z: -2.65 },
     camera: { x: 2, y: 1.35, z: 0 },
@@ -165,7 +173,10 @@ const infografis = [
     serta laboratorium klinik, Fakultas Kedokteran Gigi juga memiliki Rumah Sakit Gigi dan Mulut Prof. Soedomo sebagai tempat 
     proses pembelajaran pendidikan dokter gigi.
             `,
+    image360Location: "./images/image360/FKG 360.webp",
     voiceOver: "./assets/voice-over/12 FKG.mp3",
+    target: { x: -1.5, z: 0.5 },
+    camera: { x: -5, y: 1.15, z: -1.25 },
   },
   {
     objectName: "Fakultas_Matematika_dan_Ilmu_Pengetahuan_Alam",
@@ -188,7 +199,10 @@ const infografis = [
     program studidaan hingga kini terdapat 7 program studi. Selain fasilitas berupa gedung kuliah, Fakultas Matematika dan 
     Ilmu Pengetahuan Alam juga memiliki perpustakaan, berbagai laboratorium sesuai bidangnya, dan Student Internet Center.   
             `,
+    image360Location: "./images/image360/FMIPA 360.webp",
     voiceOver: "./assets/voice-over/13 FMIPA.mp3",
+    target: { x: -0.925, z: -2.5 },
+    camera: { x: -2.5, y: 1.25, z: 1.75 },
   },
   {
     objectName: "Fakultas_Psikologi",
@@ -204,8 +218,10 @@ const infografis = [
     program studi klaster sosial-humaniora, Fakultas Psikologi memiliki laboratorium eksperimen untuk menunjang jalannya 
     perkuliahan. Selain itu, fakultas ini juga memiliki beberapa unit pengembangan dan juga unit konsultasi psikologis.
             `,
-    image360Location: "./images/image360/psikologi_360.webp",
+    image360Location: "./images/image360/PSIKOLOGI 360.webp",
     voiceOver: "./assets/voice-over/15 Psikologi.mp3",
+    target: { x: 1.95, z: 0.15 },
+    camera: { x: -3, y: 3.25, z: -0.25 },
   },
   {
     objectName: "Fakultas_Ekonomika_dan_Bisnis",
@@ -222,8 +238,10 @@ const infografis = [
     Ekonomika dan Bisnis dilengkapi dengan berbagai sarana seperti auditorium, student lounge, perpustakaan, lab komputer, 
     serta lab bahasa.
             `,
-    image360Location: "./images/image360/feb_360.webp",
+    image360Location: "./images/image360/FEB 360.webp",
     voiceOver: "./assets/voice-over/4 FEB.mp3",
+    target: { x: 0.3, z: -0.125 },
+    camera: { x: 4, y: 4, z: 3.5 },
   },
   {
     objectName: "Fakultas_Hukum",
@@ -241,8 +259,10 @@ const infografis = [
     perkuliahan dipindahkan ke Bulaksumur. Selain gedung-gedung perkuliahan, fasilitas yang dapat ditemukan di Fakultas Hukum 
     Universitas Gadjah Mada yaitu perpustakaan, Internet Corner, serta ruang sidang peradilan semu.  
             `,
-    image360Location: "./images/image360/hukum_360.webp",
+    image360Location: "./images/image360/HUKUM 360.webp",
     voiceOver: "./assets/voice-over/10 Hukum.mp3",
+    target: { x: 1.7, z: -0.5 },
+    camera: { x: 2.5, y: 0.75, z: -3 },
   },
   {
     objectName: "Fakultas_Kedokteran_Hewan",
@@ -258,8 +278,10 @@ const infografis = [
     Selain fasilitas berupa gedung kuliah, perpustakaan, serta laboratorium diagnostik, Fakultas Kedokteran Hewan juga 
     dilengkapi dengan Rumah Sakit Hewan Prof. Soeparwi dan teaching farm. 
             `,
-    image360Location: "./images/image360/fkh_360.webp",
+    image360Location: "./images/image360/FKH 360.webp",
     voiceOver: "./assets/voice-over/16 FKH.mp3",
+    target: { x: 2.3, z: -3.5 },
+    camera: { x: 4, y: 2, z: 2.5 },
   },
   {
     objectName: "Fakultas_Farmasi",
@@ -276,7 +298,10 @@ const infografis = [
     Fakultas Farmasi dilengkapi dengan berbagai jenis laboratorium, perpustakaan, auditorium, Student Corner, dan Student 
     Supporting Center.
             `,
+    image360Location: "./images/image360/FARMASI 360.webp",
     voiceOver: "./assets/voice-over/14 Farmasi.mp3",
+    target: { x: -1.25, z: -0.825 },
+    camera: { x: 1.1, y: 1, z: 2.1 },
   },
   {
     objectName: "Fakultas_Ilmu_dan_Budaya",
@@ -305,8 +330,10 @@ const infografis = [
     Sastra Nusantara, Sastra Prancis, dan Pariwisata. Keberadaan Rumah Sumba pada fakultas ini menambah kesan budaya yang 
     terkandung.
             `,
-    image360Location: "./images/image360/fib_360.webp",
+    image360Location: "./images/image360/FIB 360.webp",
     voiceOver: "./assets/voice-over/2 Fakultas Ilmu Budaya.mp3",
+    target: { x: 0.9, z: 0.2 },
+    camera: { x: -1.5, y: 1.75, z: 3 },
   },
   {
     objectName: "Fakultas_Kehutanan",
@@ -324,8 +351,10 @@ const infografis = [
     sesuai dengan bidangnya, perpustakaan, pusat kegiatan mahasiswa, hingga laboratorium lapangan yang tersebar di beberapa 
     wilayah seperti Gunung Kidul, Blora, dan Jambi.
             `,
-    image360Location: "./images/image360/kehutanan_360.webp",
+    image360Location: "./images/image360/KEHUTANAN 360.webp",
     voiceOver: "./assets/voice-over/7 Kehutanan.mp3",
+    target: { x: 0.5, z: -2.4 },
+    camera: { x: 5.0, y: 1.75, z: 0.0 },
   },
   {
     objectName: "Fakultas_Pertanian",
@@ -352,7 +381,7 @@ const infografis = [
     membentuk Fakultas Pertanian Universitas Gadjah Mada dengan berbagai fasilitas pendukung seperti perpustakaan dan 
     bermacam-macam laboratorium guna mendukung proses akademik.
             `,
-    image360Location: "./images/image360/pertanian_360.webp",
+    image360Location: "./images/image360/PERTANIAN 360.webp",
     voiceOver: "./assets/voice-over/8 Pertanian.mp3",
   },
   {
@@ -386,7 +415,11 @@ const infografis = [
     akademika antara lain berbagai jenis laboratorium, perpustakaan, ruang referensi, hingga Posbindu sebagai fasilitas 
     kesehatan.
             `,
-    image360Location: "./images/image360/psikologi_360.webp",
+    image360Location: [
+      "./images/image360/teknik/ENERGI 360.webp",
+      "./images/image360/teknik/INFRAS 360.webp",
+      "./images/image360/teknik/MANUF 360.webp",
+    ],
     voiceOver: "./assets/voice-over/20 Teknik.mp3",
     target: { x: -3.3, z: -3 },
     camera: { x: -2.5, y: 2, z: 3 },
@@ -404,8 +437,10 @@ const infografis = [
     Fakultas Filsafat memiliki akses fisik pendukung layanan publik bagi penyandang disabilitas yang ada di seluruh fakultas 
     sehingga fakultas ini ditetapkan sebagai salah satu zona integritas di Universitas Gadjah Mada.
             `,
-    image360Location: "./images/image360/filsafat_360.webp",
+    image360Location: "./images/image360/FILSAFAT 360.webp",
     voiceOver: "./assets/voice-over/5 Filsafat.mp3",
+    target: { x: 1.875, z: -0.375 },
+    camera: { x: -0.5, y: 0.8, z: 1 },
   },
   {
     objectName: "Fakultas_Ilmu_Sosial_dan_Politik",
@@ -428,7 +463,10 @@ const infografis = [
     terdapat pada FISIPOL UGM guna mendukung proses pendidikan dan pengembangan kompetensi yang dimiliki oleh sivitas 
     akademikanya meliputi auditorium, sport corner, Fisipoint, Fisipmart, Digilib Cafe dan Coworking Space.
             `,
+    image360Location: "./images/image360/FISIPOL 360.webp",
     voiceOver: "./assets/voice-over/3 Fisipol.mp3",
+    target: { x: 0.65, z: -1.25 },
+    camera: { x: -1.25, y: 1, z: 2 },
   },
   {
     objectName: "Fakultas_Kedokteran,_Kesehatan_Masyarakat_,dan_Keperawatan",
@@ -446,6 +484,7 @@ const infografis = [
     laboratorium klinik, Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan juga dilengkapi dengan RSUP Dr. Sardjito 
     dan RS Akademik.
             `,
+    image360Location: "./images/image360/FKKMK 360.webp",
     voiceOver: "./assets/voice-over/6 FKKMK.mp3",
     target: { x: -2.75, z: -0.4 },
     camera: { x: 2, y: 2.5, z: 3 },
@@ -464,7 +503,7 @@ const infografis = [
     yang dimiliki Fakultas Peternakan Universitas Gadjah Mada antara lain laboratorium, perpustakaan, auditorium, Unit 
     Peternakan, Unit Pelaksana Teknis (UPT) Perah, hingga minimarket (AgroMart).
             `,
-    image360Location: "./images/image360/fapet_360.webp",
+    image360Location: "./images/image360/FAPET 360.webp",
     voiceOver: "./assets/voice-over/17 Peternakan.mp3",
   },
   {
@@ -484,8 +523,10 @@ const infografis = [
     pada 19 September 1963. Fasilitas penunjang akademik yang ada di Fakultas Teknologi Pertanian Universitas Gadjah Mada 
     antara lain perpustakaan dan berbagai jenis laboratorium.
             `,
-    image360Location: "./images/image360/ftp_360.webp",
+    image360Location: "./images/image360/FTP 360.webp",
     voiceOver: "./assets/voice-over/9 FTP.mp3",
+    target: { x: 0.6, z: -2.25 },
+    camera: { x: 2.5, y: 1, z: 1.5 },
   },
   {
     objectName: "Sekolah_Pascasarjana",
@@ -501,7 +542,10 @@ const infografis = [
     doktoral. Keberadaan sekolah ini merupakan penegasan terhadap perlunya penyelenggaraan tingkat lanjutan dari jenjang 
     sarjana berdasarkan kompetensi bidang ilmu yang bersifat monodisiplin dan Multidisiplin.
             `,
+    image360Location: "./images/image360/PASCA 360.webp",
     voiceOver: "./assets/voice-over/19 Sekolah Pascasarjana.mp3",
+    target: { x: -3.1, z: -4.15 },
+    camera: { x: -0.65, y: 1.25, z: -0.95 },
   },
   {
     objectName: "Sekolah_Vokasi",
@@ -517,7 +561,10 @@ const infografis = [
     laboratorium sesuai dengan kekhususannya masing-masing yang dapat dikelompokkan dalam tiga kategori yaitu Laboratorium 
     Teknik, Laboratorium Bahasa, dan Laboratorium Komputer.
             `,
+    image360Location: "./images/image360/SV 360.webp",
     voiceOver: "./assets/voice-over/18 Sekolah Vokasi.mp3",
+    target: { x: -1.5, z: 2.5 },
+    camera: { x: -5, y: 0.65, z: 2.65 },
   },
 ];
 

@@ -11,8 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import Joyride, { STATUS } from "react-joyride";
-import TutorialPC from "../assets/tutorial/tutorial_pc.webp";
-import TutorialMobile from "../assets/tutorial/tutorial_mobile.jpg";
+import TutorialPC from "../assets/tutorial/desktop.png";
+import TutorialMobile from "../assets/tutorial/mobile.png";
 
 //step intro
 const steps = [
@@ -103,29 +103,41 @@ const steps = [
   {
     target: "body",
     placement: "center",
-    title: <h5>Penggunaan PC</h5>,
+    styles:{
+      floater: {
+        width: '80vw',
+      },
+      tooltip: {
+        width: '80vw',
+      }
+    },
     content: (
-      <div>
-        <img
-          width="100%"
-          height="100%"
-          src={TutorialPC}
-          alt="Tutorial Penggunaan PC"
-        ></img>
-      </div>
+      <img
+        Width="100%"
+        height="100%"
+        src={TutorialPC}
+        alt="Tutorial PC"
+      />
     ),
   },
   {
     target: "body",
     placement: "center",
-    title: <h5>Penggunaan Mobile</h5>,
+    styles:{
+      floater: {
+        width: '80vw',
+      },
+      tooltip: {
+        width: '80vw',
+      }
+    },
     content: (
       <img
-        width="100%"
+        Width="100%"
         height="100%"
         src={TutorialMobile}
         alt="Tutorial Penggunaan Mobile"
-      ></img>
+      />
     ),
   },
   {

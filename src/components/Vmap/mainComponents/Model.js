@@ -9,7 +9,7 @@ import { useTexture, Html } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/model.glb");
+  const { nodes, materials } = useGLTF("/2021/model.glb");
   const [object, setObject] = useState();
 
   let start = 0,
@@ -1823,7 +1823,7 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/model.glb");
+useGLTF.preload("/2021/model.glb");
 
 function SpriteHover(props) {
   const spriteRef = useRef();

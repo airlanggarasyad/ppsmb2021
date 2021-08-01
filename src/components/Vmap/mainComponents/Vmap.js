@@ -44,28 +44,31 @@ export default function Vmap(props) {
   };
 
   return (
-    <div>
-      {/* <Infografis
+    <>
+      <Infografis
         show={showInfografis}
         onHide={() => setShowInfografis(false)}
         object={object}
-      /> */}
-      <h1>KKWKKW</h1>
+      />
       <Canvas
         camera={{ position: config.camStartPosition, fov: config.camSBAwalFov }}
       >
         <directionalLight intensity={0.5} />
         <ambientLight intensity={0.5} />
         <spotLight position={[0, 15, 0]} angle={0.9} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <LoaderContainer
             onComplete={() => {
               props.setLoading(false);
             }}
           >
+            {/* <SpriteObject imageSource='/images/palapa.png' position = {[-0.25, 0.55, 0.15]}/>
+          <SpriteObject imageSource='/images/discord.png' position = {[0.4, 0.55, -2]}/> */}
             {/* <AddGrass /> */}
-            {/* <Model scale={0.04} showModal={showModal} /> */}
+            <Model scale={0.04} showModal={showModal} />
             <Controls
+              storyboard={props.storyboard}
+              modalShow={showInfografis}
               object={object}
               {...props}
             />
@@ -73,7 +76,7 @@ export default function Vmap(props) {
           </LoaderContainer>
         </Suspense>
       </Canvas>
-    </div>
+    </>
   );
 }
 

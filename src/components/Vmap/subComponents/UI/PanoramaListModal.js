@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Breadcrumb, Modal, Row, Col, Card, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ButtonWeb from "../ButtonWeb";
+import { Button } from "react-bootstrap";
 import Loading from "../Loading";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Zoom from "react-reveal/Zoom";
 import { listFakultas } from "../input/listFakultas";
@@ -10,8 +13,21 @@ import { listFakultas } from "../input/listFakultas";
 export default function PanoramaListModal(props) {
   const [fakultas, setFakultas] = useState();
   const [item, setItem] = useState();
+  const [index, setIndex] = useState();
+  const [listPanorama, setListPanorama] = useState();
   const [modalShow, setModalShow] = useState(false);
 
+  const showImage = (value, _index, _listPanorama) => {
+    setItem(value);
+    setIndex(_index);
+    setListPanorama(_listPanorama);
+    setModalShow(true);
+  };
+
+  const changeIndex = (value) => {
+    setIndex(value);
+  }
+  
   const showModal = (value) => {
     setItem(value);
     setModalShow(true);
@@ -82,17 +98,21 @@ export default function PanoramaListModal(props) {
           </Breadcrumb>
           <Container>
             {!fakultas && <FakultasList setFakultas={setFakultas} />}
-            {fakultas && <Fakultas fakultas={fakultas} showModal={showModal} />}
+            {fakultas && <Fakultas fakultas={fakultas} showModal={showImage} />}
           </Container>
-          <ImagePreviewModal show={modalShow} onHide={closeModal} item={item} />
+          <ImagePreviewModal show={modalShow} onHide={closeModal} item={item} index={index} listPanorama={listPanorama} changeIndex={changeIndex} />
         </Modal.Body>
         <Modal.Footer>
           <ButtonWeb
             className="introButton mulai"
-            startVmap={props.onHide}
+            startVmap={
+              fakultas ? () => setFakultas() : props.onHide
+            }
             color="var(--color-redpink)"
             bg="var(--color-white)"
-            text="Kembali"
+            text={
+              fakultas ? "Kembali" : "Tutup"
+            }
           />
         </Modal.Footer>
       </Modal>
@@ -150,7 +170,7 @@ function Fakultas(props) {
   return (
     <>
       <Row>
-        {dataFakultas.listPanorama.map((value) => (
+        {dataFakultas.listPanorama.map((value, index) => (
           <Col xs={6} md={4} key={value.source}>
             <Card
               border="warning"
@@ -161,7 +181,7 @@ function Fakultas(props) {
               }}
               tag="a"
               onClick={() => {
-                props.showModal(value);
+                props.showModal(value, index, dataFakultas.listPanorama);
               }}
             >
               <Card.Img
@@ -185,55 +205,108 @@ function Fakultas(props) {
 
 function ImagePreviewModal(props) {
   return (
-    <Modal
-      {...props}
-      aria-labelledby="contained-modal-title-vcenter"
-      className="modal-container image-preview-modal"
-      centered
-    >
-      <Modal.Header>
-        <Modal.Title
-          id="contained-modal-title-vcenter"
-          style={{ margin: "0 auto" }}
-        >
-          Gambar
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body className="modal-main-body">
-        <div
-          style={{
-            height: "inherit",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {props.item && (
-            <>
-              <img
-                src={props.item.source}
-                style={{
-                  display: "block",
-                  height: "100%",
-                  objectFit: "fill",
-                  maxWidth: "80vw",
-                  maxHeight: "80vh",
-                }}
-                alt="fullscreenPreview"
-              />
-            </>
-          )}
-        </div>
-      </Modal.Body>
-      <Modal.Footer>
-        <ButtonWeb
-          className="introButton mulai"
-          startVmap={props.onHide}
-          color="var(--color-redpink)"
-          bg="var(--color-white)"
-          text="Kembali"
-        />
-      </Modal.Footer>
-    </Modal>
+    <>
+      <style type="text/css">
+        {`
+          .angle-right {
+            position: absolute;
+            top: 50%;
+            right: 1%;
+            width: 10vw;
+            height: 10vw;
+            max-height: 50px;
+            max-width: 50px;
+            z-index: 50;
+          }
+
+          .angle-left {
+            position: absolute;
+            top: 50%;
+            left: 1%;
+            width: 10vw;
+            height: 10vw;
+            max-height: 50px;
+            max-width: 50px;
+            z-index: 50;
+          }             
+        `}
+      </style>
+      <Modal
+        {...props}
+        aria-labelledby="contained-modal-title-vcenter"
+        className="modal-container image-preview-modal"
+        centered
+      >
+        <Modal.Header>
+          <Modal.Title
+            id="contained-modal-title-vcenter"
+            style={{ margin: "0 auto" }}
+          >
+            Gambar
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="modal-main-body">
+          <div
+            style={{
+              height: "inherit",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {props.item && (
+              <>
+                <Button
+                  className={"btn-circle angle-left"}
+                  variant="primary"
+                  onClick={() =>
+                    props.changeIndex(
+                      (((props.index - 1) % props.listPanorama.length) +
+                        props.listPanorama.length) %
+                        props.listPanorama.length
+                    )
+                  }
+                  // style={{ margin: "0 0.5vw", height: "54px", width: "54px" }}
+                >
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </Button>
+                <Button
+                  className={"btn-circle angle-right"}
+                  variant="primary"
+                  onClick={() =>
+                    props.changeIndex(
+                      (props.index + 1) % props.listPanorama.length
+                    )
+                  }
+                  // style={{ margin: "0 0.5vw", height: "54px", width: "54px" }}
+                >
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </Button>
+                <img
+                  src={props.listPanorama[props.index].source}
+                  style={{
+                    display: "block",
+                    height: "100%",
+                    objectFit: "fill",
+                    maxWidth: "80vw",
+                    maxHeight: "80vh",
+                  }}
+                  alt="fullscreenPreview"
+                />
+              </>
+            )}
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <ButtonWeb
+            className="introButton mulai"
+            startVmap={props.onHide}
+            color="var(--color-redpink)"
+            bg="var(--color-white)"
+            text="Kembali"
+          />
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
