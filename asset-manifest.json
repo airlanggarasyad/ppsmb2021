@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/2021/static/js/main.175e53cf.chunk.js",
-    "main.js.map": "/2021/static/js/main.175e53cf.chunk.js.map",
+    "main.js": "/2021/static/js/main.a5289c13.chunk.js",
+    "main.js.map": "/2021/static/js/main.a5289c13.chunk.js.map",
     "runtime-main.js": "/2021/static/js/runtime-main.2a885090.js",
     "runtime-main.js.map": "/2021/static/js/runtime-main.2a885090.js.map",
     "static/css/2.d8e2a883.chunk.css": "/2021/static/css/2.d8e2a883.chunk.css",
-    "static/js/2.889c55cd.chunk.js": "/2021/static/js/2.889c55cd.chunk.js",
-    "static/js/2.889c55cd.chunk.js.map": "/2021/static/js/2.889c55cd.chunk.js.map",
+    "static/js/2.6eeb9167.chunk.js": "/2021/static/js/2.6eeb9167.chunk.js",
+    "static/js/2.6eeb9167.chunk.js.map": "/2021/static/js/2.6eeb9167.chunk.js.map",
     "index.html": "/2021/index.html",
     "static/css/2.d8e2a883.chunk.css.map": "/2021/static/css/2.d8e2a883.chunk.css.map",
-    "static/js/2.889c55cd.chunk.js.LICENSE.txt": "/2021/static/js/2.889c55cd.chunk.js.LICENSE.txt",
+    "static/js/2.6eeb9167.chunk.js.LICENSE.txt": "/2021/static/js/2.6eeb9167.chunk.js.LICENSE.txt",
     "static/media/Arrow.850497d5.png": "/2021/static/media/Arrow.850497d5.png",
     "static/media/Indonesia-Script.241a9023.woff": "/2021/static/media/Indonesia-Script.241a9023.woff",
     "static/media/Kollektif.f40b6345.woff": "/2021/static/media/Kollektif.f40b6345.woff",
@@ -47,6 +47,7 @@
     "static/media/desktop-ornament-galeri.1585b944.webp": "/2021/static/media/desktop-ornament-galeri.1585b944.webp",
     "static/media/five.a653bc5f.png": "/2021/static/media/five.a653bc5f.png",
     "static/media/four.86fc017b.png": "/2021/static/media/four.86fc017b.png",
+    "static/media/gamadaharustahu.webp": "/2021/static/media/gamadaharustahu.4a560dec.webp",
     "static/media/geo-two.51372d3d.png": "/2021/static/media/geo-two.51372d3d.png",
     "static/media/ketentuan_img.a697ea9e.png": "/2021/static/media/ketentuan_img.a697ea9e.png",
     "static/media/logo-UGM-PPSMB.02c43acd.png": "/2021/static/media/logo-UGM-PPSMB.02c43acd.png",
@@ -69,12 +70,14 @@
     "static/media/title-decoration.608dfeb1.svg": "/2021/static/media/title-decoration.608dfeb1.svg",
     "static/media/two.c6e4364e.png": "/2021/static/media/two.c6e4364e.png",
     "static/media/two.e3f4ff12.png": "/2021/static/media/two.e3f4ff12.png",
+    "static/media/vmap-decor.a575026a.webp": "/2021/static/media/vmap-decor.a575026a.webp",
+    "static/media/vmapSS.8ea1d800.webp": "/2021/static/media/vmapSS.8ea1d800.webp",
     "static/media/white-batik-corner.d4511ec1.webp": "/2021/static/media/white-batik-corner.d4511ec1.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.2a885090.js",
     "static/css/2.d8e2a883.chunk.css",
-    "static/js/2.889c55cd.chunk.js",
-    "static/js/main.175e53cf.chunk.js"
+    "static/js/2.6eeb9167.chunk.js",
+    "static/js/main.a5289c13.chunk.js"
   ]
 }
