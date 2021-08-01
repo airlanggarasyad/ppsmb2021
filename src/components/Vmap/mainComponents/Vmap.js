@@ -9,7 +9,7 @@ import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls, useProgress, Html } from "@react-three/drei";
 import { useSpring } from "react-spring";
 import * as THREE from "three";
-import Model from "./Model";
+import Model from "./Model-Transformed";
 import Computer from "./Tambahan/Computer";
 import Rocket from "./Tambahan/Rocket";
 import Background from "../subComponents/Background";

@@ -39,9 +39,9 @@ export default function KembaraLoka() {
   
   let today = new Date();
   let rilis = new Date("2021-08-02T06:00:00+07:00");
-  if(today < rilis ){
-    window.location.replace("https://ppsmb.ugm.ac.id/2021"); 
-  }
+  // if(today < rilis ){
+  //   window.location.replace("https://ppsmb.ugm.ac.id/2021"); 
+  // }
 
   return (
     <div style={{width: "100vw", height: "100vh"}}>
