@@ -5,8 +5,6 @@ import Card from "./FakultasCard";
 import Modal from "react-modal";
 import ComingSoon from "../../assets/img/maskot-comingsoon.png";
 
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
-
 export default function Agenda({ match }) {
   const DataBreadcrumb = [
     {

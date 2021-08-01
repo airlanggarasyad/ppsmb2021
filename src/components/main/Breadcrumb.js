@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Breadcrumb(props) {
   const { primer, data, secondary, back } = props;
   const linkData = data;

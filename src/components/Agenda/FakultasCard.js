@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import BgOne from "../../assets/img/ppsmb-fakultas/PPSMB-Biologi.webp";
 import BgTwo from "../../assets/img/ppsmb-fakultas/PPSMB-EkonomikadanBisnis.webp";
 import BgThree from "../../assets/img/ppsmb-fakultas/PPSMB-Farmasi.webp";

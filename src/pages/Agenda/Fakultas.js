@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Fakultas from "../../components/Agenda/Fakultas";
 import Helmet from "react-helmet";
 
@@ -18,4 +17,4 @@ export default function landingPage() {
   );
 }
 
-const AgendaStyle = styled.div``;
+// const AgendaStyle = styled.div``;

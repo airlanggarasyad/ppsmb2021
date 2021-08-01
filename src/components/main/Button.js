@@ -1,5 +1,4 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 
 export default function Button(props) {
@@ -10,9 +9,9 @@ export default function Button(props) {
     textColor,
     children,
     borderColor,
-    href,
-    colorHover,
-    textColorHover,
+    // href,
+    // colorHover,
+    // textColorHover,
   } = props;
   console.log(color);
 

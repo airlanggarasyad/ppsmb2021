@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 //pass your tawk.to propertyId
 module.exports = function tawkTo(propertyId, email, fullName) {
