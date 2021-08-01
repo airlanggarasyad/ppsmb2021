@@ -10,8 +10,7 @@ export const MenuItems = [
     },
     {
         title: 'Peta UGM',
-        url: './peta',
-        block: true,
+        url: '/2021/kembaraloka',
     },
     {
         title: 'Galeri',

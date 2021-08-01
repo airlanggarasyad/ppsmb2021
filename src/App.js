@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import GlobalStyle from "./globalStyle";
 import Routes from "./Routes/Routes";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./Routes/ScrollToTop";
 import ScrollTop from "./components/ScrollTop";
@@ -18,12 +18,7 @@ class App extends Component {
       <div>
         <GlobalStyle />
         <Router>
-          <Navbar />
-          <ScrollToTop />
-          <Routes />
-          <Announce/>
-          <ScrollTop />
-          <Footer />
+          <ComponentHandler />
         </Router>
       </div>
     );
@@ -31,3 +26,31 @@ class App extends Component {
 }
 
 export default App;
+
+function ComponentHandler(){
+  const location = useLocation();
+  const [pathname, setPathname] = useState();
+
+  useEffect(() => {
+    setPathname(location.pathname)
+  }, location)
+
+  return (
+    <>
+      {pathname !== "/2021/kembaraloka" ?
+        <div>
+          <Navbar />
+          <ScrollToTop />
+          <Routes />
+          <Announce/>
+          <ScrollTop />
+          <Footer />
+        </div>
+        :
+        <div>
+          <Routes />
+        </div>
+      }
+    </>
+  )
+}

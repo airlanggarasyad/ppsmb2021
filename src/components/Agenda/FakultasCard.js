@@ -259,12 +259,12 @@ const CardStyle = styled.div`
     transform: scale(1, 2);
     transition: transform 500ms ease;
   }
-  .card-header {
+  .card-materi-header {
     position: absolute;
     left: 0;
     top: 0;
   }
-  .card-header > h6 {
+  .card-materi-header > h6 {
     font-size: 2vmin;
     margin: 0;
     color: white;
@@ -525,7 +525,7 @@ const CardStyle = styled.div`
       height: 30vmin;
       width: 70vmin;
     }
-    .card-header > h6 {
+    .card-materi-header > h6 {
       font-size: 3vmin;
 
       border-radius: 2vmin 0;
