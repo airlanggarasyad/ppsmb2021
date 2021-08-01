@@ -56,7 +56,7 @@ export default function Card(props) {
           link={props.link}
           onClick={openModal}
         >
-          <div className="card-header">
+          <div className="card-materi-header">
             <h6>{props.title}</h6>
           </div>
           <div className="card-background">
@@ -120,12 +120,12 @@ const CardStyle = styled.div`
     transform: scale(1, 2);
     transition: transform 500ms ease;
   }
-  .card-header {
+  .card-materi-header {
     position: absolute;
     left: 0;
     top: 0;
   }
-  .card-header > h6 {
+  .card-materi-header > h6 {
     font-size: calc(0.5rem + 0.8vmin);
     margin: 0;
     color: white;

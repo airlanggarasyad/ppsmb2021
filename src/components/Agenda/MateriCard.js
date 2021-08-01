@@ -30,7 +30,7 @@ export default function Card(props) {
 
   return (
     <CardStyle day={day}>
-      <div className="card-header">
+      <div className="card-materi-header">
         <h6>{Title}</h6>
       </div>
       <div className="card-background">
@@ -106,12 +106,12 @@ const CardStyle = styled.div`
     transition: transform 500ms ease;
   }
 
-  .card-header {
+  .card-materi-header {
     position: absolute;
     left: 0;
     top: 0;
   }
-  .card-header > h6 {
+  .card-materi-header > h6 {
     font-size: 2vmin;
     margin: 0;
     color: white;
@@ -248,7 +248,7 @@ const CardStyle = styled.div`
       height: 30vmin;
       width: 70vmin;
     }
-    .card-header > h6 {
+    .card-materi-header > h6 {
       font-size: 3vmin;
 
       border-radius: 2vmin 0;

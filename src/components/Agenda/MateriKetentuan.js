@@ -161,8 +161,8 @@ export default class AgendaPenugasan extends Component {
         >
           {" "}
         </div>
-        <div className="breadcrumb-container">
-          <div className="breadcrumb">
+        <div className="breadcrumb-content-container">
+          <div className="breadcrumb-content">
             <Breadcrumb data={DataBreadcrumb} secondary="black" back="/2021"/>
           </div>
         </div>
@@ -195,7 +195,7 @@ const AgendaStyle = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
-  .breadcrumb-container {
+  .breadcrumb-content-container {
     display: flex;
     height: 10vmin;
     width: 100vw;
@@ -203,7 +203,7 @@ const AgendaStyle = styled.div`
     justify-content: center;
     z-index: 3;
   }
-  .breadcrumb {
+  .breadcrumb-content {
     width: 85%;
     margin-top: 5vmin;
   }
@@ -342,7 +342,7 @@ const AgendaStyle = styled.div`
   }
   @media screen and (max-width: 992px) {
     height: auto;
-    .breadcrumb {
+    .breadcrumb-content {
       margin-top: 10vmin;
     }
     .batik-bg {
@@ -358,7 +358,7 @@ const AgendaStyle = styled.div`
   }
   @media screen and (max-width: 768px) {
     height: auto;
-    .breadcrumb {
+    .breadcrumb-content {
       margin-top: 10vmin;
     }
     .batik-bg {

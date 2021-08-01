@@ -23,19 +23,19 @@ export default function Breadcrumb(props) {
         </svg>
       </div>
       </Link>
-      <div className="breadcrumb-content">
+      <div className="breadcrumb-content-content">
         {linkData.map((item, index) => (
           <>
             {index === index.length - 1 ? (
              
-              <div className="breadcrumb-link">
+              <div className="breadcrumb-content-link">
                 {" "} <Link style={{ textDecoration: 'none' }} to={item.link}>
                 {item.text}</Link>
               </div>
              
             ) : (
              
-              <div className="breadcrumb-link">
+              <div className="breadcrumb-content-link">
                 {" "}
                 <Link style={{ textDecoration: 'none' }} to={item.link}>
               {item.text}
@@ -92,19 +92,19 @@ const BreadcrumStyle = styled.div`
         : "#F0F0F0"};
   }
 
-  .breadcrumb-content {
+  .breadcrumb-content-content {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 3vmin;
   }
-  .breadcrumb-link {
+  .breadcrumb-content-link {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .breadcrumb-link > a {
+  .breadcrumb-content-link > a {
     color: ${(props) =>
       props.color === "red"
         ? "#F31958"
@@ -120,7 +120,7 @@ const BreadcrumStyle = styled.div`
     text-decoration: white;
     font-size: 3vmin;
   }
-  .breadcrumb-link > span {
+  .breadcrumb-content-link > span {
     color: ${(props) =>
       props.color === "red"
         ? "#F31958"
@@ -136,7 +136,7 @@ const BreadcrumStyle = styled.div`
     font-size: 3vmin;
     margin: 0 0.5vw 0 0.5vw;
   }
-  .breadcrumb-link > a:hover {
+  .breadcrumb-content-link > a:hover {
     color: ${(props) =>
       props.colorHover === "red"
         ? "#F31958"
@@ -155,7 +155,7 @@ const BreadcrumStyle = styled.div`
       width: 4vmin;
       height: 4vmin;
     }
-    .breadcrumb-link > a {
+    .breadcrumb-content-link > a {
       font-size: 3vmin;
     }
   }
