@@ -142,6 +142,7 @@ const Header = styled.header`
         text-decoration: none;
         font-weight: bold;
         font-size: calc(0.5rem + 2vmin);
+        margin: 0;
       }
     }
     background: var(--color-white);
@@ -165,6 +166,7 @@ const Header = styled.header`
   @media (min-width: 1024px) {
     .navbar {
       min-height: 0vmin;
+      padding-right: 5vmin;
     }
   }
 
@@ -237,6 +239,7 @@ const NavItemsStyled = styled.ul`
   grid-column-gap: 5vw;
   padding: 0;
   margin-right: 5vmin;
+  margin: 0;
 
   li {
     list-style-type: none;
@@ -269,6 +272,7 @@ const NavItemsStyled = styled.ul`
     color: var(--color-black);
     text-decoration: none;
     transition: all 0.2s ease-out;
+    margin: 0;
 
     &:hover {
       color: var(--color-darkblue);
