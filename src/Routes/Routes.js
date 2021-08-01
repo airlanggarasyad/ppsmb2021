@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from "react";
 import Galeri from "../pages/Galeri";
 import Beranda from "../pages/Beranda";
+import KembaraLoka from "../components/Vmap/KembaraLoka"
 import AgendaMateri from "../pages/Agenda/MateriKetentuan";
 import { Switch, Route, useHistory, useParams } from "react-router-dom";
 import gaTracker from './gaTracker'
@@ -58,6 +59,7 @@ export default function Routes() {
       <Route exact path="/2021" component={Beranda} />
       <Route exact path="/2021/faq" component={FAQ} />
       <Route path="/2021/galeri" component={Galeri} />
+      <Route path="/2021/kembaraloka" component={KembaraLoka} />
       {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
       {/* Agenda Section */}
       <Route exact path="/2021/materi-ketentuan" component={AgendaMateri} />
