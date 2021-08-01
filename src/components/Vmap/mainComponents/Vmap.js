@@ -14,6 +14,7 @@ import Computer from "./Tambahan/Computer";
 import Rocket from "./Tambahan/Rocket";
 import Background from "../subComponents/Background";
 import AddGrass from "./instancedComponents/AddGrass";
+import Helmet from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Infografis from "../subComponents/Infografis";
 import { infografis as dataInfografis } from "../subComponents/DataInfografis";
@@ -48,6 +49,9 @@ export default function Vmap(props) {
 
   return (
     <>
+      <Helmet>
+        <title>Kembara Loka | PPSMB UGM 2021</title>
+      </Helmet>
       <Infografis
         show={showInfografis}
         onHide={() => setShowInfografis(false)}

@@ -105,7 +105,10 @@ export default function Beranda() {
       setToday(new Date());
       DaftarAgenda.map((item, index) => {
         let waktu = new Date();
-        if (waktu.getDate() === item.date.getDate() && waktu.getMonth() === item.date.getMonth()) {
+        if (
+          waktu.getDate() === item.date.getDate() &&
+          waktu.getMonth() === item.date.getMonth()
+        ) {
           setActiveDate({
             date: item.date,
             title: item.title,
@@ -116,7 +119,7 @@ export default function Beranda() {
             linkSimaster: item.linkSimaster,
           });
         }
-        return(null)
+        return null;
       });
     } else if (new Date() < new Date(2021, 7, 14)) {
       setToday(new Date());
@@ -154,7 +157,7 @@ export default function Beranda() {
         });
         console.log("activeDate after: ", activeDate.date);
       }
-      return(null)
+      return null;
     });
   }
 
@@ -286,12 +289,8 @@ export default function Beranda() {
                 <VideoContainer
                   id="fGOamlnU_uI"
                   title="Selamat Datang Gamada!"
-                />                
-                <VideoContainer
-                  id="spDx6be8FHY"
-                  title="Sambutan Rektor UGM"
                 />
-                
+                <VideoContainer id="spDx6be8FHY" title="Sambutan Rektor UGM" />
               </div>
             </Slide>
           </div>
@@ -317,7 +316,7 @@ export default function Beranda() {
                         </Fade>
                       </h1>
                     </Lightspeed>
-                      <img src={RedStick} className="red-stick" alt=""></img>
+                    <img src={RedStick} className="red-stick" alt=""></img>
                   </div>
                   <div className="batiks unselectable">
                     <img src={Batik} alt="" srcset="" className="batik" />
@@ -405,7 +404,7 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        {/* <section className='vmap pattern-bg'>
+        <section className='vmap pattern-bg'>
         <Fade bottom>
           <div className="red-stick">
             <img src={RedStick} className='red-stick' alt=""></img>
@@ -415,7 +414,7 @@ export default function Beranda() {
         <div className="vmap-content">
             <img src={VmapSS} alt="peta ugm"/> 
             <div className="vmap-btn">
-              <Link to="/2021/peta">
+              <Link to="/2021/kembaraloka">
                 <div className='beranda-button'>
                   <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta UGM" />
                 </div>
@@ -437,7 +436,7 @@ export default function Beranda() {
             </div>
             </Slide>
           </div>
-        </section> */}
+        </section>
         <section className="agenda">
           <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
@@ -449,32 +448,39 @@ export default function Beranda() {
           </div>
           <div className="agenda-content">
             <div className="agenda-desc ppsmb-darkblue">
-              <p style={{ marginTop: "0" }}>
-                Dengan membawa nilai-nilai luhur dan jati diri Universitas,
-                PPSMB UGM 2021 dilaksanakan untuk membentuk Gamada sebagai
-                pembelajar sukses yang siap menjadi pemimpin bangsa intelektual
-                yang mengandalkan kecerdasan berpikir, kedewasaan dalam bertutur
-                kata dan bertindak, anti kekerasan, berbudaya, bermartabat,
-                inspiratif, serta menjunjung tinggi nilai-nilai Pancasila. PPSMB
-                secara khusus juga bertujuan untuk mengembangkan karakter
-                mahasiswa menjadi manusia susila yang siap menjadi ‘SANG JUARA’
-                (Santun, Adil, Nasionalis, Gembira, Jujur, Unggul, Amanah,
-                Religius, dan Andal)
-              </p>
-              <Fade spy={activeDate}>
-                <p>
-                  <small>
-                    {activeDate.date.toLocaleDateString("id-ID", {
-                      weekday: "long",
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </small>
-                  <br />
-                  <h4 style={{ margin: "0 0 2vmin 0" }}>{activeDate.title}</h4>
-                  {activeDate.desc}
+              <div className="desc-container">
+                <p style={{ marginTop: "0" }}>
+                  Dengan membawa nilai-nilai luhur dan jati diri Universitas,
+                  PPSMB UGM 2021 dilaksanakan untuk membentuk Gamada sebagai
+                  pembelajar sukses yang siap menjadi pemimpin bangsa
+                  intelektual yang mengandalkan kecerdasan berpikir, kedewasaan
+                  dalam bertutur kata dan bertindak, anti kekerasan, berbudaya,
+                  bermartabat, inspiratif, serta menjunjung tinggi nilai-nilai
+                  Pancasila. PPSMB secara khusus juga bertujuan untuk
+                  mengembangkan karakter mahasiswa menjadi manusia susila yang
+                  siap menjadi ‘SANG JUARA’ (Santun, Adil, Nasionalis, Gembira,
+                  Jujur, Unggul, Amanah, Religius, dan Andal)
                 </p>
+              </div>
+
+              <Fade spy={activeDate}>
+                <div className="desc-container">
+                  <p>
+                    <small>
+                      {activeDate.date.toLocaleDateString("id-ID", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </small>
+                    <br />
+                    <h4 style={{ margin: "0 0 2vmin 0" }}>
+                      {activeDate.title}
+                    </h4>
+                    {activeDate.desc}
+                  </p>
+                </div>
                 <div className="quick-access">
                   <ShowQuickAccess
                     bg="var(--color-darkblue)"
@@ -750,8 +756,17 @@ const Container = styled.div`
   margin: 0;
   display: flex;
   flex-direction: column;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+  h4 {
+    font-size: calc(0.5rem + 1.5vmin);
+  }
 
-  .beranda-button{
+  .beranda-button {
     font-size: calc(0.5rem + 1.5vmin);
   }
 
@@ -1101,7 +1116,7 @@ const Container = styled.div`
 
             .red-stick {
               width: 25vmin;
-              transform: translateY(-150%);
+              /* transform: translateY(-100%); */
             }
           }
           .batiks {
@@ -1165,6 +1180,9 @@ const Container = styled.div`
         .socmed {
           display: flex;
           align-items: center;
+          p {
+            margin: 0;
+          }
         }
 
         a {
@@ -1250,15 +1268,15 @@ const Container = styled.div`
       align-items: center;
       padding: 10vmin;
 
-      .title{        
+      .title {
         position: absolute;
         height: 60vmin;
         top: 0;
         left: 0;
-        img{
+        img {
           height: 100%;
         }
-        .title-box{
+        .title-box {
           height: 30%;
           width: 92%;
           padding: 0 0 0 10vmin;
@@ -1272,49 +1290,49 @@ const Container = styled.div`
           align-items: flex-start;
           h1 {
             white-space: nowrap;
-              margin: 0;
-              font-size: calc(0.5rem + 3.5vmin);
-              .font-indonesia-script {
-                display: inline-block;
-                transform: rotate(-18deg) translate(-40%, -10%);
-                font-weight: lighter;
-              }
+            margin: 0;
+            font-size: calc(0.5rem + 3.5vmin);
+            .font-indonesia-script {
+              display: inline-block;
+              transform: rotate(-18deg) translate(-40%, -10%);
+              font-weight: lighter;
             }
+          }
         }
       }
 
-      .vmap-content{
+      .vmap-content {
         position: relative;
         background-color: var(--color-darkblue);
-        border: 10px solid var(--color-yellow);  
+        border: 10px solid var(--color-yellow);
         float: left;
         width: 80vw;
         height: 40vw;
         margin: 20px;
         overflow: hidden;
         box-shadow: 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
-          border-radius: 25px;
-          display: flex;
-          justify-content: flex-end;
-          align-items: flex-end;
+        border-radius: 25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
       }
-      
+
       .vmap-content img {
         position: relative;
         width: 120vw;
         height: 60vw;
         right: -10vw;
         bottom: -10vw;
-      
+
         -webkit-transition: all 1s ease;
-          -moz-transition: all 1s ease;
-            -o-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-                transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
       }
- 
-      .vmap-content:hover{
-        img{
+
+      .vmap-content:hover {
+        img {
           width: 80vw;
           height: 40vw;
           right: 0;
@@ -1322,12 +1340,12 @@ const Container = styled.div`
         }
       }
 
-      .vmap-btn{
+      .vmap-btn {
         position: absolute;
         margin: 5vmin;
       }
 
-      .red-stick{
+      .red-stick {
         position: absolute;
         transform: rotate(90deg) translateX(-100%);
         transform-origin: left bottom;
@@ -1336,13 +1354,11 @@ const Container = styled.div`
         width: 25vmin;
       }
 
-      @media(max-width: 1024px){
-        .vmap-content{
+      @media (max-width: 1024px) {
+        .vmap-content {
           margin-top: 40vmin;
         }
       }
-
-
     }
 
     &.agenda {
@@ -1389,6 +1405,7 @@ const Container = styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         .agenda-access {
           display: flex;
           flex-direction: column;
@@ -1417,10 +1434,15 @@ const Container = styled.div`
           display: flex;
           width: 50%;
           flex-direction: column;
+          justify-content: flex-start;
           align-items: flex-start;
           align-self: flex-end;
           p {
             text-align: justify;
+          }
+
+          .desc-container {
+            flex-grow: 1;
           }
           .quick-access {
             width: 100%;
@@ -1436,7 +1458,7 @@ const Container = styled.div`
         }
         .agenda-content {
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
           text-align: justify;
           width: 100%;
 
