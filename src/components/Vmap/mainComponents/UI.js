@@ -172,10 +172,10 @@ const steps = [
     placement: "center",
     styles:{
       floater: {
-        width: '30vw',
+        width: '80vw',
       },
       tooltip: {
-        width: '30vw',
+        width: '80vw',
       }
     },
     content: (
@@ -185,7 +185,7 @@ const steps = [
         Gunakan tempat ini sebagai wadah untuk berkreasi.<br />
         <br />
         Credits:<br />
-        - Tree, Rock, and Houses Model: Quarternius.<br />
+        - Tree, Rock, and Houses Model: Quaternius.<br />
         - Video Profil UGM : UGM Yogyakarta.<br />
         </p>
       </div>
