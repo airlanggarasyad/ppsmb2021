@@ -404,7 +404,7 @@ export default function Beranda() {
             </div>
           </div>
         </section>
-        {/* <section className='vmap pattern-bg'>
+        <section className='vmap pattern-bg'>
         <Fade bottom>
           <div className="red-stick">
             <img src={RedStick} className='red-stick' alt=""></img>
@@ -414,7 +414,7 @@ export default function Beranda() {
         <div className="vmap-content">
             <img src={VmapSS} alt="peta ugm"/> 
             <div className="vmap-btn">
-              <Link to="/2021/peta">
+              <Link to="/2021/kembaraloka">
                 <div className='beranda-button'>
                   <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta UGM" />
                 </div>
@@ -436,7 +436,7 @@ export default function Beranda() {
             </div>
             </Slide>
           </div>
-        </section> */}
+        </section>
         <section className="agenda">
           <div className="agenda-title">
             <h2 className="ppsmb-darkblue">Agenda dan Materi</h2>
