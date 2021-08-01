@@ -15,8 +15,9 @@ export default function Model(props) {
   useFrame(() => {
     if (rocketRef) {
       if(props.rocket){
-        console.log("test")
         rocketRef.current.position.y += 0.2;
+      } else {
+        rocketRef.current.position.y = 0;
       }
     }
   });

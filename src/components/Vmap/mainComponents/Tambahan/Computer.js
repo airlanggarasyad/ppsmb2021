@@ -8,9 +8,14 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/2021/computer.glb')
+
+  const handleClick = (e) => {
+    props.setRocket(!props.rocket)
+  }
+
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene" onClick={() => {props.setRocket(true)}}>
+      <group name="Scene" onClick={(e) => {handleClick(e)}}>
         <group name="Layer0_001" position={[0.24744, 0.29569, -0.29384]} scale={[0.01, 0.01, 0.01]}>
           <mesh name="Mesh" geometry={nodes.Mesh.geometry} material={materials.dbl_Layer0_001} />
           <mesh name="Mesh_1" geometry={nodes.Mesh_1.geometry} material={materials['Material.001']} />

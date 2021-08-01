@@ -73,7 +73,7 @@ export default function Vmap(props) {
           <SpriteObject imageSource='/images/discord.png' position = {[0.4, 0.55, -2]}/> */}
             {/* <AddGrass /> */}
             <Model scale={0.04} showModal={showModal} />
-            <Computer scale={0.75} position={[-5.6,1.6,-4.6]} rotation={[0,1,0]} setRocket={setRocket} />
+            <Computer scale={0.75} position={[-5.6,1.6,-4.6]} rotation={[0,1,0]} rocket={rocket} setRocket={setRocket} />
             <Rocket scale={0.75} position={[-5.825,1.6,-4.4]} rocket={rocket}/>
             <Controls
               storyboard={props.storyboard}
