@@ -85,7 +85,7 @@ const steps = [
     content: (
       <div>
         <p style={{ textAlign: "justify" }}>
-          Gadjah Mada Muda dapat melihat lokasi dan rute melalui google maps dengan tombol berikut.
+          Gadjah Mada Muda dapat melihat lokasi dan rute melalui Google Maps dengan tombol berikut.
         </p>
       </div>
     ),

@@ -11,7 +11,6 @@ export const MenuItems = [
     {
         title: 'Peta UGM',
         url: '/2021/kembaraloka',
-        block: new Date() <= new Date(2021, 7, 2, 21) ? true : false,
     },
     {
         title: 'Galeri',
