@@ -590,7 +590,7 @@ export default function Model(props) {
             />
           </group>
           <group
-            name="Fakulas_Kedokteran_Gigi"
+            name="Fakultas_Kedokteran_Gigi"
             position={[-64.64047, 0.20852, 3.28671]}
             rotation={[Math.PI / 2, 0, -3.07889]}
             scale={[0.00041, 0.00041, 0.00041]}
@@ -1377,9 +1377,14 @@ export default function Model(props) {
             />
           </group>
           <group
-            name="Play"
+            name="Play_Video"
             position={[-0.09465, 1.52805, 16.72853]}
             scale={[1, 0.52087, 0.08808]}
+            onClick={() => {
+              window.open("https://www.youtube.com/user/ppsmbpalapa");
+            }}
+            onPointerOver={(e) => handleHover(e)}
+            onPointerOut={(e) => clearHover(e)}
           >
             <mesh
               name="Cube003"

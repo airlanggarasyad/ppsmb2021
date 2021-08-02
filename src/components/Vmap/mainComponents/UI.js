@@ -178,10 +178,14 @@ const steps = [
     placement: "center",
     styles: {
       floater: {
-        width: "30vw",
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
       },
       tooltip: {
-        width: "30vw",
+        width: device === "desktop" ? "100vmin" : "70vmin",
+        maxHeight: "70vh",
+        overflow: "scroll",
       },
     },
     content: (
