@@ -14,6 +14,12 @@ import Joyride, { STATUS } from "react-joyride";
 import TutorialPC from "../assets/tutorial/desktop.png";
 import TutorialMobile from "../assets/tutorial/mobile.png";
 
+const width =  window.screen.width 
+
+const height = window.screen.height 
+
+const device = window.screen.width >= 500 && window.screen.height >= 500 ? "desktop" : "mobile";
+
 //step intro
 const steps = [
   {
@@ -22,15 +28,19 @@ const steps = [
     title: <h2>Tutorial</h2>,
     styles:{
       floater: {
-        width: '40vw',
+        width: device === "desktop" ? '100vmin' :'70vmin',
+        maxHeight: '70vh',
+        overflow:'scroll'
       },
       tooltip: {
-        width: '40vw',
+        width: device === "desktop" ? '100vmin' :'70vmin',
+        maxHeight: '70vh',
+        overflow:'scroll'
       }
     },
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+        <p style={{ textAlign: "center" }}>
           Selamat datang Gadjah Mada Muda!<br />
           Selamat menjelajahi Kembara Loka.<br />
           <br />
@@ -50,7 +60,7 @@ const steps = [
     title: <h4>Lihat atau Sembunyikan</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+        <p style={{ textAlign: "center" }}>
           Gadjah Mada Muda dapat menekan tombol berikut untuk menampilkan atau menyembunyikan tombol navigasi.
         </p>
       </div>
@@ -61,7 +71,7 @@ const steps = [
     title: <h4>Putar atau Jeda</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+       <p style={{ textAlign: "center" }}>
           Untuk kenyamanan dalam menjelajah dengan lagu maupun tidak, Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
@@ -73,7 +83,7 @@ const steps = [
     title: <h4>Video Profil</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+        <p style={{ textAlign: "center" }}>
           Gadjah Mada Muda dapat menekan tombol berikut untuk melihat video profil Universitas Gadjah Mada.
         </p>
       </div>
@@ -84,7 +94,7 @@ const steps = [
     title: <h4>Lokasi UGM</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+      <p style={{ textAlign: "center" }}>
           Gadjah Mada Muda dapat melihat lokasi dan rute melalui Google Maps dengan tombol berikut.
         </p>
       </div>
@@ -95,7 +105,7 @@ const steps = [
     title: <h4>Panorama</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+        <p style={{ textAlign: "center" }}>
           Untuk melihat gambar lingkungan fakultas dan fasilitas universitas, Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
       </div>
@@ -106,7 +116,7 @@ const steps = [
     title: <h4>Jamboard</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+ <p style={{ textAlign: "center" }}>
           Tombol ini digunakan untuk pergi ke laman Jamboard resmi dari Kembara
           Loka.
         </p>
@@ -138,10 +148,14 @@ const steps = [
     placement: "center",
     styles:{
       floater: {
-        width: '80vw',
+        width: device === "desktop" ? '100vmin' :'70vmin',
+        maxHeight: '70vh',
+        overflow:'scroll'
       },
       tooltip: {
-        width: '80vw',
+        width: device === "desktop" ? '100vmin' :'70vmin',
+        maxHeight: '70vh',
+        overflow:'scroll'
       }
     },
     content: (
@@ -166,7 +180,7 @@ const steps = [
     },
     content: (
       <div>
-        <p style={{ textAlign: "justify" }}>
+    <p style={{ textAlign: "center" }}>
         Selamat menjelajah, Gadjah Mada Muda.<br />
         Gunakan tempat ini sebagai wadah untuk berkreasi.<br />
         <br />
