@@ -85,6 +85,8 @@
 .splash-logo-container img {
   width: 50vw;
   pointer-events: none;
+  animation: blink 2.5s;
+  animation-iteration-count: infinite;
 }
 
 .image-360-container {
@@ -95,5 +97,17 @@
 @media only screen and (max-width: 800px) {
   .splash-logo-container img {
     width: 80vw;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
