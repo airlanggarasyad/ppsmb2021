@@ -236,6 +236,16 @@ export default function Beranda() {
                 infinite={false}
               >
                 <LiniMasa
+                mainText="Pengumuman Perpanjangan Pengerjaan Tugas"
+                mainTextColor="var(--color-white)"
+                background={BgTwo}
+                title="27 Juli 2021"
+                titleColor="var(--color-white)"
+                headerColor="var(--color-redpink)"
+                shadow="rgba(1,56,94,0.4)"
+                link="https://drive.google.com/file/d/10JRIDIaIP8fhlCsci3_5czDUuEHOHIVI/preview?usp=sharing"
+                />
+                <LiniMasa
                   mainText="Pengumuman Perpanjangan Pretest"
                   mainTextColor="var(--color-white)"
                   background={BgFive}
@@ -274,16 +284,6 @@ export default function Beranda() {
                   headerColor="var(--color-redpink)"
                   shadow="rgba(255,190,0,0.4)"
                   link="https://drive.google.com/file/d/1ttwV90neA2Mms1OQeXPypqo8BxtmYUEI/preview?usp=sharing"
-                />
-                <LiniMasa
-                mainText="Pengumuman Perpanjangan Pengerjaan Tugas"
-                mainTextColor="var(--color-white)"
-                background={BgTwo}
-                title="27 Juli 2021"
-                titleColor="var(--color-white)"
-                headerColor="var(--color-redpink)"
-                shadow="rgba(1,56,94,0.4)"
-                link="https://drive.google.com/file/d/10JRIDIaIP8fhlCsci3_5czDUuEHOHIVI/preview?usp=sharing"
                 />
               </Sliders>
             </div>
