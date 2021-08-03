@@ -29,7 +29,6 @@ export default function ExampleModal(props) {
 
               .gambarMain {
                 height: 30vh;
-                padding-bottom: 10px;
                 display:block;
                 margin:auto;
               }

@@ -36,8 +36,8 @@ const steps = [
     },
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
-          Selamat datang Gadjah Mada Muda!
+        <p style={{ textAlign: "justify", textAlignLast: "center" }}>
+          Selamat datang, Gadjah Mada Muda!
           <br />
           Selamat menjelajahi Kembara Loka.
           <br />
@@ -62,7 +62,13 @@ const steps = [
     title: <h4>Lihat atau Sembunyikan</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Gadjah Mada Muda dapat menekan tombol berikut untuk menampilkan atau
           menyembunyikan tombol navigasi.
         </p>
@@ -74,7 +80,13 @@ const steps = [
     title: <h4>Putar atau Jeda</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Untuk kenyamanan dalam menjelajah dengan lagu maupun tidak, Gadjah
           Mada Muda dapat menekan tombol berikut.
         </p>
@@ -87,7 +99,13 @@ const steps = [
     title: <h4>Video Profil</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Gadjah Mada Muda dapat menekan tombol berikut untuk melihat video
           profil Universitas Gadjah Mada.
         </p>
@@ -99,7 +117,13 @@ const steps = [
     title: <h4>Lokasi UGM</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Gadjah Mada Muda dapat melihat lokasi dan rute melalui Google Maps
           dengan tombol berikut.
         </p>
@@ -111,7 +135,13 @@ const steps = [
     title: <h4>Panorama</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Untuk melihat gambar lingkungan fakultas dan fasilitas universitas,
           Gadjah Mada Muda dapat menekan tombol berikut.
         </p>
@@ -123,7 +153,13 @@ const steps = [
     title: <h4>Jamboard</h4>,
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "justify",
+            textAlignLast: "center",
+            hyphens: "auto",
+          }}
+        >
           Tombol ini digunakan untuk pergi ke laman Jamboard resmi dari Kembara
           Loka.
         </p>
@@ -293,7 +329,7 @@ function Right(props) {
                 .panel-right{
                     position: fixed;
                     z-index:20;
-                    top: 28%;
+                    top: 25%;
                     right: 10px;
                     align-items: center;
                 }
@@ -361,6 +397,7 @@ function Right(props) {
                   className="icn"
                   src="./assets/icon/maps.webp"
                   alt="Icon Lokasi"
+                  style={{ marginBottom: "10%" }}
                 />
               </Button>
             </Row>

@@ -77,7 +77,7 @@ class GenerateImage extends React.Component {
         </Suspense>
         <OrbitControls
           autoRotate="true"
-          autoRotateSpeed={0.4}
+          autoRotateSpeed={0.3}
           minDistance={5}
           maxDistance={40}
         />
