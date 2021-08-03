@@ -9,7 +9,6 @@ import Loading from "./Loading";
 import { infografis } from "./DataInfografis";
 
 export default function ExampleModal(props) {
-  console.log(props.object.j);
   return (
     <>
       <style type="text/css">
