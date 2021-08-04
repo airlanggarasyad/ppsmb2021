@@ -21,6 +21,10 @@ export default function PlayGaleri(props) {
                 font-size: 12pt;
             }
 
+            ,judul h3 {
+              font-size: 4vmin;
+            }
+
             .video-list-galeri {
                 position: relative;
                 display: flex;
@@ -41,7 +45,8 @@ export default function PlayGaleri(props) {
             }
         
             .video-list-galeri .video-carousel {
-                width: 100%;
+                width: 90%;
+                margin: 0 auto;
                 position: relative;
                 /* left: -10vmin; */
             }
@@ -53,12 +58,15 @@ export default function PlayGaleri(props) {
             
             .slick-arrow::before {
                 color: var(--color-redpink);
+                font-size: 4vmin;
+                display: flex;
+                justify-content: center;
             }
         `}
       </style>
       <Modal
         {...props}
-        size="xl"
+        size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
@@ -73,7 +81,12 @@ export default function PlayGaleri(props) {
         <Modal.Body style={{ height: "70vh" }}>
           <div style={{ position: "relative", width: "100%", height: "100%" }}>
             <Loading />
-            <div className="video-list-galeri">{video}</div>
+            <div
+              className="video-list-galeri"
+              style={{ padding: "1.5vmin 2.5vmin" }}
+            >
+              {video}
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -150,7 +163,7 @@ var video = galeriVideos.map(function (obj) {
           slidesToShow={1}
           slidesToScroll={1}
           arrows={true}
-          dots={true}
+          dots={false}
           responsive={[
             {
               breakpoint: 1024,

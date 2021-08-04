@@ -44,7 +44,7 @@ export default function Model(props) {
   async function endCount(e) {
     end = Date.now();
     if (end - start < 200 && end - last > 1000) {
-      if (e.object.parent.name === "Play_Video") {
+      if (e.object.parent.name === "Galeri Palapa") {
         handleClickPlayGaleri();
       } else {
         handleClick(e);
@@ -1385,7 +1385,7 @@ export default function Model(props) {
             />
           </group>
           <group
-            name="Play_Video"
+            name="Galeri Palapa"
             position={[-0.09465, 1.52805, 16.72853]}
             scale={[1, 0.52087, 0.08808]}
             onPointerOver={(e) => handleHover(e)}

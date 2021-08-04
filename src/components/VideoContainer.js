@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import titleDecoration from "../assets/img/galeri/title-decoration.svg";
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 function VideoContainer(props) {
   return (
@@ -11,11 +11,11 @@ function VideoContainer(props) {
       bgcolor={props.bgcolor}
       noDecor={props.noDecor}
     >
-    <LiteYouTubeEmbed 
-      id={props.id}
-      title={props.title}
-      poster={props.nomaxres ? "hqdefault":"maxresdefault"}
-    />
+      <LiteYouTubeEmbed
+        id={props.id}
+        title={props.title}
+        poster={props.nomaxres ? "hqdefault" : "maxresdefault"}
+      />
       <div className={`title-decoration ${props.passClass}`}>
         <div className="title-text">
           <h3>{props.title}</h3>
@@ -31,11 +31,11 @@ export default VideoContainer;
 const VideoSectionContainer = styled.div`
   position: relative;
   /* display: flex; */
-  aspect-ratio: 17 / 9;
+  aspect-ratio: 16 / 9;
   overflow: clip;
 
   width: 100%;
-  border-radius: 5vmin;
+  border-radius: 0;
   margin-bottom: 20px;
   /* padding: 5%; */
 
@@ -48,8 +48,8 @@ const VideoSectionContainer = styled.div`
   }
 
   .yt-lite {
-    height:100%;
-    border-radius:5vmin;
+    height: 100%;
+    border-radius: 2.3vmin;
   }
 
   h3 {
@@ -59,7 +59,7 @@ const VideoSectionContainer = styled.div`
 
   .title-decoration {
     position: absolute;
-    display: ${props => props.noDecor ? "none" : "flex"};
+    display: ${(props) => (props.noDecor ? "none" : "flex")};
     width: 100%;
     left: 0;
     top: 0;
@@ -96,7 +96,8 @@ const VideoSectionContainer = styled.div`
     width: 10vmin;
     border-radius: 50%;
 
-    background-color: ${props => props.bgcolor ? props.bgcolor : "var(--color-blue)"};
+    background-color: ${(props) =>
+      props.bgcolor ? props.bgcolor : "var(--color-blue)"};
     opacity: 0.5;
   }
 
