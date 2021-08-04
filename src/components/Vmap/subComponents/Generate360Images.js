@@ -1,7 +1,12 @@
 import React, { Suspense } from "react";
 // import { useTransition } from "react-spring";
 // import { a } from "@react-spring/three";
-// import { BrightnessContrast } from "@react-three/postprocessing";
+import {
+  BrightnessContrast,
+  EffectComposer,
+  BlendFunction,
+  BlendMode,
+} from "@react-three/postprocessing";
 import { useTexture, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
@@ -77,10 +82,13 @@ class GenerateImage extends React.Component {
         </Suspense>
         <OrbitControls
           autoRotate="true"
-          autoRotateSpeed={0.3}
+          autoRotateSpeed={0.4}
           minDistance={5}
           maxDistance={40}
         />
+        <EffectComposer>
+          <BrightnessContrast brightness={0.3} opacity={0.1} />
+        </EffectComposer>
       </Canvas>
     );
   }

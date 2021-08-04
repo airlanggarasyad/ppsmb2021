@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Modal } from "react-bootstrap";
+
+import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "../ImageModal.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "react-bootstrap";
 import { faExpand, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+
 import ButtonWeb from "./ButtonWeb";
 import GenerateImage from "./Generate360Images.js";
 // import Loading from "./Loading";
