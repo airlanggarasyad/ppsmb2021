@@ -44,7 +44,11 @@ export default function Model(props) {
   async function endCount(e) {
     end = Date.now();
     if (end - start < 200 && end - last > 1000) {
-      handleClick(e);
+      if (e.object.parent.name === "Play_Video") {
+        handleClickPlayGaleri();
+      } else {
+        handleClick(e);
+      }
       last = Date.now();
     }
   }
@@ -58,6 +62,10 @@ export default function Model(props) {
       },
       name: e.object.parent.name,
     });
+  }
+
+  async function handleClickPlayGaleri(e) {
+    props.showModalGaleri(true);
   }
 
   async function handleHover(e) {
@@ -1380,9 +1388,6 @@ export default function Model(props) {
             name="Play_Video"
             position={[-0.09465, 1.52805, 16.72853]}
             scale={[1, 0.52087, 0.08808]}
-            onClick={() => {
-              window.open("https://www.youtube.com/user/ppsmbpalapa");
-            }}
             onPointerOver={(e) => handleHover(e)}
             onPointerOut={(e) => clearHover(e)}
           >

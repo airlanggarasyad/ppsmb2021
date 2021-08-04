@@ -17,6 +17,7 @@ import AddGrass from "./instancedComponents/AddGrass";
 import Helmet from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Infografis from "../subComponents/Infografis";
+import PlayGaleri from "../subComponents/PlayGaleri";
 import { infografis as dataInfografis } from "../subComponents/DataInfografis";
 // import SpriteIntro from "../subComponents/SpriteIntro";
 // import SpriteObject from "./SpriteObject"
@@ -35,6 +36,7 @@ const config = {
 
 export default function Vmap(props) {
   const [showInfografis, setShowInfografis] = useState(false);
+  const [showPlayGaleri, setShowPlayGaleri] = useState(false);
   const [object, setObject] = useState(false);
   const [rocket, setRocket] = useState(false);
 
@@ -57,6 +59,10 @@ export default function Vmap(props) {
         onHide={() => setShowInfografis(false)}
         object={object}
       />
+      <PlayGaleri
+        show={showPlayGaleri}
+        onHide={() => setShowPlayGaleri(false)}
+      />
       <Canvas
         camera={{ position: config.camStartPosition, fov: config.camSBAwalFov }}
       >
@@ -72,7 +78,11 @@ export default function Vmap(props) {
             {/* <SpriteObject imageSource='/images/palapa.png' position = {[-0.25, 0.55, 0.15]}/>
           <SpriteObject imageSource='/images/discord.png' position = {[0.4, 0.55, -2]}/> */}
             {/* <AddGrass /> */}
-            <Model scale={0.04} showModal={showModal} />
+            <Model
+              scale={0.04}
+              showModal={showModal}
+              showModalGaleri={setShowPlayGaleri}
+            />
             <Computer
               scale={0.75}
               position={[-5.6, 1.6, -4.6]}

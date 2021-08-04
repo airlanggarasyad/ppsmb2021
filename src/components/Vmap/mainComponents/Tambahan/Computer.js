@@ -10,7 +10,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF("/2021/computer.glb");
 
   const rocketSound = new Audio("/2021/rocketSound.mp3");
-  rocketSound.volume = 0.05;
+  rocketSound.volume = 0.2;
 
   const handleClick = (e) => {
     props.setRocket(!props.rocket);
@@ -20,8 +20,22 @@ export default function Model(props) {
     }
   };
 
+  async function handleHover(e) {
+    document.body.style.cursor = "pointer";
+  }
+
+  async function clearHover(e) {
+    document.body.style.cursor = "auto";
+  }
+
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      onPointerOver={(e) => handleHover(e)}
+      onPointerOut={(e) => clearHover(e)}
+    >
       <group
         name="Scene"
         onClick={(e) => {
