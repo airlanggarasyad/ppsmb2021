@@ -214,30 +214,21 @@ const steps = [
     placement: "center",
     styles: {
       floater: {
-        width: device === "desktop" ? "100vmin" : "70vmin",
-        maxHeight: "70vh",
-        overflow: "scroll",
+        width: '80vw',
       },
       tooltip: {
-        width: device === "desktop" ? "100vmin" : "70vmin",
-        maxHeight: "70vh",
-        overflow: "scroll",
-      },
+        width: '80vw',
+      }
     },
     content: (
       <div>
-        <p style={{ textAlign: "center" }}>
-          Selamat menjelajah, Gadjah Mada Muda.
-          <br />
-          Gunakan tempat ini sebagai wadah untuk berkreasi.
-          <br />
-          <br />
-          Credits:
-          <br />
-          - Tree, Rock, and Houses Model: Quarternius.
-          <br />
-          - Video Profil UGM : UGM Yogyakarta.
-          <br />
+    <p style={{ textAlign: "center" }}>
+        Selamat menjelajah, Gadjah Mada Muda.<br />
+        Gunakan tempat ini sebagai wadah untuk berkreasi.<br />
+        <br />
+        Credits:<br />
+        - Tree, Rock, and Houses Model: Quaternius.<br />
+        - Video Profil UGM : UGM Yogyakarta.<br />
         </p>
       </div>
     ),
