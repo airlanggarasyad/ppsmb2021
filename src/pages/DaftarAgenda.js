@@ -3,14 +3,14 @@ export const DaftarAgenda = [
         date: new Date(2021, 7, 2),
         desc: 'PPSMB UGM 2021 pada hari pertama adalah PPSMB Universitas yang akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
         title: 'Upacara Pembukaan & PPSMB Universitas Hari Pertama',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
         linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2',
     },
     {
         date: new Date(2021, 7, 3),
         title: 'PPSMB Universitas Hari Kedua',
         desc: 'PPSMB UGM 2021 pada hari kedua adalah PPSMB Universitas yang akan membahas modul "Peran Aktifku dalam Masyarakat". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+        linkElok: 'https://elok.ugm.ac.id/enrol/index.php?id=6721',
         linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3',
     },
     {
@@ -31,14 +31,14 @@ export const DaftarAgenda = [
         date: new Date(2021, 7, 6),
         title: 'PPSMB Softskills Hari Pertama',
         desc: 'PPSMB UGM 2021 pada hari kelima adalah PPSMB Softskills yang akan membahas modul "Aku Mahasiswa Adaptif dan Sukses". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+        linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6722",
         linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4',
     },
     {
         date: new Date(2021, 7, 7),
         title: 'PPSMB Softskills Hari Kedua',
         desc: 'PPSMB UGM 2021 pada hari keenam adalah PPSMB Softskills yang akan membahas modul "Aksi Nyataku untuk Masyarakat". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
-        linkElok: 'https://elok.ugm.ac.id/course/index.php?categoryid=52',
+        linkElok: 'https://elok.ugm.ac.id/enrol/index.php?id=6723',
         linkLengkap: '/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5',
     },
     {
