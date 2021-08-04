@@ -17,6 +17,10 @@ export default function Model(props) {
 
     if (!props.rocket) {
       rocketSound.play();
+
+      setTimeout(function () {
+        props.setModalKreasi(!props.modalKreasi);
+      }, 750);
     }
   };
 
@@ -29,42 +33,38 @@ export default function Model(props) {
   }
 
   return (
-    <group
-      ref={group}
-      {...props}
-      dispose={null}
-      onPointerOver={(e) => handleHover(e)}
-      onPointerOut={(e) => clearHover(e)}
-    >
-      <group
-        name="Scene"
-        onClick={(e) => {
-          handleClick(e);
-        }}
-      >
+    <>
+      <group ref={group} {...props} dispose={null}>
         <group
-          name="Layer0_001"
-          position={[0.24744, 0.29569, -0.29384]}
-          scale={[0.01, 0.01, 0.01]}
+          name="Scene"
+          onClick={(e) => {
+            handleClick(e);
+          }}
         >
-          <mesh
-            name="Mesh"
-            geometry={nodes.Mesh.geometry}
-            material={materials.dbl_Layer0_001}
-          />
-          <mesh
-            name="Mesh_1"
-            geometry={nodes.Mesh_1.geometry}
-            material={materials["Material.001"]}
-          />
-          <mesh
-            name="Mesh_2"
-            geometry={nodes.Mesh_2.geometry}
-            material={materials["Material.002"]}
-          />
+          <group
+            name="Layer0_001"
+            position={[0.24744, 0.29569, -0.29384]}
+            scale={[0.01, 0.01, 0.01]}
+          >
+            <mesh
+              name="Mesh"
+              geometry={nodes.Mesh.geometry}
+              material={materials.dbl_Layer0_001}
+            />
+            <mesh
+              name="Mesh_1"
+              geometry={nodes.Mesh_1.geometry}
+              material={materials["Material.001"]}
+            />
+            <mesh
+              name="Mesh_2"
+              geometry={nodes.Mesh_2.geometry}
+              material={materials["Material.002"]}
+            />
+          </group>
         </group>
       </group>
-    </group>
+    </>
   );
 }
 

@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 400;
     }
 
+    h6 {
+        font-weight: bold;
+    }
+
 
     /*----------------------*\
               Utility

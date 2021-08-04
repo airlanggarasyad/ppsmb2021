@@ -12,6 +12,7 @@ import * as THREE from "three";
 import Model from "./Model-Transformed";
 import Computer from "./Tambahan/Computer";
 import Rocket from "./Tambahan/Rocket";
+import KreasiModal from "./Tambahan/KreasiModal";
 import Background from "../subComponents/Background";
 import AddGrass from "./instancedComponents/AddGrass";
 import Helmet from "react-helmet";
@@ -39,6 +40,7 @@ export default function Vmap(props) {
   const [showPlayGaleri, setShowPlayGaleri] = useState(false);
   const [object, setObject] = useState(false);
   const [rocket, setRocket] = useState(false);
+  const [modalKreasi, setModalKreasi] = useState(false);
 
   const showModal = (e) => {
     const data = dataInfografis.find((obj) => obj.objectName === e.name);
@@ -59,10 +61,7 @@ export default function Vmap(props) {
         onHide={() => setShowInfografis(false)}
         object={object}
       />
-      <PlayGaleri
-        show={showPlayGaleri}
-        onHide={() => setShowPlayGaleri(false)}
-      />
+      <KreasiModal show={modalKreasi} onHide={() => setModalKreasi(false)} />
       <Canvas
         camera={{ position: config.camStartPosition, fov: config.camSBAwalFov }}
       >
@@ -89,12 +88,16 @@ export default function Vmap(props) {
               rotation={[0, 1, 0]}
               rocket={rocket}
               setRocket={setRocket}
+              modalKreasi={modalKreasi}
+              setModalKreasi={setModalKreasi}
+              style={{ cursor: "pointer" }}
             />
             <Rocket
               scale={0.75}
               position={[-5.825, 1.6, -4.4]}
               rocket={rocket}
             />
+
             <Controls
               storyboard={props.storyboard}
               modalShow={showInfografis}

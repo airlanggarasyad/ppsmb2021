@@ -153,8 +153,10 @@ export default function Agenda({ match }) {
             <Card day="six"></Card>
           </a>
           <a
-            onClick={openModal}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
+            href="https://elok.ugm.ac.id/enrol/index.php?id=6668"
           >
             <Card day="seven"></Card>
           </a>
