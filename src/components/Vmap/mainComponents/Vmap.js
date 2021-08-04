@@ -61,6 +61,10 @@ export default function Vmap(props) {
         onHide={() => setShowInfografis(false)}
         object={object}
       />
+      <PlayGaleri
+        show={showPlayGaleri}
+        onHide={() => setShowPlayGaleri(false)}
+      />
       <KreasiModal show={modalKreasi} onHide={() => setModalKreasi(false)} />
       <Canvas
         camera={{ position: config.camStartPosition, fov: config.camSBAwalFov }}
