@@ -120,6 +120,11 @@ var galeriVideos = [
       { id: 4, videoUrl: "rFbG09dk54k" },
     ],
   },
+  {
+    id: 5,
+    judul: "Di Balik Himne Gadjah Mada",
+    videoList: [{ id: 1, videoUrl: "DsCmGuCOhm0" }],
+  },
 ];
 
 var video = galeriVideos.map(function (obj) {
