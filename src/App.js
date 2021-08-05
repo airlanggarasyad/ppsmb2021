@@ -33,7 +33,7 @@ function ComponentHandler(){
 
   useEffect(() => {
     setPathname(location.pathname)
-  }, location)
+  }, [location.pathname])
 
   return (
     <>
