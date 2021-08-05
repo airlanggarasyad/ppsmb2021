@@ -72,6 +72,7 @@ export default class Navbar extends Component {
                     <li key={index}>
                       <Link
                         className={"nav-links block"}
+                        onClick={this.openModal}
                         relative
                       >
                         {item.title}
