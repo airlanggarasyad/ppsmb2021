@@ -101,7 +101,7 @@ export default function ExampleModal(props) {
                 <div className="image-txt-container">
                   <img
                     className="fotoFakultas"
-                    src={"/2021" + props.object.gambarFakultas}
+                    src={props.object.gambarFakultas}
                     alt=""
                   />
                   <div className="paragraph-container">
@@ -131,7 +131,7 @@ export default function ExampleModal(props) {
               <div>
                 <img
                   className="gambarMain"
-                  src={"/2021" + props.object.gambarFakultas}
+                  src={props.object.gambarFakultas}
                   alt=""
                 />
                 <p style={{ textAlign: "justify" }}>{props.object.narasi}</p>

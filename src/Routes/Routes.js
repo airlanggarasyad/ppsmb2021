@@ -11,6 +11,8 @@ import Materi from "../pages/Agenda/Materi";
 import Universitas from "../pages/Agenda/Universitas";
 import Fakultas from "../pages/Agenda/Fakultas";
 import Ketentuan from "../pages/Agenda/KetentuanPenugasan";
+import Artikel from "../pages/Artikel";
+import ArtikelPage from "../components/Artikel/ArtikelPage"
 //Modul
 import Modul1 from "../pages/Agenda/Modul/Modul1";
 import Modul2 from "../pages/Agenda/Modul/Modul2";
@@ -99,6 +101,10 @@ export default function Routes() {
         path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5"
         component={Modul5}
       />
+
+      <Route exact path="/2021/redaksi-palapa" component={Artikel} />
+
+      <Route exact path="/2021/redaksi-palapa/kembaraloka" render={(props) => <ArtikelPage {...props} day="one"/>} />
 
       <Route component={error} />
     </Switch>

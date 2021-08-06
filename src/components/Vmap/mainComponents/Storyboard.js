@@ -155,6 +155,7 @@ export default function Storyboard(props) {
             `}
       </style>
 
+      {!gone && (
       <div onContextMenu={(e) => e.preventDefault()}>
         {/* Corner IMG */}
         <div className="image-corner noselect">
@@ -177,7 +178,6 @@ export default function Storyboard(props) {
         </div>
 
         {/* Main Storyboard */}
-        {!gone && (
           <Fade when={!props.freeControl} duration={2000}>
             <div className="storyboard">
               <Container className="text-center apaaja">
@@ -315,8 +315,8 @@ export default function Storyboard(props) {
               </Container>
             </div>
           </Fade>
-        )}
       </div>
+      )}
     </>
   );
 }
