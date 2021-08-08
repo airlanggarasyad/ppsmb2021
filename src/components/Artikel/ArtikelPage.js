@@ -51,9 +51,7 @@ function ArtikelPage(props) {
       <br />
       <br />
       Selain fitur-fitur yang menunjang kebermanfaatan peta virtual UGM,
-      kedepannya Kembara Loka akan berfungsi sebagai wadah bagi Gamada untuk
-      dapat mengekspresikan hasil kreasi berupa action plan yang akan
-      ditampilkan di akhir closing ceremony PPSMB UGM 2021. Dengan adanya peta
+      kedepannya Kembara Loka akan mendapat beberapa pembaharuan fitur. Dengan adanya peta
       virtual yang dikemas secara lebih menarik ini, harapannya Gamada dapat
       memanfaatkan berbagai macam fitur untuk dapat menjelajahi UGM secara
       virtual beserta fasilitas dan informasi yang ada di dalamnya. Walaupun
