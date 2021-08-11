@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/2021/static/css/main.c0108ece.chunk.css",
-    "main.js": "/2021/static/js/main.6a708ace.chunk.js",
+    "main.js": "/2021/static/js/main.6f5c25dd.chunk.js",
     "runtime-main.js": "/2021/static/js/runtime-main.2a885090.js",
     "static/css/2.7eda68fc.chunk.css": "/2021/static/css/2.7eda68fc.chunk.css",
-    "static/js/2.6c918c70.chunk.js": "/2021/static/js/2.6c918c70.chunk.js",
+    "static/js/2.e5582a9e.chunk.js": "/2021/static/js/2.e5582a9e.chunk.js",
     "index.html": "/2021/index.html",
-    "static/js/2.6c918c70.chunk.js.LICENSE.txt": "/2021/static/js/2.6c918c70.chunk.js.LICENSE.txt",
+    "static/js/2.e5582a9e.chunk.js.LICENSE.txt": "/2021/static/js/2.e5582a9e.chunk.js.LICENSE.txt",
     "static/media/1 Fakultas Geografi.mp3": "/2021/static/media/1 Fakultas Geografi.f5f6eeeb.mp3",
     "static/media/10 Hukum.mp3": "/2021/static/media/10 Hukum.ad14823c.mp3",
     "static/media/11 Biologi.mp3": "/2021/static/media/11 Biologi.e42bdbc6.mp3",
@@ -231,6 +231,7 @@
     "static/media/bio taun lalu (1).webp": "/2021/static/media/bio taun lalu (1).a99e033f.webp",
     "static/media/bio taun lalu (2).webp": "/2021/static/media/bio taun lalu (2).01917422.webp",
     "static/media/biologi.jpg": "/2021/static/media/biologi.c0581a6c.jpg",
+    "static/media/bts-rubikkarsa.webp": "/2021/static/media/bts-rubikkarsa.141b06ab.webp",
     "static/media/corner-bulk1.3a516b56.webp": "/2021/static/media/corner-bulk1.3a516b56.webp",
     "static/media/corner-bulk2.4facdaa6.webp": "/2021/static/media/corner-bulk2.4facdaa6.webp",
     "static/media/corner-lean1.656ca4ac.webp": "/2021/static/media/corner-lean1.656ca4ac.webp",
@@ -296,6 +297,7 @@
     "static/media/psikologi.jpg": "/2021/static/media/psikologi.7e989670.jpg",
     "static/media/red-stick.eca0bce8.webp": "/2021/static/media/red-stick.eca0bce8.webp",
     "static/media/right-bottom.b7e4d317.webp": "/2021/static/media/right-bottom.b7e4d317.webp",
+    "static/media/rubikkarsa.webp": "/2021/static/media/rubikkarsa.558d5a4d.webp",
     "static/media/six.35a567f5.png": "/2021/static/media/six.35a567f5.png",
     "static/media/six.ec461cac.png": "/2021/static/media/six.ec461cac.png",
     "static/media/slick-theme.css": "/2021/static/media/slick.c94f7671.ttf",
@@ -318,8 +320,8 @@
   "entrypoints": [
     "static/js/runtime-main.2a885090.js",
     "static/css/2.7eda68fc.chunk.css",
-    "static/js/2.6c918c70.chunk.js",
+    "static/js/2.e5582a9e.chunk.js",
     "static/css/main.c0108ece.chunk.css",
-    "static/js/main.6a708ace.chunk.js"
+    "static/js/main.6f5c25dd.chunk.js"
   ]
 }
