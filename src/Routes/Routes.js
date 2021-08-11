@@ -105,6 +105,7 @@ export default function Routes() {
       <Route exact path="/2021/redaksi-palapa" component={Artikel} />
 
       <Route exact path="/2021/redaksi-palapa/kembaraloka" render={(props) => <ArtikelPage {...props} day="one"/>} />
+      <Route exact path="/2021/redaksi-palapa/rubik-karsa" render={(props) => <ArtikelPage {...props} day="two"/>} />
 
       <Route component={error} />
     </Switch>
