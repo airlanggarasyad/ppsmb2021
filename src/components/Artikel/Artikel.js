@@ -111,6 +111,12 @@ export default function Agenda({ match }) {
             >
               <Card day="one"></Card>
             </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/2021/redaksi-palapa/rubik-karsa"
+            >
+              <Card day="two"></Card>
+            </Link>
           </div>
         </Fade>
       </div>

@@ -13,7 +13,7 @@ export default function Card(props) {
     day === "one"
       ? "Kembara Loka"
       : day === "two"
-      ? "PPSMB Soft Skill"
+      ? "Rubik Karsa"
       : day === "three"
       ? "PPSMB Fakultas"
       : "PPSMB"
