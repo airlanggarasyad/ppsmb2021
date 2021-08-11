@@ -65,86 +65,99 @@ function ArtikelPage(props) {
       dihadapi, Gamada tetap dapat mengenal lebih dekat universitas kebanggaan
       dengan menjelajahi peta virtual Kembara Loka.
     </span>,
-    <span>
-      Setiap tahunnya, rangkaian kegiatan Upacara Pembukaan PPSMB UGM adalah hal
-      yang paling dinantikan dan banyak menarik perhatian, tidak hanya bagi
-      Gadjah Mada Muda tetapi juga masyarakat luas. Kejutan yang dikemas dengan
-      menarik dan mengedepankan kreativitas tiap tahunnya tentu memiliki konsep,
-      alur cerita, dan makna tersendiri. Panitia PPSMB UGM terus berinovasi
-      dalam menyajikan upacara penyambutan yang berkesan sehingga akan selalu
-      diingat bagi Gadjah Mada Muda. Tidak melupakan fakta pada tahun 2020,
-      panitia PPSMB UGM 2020 bahkan berhasil mencetak rekor Museum Rekor
-      Indonesia (MURI) melalui penampilan formasinya yakni Formasi Pelita Gadjah
-      Mada. Rangkaian lampu yang ditampilkan berhasil mencetak rekor dengan
-      kolase digital terbanyak.
-      <br />
-      <br />
-      Tahun ini, Formasi Rubik Karsa merupakan salah satu bentuk kreasi panitia
-      sebagai jawaban dari kejutan untuk Gadjah Mada Muda di Upacara Pembukaan
-      PPSMB UGM 2021. Formasi Rubik Karsa ini terinspirasi dari suatu permainan
-      daring kontemporer yaitu <i>Minecraft</i>. Selain itu, gagasan akan konsep
-      balok yang bergerak ini berasal ide liar yang berujung pada suatu kreasi
-      spektakuler. Seperti yang telah disaksikan bersama, formasi tahun ini
-      memaparkan suatu alur cerita penuh pesan yang mengajak Gadjah Mada Muda
-      agar terus berani berinovasi dan menjadi manusia yang kreatif, unggul, dan
-      berdaya cipta tinggi. Sesuai dengan tema besar PPSMB UGM 2021 itu sendiri
-      yaitu “Ragam Kreasi UGM Pancarkan Pesona Pertiwi”.
-      <br />
-      <br />
-      Formasi Rubik Karsa ini merupakan hasil kreasi kolaboratif dari beberapa
-      divisi kepanitiaan PPSMB UGM 2021 diantaranya, Acara, IT, Perlengkapan,
-      dan DDD. Dalam persiapan teknis maupun nonteknis, terdapat proses panjang
-      dengan kompleksitas dibaliknya. Divisi Perlengkapan sebagai penyedia dan
-      tim yang merangkai perangkat keras dalam proyek ini memiliki banyak
-      kendala dan cerita tersendiri dalam prosesnya. Berbagai macam kendala
-      berhasil dilewati oleh panitia, salah satunya proses akurasi dalam
-      pembuatan bingkai berukuran 2,5 x 2,75 meter yang disesuaikan dengan
-      ukuran dari setiap balok yaitu 10 cm x 10 cm berjumlah 400 buah yang
-      diproduksi secara <i>handmade</i> oleh divisi perlengkapan sendiri. Selain
-      itu, kelistrikan dalam rangkaian perangkat Formasi Rubik Karsa pernah
-      mengalami kerusakan pada saat uji coba, “Beberapa <i>serv</i>o dan salah
-      satu <i>power supply</i>
-      yang digunakan untuk membuat balok tersebut dapat bergerak dinamis
-      mengalami kerusakan, sehingga proses pembuatan formasi ini sempat
-      terhambat. Namun, sekali lagi hal tersebut dapat ditangani dengan baik.”
-      terang Dendi, salah satu Staf divisi Perlengkapan.
-      <br />
-      <br />
-      Tidak terbatas hanya pada satu divisi, kendala dan rintangan juga muncul
-      di divisi-divisi lain seperti IT dan DDD. Pada proses <i>coding</i>, “Tim
-      IT, melakukan <i>image processing</i> untuk pengubahan gambar yang
-      sebelumnya telah disiapkan oleh divisi acara agar dapat menjadi matriks
-      dan selanjutnya
-      <i>coding</i> di-<i>input</i> ke Arduino yang bekerja untuk pengaturan
-      motor servo.” ujar Angga yang merupakan staf divisi IT. Proses peng-
-      <i>coding</i>-an juga mengalami beberapa kendala yang harus dilewati hal
-      tersebut berimbas pula pada divisi DDD yang juga perlu menyesuaikan{" "}
-      <i>editing</i>-nya. Selain itu, pengaturan pencahayaan yang tepat dari
-      berbagai arah yang sangat menentukan efek 3D dari formasi tersebut juga
-      menjadi tantangan tersendiri bagi panitia. Namun, melihat hasil kreasi
-      luar biasa Rubik Karsa tersebut, tentu segala kendala dan rintangan yang
-      telah dilewati berhasil menjadi pelajaran dan pengalaman luar biasa bagi
-      setiap panitia yang terlibat.
-      <br />
-      <br />
-      Alur cerita Formasi Rubik Karsa sendiri diawali dengan animasi yang
-      menggambarkan perubahan dari zaman dahulu hingga saat ini yang menunjukan
-      bahwa aspek kreativitas di Indonesia masih berada pada titik yang cukup
-      rendah. Formasi Rubik Karsa menyampaikan pesan bahwa Universitas Gadjah
-      Mada memiliki andil dalam menangani isu tersebut. Selain itu, juga
-      ditampilkan bukti-bukti penting bahwa UGM merupakan tempat yang tepat
-      untuk menyalurkan segala minat maupun bakat yang dimiliki oleh generasi
-      emas di Indonesia dan siap untuk menjadi perguruan tinggi yang menyediakan
-      sarana dan prasarana untuk membentuk civitas akademika yang dapat
-      berkreasi demi kemajuan bangsa. Pihak panitia berharap setelah menonton
-      penampilan Formasi Rubik Karsa, Gadjah Mada Muda atau bahkan masyarakat
-      secara luas dapat terdorong untuk menjadi individu yang lebih kreatif dan
-      berani untuk berekspresi melalui karya dan ciptaannya.
-    </span>,
+    <div>
+      <span>
+        Setiap tahunnya, rangkaian kegiatan Upacara Pembukaan PPSMB UGM adalah
+        hal yang paling dinantikan dan banyak menarik perhatian, tidak hanya
+        bagi Gadjah Mada Muda tetapi juga masyarakat luas. Kejutan yang dikemas
+        dengan menarik dan mengedepankan kreativitas tiap tahunnya tentu
+        memiliki konsep, alur cerita, dan makna tersendiri. Panitia PPSMB UGM
+        terus berinovasi dalam menyajikan upacara penyambutan yang berkesan
+        sehingga akan selalu diingat bagi Gadjah Mada Muda. Tidak melupakan
+        fakta pada tahun 2020, panitia PPSMB UGM 2020 bahkan berhasil mencetak
+        rekor Museum Rekor Indonesia (MURI) melalui penampilan formasinya yakni
+        Formasi Pelita Gadjah Mada. Rangkaian lampu yang ditampilkan berhasil
+        mencetak rekor dengan kolase digital terbanyak.
+        <br />
+        <br />
+        Tahun ini, Formasi Rubik Karsa merupakan salah satu bentuk kreasi
+        panitia sebagai jawaban dari kejutan untuk Gadjah Mada Muda di Upacara
+        Pembukaan PPSMB UGM 2021. Formasi Rubik Karsa ini terinspirasi dari
+        suatu permainan daring kontemporer yaitu <i>Minecraft</i>. Selain itu,
+        gagasan akan konsep balok yang bergerak ini berasal ide liar yang
+        berujung pada suatu kreasi spektakuler. Seperti yang telah disaksikan
+        bersama, formasi tahun ini memaparkan suatu alur cerita penuh pesan yang
+        mengajak Gadjah Mada Muda agar terus berani berinovasi dan menjadi
+        manusia yang kreatif, unggul, dan berdaya cipta tinggi. Sesuai dengan
+        tema besar PPSMB UGM 2021 itu sendiri yaitu “Ragam Kreasi UGM Pancarkan
+        Pesona Pertiwi”.
+        <br />
+        <br />
+        Formasi Rubik Karsa ini merupakan hasil kreasi kolaboratif dari beberapa
+        divisi kepanitiaan PPSMB UGM 2021 diantaranya, Acara, IT, Perlengkapan,
+        dan DDD. Dalam persiapan teknis maupun nonteknis, terdapat proses
+        panjang dengan kompleksitas dibaliknya. Divisi Perlengkapan sebagai
+        penyedia dan tim yang merangkai perangkat keras dalam proyek ini
+        memiliki banyak kendala dan cerita tersendiri dalam prosesnya. Berbagai
+        macam kendala berhasil dilewati oleh panitia, salah satunya proses
+        akurasi dalam pembuatan bingkai berukuran 2,5 x 2,75 meter yang
+        disesuaikan dengan ukuran dari setiap balok yaitu 10 cm x 10 cm
+        berjumlah 400 buah yang diproduksi secara <i>handmade</i> oleh divisi
+        perlengkapan sendiri. Selain itu, kelistrikan dalam rangkaian perangkat
+        Formasi Rubik Karsa pernah mengalami kerusakan pada saat uji coba,
+        “Beberapa <i>servo</i> dan salah satu <i>power supply</i>
+        yang digunakan untuk membuat balok tersebut dapat bergerak dinamis
+        mengalami kerusakan, sehingga proses pembuatan formasi ini sempat
+        terhambat. Namun, sekali lagi hal tersebut dapat ditangani dengan baik.”
+        terang Dendi, salah satu Staf divisi Perlengkapan.
+        <br />
+      </span>
+      <img
+        className="image-inside"
+        src={
+          require("../../assets/img/redaksi-palapa/bts-rubikkarsa.webp").default
+        }
+        alt=""
+      />
+      <span>
+        <br />
+        Tidak terbatas hanya pada satu divisi, kendala dan rintangan juga muncul
+        di divisi-divisi lain seperti IT dan DDD. Pada proses <i>coding</i>,
+        “Tim IT, melakukan <i>image processing</i> untuk pengubahan gambar yang
+        sebelumnya telah disiapkan oleh divisi acara agar dapat menjadi matriks
+        dan selanjutnya
+        <i>coding</i> di-<i>input</i> ke Arduino yang bekerja untuk pengaturan
+        motor servo.” ujar Angga yang merupakan staf divisi IT. Proses peng-
+        <i>coding</i>-an juga mengalami beberapa kendala yang harus dilewati hal
+        tersebut berimbas pula pada divisi DDD yang juga perlu menyesuaikan{" "}
+        <i>editing</i>-nya. Selain itu, pengaturan pencahayaan yang tepat dari
+        berbagai arah yang sangat menentukan efek 3D dari formasi tersebut juga
+        menjadi tantangan tersendiri bagi panitia. Namun, melihat hasil kreasi
+        luar biasa Rubik Karsa tersebut, tentu segala kendala dan rintangan yang
+        telah dilewati berhasil menjadi pelajaran dan pengalaman luar biasa bagi
+        setiap panitia yang terlibat.
+        <br />
+        <br />
+        Alur cerita Formasi Rubik Karsa sendiri diawali dengan animasi yang
+        menggambarkan perubahan dari zaman dahulu hingga saat ini yang
+        menunjukan bahwa aspek kreativitas di Indonesia masih berada pada titik
+        yang cukup rendah. Formasi Rubik Karsa menyampaikan pesan bahwa
+        Universitas Gadjah Mada memiliki andil dalam menangani isu tersebut.
+        Selain itu, juga ditampilkan bukti-bukti penting bahwa UGM merupakan
+        tempat yang tepat untuk menyalurkan segala minat maupun bakat yang
+        dimiliki oleh generasi emas di Indonesia dan siap untuk menjadi
+        perguruan tinggi yang menyediakan sarana dan prasarana untuk membentuk
+        civitas akademika yang dapat berkreasi demi kemajuan bangsa. Pihak
+        panitia berharap setelah menonton penampilan Formasi Rubik Karsa, Gadjah
+        Mada Muda atau bahkan masyarakat secara luas dapat terdorong untuk
+        menjadi individu yang lebih kreatif dan berani untuk berekspresi melalui
+        karya dan ciptaannya.
+      </span>
+    </div>,
   ];
   const photo = [
-    require("../../assets/img/redaksi-palapa/kembaraloka.webp").default,
-    require("../../assets/img/redaksi-palapa/rubikkarsa.webp").default,
+    [require("../../assets/img/redaksi-palapa/kembaraloka.webp").default],
+    [require("../../assets/img/redaksi-palapa/rubikkarsa.webp").default],
   ];
 
   const writer = ["Nabila Maharani Naumi", "Herera Aribah Respati"];
@@ -158,7 +171,7 @@ function ArtikelPage(props) {
   } else if (props.day === "two") {
     selectedTitle = title[1];
     selectedText = text[1];
-    selectedPhoto = photo[1];
+    selectedPhoto = photo[1][0];
     selectedWriter = writer[1];
   }
 
@@ -224,6 +237,10 @@ const ArtikelPageStyle = styled.div`
     text-align: justify;
     font-size: calc(0.5rem + 2.2vmin);
     line-height: 1.8;
+  }
+
+  .image-inside {
+    width: 100%;
   }
 
   @media (min-width: 992px) {
