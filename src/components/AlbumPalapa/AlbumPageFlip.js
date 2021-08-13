@@ -464,7 +464,7 @@ const Page = React.forwardRef((props, ref) => {
           position: absolute;
           z-index: 9000;
           top: 50%;
-          left: 5%;
+          left: 7%;
           transform: translateY(-50%);
         }
 
@@ -553,8 +553,7 @@ function AlbumPageFlip() {
         mobileScrollSupport={true}
         onFlip={onFlip}
         showCover={true}
-        // useMouseEvents={false}
-        disableFlipByClick={true}
+        useMouseEvents={false}
         className="album-palapa"
       >
         <PageCover
