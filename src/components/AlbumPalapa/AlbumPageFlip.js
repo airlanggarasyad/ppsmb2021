@@ -6,7 +6,6 @@ import { albumPhotoList } from "./AlbumPhotoList";
 
 const PageCover = React.forwardRef((props, ref) => {
   const handleFlip = () => {
-    props.setOrientation(props.flip.pageFlip().getOrientation());
     props.flip.pageFlip().flipNext();
   };
 
@@ -535,6 +534,10 @@ function AlbumPageFlip() {
   }
   // console.log(pageList);
 
+  const onFlip = () => {
+    setOrientation(flipRef.current.pageFlip().getOrientation());
+  };
+
   return (
     <>
       <HTMLFlipBook
@@ -548,8 +551,10 @@ function AlbumPageFlip() {
         maxHeight={1533}
         maxShadowOpacity={0.5}
         mobileScrollSupport={true}
+        onFlip={onFlip}
         showCover={true}
-        useMouseEvents={false}
+        // useMouseEvents={false}
+        disableFlipByClick={true}
         className="album-palapa"
       >
         <PageCover
