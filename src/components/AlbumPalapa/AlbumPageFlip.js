@@ -4,6 +4,7 @@ import AlbumPage from "./AlbumPage";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { albumPhotoList } from "./AlbumPhotoList";
 import styled from "styled-components";
+
 const SlickArrowLeft = ({ ...props }) => (
   <div {...props} className={"slick-prev"} type="button">
     <svg
@@ -497,8 +498,8 @@ const Page = React.forwardRef((props, ref) => {
       </FlipButton> 
       }
       <BookNav>
-          <input placeHolder={props.count + 1} type="number" id="currentPage" name="currentPage" min="0" max="100"/>
-          <span>&nbsp; of {props.pageMax + 1}</span>
+          <span id="currentPage" name="currentPage">{props.count + 1}</span>
+          <span>&nbsp; dari {props.pageMax + 1}</span>
       </BookNav>
     </div>
     </>
@@ -545,6 +546,7 @@ function AlbumPageFlip() {
         maxShadowOpacity={0.5}
         mobileScrollSupport={true}
         showCover={true}
+        swipeDistance={10}
         disableFlipByClick={true}
         className="album-palapa"
       >
