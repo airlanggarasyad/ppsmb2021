@@ -9,9 +9,6 @@ export const albumPhotoList = [
     src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/3.webp"}`,
   },
   {
-    src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/4.webp"}`,
-  },
-  {
     src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/5.webp"}`,
   },
   {
@@ -40,9 +37,6 @@ export const albumPhotoList = [
   },
   {
     src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/15.webp"}`,
-  },
-  {
-    src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/16.webp"}`,
   },
   {
     src: `${process.env.PUBLIC_URL + "/assets/img/album-palapa/17.webp"}`,
