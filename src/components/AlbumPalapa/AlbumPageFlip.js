@@ -114,9 +114,9 @@ const PageCover = React.forwardRef((props, ref) => {
             Masyarakat
           </h3>
         </div>
-        <BookNav onClick={handleFlip}>
+        <FlipButton onClick={handleFlip}>
           <SlickArrowRight/>
-        </BookNav>
+        </FlipButton>
         <div className="lower-ornament-cover">
           <svg
             width="auto"
@@ -447,35 +447,13 @@ const LastPage = React.forwardRef((props, ref) => {
 
   return (
     <div ref={ref}>
-      <style>
-        {`
-          .last{
-            height: 100%;
-            width: 100%;
-          }
-
-          .contentLast{
-            padding: 5%;
-            text-align: center;
-          }
-
-          .flipButtonLast{
-            position: absolute;
-            z-index: 9000;
-            top: 50%;
-            left: 5%;
-            transform: translate(0, -50%);
-            border-radius: 50%;
-          }
-        `}
-      </style>
       <div className="last pattern-bg-darkblue pattern-bg-book">
         <div className="contentLast">
           <h2>{props.children}</h2>
         </div>
-        <BookNav onClick={handleFlip}>
+        <FlipButton onClick={handleFlip}>
           <SlickArrowLeft/>
-        </BookNav>
+        </FlipButton>
       </div>
     </div>
   );
@@ -491,7 +469,6 @@ const Page = React.forwardRef((props, ref) => {
   const handleFlipNext = () => {
     props.flip.pageFlip().flipNext();
   };
-
   const handleFlip = () => {
     if (props.count % 2 === 0) {
       handleFlipPrev();
@@ -503,42 +480,26 @@ const Page = React.forwardRef((props, ref) => {
   return (
     <>
     <div ref={ref}>
-      <style>
-        {`
-        .flipButton{
-          border-radius: 50%;
-        }
-
-        .flipButtonLeft{
-          position: absolute;
-          z-index: 9000;
-          top: 50%;
-          left: 5%;
-          transform: translateY(-50%);
-        }
-
-        .flipButtonRight{
-          position: absolute;
-          z-index: 9000;
-          top: 50%;
-          right: 2%;
-          transform: translateY(-50%);
-        }
-      `}
-      </style>
       <SimpleReactLightbox>
         <AlbumPage {...props} />
       </SimpleReactLightbox>
-      {(props.orientation === 'landscape') ?       
-      <BookNav>
-        {(props.count % 2 === 0 ) ? <SlickArrowLeft onClick={handleFlip}/> : <SlickArrowRight onClick={handleFlip}/>}
-      </BookNav> : 
-      <BookNav>
+      {(props.orientation === 'landscape') ? 
+
+      <FlipButton>
+        {(props.count % 2 === 0 ) ? 
+        <SlickArrowLeft onClick={handleFlip}/> : 
+        <SlickArrowRight onClick={handleFlip}/>}
+      </FlipButton> : 
+      
+      <FlipButton>
         <SlickArrowLeft onClick={handleFlipPrev}/>
         <SlickArrowRight onClick={handleFlipNext}/>
-      </BookNav> 
+      </FlipButton> 
       }
-
+      <BookNav>
+          <input placeHolder={props.count + 1} type="number" id="currentPage" name="currentPage" min="0" max="100"/>
+          <span>&nbsp; of {props.pageMax + 1}</span>
+      </BookNav>
     </div>
     </>
   );
@@ -584,7 +545,7 @@ function AlbumPageFlip() {
         maxShadowOpacity={0.5}
         mobileScrollSupport={true}
         showCover={true}
-        useMouseEvents={false}
+        disableFlipByClick={true}
         className="album-palapa"
       >
         <PageCover
@@ -599,6 +560,22 @@ function AlbumPageFlip() {
 }
 
 const BookNav = styled.div`
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+
+    input{
+      text-align: center;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+`
+const FlipButton = styled.div`
    position: absolute;
     top: 50%;
     width: 100%;
