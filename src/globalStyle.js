@@ -125,6 +125,10 @@ const GlobalStyle = createGlobalStyle`
         padding: calc(var(--spacer) * 3);
     }
 
+    .mirror-y {
+        transform: scale(-1, 1);
+    }
+
 
 
     /*----------------------*\
@@ -160,6 +164,10 @@ const GlobalStyle = createGlobalStyle`
     \*----------------------*/
     .pattern-bg {
         background-size: 30%;
+    }
+
+    .pattern-bg-book {
+        background-size: 40%;
     }
 
     .pattern-bg-white {

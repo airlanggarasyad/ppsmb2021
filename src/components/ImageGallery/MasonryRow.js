@@ -2,19 +2,18 @@ import React, { useCallback } from "react";
 import Gallery from "react-photo-gallery";
 
 import { srcPhotos, srlPhotos } from "./PhotoList";
-import {SRLWrapper, useLightbox} from 'simple-react-lightbox'
+import { SRLWrapper, useLightbox } from "simple-react-lightbox";
 import Fade from "react-reveal/Fade";
-import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 export default function MasonryRow() {
-  const { openLightbox, closeLightbox } = useLightbox()
+  const { openLightbox, closeLightbox } = useLightbox();
 
   const options = {
     settings: {
       autoplaySpeed: 4000,
       transitionSpeed: 500,
       hideControlsAfter: 1000,
-      slideAnimationType: 'both',
+      slideAnimationType: "both",
       slideTransitionSpeed: 0.9,
     },
     buttons: {
@@ -31,19 +30,24 @@ export default function MasonryRow() {
     },
     thumbnails: {
       showThumbnails: false,
-    }
+    },
   };
 
   const imageRenderer = useCallback(({ index, left, top, key, photo }) => (
-      <Fade>
-        <img alt={photo.alt} {...photo} onClick={() => openLightbox(index)} style={{padding: "0.5vmin", cursor: "pointer"}}/>
-      </Fade>
+    <Fade>
+      <img
+        alt={photo.alt}
+        {...photo}
+        onClick={() => openLightbox(index)}
+        style={{ padding: "0.5vmin", cursor: "pointer" }}
+      />
+    </Fade>
   ));
 
   return (
     <>
       <Gallery photos={srcPhotos} renderImage={imageRenderer}></Gallery>
-      <SRLWrapper elements={srlPhotos} options={options}/>
+      <SRLWrapper elements={srlPhotos} options={options} />
     </>
   );
 }
