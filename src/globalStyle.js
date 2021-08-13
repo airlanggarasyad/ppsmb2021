@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import Kollektif from "./assets/fonts/Kollektif.woff";
 import IndonesiaScript from "./assets/fonts/Indonesia-Script.woff";
 import patternBGWhite from "./assets/img/pattern-bg-white.webp";
+import patternBGDarkBlue from "./assets/img/pattern-bg-darkblue.webp";
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -172,6 +173,11 @@ const GlobalStyle = createGlobalStyle`
 
     .pattern-bg-white {
         background-image: url(${patternBGWhite});
+        background-repeat: repeat;
+    }
+
+    .pattern-bg-darkblue {
+        background-image: url(${patternBGDarkBlue});
         background-repeat: repeat;
     }
 

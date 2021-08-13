@@ -178,26 +178,25 @@ export default class Galeri extends Component {
             </div>
           </section>
 
+          <section className="album">
+            <AlbumPageFlip />
+          </section>
+
           <section className="photos">
             <div className="year-tab">
-              <h2 className="year ppsmb-darkblue">
+              <h2 className="year ppsmb-darkblue font-bold">
                 PPSMB
-                <span className="ppsmb-blue"> 2</span>
-                <span className="ppsmb-redpink">0</span>
-                <span className="ppsmb-orange">2</span>
-                <span className="ppsmb-yellow">0</span>
+                <span className="ppsmb-blue font-bold"> 2</span>
+                <span className="ppsmb-redpink font-bold">0</span>
+                <span className="ppsmb-orange font-bold">2</span>
+                <span className="ppsmb-yellow font-bold">0</span>
               </h2>
             </div>
-          </section>
-          
-          <div className="photo-list">
-            <SimpleReactLightbox>
-              <MasonryRow />
-            </SimpleReactLightbox>
-          </div>
-          
-          <section className="album">
-              <AlbumPageFlip />
+            <div className="photo-list">
+              <SimpleReactLightbox>
+                <MasonryRow />
+              </SimpleReactLightbox>
+            </div>
           </section>
 
           <section className="gadjah-mada-kita">
@@ -326,6 +325,10 @@ const GaleriContainer = styled.div`
     width: 5vmin;
   }
 
+  section.album {
+    margin-top: 10vmin;
+  }
+
   .photos {
     position: relative;
     width: 100%;
@@ -333,7 +336,7 @@ const GaleriContainer = styled.div`
   }
 
   .photo-list {
-    padding: 0vmin 10vmin 10vmin 10vmin;
+    padding: 0vmin 0vmin 10vmin 0vmin;
   }
 
   .photos h2 {
