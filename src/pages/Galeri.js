@@ -5,10 +5,14 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slider from "react-slick";
 import SimpleReactLightbox from "simple-react-lightbox";
+import "react-image-lightbox/style.css";
 
 import VideoContainer from "../components/VideoContainer";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
 import Button from "../components/Button";
+import AlbumPage from "../components/AlbumPalapa/AlbumPage";
+import AlbumPageFlip from "../components/AlbumPalapa/AlbumPageFlip";
+import AlbumCover from "../components/AlbumPalapa/AlbumCover";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";
 import Batik from "../assets/img/batik-color.svg";
@@ -149,7 +153,7 @@ var video = ukmVideos.map(function (sekber) {
 export default class Galeri extends Component {
   render() {
     return (
-      <SimpleReactLightbox>
+      <>
         <Helmet>
           <title>Galeri | PPSMB UGM 2021</title>
         </Helmet>
@@ -185,9 +189,16 @@ export default class Galeri extends Component {
               </h2>
             </div>
           </section>
+          
           <div className="photo-list">
-            <MasonryRow />
+            <SimpleReactLightbox>
+              <MasonryRow />
+            </SimpleReactLightbox>
           </div>
+          
+          <section className="album">
+              <AlbumPageFlip />
+          </section>
 
           <section className="gadjah-mada-kita">
             <div className="title">
@@ -261,7 +272,7 @@ export default class Galeri extends Component {
             <div className="video-list-ukm">{video}</div>
           </section>
         </GaleriContainer>
-      </SimpleReactLightbox>
+      </>
     );
   }
 }
