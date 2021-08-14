@@ -12,9 +12,10 @@ import * as THREE from "three";
 import Model from "./Model-Transformed";
 import Computer from "./Tambahan/Computer";
 import Rocket from "./Tambahan/Rocket";
+import Logo from "./Tambahan/Logo";
 import KreasiModal from "./Tambahan/KreasiModal";
+import ActionPlanModal from "./Tambahan/ActionPlanModal";
 import Background from "../subComponents/Background";
-import AddGrass from "./instancedComponents/AddGrass";
 import Helmet from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Infografis from "../subComponents/Infografis";
@@ -41,6 +42,7 @@ export default function Vmap(props) {
   const [object, setObject] = useState(false);
   const [rocket, setRocket] = useState(false);
   const [modalKreasi, setModalKreasi] = useState(false);
+  const [modalActionPlan, setModalActionPlan] = useState(false);
 
   const showModal = (e) => {
     const data = dataInfografis.find((obj) => obj.objectName === e.name);
@@ -66,6 +68,11 @@ export default function Vmap(props) {
         onHide={() => setShowPlayGaleri(false)}
       />
       <KreasiModal show={modalKreasi} onHide={() => setModalKreasi(false)} />
+      <ActionPlanModal
+        show={modalActionPlan}
+        onHide={() => setModalActionPlan(false)}
+      />
+
       <Canvas
         camera={{ position: config.camStartPosition, fov: config.camSBAwalFov }}
       >
@@ -100,6 +107,13 @@ export default function Vmap(props) {
               scale={0.75}
               position={[-5.825, 1.6, -4.4]}
               rocket={rocket}
+            />
+            <Logo
+              scale={0.05}
+              position={[0, 0.4, 0]}
+              style={{ cursor: "pointer" }}
+              modalActionPlan={modalActionPlan}
+              setModalActionPlan={() => setModalActionPlan(!modalActionPlan)}
             />
 
             <Controls
