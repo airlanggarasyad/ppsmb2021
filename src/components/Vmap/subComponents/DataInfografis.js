@@ -1,10 +1,11 @@
+
 const infografis = [
   // Start Kelas 1
   {
     objectName: "Perpustakaan_Pusat",
     name: "Perpustakaan Universitas Gadjah Mada",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/perpusat-min.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/perpusat-min.jpg").default,
     narasi: `
     Perpustakaan Universitas Gadjah Mada yang berdiri pada tanggal 1 Maret 1951 pada mulanya bertempat di gedung pada Jl. 
     Senopati dan saat ini berkedudukan di kampus Bulaksumur, Yogyakarta. Perpustakaan Universitas Gadjah Mada yang sering 
@@ -12,8 +13,8 @@ const infografis = [
     berbagai literatur dan fasilitas yang dimilikinya. Terdapat dua kategori fasilitas yakni Fasilitas Belajar Mandiri 
     (Quiet Area) dan Fasilitas Belajar Ruang Diskusi (Noisy Area).
             `,
-    image360Location: "./images/image360/PERPUSAT 360.webp",
-    voiceOver: "./assets/voice-over/24 Perpus.mp3",
+    image360Location: require("../../../assets/images/image360/PERPUSAT 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/22 Perpus.mp3").default,
     target: { x: -0.15, z: -1.35 },
     camera: { x: -1.5, y: 1.75, z: 3 },
   },
@@ -21,7 +22,7 @@ const infografis = [
     objectName: "Balairung",
     name: "Kantor Pusat Universitas Gadjah Mada",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/balairung.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/balairung.jpg").default,
     narasi: `
     Gedung Pusat Universitas Gadjah Mada atau Balairung merupakan kantor utama penyelenggaraan urusan vital Universitas 
     Gadjah Mada. Beberapa kantor yang berada di gedung ini antara lain Kantor Rektorat, Direktorat Keuangan, Direktorat 
@@ -31,8 +32,8 @@ const infografis = [
     19 Desember 1959. Karakter konstruksi Balairung merepresentasikan bangunan modern awal yang ada di Indonesia. Sosok 
     arsitek dibalik kemegahan Balairung yaitu GPH Hadinegoro.
           `,
-    image360Location: "./images/image360/BALAIRUNG 360.webp",
-    voiceOver: "./assets/voice-over/24 Balairung.mp3",
+    image360Location: require("../../../assets/images/image360/BALAIRUNG 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/24 Balairung.mp3").default,
     target: { x: 0.35, z: -2.5 },
     camera: { x: -1.5, y: 1.75, z: -5 },
   },
@@ -40,7 +41,7 @@ const infografis = [
     objectName: "Masjid_Kampus",
     name: "Masjid Kampus",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/maskam.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/maskam.jpg").default,
     narasi: `
     Masjid Kampus Universitas Gadjah Mada terletak di Jalan Tevesia 1, Kompleks Bulaksumur, Depok, Sleman, DIY.  
     Masjid megah ini didirikan pada tahun 1998. Ide pembangunan masjid berawal dari keinginan pada masa kepemimpinan 
@@ -48,8 +49,8 @@ const infografis = [
     Universitas Gadjah Mada. Selain memiliki tempat shalat, Masjid Kampus Universitas Gadjah Mada juga dilengkapi dengan 
     tempat wudhu, kelas, sekretariat, perpustakaan, lanskap, lahan parkir, serta menara.
             `,
-    image360Location: "./images/image360/MASKAM 360.webp",
-    voiceOver: "./assets/voice-over/23 Masjid Kampus.mp3",
+    image360Location: require("../../../assets/images/image360/MASKAM 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/23 Masjid Kampus.mp3").default,
     target: { x: 1.6, z: 1.25 },
     camera: { x: 6, y: 2.5, z: 6 },
   },
@@ -57,7 +58,7 @@ const infografis = [
     objectName: "Grha_Sabha_Pramana",
     name: "Grha Sabha Pramana",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/gsp.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/gsp.jpg").default,
     narasi: `
     Grha Sabha Pramana atau GSP adalah gedung pertemuan serbaguna Universitas Gadjah Mada yang berkapasitas hingga 5000 
     orang, terdiri atas dua lantai yaitu lantai dasar yang memiliki beberapa area pertemuan berkapasitas terbatas dan 
@@ -67,8 +68,8 @@ const infografis = [
     job fair, hingga acara hiburan seperti konser musik. Gedung Grha Sabha Pramana mulai didirikan pada 1 Mei 1993 dan selesai 
     pada 8 September 1994. Peresmian GSP diselenggarakan pada 20 Desember 1994 oleh Presiden Soeharto.
             `,
-    image360Location: "./images/image360/GSP 360.webp",
-    voiceOver: "./assets/voice-over/21 GSP.mp3",
+    image360Location: require("../../../assets/images/image360/GSP 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/21 GSP.mp3").default,
     target: { x: -0.4, z: -0.2 },
     camera: { x: -2.5, y: 2, z: 4 },
   },
@@ -76,14 +77,14 @@ const infografis = [
     objectName: "Gerbang_UGM",
     name: "Gerbang Utama",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/gerbang.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/gerbang.jpg").default,
     narasi: `
     Gerbang Utama UGM memiliki filosofi, yakni Gapura Gadjah Mada terinspirasi oleh Candi Bentar. Candi Bentar adalah pemisah 
     antara bagian luar dan bagian dalam. Gapura UGM terbuat dari Stainless maksudnya berpijak di masa lalu tetapi juga harus 
     berkembang dan terinspirasi ke masa depan.
             `,
-    image360Location: "./images/image360/BUNDERAN 360.webp",
-    voiceOver: "./assets/voice-over/26 Gerbang UGM.mp3",
+    image360Location: require("../../../assets/images/image360/BUNDERAN 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/26 Gerbang UGM.mp3").default,
     target: { x: -0.5, z: 2.25 },
     camera: { x: 0, y: 2.5, z: 8 },
   },
@@ -91,14 +92,14 @@ const infografis = [
     objectName: "Stadion_Pancasila",
     name: "Stadion Pancasila",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/stadion.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/stadion.jpg").default,
     narasi: `
     Stadion Pancasila merupakan salah satu fasilitas penunjang kegiatan kemahasiswaan Stadion ini terletak di kawasan lembah 
     UGM dan digunakan untuk kegiatan olahraga sepak bola,  atletik, hoki, serta kegiatan-kegiatan lain yang diizinkan oleh 
     Rektor UGM.
             `,
-    image360Location: "./images/image360/STAD PANCAS 360.webp",
-    voiceOver: "./assets/voice-over/25 Stadion Pancasila.mp3",
+    image360Location: require("../../../assets/images/image360/STAD PANCAS 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/25 Stadion Pancasila.mp3").default,
     target: { x: 3.6, z: -1.925 },
     camera: { x: 5.75, y: 0.5, z: -0.25 },
   },
@@ -106,13 +107,13 @@ const infografis = [
     objectName: "Gadjah_Mada_Medical_Center",
     name: "Gadjah Mada Medical Center (GMC)",
     isFakultas: false,
-    gambarFakultas: "/images/gambarInfografis/gmc.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/gmc.jpg").default,
     narasi: `
     GMC adalah badan pengelola santunan kesehatan sivitas akademika UGM yang bersifat not for profit. GMC terletak di Jalan 
     SEKIP Blok L3, Sendowo, Sinduadi, Mlati, Sinduadi, Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta .
             `,
-    image360Location: "./images/image360/GMC 360.webp",
-    voiceOver: "./assets/voice-over/27 GMC.mp3",
+    image360Location: require("../../../assets/images/image360/GMC 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/27 GMC.mp3").default,
     target: { x: -1.25, z: 1.5 },
     camera: { x: 0.75, y: 1.35, z: -1 },
   },
@@ -123,7 +124,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Biologi"],
-    gambarFakultas: "/images/gambarInfografis/biologi.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/biologi.jpg").default,
     narasi: `
     Fakultas Biologi Universitas Gadjah Mada didirikan pada 19 September 1955 dengan mencakup dua seksi yaitu seksi zoologi 
     dan seksi botani. Fakultas ini pada awalnya terletak di Kompleks Mangkubumen, Yogyakarta dan pada tahun 1970 menempati 
@@ -132,8 +133,8 @@ const infografis = [
     Program Studi Biologi. Fakultas Biologi juga dilengkapi dengan berbagai laboratorium penelitian, perpustakaan, auditorium, 
     museum biologi, dan kebun biologi untuk menunjang pengembangan ilmu biologi.
             `,
-    image360Location: "./images/image360/BIOLOGI 360.webp",
-    voiceOver: "./assets/voice-over/11 Biologi.mp3",
+    image360Location: require("../../../assets/images/image360/BIOLOGI 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/11 Biologi.mp3").default,
     target: { x: -1.7, z: -2.1 },
     camera: { x: 1, y: 1.5, z: -4 },
   },
@@ -147,7 +148,7 @@ const infografis = [
       "Kartografi dan Penginderaan Jauh",
       "Pembangunan Wilayah",
     ],
-    gambarFakultas: "/images/gambarInfografis/geografi.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/geografi.jpg").default,
     narasi: `
     Fakultas Geografi didirikan pada 1 September 1963. Pada mulanya Fakultas Geografi terdiri dari Jurusan Geografi Fisik 
     dan Geografi Manusia. Namun pada saat ini, Fakultas Geografi terdiri dari tiga program studi jenjang sarjana, antara 
@@ -155,8 +156,8 @@ const infografis = [
     yang dimiliki guna mendukung kelancaran proses studi antara lain berbagai jenis laboratorium, studio, perpustakaan, 
     auditorium, sarana olahraga, taman, serta kantor sekretariat kegiatan mahasiswa.
             `,
-    image360Location: "./images/image360/GEOGRAFI 360.webp",
-    voiceOver: "./assets/voice-over/1 Fakultas Geografi.mp3",
+    image360Location: require("../../../assets/images/image360/GEOGRAFI 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/1 Fakultas Geografi.mp3").default,
     target: { x: -1.15, z: -2.65 },
     camera: { x: 2, y: 1.35, z: 0 },
   },
@@ -166,7 +167,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 2,
     listProdi: ["Higiene Gigi", "Kedokteran Gigi"],
-    gambarFakultas: "/images/gambarInfografis/fkg.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fkg.jpg").default,
     narasi: `
     Fakultas Kedokteran Gigi bermula dari berdirinya Perguruan Tinggi Kedokteran Gigi pada 1948. Pada 1949, perguruan tinggi 
     ini bergabung dengan Yayasan Balai Perguruan Tinggi Gadjah Mada. Fakultas Kedokteran Gigi mulai berdiri sebagai satu 
@@ -175,8 +176,8 @@ const infografis = [
     serta laboratorium klinik, Fakultas Kedokteran Gigi juga memiliki Rumah Sakit Gigi dan Mulut Prof. Soedomo sebagai tempat 
     proses pembelajaran pendidikan dokter gigi.
             `,
-    image360Location: "./images/image360/FKG 360.webp",
-    voiceOver: "./assets/voice-over/12 FKG.mp3",
+    image360Location: require("../../../assets/images/image360/FKG 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/12 FKG.mp3").default,
     target: { x: -1.5, z: 0.5 },
     camera: { x: -5, y: 1.15, z: -1.25 },
   },
@@ -194,15 +195,15 @@ const infografis = [
       "Statistika",
       "Ilmu Komputer",
     ],
-    gambarFakultas: "/images/gambarInfografis/mipa-min.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/mipa-min.jpg").default,
     narasi: `
     Fakultas Matematika dan Ilmu Pengetahuan Alam pada mulanya bersatu dengan Fakultas Teknik dan kemudian berpisah pada 
     tanggal 1 September 1956. Fakultas Matematika dan Ilmu Pengetahuan Alam telah mengalami banyak perubahan dan penambahan 
     program studidaan hingga kini terdapat 7 program studi. Selain fasilitas berupa gedung kuliah, Fakultas Matematika dan 
     Ilmu Pengetahuan Alam juga memiliki perpustakaan, berbagai laboratorium sesuai bidangnya, dan Student Internet Center.   
             `,
-    image360Location: "./images/image360/FMIPA 360.webp",
-    voiceOver: "./assets/voice-over/13 FMIPA.mp3",
+    image360Location: require("../../../assets/images/image360/FMIPA 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/13 FMIPA.mp3").default,
     target: { x: -0.925, z: -2.5 },
     camera: { x: -2.5, y: 1.25, z: 1.75 },
   },
@@ -212,7 +213,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Psikologi"],
-    gambarFakultas: "/images/gambarInfografis/psikologi.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/psikologi.jpg").default,
     narasi: `
     Pada awal pembentukannya, Fakultas Psikologi berada di bawah Fakultas Ilmu Pendidikan Universitas Gadjah Mada yang 
     didirikan pada tahun ajaran 1958/1959. Setelah jurusan Psikologi sempat bergabung dengan IKIP Yogyakarta dan dipimpin 
@@ -220,8 +221,8 @@ const infografis = [
     program studi klaster sosial-humaniora, Fakultas Psikologi memiliki laboratorium eksperimen untuk menunjang jalannya 
     perkuliahan. Selain itu, fakultas ini juga memiliki beberapa unit pengembangan dan juga unit konsultasi psikologis.
             `,
-    image360Location: "./images/image360/PSIKOLOGI 360.webp",
-    voiceOver: "./assets/voice-over/15 Psikologi.mp3",
+    image360Location: require("../../../assets/images/image360/PSIKOLOGI 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/15 Psikologi.mp3").default,
     target: { x: 1.95, z: 0.15 },
     camera: { x: -3, y: 3.25, z: -0.25 },
   },
@@ -231,7 +232,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 3,
     listProdi: ["Akuntansi", "Ilmu Ekonomi", "Manajemen"],
-    gambarFakultas: "/images/gambarInfografis/feb.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/feb.jpg").default,
     narasi: `
     Pada mulanya, Fakultas Ekonomi dan Bisnis merupakan bagian dari Fakultas Hukum, Ekonomi, Sosial, dan Politik. Pada 19 
     September 1955, Fakultas Ekonomi resmi berdiri dengan pelaksanaan kegiatan belajar mengajar bertempat pada sekitar 
@@ -240,8 +241,8 @@ const infografis = [
     Ekonomika dan Bisnis dilengkapi dengan berbagai sarana seperti auditorium, student lounge, perpustakaan, lab komputer, 
     serta lab bahasa.
             `,
-    image360Location: "./images/image360/FEB 360.webp",
-    voiceOver: "./assets/voice-over/4 FEB.mp3",
+    image360Location: require("../../../assets/images/image360/FEB 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/4 FEB.mp3").default,
     target: { x: 0.3, z: -0.125 },
     camera: { x: 4, y: 4, z: 3.5 },
   },
@@ -254,15 +255,15 @@ const infografis = [
       "Program S1 Reguler",
       "Program International Undergraduate Program (IUP)",
     ],
-    gambarFakultas: "/images/gambarInfografis/hukum.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/hukum.jpg").default,
     narasi: `
     Fakultas Hukum pada mulanya bergabung dengan Fakultas Ekonomi, Sosial dan Politik. Mulai tanggal 15 September 1953, 
     Fakultas Hukum berdiri sendiri dan bertempat pada lingkungan keraton. Mulai tahun 1973, kegiatan penyelenggaraan kegiatan 
     perkuliahan dipindahkan ke Bulaksumur. Selain gedung-gedung perkuliahan, fasilitas yang dapat ditemukan di Fakultas Hukum 
     Universitas Gadjah Mada yaitu perpustakaan, Internet Corner, serta ruang sidang peradilan semu.  
             `,
-    image360Location: "./images/image360/HUKUM 360.webp",
-    voiceOver: "./assets/voice-over/10 Hukum.mp3",
+    image360Location: require("../../../assets/images/image360/HUKUM 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/10 Hukum.mp3").default,
     target: { x: 1.7, z: -0.75 },
     camera: { x: 4, y:1, z: -0.5 },
   },
@@ -272,7 +273,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Kedokteran Hewan"],
-    gambarFakultas: "/images/gambarInfografis/fkh.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fkh.jpg").default,
     narasi: `
     Awal mula pendirian Fakultas Kedokteran Hewan Universitas Gadjah Mada adalah Indische Veeartsen School yang didirikan 
     pada tahun 1910 dan sempat bergabung dengan Fakultas peternakan. Pada tanggal 10 November 1969, Fakultas Kedokteran Hewan 
@@ -280,8 +281,8 @@ const infografis = [
     Selain fasilitas berupa gedung kuliah, perpustakaan, serta laboratorium diagnostik, Fakultas Kedokteran Hewan juga 
     dilengkapi dengan Rumah Sakit Hewan Prof. Soeparwi dan teaching farm. 
             `,
-    image360Location: "./images/image360/FKH 360.webp",
-    voiceOver: "./assets/voice-over/16 FKH.mp3",
+    image360Location: require("../../../assets/images/image360/FKH 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/16 FKH.mp3").default,
     target: { x: 2.3, z: -3.5 },
     camera: { x: 4, y: 2, z: 2.5 },
   },
@@ -291,7 +292,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Farmasi"],
-    gambarFakultas: "/images/gambarInfografis/farmasi.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/farmasi.jpg").default,
     narasi: `
     Fakultas Farmasi Universitas Gadjah Mada pada mulanya berdiri dengan nama Perguruan Tinggi Ahli Obat (PTAO) pada tanggal 
     27 September 1946. Fakultas Farmasi sempat bergabung dengan Fakultas Kedokteran dan Fakultas Kedokteran Gigi, bertempat 
@@ -300,8 +301,8 @@ const infografis = [
     Fakultas Farmasi dilengkapi dengan berbagai jenis laboratorium, perpustakaan, auditorium, Student Corner, dan Student 
     Supporting Center.
             `,
-    image360Location: "./images/image360/FARMASI 360.webp",
-    voiceOver: "./assets/voice-over/14 Farmasi.mp3",
+    image360Location: require("../../../assets/images/image360/FARMASI 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/14 Farmasi.mp3").default,
     target: { x: -1.25, z: -0.825 },
     camera: { x: 1.1, y: 1, z: 2.1 },
   },
@@ -323,7 +324,7 @@ const infografis = [
       "Sastra Nusantara",
       "Sastra Perancis",
     ],
-    gambarFakultas: "/images/gambarInfografis/fib.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fib.jpg").default,
     narasi: `
     Fakultas Ilmu Budaya Universitas Gadjah Mada didirikan pada 3 Maret 1946 dengan nama Fakulteit Sastra, Filsafat, dan 
     Keboedajaan. Fakultas ini mengalami beberapa kali perubahan nama hingga mulai tanggal 23 Juni 2001, nama Fakultas Ilmu 
@@ -332,8 +333,8 @@ const infografis = [
     Sastra Nusantara, Sastra Prancis, dan Pariwisata. Keberadaan Rumah Sumba pada fakultas ini menambah kesan budaya yang 
     terkandung.
             `,
-    image360Location: "./images/image360/FIB 360.webp",
-    voiceOver: "./assets/voice-over/2 Fakultas Ilmu Budaya.mp3",
+    image360Location: require("../../../assets/images/image360/FIB 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/2 Fakultas Ilmu Budaya.mp3").default,
     target: { x: 0.9, z: 0.2 },
     camera: { x: -1.5, y: 1.75, z: 3 },
   },
@@ -343,7 +344,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Kehutanan"],
-    gambarFakultas: "/images/gambarInfografis/fkt.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fkt.jpg").default,
     narasi: `
     Pendirian Fakultas Kehutanan pada mulanya bergabung dengan Fakultas Pertanian. Mulai tanggal 17 Agustus 1963, Fakultas 
     Pertanian dan Kehutanan dipecah menjadi tiga fakultas meliputi Fakultas Pertanian, Fakultas Teknologi Pertanian, dan 
@@ -353,8 +354,8 @@ const infografis = [
     sesuai dengan bidangnya, perpustakaan, pusat kegiatan mahasiswa, hingga laboratorium lapangan yang tersebar di beberapa 
     wilayah seperti Gunung Kidul, Blora, dan Jambi.
             `,
-    image360Location: "./images/image360/KEHUTANAN 360.webp",
-    voiceOver: "./assets/voice-over/7 Kehutanan.mp3",
+    image360Location: require("../../../assets/images/image360/KEHUTANAN 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/7 Kehutanan.mp3").default,
     target: { x: 0.5, z: -2.575},
     camera: { x: 5.0, y: 1.75, z: 0.0 },
   },
@@ -375,7 +376,7 @@ const infografis = [
       "Sosial Ekonomi Pertanian",
       "Teknologi Hasil Perikanan",
     ],
-    gambarFakultas: "/images/gambarInfografis/pertanian-min.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/pertanian-min.jpg").default,
     narasi: `
     Fakultas Pertanian merupakan salah satu dari keenam fakultas pertama Universitas Gadjah Mada. Didirikan pada tanggal 27 
     September 1946 dan bertempat di Klaten. Pada tanggal 1 November 1949, Fakultas Pertanian diresmikan oleh Presiden Soekarno 
@@ -383,8 +384,8 @@ const infografis = [
     membentuk Fakultas Pertanian Universitas Gadjah Mada dengan berbagai fasilitas pendukung seperti perpustakaan dan 
     bermacam-macam laboratorium guna mendukung proses akademik.
             `,
-    image360Location: "./images/image360/PERTANIAN 360.webp",
-    voiceOver: "./assets/voice-over/8 Pertanian.mp3",    
+    image360Location: require("../../../assets/images/image360/PERTANIAN 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/8 Pertanian.mp3").default,    
     target: { x: 2.25, z: -1.5},
     camera: { x: -2, y: 2.5, z: -5},
   },
@@ -409,7 +410,7 @@ const infografis = [
       "Teknik Sipil dan Lingkungan",
       "Teknologi Informasi",
     ],
-    gambarFakultas: "/images/gambarInfografis/teknik.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/teknik.jpg").default,
     narasi: `
     Fakultas Teknik Universitas Gadjah Mada berawal dari pendirian Sekolah Tinggi Teknik Bandung yang kemudian dipindahkan 
     menuju Yogyakarta pada tahun 1946. Setelah sempat mengalami beberapa kali perubahan nama dan lokasi, pada 1949 Sekolah 
@@ -420,11 +421,11 @@ const infografis = [
     kesehatan.
             `,
     image360Location: [
-      "./images/image360/teknik/ENERGI 360.webp",
-      "./images/image360/teknik/INFRAS 360.webp",
-      "./images/image360/teknik/MANUF 360.webp",
+      require("../../../assets/images/image360/teknik/ENERGI 360.webp").default,
+      require("../../../assets/images/image360/teknik/INFRAS 360.webp").default,
+      require("../../../assets/images/image360/teknik/MANUF 360.webp").default,
     ],
-    voiceOver: "./assets/voice-over/20 Teknik.mp3",
+    voiceOver: require("../../../assets/voice-over/20 Teknik.mp3").default,
     target: { x: -3.3, z: -3 },
     camera: { x: -2.5, y: 2, z: 3 },
   },
@@ -434,15 +435,15 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 1,
     listProdi: ["Ilmu Filsafat"],
-    gambarFakultas: "/images/gambarInfografis/filsafat.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/filsafat.jpg").default,
     narasi: `
     Fakultas Filsafat pada awalnya bernama Fakultas Sastra, Paedagogik, dan Filsafat yang diresmikan pada 23 Januari 1951. 
     Setelah mengalami beberapa perubahan, pada tanggal 18 Agustus 1967, Fakultas Filsafat kembali didirikan dan diresmikan. 
     Fakultas Filsafat memiliki akses fisik pendukung layanan publik bagi penyandang disabilitas yang ada di seluruh fakultas 
     sehingga fakultas ini ditetapkan sebagai salah satu zona integritas di Universitas Gadjah Mada.
             `,
-    image360Location: "./images/image360/FILSAFAT 360.webp",
-    voiceOver: "./assets/voice-over/5 Filsafat.mp3",
+    image360Location: require("../../../assets/images/image360/FILSAFAT 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/5 Filsafat.mp3").default,
     target: { x: 1.875, z: -0.375 },
     camera: { x: -0.5, y: 0.8, z: 1 },
   },
@@ -459,7 +460,7 @@ const infografis = [
       "Manajemen Kebijakan Publik",
       "Pengembangan Sosial dan Kesejahteraan",
     ],
-    gambarFakultas: "/images/gambarInfografis/fisipol.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fisipol.jpg").default,
     narasi: `
     Pada awalnya, FISIPOL merupakan salah satu bagian dari gabungan Fakultas Hukum, Ekonomi, Sosial dan Politik yang kemudian 
     berdiri sendiri mulai tahun 1955. Pada FISIPOL UGM, terdapat pula jurusan-jurusan IUP atau dikenal dengan International 
@@ -467,8 +468,8 @@ const infografis = [
     terdapat pada FISIPOL UGM guna mendukung proses pendidikan dan pengembangan kompetensi yang dimiliki oleh sivitas 
     akademikanya meliputi auditorium, sport corner, Fisipoint, Fisipmart, Digilib Cafe dan Coworking Space.
             `,
-    image360Location: "./images/image360/FISIPOL 360.webp",
-    voiceOver: "./assets/voice-over/3 Fisipol.mp3",
+    image360Location: require("../../../assets/images/image360/FISIPOL 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/3 Fisipol.mp3").default,
     target: { x: 0.65, z: -1.25 },
     camera: { x: -1.25, y: 1, z: 2 },
   },
@@ -478,7 +479,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 3,
     listProdi: ["Pendidikan Dokter", "Ilmu Keperawatan", "Gizi dan Kesehatan"],
-    gambarFakultas: "/images/gambarInfografis/fkkmk.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/fkkmk.jpg").default,
     narasi: `
     Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan berawal dari pendirian Geneeskundige Hooge School (GHS) yang 
     kemudian berubah nama menjadi Perguruan Tinggi Kedokteran. Pada 1949, perguruan tinggi ini bergabung dengan Yayasan Balai 
@@ -488,8 +489,8 @@ const infografis = [
     laboratorium klinik, Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan juga dilengkapi dengan RSUP Dr. Sardjito 
     dan RS Akademik.
             `,
-    image360Location: "./images/image360/FKKMK 360.webp",
-    voiceOver: "./assets/voice-over/6 FKKMK.mp3",
+    image360Location: require("../../../assets/images/image360/FKKMK 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/6 FKKMK.mp3").default,
     target: { x: -2.75, z: -0.4 },
     camera: { x: 2, y: 2.5, z: 3 },
   },
@@ -499,7 +500,7 @@ const infografis = [
     isFakultas: true,
     jumlahProdi: 7,
     listProdi: ["Ilmu dan Industri Peternakan"],
-    gambarFakultas: "/images/gambarInfografis/peternakan-min.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/peternakan-min.jpg").default,
     narasi: `
     Fakultas Peternakan Universitas Gadjah Mada pada mulanya bergabung dengan Fakultas Kedokteran Hewan dan berpisah mulai 
     tanggal 1 September 1966. Fakultas Peternakan diresmikan pada 10 November 1969 dengan menyelenggarakan satu program studi 
@@ -507,8 +508,8 @@ const infografis = [
     yang dimiliki Fakultas Peternakan Universitas Gadjah Mada antara lain laboratorium, perpustakaan, auditorium, Unit 
     Peternakan, Unit Pelaksana Teknis (UPT) Perah, hingga minimarket (AgroMart).
             `,
-    image360Location: "./images/image360/FAPET 360.webp",
-    voiceOver: "./assets/voice-over/17 Peternakan.mp3",
+    image360Location: require("../../../assets/images/image360/FAPET 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/17 Peternakan.mp3").default,
     target: { x: 4.15, z: -3.2 },
     camera: { x: 1.15, y: 1.35, z: -2 },
   },
@@ -522,15 +523,15 @@ const infografis = [
       "Teknologi Pangan Hasil Pertanian",
       "Teknologi Industri Pertanian",
     ],
-    gambarFakultas: "/images/gambarInfografis/ftp.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/ftp.jpg").default,
     narasi: `
     Pada awal pembentukannya, Fakultas Teknologi Pertanian bergabung dengan Fakultas Kehutanan dan Fakultas Pertanian. 
     Setelah berpisah dari fakultas Kehutanan dan Pertanian, Fakultas Teknologi Pertanian Universitas Gadjah Mada resmi berdiri 
     pada 19 September 1963. Fasilitas penunjang akademik yang ada di Fakultas Teknologi Pertanian Universitas Gadjah Mada 
     antara lain perpustakaan dan berbagai jenis laboratorium.
             `,
-    image360Location: "./images/image360/FTP 360.webp",
-    voiceOver: "./assets/voice-over/9 FTP.mp3", 
+    image360Location: require("../../../assets/images/image360/FTP 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/9 FTP.mp3").default, 
     target: { x: 1, z: -2},
     camera: { x: -2, y: 2, z: 1.5},
   },
@@ -539,7 +540,7 @@ const infografis = [
     name: "Sekolah Pascasarjana",
     isFakultas: true,
     jumlahProdi: 0,
-    gambarFakultas: "/images/gambarInfografis/pau.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/pau.jpg").default,
     narasi: `
     Berawal dengan nama Lembaga Pendidikan Doktor (LPD), Sekolah Pascasarjana Universitas Gadjah Mada memulai sejarahnya pada 
     tahun 1950. Setelahnya sempat beberapa kali mengalami pergantian nama menjadi Fakultas Pascasarjana dan Program 
@@ -547,8 +548,8 @@ const infografis = [
     doktoral. Keberadaan sekolah ini merupakan penegasan terhadap perlunya penyelenggaraan tingkat lanjutan dari jenjang 
     sarjana berdasarkan kompetensi bidang ilmu yang bersifat monodisiplin dan Multidisiplin.
             `,
-    image360Location: "./images/image360/PASCA 360.webp",
-    voiceOver: "./assets/voice-over/19 Sekolah Pascasarjana.mp3",
+    image360Location: require("../../../assets/images/image360/PASCA 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/19 Sekolah Pascasarjana.mp3").default,
     target: { x: -3.1, z: -4.15 },
     camera: { x: -0.65, y: 1.25, z: -0.95 },
   },
@@ -557,7 +558,7 @@ const infografis = [
     name: "Sekolah Vokasi",
     isFakultas: true,
     jumlahProdi: 0,
-    gambarFakultas: "/images/gambarInfografis/sv.jpg",
+    gambarFakultas: require("../../../assets/images/gambarInfografis/sv.jpg").default,
     narasi: `
     Pelaksanaan kegiatan belajar mengajar program diploma dari tahun 1992 pada mulanya dilaksanakan di dalam fakultas 
     masing-masing hingga pada akhirnya, Sekolah Vokasi Universitas Gadjah Mada diresmikan pada 2009. Saat ini Sekolah Vokasi 
@@ -565,8 +566,8 @@ const infografis = [
     laboratorium sesuai dengan kekhususannya masing-masing yang dapat dikelompokkan dalam tiga kategori yaitu Laboratorium 
     Teknik, Laboratorium Bahasa, dan Laboratorium Komputer.
             `,
-    image360Location: "./images/image360/SV 360.webp",
-    voiceOver: "./assets/voice-over/18 Sekolah Vokasi.mp3",
+    image360Location: require("../../../assets/images/image360/SV 360.webp").default,
+    voiceOver: require("../../../assets/voice-over/18 Sekolah Vokasi.mp3").default,
     target: { x: -1.5, z: 2.5 },
     camera: { x: -5, y: 0.65, z: 2.65 },
   },

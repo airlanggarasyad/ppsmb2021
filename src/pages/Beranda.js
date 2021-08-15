@@ -239,7 +239,7 @@ export default function Beranda() {
                 mainText="Pengumuman Perpanjangan Pengerjaan Tugas"
                 mainTextColor="var(--color-white)"
                 background={BgTwo}
-                title="27 Juli 2021"
+                title="3 Agustus 2021"
                 titleColor="var(--color-white)"
                 headerColor="var(--color-redpink)"
                 shadow="rgba(1,56,94,0.4)"

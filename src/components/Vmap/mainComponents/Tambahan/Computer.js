@@ -13,15 +13,16 @@ export default function Model(props) {
   rocketSound.volume = 0.2;
 
   const handleClick = (e) => {
-    props.setRocket(!props.rocket);
-
     if (!props.rocket) {
+	  props.setRocket(true);
       rocketSound.play();
 
       setTimeout(function () {
         props.setModalKreasi(!props.modalKreasi);
       }, 750);
-    }
+    } else {
+	  props.setRocket(false);
+	}
   };
 
   async function handleHover(e) {
@@ -40,6 +41,8 @@ export default function Model(props) {
           onClick={(e) => {
             handleClick(e);
           }}
+          onPointerOver={(e) => handleHover(e)}
+          onPointerOut={(e) => clearHover(e)}
         >
           <group
             name="Layer0_001"

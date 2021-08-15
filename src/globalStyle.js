@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import Kollektif from "./assets/fonts/Kollektif.woff";
 import IndonesiaScript from "./assets/fonts/Indonesia-Script.woff";
 import patternBGWhite from "./assets/img/pattern-bg-white.webp";
+import patternBGDarkBlue from "./assets/img/pattern-bg-darkblue.webp";
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
@@ -125,6 +126,10 @@ const GlobalStyle = createGlobalStyle`
         padding: calc(var(--spacer) * 3);
     }
 
+    .mirror-y {
+        transform: scale(-1, 1);
+    }
+
 
 
     /*----------------------*\
@@ -162,8 +167,17 @@ const GlobalStyle = createGlobalStyle`
         background-size: 30%;
     }
 
+    .pattern-bg-book {
+        background-size: 40%;
+    }
+
     .pattern-bg-white {
         background-image: url(${patternBGWhite});
+        background-repeat: repeat;
+    }
+
+    .pattern-bg-darkblue {
+        background-image: url(${patternBGDarkBlue});
         background-repeat: repeat;
     }
 

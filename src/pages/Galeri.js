@@ -5,10 +5,14 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slider from "react-slick";
 import SimpleReactLightbox from "simple-react-lightbox";
+import "react-image-lightbox/style.css";
 
 import VideoContainer from "../components/VideoContainer";
 import MasonryRow from "../components/ImageGallery/MasonryRow";
 import Button from "../components/Button";
+import AlbumPage from "../components/AlbumPalapa/AlbumPage";
+import AlbumPageFlip from "../components/AlbumPalapa/AlbumPageFlip";
+import AlbumCover from "../components/AlbumPalapa/AlbumCover";
 
 import heroGaleriDesktop from "../assets/img/galeri/desktop-ornament-galeri.webp";
 import Batik from "../assets/img/batik-color.svg";
@@ -149,7 +153,7 @@ var video = ukmVideos.map(function (sekber) {
 export default class Galeri extends Component {
   render() {
     return (
-      <SimpleReactLightbox>
+      <>
         <Helmet>
           <title>Galeri | PPSMB UGM 2021</title>
         </Helmet>
@@ -174,20 +178,26 @@ export default class Galeri extends Component {
             </div>
           </section>
 
+          <section className="album">
+            <AlbumPageFlip />
+          </section>
+
           <section className="photos">
             <div className="year-tab">
-              <h2 className="year ppsmb-darkblue">
+              <h2 className="year ppsmb-darkblue font-bold">
                 PPSMB
-                <span className="ppsmb-blue"> 2</span>
-                <span className="ppsmb-redpink">0</span>
-                <span className="ppsmb-orange">2</span>
-                <span className="ppsmb-yellow">0</span>
+                <span className="ppsmb-blue font-bold"> 2</span>
+                <span className="ppsmb-redpink font-bold">0</span>
+                <span className="ppsmb-orange font-bold">2</span>
+                <span className="ppsmb-yellow font-bold">0</span>
               </h2>
             </div>
+            <div className="photo-list">
+              <SimpleReactLightbox>
+                <MasonryRow />
+              </SimpleReactLightbox>
+            </div>
           </section>
-          <div className="photo-list">
-            <MasonryRow />
-          </div>
 
           <section className="gadjah-mada-kita">
             <div className="title">
@@ -261,7 +271,7 @@ export default class Galeri extends Component {
             <div className="video-list-ukm">{video}</div>
           </section>
         </GaleriContainer>
-      </SimpleReactLightbox>
+      </>
     );
   }
 }
@@ -315,6 +325,10 @@ const GaleriContainer = styled.div`
     width: 5vmin;
   }
 
+  section.album {
+    margin-top: 10vmin;
+  }
+
   .photos {
     position: relative;
     width: 100%;
@@ -322,7 +336,7 @@ const GaleriContainer = styled.div`
   }
 
   .photo-list {
-    padding: 0vmin 10vmin 10vmin 10vmin;
+    padding: 0vmin 0vmin 10vmin 0vmin;
   }
 
   .photos h2 {

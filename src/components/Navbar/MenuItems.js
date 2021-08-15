@@ -20,4 +20,8 @@ export const MenuItems = [
         title: 'FAQ',
         url: '/2021/faq',
     },
+    {
+        title: 'Redaksi Palapa',
+        url: '/2021/redaksi-palapa',
+    },
 ]
