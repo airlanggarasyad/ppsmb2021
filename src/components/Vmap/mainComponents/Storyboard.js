@@ -156,28 +156,28 @@ export default function Storyboard(props) {
       </style>
 
       {!gone && (
-      <div onContextMenu={(e) => e.preventDefault()}>
-        {/* Corner IMG */}
-        <div className="image-corner noselect">
-          <Slide
-            top
-            when={props.storyboard && !props.loading}
-            delay={500}
-            duration={500}
-          >
-            <img src={leftTop} alt="" className="left-top-corner" />
-          </Slide>
-          <Slide
-            bottom
-            when={props.storyboard && !props.loading}
-            delay={500}
-            duration={500}
-          >
-            <img src={rightBottom} alt="" className="right-bottom-corner" />
-          </Slide>
-        </div>
+        <div onContextMenu={(e) => e.preventDefault()}>
+          {/* Corner IMG */}
+          <div className="image-corner noselect">
+            <Slide
+              top
+              when={props.storyboard && !props.loading}
+              delay={500}
+              duration={500}
+            >
+              <img src={leftTop} alt="" className="left-top-corner" />
+            </Slide>
+            <Slide
+              bottom
+              when={props.storyboard && !props.loading}
+              delay={500}
+              duration={500}
+            >
+              <img src={rightBottom} alt="" className="right-bottom-corner" />
+            </Slide>
+          </div>
 
-        {/* Main Storyboard */}
+          {/* Main Storyboard */}
           <Fade when={!props.freeControl} duration={2000}>
             <div className="storyboard">
               <Container className="text-center apaaja">
@@ -315,7 +315,7 @@ export default function Storyboard(props) {
               </Container>
             </div>
           </Fade>
-      </div>
+        </div>
       )}
     </>
   );
