@@ -41,7 +41,11 @@ export default function KembaraLoka() {
   // if (today < rilis) {
   //   window.location.replace("https://ppsmb.ugm.ac.id/2021");
   // }
+  console.log("hayoo ngapain buka-buka developer tools");
+  console.log("jangan aneh-aneh ya :(");
+  console.log("- IT PPSMB UGM 2021 with love");
 
+  console.log = console.warn = console.error = () => {};
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <GlobalStyle />
