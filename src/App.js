@@ -8,7 +8,6 @@ import ScrollToTop from "./Routes/ScrollToTop";
 import ScrollTop from "./components/ScrollTop";
 import Announce from "./components/Announce";
 
-
 class App extends Component {
   render() {
     return (

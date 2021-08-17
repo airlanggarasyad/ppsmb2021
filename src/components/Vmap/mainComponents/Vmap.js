@@ -36,8 +36,7 @@ const config = {
   camSBAkhirFov: 100, //storyboard
 };
 
-export default function Vmap(props) {
-  const [showInfografis, setShowInfografis] = useState(false);
+export default function Vmap(props) {  const [showInfografis, setShowInfografis] = useState(false);
   const [showPlayGaleri, setShowPlayGaleri] = useState(false);
   const [object, setObject] = useState(false);
   const [rocket, setRocket] = useState(false);
