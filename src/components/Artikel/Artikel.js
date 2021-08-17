@@ -117,6 +117,18 @@ export default function Agenda({ match }) {
             >
               <Card day="two"></Card>
             </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/2021/redaksi-palapa/rinai-warna"
+            >
+              <Card day="three"></Card>
+            </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/2021/redaksi-palapa/lantunan-adiwarna"
+            >
+              <Card day="four"></Card>
+            </Link>
           </div>
         </Fade>
       </div>

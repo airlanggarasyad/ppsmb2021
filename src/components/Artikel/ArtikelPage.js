@@ -7,6 +7,8 @@ function ArtikelPage(props) {
   const title = [
     "Jelajah UGM dari Rumah bersama Kembara Loka",
     "Formasi Rubik Karsa : Ekspresi dalam Kreasi ",
+    "Rinai Warna: Secercah Asa dalam Pesona Kreasi",
+    "Lantunan Adiwarna : Ekspresi dalam Kolaborasi"
   ];
   const text = [
     <span>
@@ -154,13 +156,227 @@ function ArtikelPage(props) {
         karya dan ciptaannya.
       </span>
     </div>,
+    <div>
+      <span>
+        Tanggal 14 Agustus 2021, menjadi tanggal pelaksanaan upacara penutupan
+        yang menandakan usainya rangkaian PPSMB UGM 2021. Setiap tahun, upacara
+        penutupan dilaksanakan untuk secara resmi mengakhiri masa orientasi dan
+        menyambut periode pembelajaran mahasiswa. Terlepas dari adanya pandemi
+        yang terjadi dan mengakibatkan upacara penutupan harus dilaksanakan
+        secara daring, panitia tetap berinovasi dan berusaha menyuguhkan
+        persembahan terbaik. Hal ini bertujuan untuk menunjukan apresiasi kepada
+        pihak-pihak terkait, khususnya Gadjah Mada Muda yang telah menyelesaikan
+        seluruh rangkaian PPSMB UGM 2021.
+      </span>
+      <br />
+      <br />
+      <span>
+        Pada Upacara Penutupan tahun ini, salah satu persembahan yang menarik
+        perhatian adalah Rinai Warna, sebuah pertunjukan yang menggunakan air
+        sebagai media penampilannya yang dilaksanakan di area Wisdom Park, UGM.
+        Pertunjukan ini merupakan hasil kolaborasi antar divisi yang melibatkan
+        Divisi Acara, DDD, IT, dan Perlengkapan. Uniknya, ide untuk menyuguhkan
+        pertunjukan dengan <i>water screen</i> berdiameter kurang lebih 18 meter
+        dan tinggi 5 meter serta air mancur berirama ini justru pertama kali
+        hadir ketika pompa air salah satu rekan panitia mengalami malfungsi.
+        Mulai dari situ, selama lebih kurang dua bulan dan menggunakan
+        pertunjukan <i>“Songs of the Sea”</i> sebagai referensi, panitia-panitia
+        memulai riset dan persiapan instalasi Rinai Warna
+      </span>
+      <br />
+      <img
+        className="image-inside"
+        src={
+          require("../../assets/img/redaksi-palapa/rinai-warna-1.webp").default
+        }
+        alt=""
+      />
+      <span>
+        Selaras dengan tema besar PPSMB UGM 2021 “Ragam Kreasi UGM Pancarkan
+        Pesona Pertiwi” Rinai Warna mengisahkan perjuangan seorang tokoh untuk
+        dapat berkarya sesuai dengan bidang yang ingin ia minati. Beragam
+        tantangan harus ia lalui, mulai dari konflik yang ada di lingkungan
+        sekitarnya hingga puncaknya adalah ketika muncul pertentangan dari
+        lingkup internal sang tokoh, dimana orang tua tokoh tersebut tidak
+        mendukung <i>passion</i>-nya. Jatuh dalam kesedihan menjadi suatu hal
+        yang sulit untuk dihindari, sang tokoh utama hampir menyerah akan
+        minatnya. Di momen itu, hadirlah sebuah bintang yang akhirnya memberikan
+        secercah harapan kepada tokoh utama untuk bangkit kembali, memotivasinya
+        untuk tidak menyerah akan keadaan. Perjalanan kedepannya memang tidak
+        seketika menjadi mulus, namun ia dengan gigih memperjuangkan mimpinya
+        untuk berkreasi sehingga akhirnya dapat mencapai keberhasilan.
+      </span>
+      <br />
+      <br />
+      <span>
+        Untuk menghasilkan <i>water screen</i> yang berfungsi sebagai layar
+        untuk memproyeksikan animasi, digunakan tiga pompa air yang digabungkan
+        sehingga menghasilkan aliran air bertekanan tinggi. Aliran tersebut
+        diarahkan ke permukaan semen yang didesain sedemikian rupa sehingga
+        menghasilkan cipratan air berbentuk setengah lingkaran. Pada air mancur,
+        digunakan NodeMCU untuk mengatur nyala matinya pancuran air yang
+        disesuaikan dengan ketukan musik. Tak ayal, ada rintangan-rintangan yang
+        harus dilewati dalam proses penyusunan Rinai Warna. Proses sinkronisasi
+        antara <i>beat</i> musik dan pancuran air menjadi hal yang cukup memakan
+        waktu, dalam eksekusinya pemrograman air mancur sempat terkendala dan
+        secara mendadak tidak sinkron dengan musik latar. Hal tersebut
+        diakibatkan hilangnya sinyal dari alat yang menyelaraskan satu air
+        mancur dengan lainnya. Rintangan juga ditemukan ketika panitia harus
+        menentukan alat yang tepat dengan keterbatasan sumber daya yang
+        dimiliki. Kurangnya referensi akan alat yang digunakan dikarenakan
+        pertunjukan ini terinspirasi dari pertunjukan yang membutuhkan{" "}
+        <i>budget</i> besar, sementara Rinai Warna adalah pertunjukan yang
+        diinisiasi oleh mahasiswa membuat panitia harus mengeksplorasi
+        alternatif dari peralatan yang dibutuhkan. Selain itu, pemilihan danau
+        yang berlokasi di Wisdom Park sebagai latar tempat menjadi tantangan
+        tersendiri karena terbatasnya mobilitas panitia untuk melakukan
+        instalasi alat sehingga membutuhkan waktu dan tenaga dalam prosesnya.
+        Namun pada akhirnya, dengan motivasi yang kuat untuk mempersembahkan
+        yang terbaik kepada Gamada, segala rintangan tersebut dapat teratasi,
+        dibuktikan dengan suksesnya penayangan Rinai Warna di video Upacara
+        Penutupan PPSMB UGM 2021 yang dapat diakses melalui laman Youtube resmi
+        Universitas Gadjah Mada.
+      </span>
+      <br />
+      <br />
+      <span>
+        Rinai Warna tentunya bukan hanya sebuah pertunjukan semata, ada
+        pesan-pesan yang ingin disampaikan kepada teman-teman Gamada. Melalui
+        proses panjang pembuatan dan alur cerita yang disuguhkan, harapannya
+        Gamada atau bahkan khalayak umum yang menyaksikan dapat menyadari bahwa
+        untuk berkreasi, kita tidak harus terinspirasi dari suatu hal yang megah
+        atau memukau, terkadang hal-hal yang sederhana justru bisa menghasilkan
+        suatu karya yang memesona. Selagi tidak merugikan pihak lain, ikutilah
+        kata hati dan pantanglah menyerah untuk mengekspresikan kreasi kita
+        sebebas mungkin. Panitia-panitia berharap persembahan Rinai Warna di
+        Upacara Penutupan PPSMB UGM tahun 2021 ini dapat menghibur,
+        menginspirasi, dan menjadi kebanggaan bagi Gamada yang telah menjadi
+        bagian dari Universitas Gadjah Mada.
+      </span>
+    </div>,
+    <div>
+      <span>
+        Pada tanggal 14 Agustus 2021 kemarin, rangkaian PPSMB UGM 2021 secara
+        resmi telah ditutup, ditandai dengan penutupan buku Mekar Imaji oleh
+        Prof. Ir. Panut Mulyono, M.Eng., D.Eng., IPU, ASEAN Eng. selaku Rektor
+        Universitas Gadjah Mada. Namun, dengan berakhirnya rangkaian kegiatan
+        PPSMB UGM 2021 bukan berarti perjalanan Gadjah Mada Muda telah usai,
+        justru inilah langkah awal bagi Gamada untuk menjejakkan kaki ke dunia
+        perkuliahan.
+      </span>
+      <br />
+      <br />
+      <span>
+        <i>Closing Ceremony</i> PPSMB UGM 2021 dimeriahkan oleh berbagai
+        penampilan menarik. Mulai dari Gemintang Adicita, Lentera Cita Gadjah
+        Mada, Gelora Harmoni Gadjah Mada, Lantunan Adiwarna, dan Rinai Warna.
+        Artikel kali ini secara khusus akan membahas mengenai Lantunan Adiwarna,
+        sebuah ekspresi dalam kolaborasi.
+      </span>
+      <br />
+      <img
+        className="image-inside"
+        src={
+          require("../../assets/img/redaksi-palapa/lantunan-adiwarna-1.webp").default
+        }
+        alt=""
+      />
+      <span>
+        Lantunan Adiwarna merupakan sebuah penampilan kolaborasi dari UKM sekber
+        kesenian yang dimeriahkan oleh Unit Tari Bali (UTB), Unit Seni Rupa
+        (USER), Unit Kesenian Jawa Gaya Surakarta (UKJGS), Gamaband, Gadjah Mada
+        Chamber Orchestra (GMCO), Marching Band, dan Paduan Suara Mahasiswa
+        (PSM). Sebagai bentuk persembahan bagi Gadjah Mada Muda, masing-masing
+        UKM tersebut menunjukkan hasil kreasi terbaik mereka yang terangkum
+        dalam penampilan kolaboratif Lantunan Adiwarna.
+      </span>
+      <br />
+      <br />
+      <span>
+        Mengambil konsep video musik, Lantunan Adiwarna membawakan lagu Lathi -
+        Weird Genius, Ekspresi - Titi DJ, dan Terhebat - Coboy Junior. “Kita
+        memilih lagu Lathi karena memang lagu tersebut dirasa sangat
+        menggambarkan Indonesia, namun dikemas dengan unik dan modern. Lalu
+        untuk Ekspresi - Titi DJ, kami pilih karena ingin menunjukkan bahwa
+        sebenarnya di UGM ini, Gamada dan semua sivitas akademika sangat
+        dibebaskan untuk berekspresi, serta dari UGM sendiri akan selalu
+        mewadahi dan mendukung segala bentuk ekspresi dari masing masing sivitas
+        akademika. Yang terakhir, lagu Terhebat - Coboy Junior kami pilih karena
+        ingin menunjukkan apresiasi kami dari panitia untuk Gamada, karena telah
+        sampai di penghujung PPSMB UGM 2021 dan melaksanakan seluruh rangkaian
+        dengan sebaik mungkin.” Ujar Brigitta Novanka, selaku Sub Koordinator
+        Acara PPSMB UGM 2021 saat dilakukan wawancara (13/8).
+      </span>
+      <br />
+      <img
+        className="image-inside"
+        src={
+          require("../../assets/img/redaksi-palapa/lantunan-adiwarna-2.webp").default
+        }
+        alt=""
+      />
+      <span>
+        Untuk aransemen musik, panitia PPSMB UGM 2021 bekerja sama dengan
+        maestro musik yang sudah tidak asing lagi, yaitu Afriza Animawan.
+        Sebagai informasi, Afriza Animawan adalah pencipta Anthem PPSMB UGM yang
+        setiap tahunnya memeriahkan rangkaian kegiatan PPSMB. Beliau juga aktif
+        bermusik di Gadjah Mada Chamber Orchestra. Proses perekaman audio juga
+        dilaksanakan di studio milik Mas Afriza, ARF Studio.
+      </span>
+      <br />
+      <img
+        className="image-inside"
+        src={
+          require("../../assets/img/redaksi-palapa/lantunan-adiwarna-3.webp").default
+        }
+        alt=""
+      />
+      <span>
+        Talent yang berpartisipasi pada Lantunan Adiwarna juga merupakan
+        mahasiswa UGM yang memiliki keahlian di bidang masing-masing, contohnya
+        Agatha Fabyan pemain <i>flute</i> yang merupakan anggota GMCO. Feby,
+        pernah terpilih menjadi anggota Gita Bahana Nusantara (GBN) saat umurnya
+        masih 18 tahun.
+      </span>
+      <br />
+      <br />
+      <span>
+        “Kalau untuk persiapannya sendiri, dari Mas Afriza sudah memberi
+        partitur dan MIDI untuk latihan dari jauh hari sebelum rekaman, jadi
+        bisa dipelajari dulu. Untuk proses rekaman audio dan video sendiri,
+        panitia sangat memperhatikan protokol kesehatan. Jadi, sebelum proses
+        rekaman dilakukan, pihak-pihak yang terlibat melakukan tes GeNoSe.
+        Selain itu, pembatasan jumlah personil dalam dan efisiensi waktu sangat
+        diperhatikan mengingat kondisi Covid-19 saat ini.” begitu ujar Agatha
+        Fabyan saat diwawancarai (14/8).
+      </span>
+      <br />
+      <br />
+      <span>
+        Itulah Lantunan Adiwarna, sebuah video musik yang menggambarkan ekspresi
+        yang dipadukan dalam sebuah kolaborasi. Pesan yang disampaikan melalui
+        Lantunan Adiwarna adalah Gadjah Mada Muda diharapkan untuk tak gentar
+        dalam berkreasi karena UGM akan terus mendukung dalam rangka meraih
+        prestasi. Ajining diri ana ing lathi, harga diri seseorang ada pada
+        perkataannya, maka dari itu mari berkarya entah dalam puisi, lagu,
+        maupun kreasi lainnya, dan jangan pernah takut untuk memulai segala
+        sesuatu karena kamu memang yang terhebat!
+      </span>
+    </div>,
   ];
   const photo = [
     [require("../../assets/img/redaksi-palapa/kembaraloka.webp").default],
     [require("../../assets/img/redaksi-palapa/rubikkarsa.webp").default],
+    [require("../../assets/img/redaksi-palapa/rinai-warna.webp").default],
+    [require("../../assets/img/redaksi-palapa/lantunan-adiwarna.webp").default],
   ];
 
-  const writer = ["Nabila Maharani Naumi", "Herera Aribah Respati"];
+  const writer = [
+    "Nabila Maharani Naumi",
+    "Herera Aribah Respati",
+    "Gisela Nolasari Putri",
+    "Andihan Lukas Argadhika",
+  ];
   let selectedTitle, selectedText, selectedPhoto, selectedWriter;
 
   if (props.day === "one") {
@@ -173,6 +389,16 @@ function ArtikelPage(props) {
     selectedText = text[1];
     selectedPhoto = photo[1][0];
     selectedWriter = writer[1];
+  } else if (props.day === "three") {
+    selectedTitle = title[2];
+    selectedText = text[2];
+    selectedPhoto = photo[2][0];
+    selectedWriter = writer[2];
+  } else if (props.day === "four") {
+    selectedTitle = title[3];
+    selectedText = text[3];
+    selectedPhoto = photo[3][0];
+    selectedWriter = writer[3];
   }
 
   return (

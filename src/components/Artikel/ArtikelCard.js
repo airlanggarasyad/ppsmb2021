@@ -15,7 +15,9 @@ export default function Card(props) {
       : day === "two"
       ? "Rubik Karsa"
       : day === "three"
-      ? "PPSMB Fakultas"
+      ? "Rinai Warna"
+      : day === "four"
+      ? "Lantunan Adiwarna"
       : "PPSMB"
   );
   const [Title, setTitle] = useState(

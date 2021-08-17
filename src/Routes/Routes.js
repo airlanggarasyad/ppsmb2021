@@ -106,7 +106,8 @@ export default function Routes() {
 
       <Route exact path="/2021/redaksi-palapa/kembaraloka" render={(props) => <ArtikelPage {...props} day="one"/>} />
       <Route exact path="/2021/redaksi-palapa/rubik-karsa" render={(props) => <ArtikelPage {...props} day="two"/>} />
-
+      <Route exact path="/2021/redaksi-palapa/rinai-warna" render={(props) => <ArtikelPage {...props} day="three"/>} />
+      <Route exact path="/2021/redaksi-palapa/lantunan-adiwarna" render={(props) => <ArtikelPage {...props} day="four"/>} />
       <Route component={error} />
     </Switch>
   );
