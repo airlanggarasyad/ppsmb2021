@@ -40,7 +40,7 @@ export default function Routes() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname !== "/2021/kembaraloka") {
+    if (location.pathname !== "/kembaraloka") {
       const script = document.createElement("script");
 
       script.src = "https://embed.tawk.to/60f433d2649e0a0a5cccc803/1fasuksoa";
@@ -60,54 +60,54 @@ export default function Routes() {
 
   return (
     <Switch>
-      <Route exact path="/2021" component={Beranda} />
-      <Route exact path="/2021/faq" component={FAQ} />
-      <Route path="/2021/galeri" component={Galeri} />
-      <Route path="/2021/kembaraloka" component={KembaraLoka} />
-      {/* <Route relative path="/2021/agenda" component={Agenda} /> */}
+      <Route exact path="/" component={Beranda} />
+      <Route exact path="/faq" component={FAQ} />
+      <Route path="/galeri" component={Galeri} />
+      <Route path="/kembaraloka" component={KembaraLoka} />
+      {/* <Route relative path="/agenda" component={Agenda} /> */}
       {/* Agenda Section */}
-      <Route exact path="/2021/materi-ketentuan" component={AgendaMateri} />
-      <Route exact path="/2021/materi-ketentuan/materi" component={Materi} />
+      <Route exact path="/materi-ketentuan" component={AgendaMateri} />
+      <Route exact path="/materi-ketentuan/materi" component={Materi} />
 
-      <Route path="/2021/materi-ketentuan/ketentuan" component={Ketentuan} />
+      <Route path="/materi-ketentuan/ketentuan" component={Ketentuan} />
       {/* Agenda-materi */}
       <Route
         exact
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas"
+        path="/materi-ketentuan/materi/ppsmb-universitas"
         component={Universitas}
       />
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-fakultas"
+        path="/materi-ketentuan/materi/ppsmb-fakultas"
         component={Fakultas}
       />
 
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1"
+        path="/materi-ketentuan/materi/ppsmb-universitas/modul-1"
         component={Modul1}
       />
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2"
+        path="/materi-ketentuan/materi/ppsmb-universitas/modul-2"
         component={Modul2}
       />
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3"
+        path="/materi-ketentuan/materi/ppsmb-universitas/modul-3"
         component={Modul3}
       />
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4"
+        path="/materi-ketentuan/materi/ppsmb-universitas/modul-4"
         component={Modul4}
       />
       <Route
-        path="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5"
+        path="/materi-ketentuan/materi/ppsmb-universitas/modul-5"
         component={Modul5}
       />
 
-      <Route exact path="/2021/redaksi-palapa" component={Artikel} />
+      <Route exact path="/redaksi-palapa" component={Artikel} />
 
-      <Route exact path="/2021/redaksi-palapa/kembaraloka" render={(props) => <ArtikelPage {...props} day="one"/>} />
-      <Route exact path="/2021/redaksi-palapa/rubik-karsa" render={(props) => <ArtikelPage {...props} day="two"/>} />
-      <Route exact path="/2021/redaksi-palapa/rinai-warna" render={(props) => <ArtikelPage {...props} day="three"/>} />
-      <Route exact path="/2021/redaksi-palapa/lantunan-adiwarna" render={(props) => <ArtikelPage {...props} day="four"/>} />
+      <Route exact path="/redaksi-palapa/kembaraloka" render={(props) => <ArtikelPage {...props} day="one"/>} />
+      <Route exact path="/redaksi-palapa/rubik-karsa" render={(props) => <ArtikelPage {...props} day="two"/>} />
+      <Route exact path="/redaksi-palapa/rinai-warna" render={(props) => <ArtikelPage {...props} day="three"/>} />
+      <Route exact path="/redaksi-palapa/lantunan-adiwarna" render={(props) => <ArtikelPage {...props} day="four"/>} />
       <Route component={error} />
     </Switch>
   );

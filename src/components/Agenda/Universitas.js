@@ -11,15 +11,15 @@ export default function Agenda({match}) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021"
+      link: "/"
     },
     {
       text: "Materi",
-      link: "/2021/materi-ketentuan/materi"
+      link: "/materi-ketentuan/materi"
     },
     {
       text: "PPSMB Universitas ",
-      link: "/2021/materi-ketentuan/materi/ppsmb-universitas"
+      link: "/materi-ketentuan/materi/ppsmb-universitas"
     },
   
   ];
@@ -39,7 +39,7 @@ export default function Agenda({match}) {
         </div>
       </div>
       <div className="agenda-container">
-        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/materi-ketentuan/materi" />
+        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/materi-ketentuan/materi" />
         <div className="agenda-title">
           <h1>Modul</h1>
           <div className="flower-icon">
@@ -103,19 +103,19 @@ export default function Agenda({match}) {
         </div>
 
         <div className="card-grid">
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1" >
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas/modul-1" >
           <Card day="one"></Card> 
           </Link>
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2">
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas/modul-2">
           <Card day="two"></Card> 
           </Link>
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3">
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas/modul-3">
           <Card day="three"></Card> 
           </Link>
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4" >
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas/modul-4" >
           <Card day="four"></Card> 
           </Link>
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5">
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas/modul-5">
           <Card day="five"></Card> 
           </Link>
 

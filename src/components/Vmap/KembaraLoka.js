@@ -15,7 +15,7 @@ export default function KembaraLoka() {
   const [freeControl, setFreeControl] = useState(false);
   const [music, setMusic] = useState(true);
   const myRef = useRef();
-  const audio = new Audio("/2021/anthem.mp3");
+  const audio = new Audio("/anthem.mp3");
 
   // useEffect(() => {
   //   console.log('audio')
@@ -39,7 +39,7 @@ export default function KembaraLoka() {
   let today = new Date();
   let rilis = new Date("2021-08-02T06:00:00+07:00");
   // if (today < rilis) {
-  //   window.location.replace("https://ppsmb.ugm.ac.id/2021");
+  //   window.location.replace("https://ppsmb.ugm.ac.id/");
   // }
   console.log("hayoo ngapain buka-buka developer tools");
   console.log("jangan aneh-aneh ya :(");
@@ -54,7 +54,7 @@ export default function KembaraLoka() {
         load={true}
         loading={loading}
       />
-      <audio ref={myRef} src="/2021/anthem.mp3" />
+      <audio ref={myRef} src="/anthem.mp3" />
       {/* <Fade in={storyboard && !loading}>
       </Fade> */}
       <Storyboard

@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 export default function Background(props) {
   const myRef = useRef();
-  const image = useTexture("/2021/images/skybox.jpg");
+  const image = useTexture("/images/skybox.jpg");
 
   // useFrame(() => {
   //   if (props.freeControl) {

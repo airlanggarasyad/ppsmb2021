@@ -11,15 +11,15 @@ export default function Agenda({match}) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021"
+      link: "/"
     },
     {
       text: "Materi & Ketentuan",
-      link: "/2021/materi-ketentuan"
+      link: "/materi-ketentuan"
     },
     {
       text: "Materi ",
-      link: "/2021/materi-ketentuan/materi"
+      link: "/materi-ketentuan/materi"
     },
   
   ];
@@ -39,7 +39,7 @@ export default function Agenda({match}) {
         </div>
       </div>
       <div className="agenda-container">
-        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/2021/materi-ketentuan" />
+        <Breadcrumb data={DataBreadcrumb} primer="black" secondary="red" back="/materi-ketentuan" />
         <div className="agenda-title">
           <h1>Materi</h1>
           <div className="flower-icon">
@@ -105,11 +105,11 @@ export default function Agenda({match}) {
         </div>
 
         <div className="card-grid">
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas" >
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas" >
           <Card day="one"></Card> 
           </Link>
         
-          <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-fakultas">
+          <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-fakultas">
           <Card day="three"></Card> 
           </Link>
           

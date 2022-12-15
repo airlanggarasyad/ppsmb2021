@@ -1,27 +1,27 @@
 export const MenuItems = [
     {
         title: 'Beranda',
-        url: '/2021'
+        url: '/'
     },
     {
         title: 'Materi & Ketentuan',
-        url: '/2021/materi-ketentuan',
+        url: '/materi-ketentuan',
     
     },
     {
         title: 'Peta UGM',
-        url: '/2021/kembaraloka',
+        url: '/kembaraloka',
     },
     {
         title: 'Galeri',
-        url: '/2021/galeri'
+        url: '/galeri'
     },
     {
         title: 'FAQ',
-        url: '/2021/faq',
+        url: '/faq',
     },
     {
         title: 'Redaksi Palapa',
-        url: '/2021/redaksi-palapa',
+        url: '/redaksi-palapa',
     },
 ]

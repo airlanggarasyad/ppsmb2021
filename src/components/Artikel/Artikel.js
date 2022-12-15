@@ -12,11 +12,11 @@ export default function Agenda({ match }) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021",
+      link: "/",
     },
     {
       text: "Redaksi Palapa",
-      link: "/2021/redaksi-palapa",
+      link: "/redaksi-palapa",
     },
   ];
   return (
@@ -39,7 +39,7 @@ export default function Agenda({ match }) {
           data={DataBreadcrumb}
           primer="black"
           secondary="red"
-          back="/2021/materi-ketentuan"
+          back="/materi-ketentuan"
         />
         <div className="agenda-title">
           <h1>Artikel</h1>
@@ -107,25 +107,25 @@ export default function Agenda({ match }) {
           <div className="card-grid">
             <Link
               style={{ textDecoration: "none" }}
-              to="/2021/redaksi-palapa/kembaraloka"
+              to="/redaksi-palapa/kembaraloka"
             >
               <Card day="one"></Card>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              to="/2021/redaksi-palapa/rubik-karsa"
+              to="/redaksi-palapa/rubik-karsa"
             >
               <Card day="two"></Card>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              to="/2021/redaksi-palapa/rinai-warna"
+              to="/redaksi-palapa/rinai-warna"
             >
               <Card day="three"></Card>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              to="/2021/redaksi-palapa/lantunan-adiwarna"
+              to="/redaksi-palapa/lantunan-adiwarna"
             >
               <Card day="four"></Card>
             </Link>

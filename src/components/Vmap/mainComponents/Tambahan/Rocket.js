@@ -8,7 +8,7 @@ import { useFrame } from "@react-three/fiber";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/2021/rocket.glb");
+  const { nodes, materials } = useGLTF("/rocket.glb");
   const rocketRef = useRef();
 
   useFrame(() => {
@@ -87,4 +87,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/2021/rocket.glb");
+useGLTF.preload("/rocket.glb");

@@ -37,15 +37,15 @@ export default function Day(props) {
 
   const [LinkText, setLinkText] = useState(
     day === "one"
-    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-1"
+    ? "/materi-ketentuan/materi/ppsmb-universitas/modul-1"
     : day === "two"
-    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2"
+    ? "/materi-ketentuan/materi/ppsmb-universitas/modul-2"
     : day === "three"
-    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-3"
+    ? "/materi-ketentuan/materi/ppsmb-universitas/modul-3"
     : day === "four"
-    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-4"
+    ? "/materi-ketentuan/materi/ppsmb-universitas/modul-4"
     : day === "five"
-    ? "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-5"
+    ? "/materi-ketentuan/materi/ppsmb-universitas/modul-5"
     : day === "six"
     ? "PPSMB Fakultas"
     : "PPSMB"
@@ -55,11 +55,11 @@ export default function Day(props) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021"
+      link: "/"
     },
     {
       text: "PPSMB Universitas",
-      link: "/2021/materi-ketentuan/materi/ppsmb-universitas"
+      link: "/materi-ketentuan/materi/ppsmb-universitas"
     },
     {
       text: `${BreadcrumbText}`,
@@ -183,7 +183,7 @@ export default function Day(props) {
           data={DataBreadcrumb}
           primer={BreadcrumbPrimer}
           secondary={BreadcrumbSecondary}
-          back="/2021/materi-ketentuan/materi/ppsmb-universitas"
+          back="/materi-ketentuan/materi/ppsmb-universitas"
         />
         <Fade bottom>
         <div className="title-container">
@@ -219,7 +219,7 @@ export default function Day(props) {
           <div className="button-content">
           <Fade bottom>
             <div className="back-button">
-              <Link style={{ textDecoration: 'none' }} to="/2021/materi-ketentuan/materi/ppsmb-universitas" >
+              <Link style={{ textDecoration: 'none' }} to="/materi-ketentuan/materi/ppsmb-universitas" >
               <Button text="Kembali" textColor={TextColor}>
         
                 <div className="back-icon">

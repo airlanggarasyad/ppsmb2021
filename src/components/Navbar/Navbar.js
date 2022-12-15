@@ -36,7 +36,7 @@ export default class Navbar extends Component {
         <nav className="navbar">
           {/* Left-corner: Logo PPSMB */}
           <Link
-            to="/2021"
+            to="/"
             relative
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
@@ -54,7 +54,7 @@ export default class Navbar extends Component {
               let today = new Date();
               let rilis = new Date("2021-08-02T06:00:00+07:00");
 
-              if (item.url === "/2021/kembaraloka") {
+              if (item.url === "/kembaraloka") {
                 if (today >= rilis) {
                   return (
                     <li key={index}>
@@ -62,7 +62,7 @@ export default class Navbar extends Component {
                         className={item.block ? "nav-links block" : "nav-links"}
                         to={item.block ? {} : item.url}
                         relative
-                        href="/2021/kembaraloka"
+                        href="/kembaraloka"
                         target="_blank"
                       >
                         {item.title}

@@ -39,7 +39,7 @@ export const QuestionItems = [
             },
             {
                 title: 'Bagaimana cara login ke Simaster?',
-                answer: <p>Silakan akses "Ketentuan dan Panduan" pada tautan berikut <Link to="/2021/materi-ketentuan/ketentuan/">cara <i>login</i> Simaster</Link>.</p>,
+                answer: <p>Silakan akses "Ketentuan dan Panduan" pada tautan berikut <Link to="/materi-ketentuan/ketentuan/">cara <i>login</i> Simaster</Link>.</p>,
             },
             {
                 title: 'Apa yang akan Gamada peroleh setelah berhasil login ke Simaster?',

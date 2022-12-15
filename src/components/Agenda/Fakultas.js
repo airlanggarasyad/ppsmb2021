@@ -9,15 +9,15 @@ export default function Agenda({ match }) {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021",
+      link: "/",
     },
     {
       text: "Materi",
-      link: "/2021/materi-ketentuan/materi",
+      link: "/materi-ketentuan/materi",
     },
     {
       text: "PPSMB Fakultas ",
-      link: "/2021/materi-ketentuan/materi/ppsmb-fakultas",
+      link: "/materi-ketentuan/materi/ppsmb-fakultas",
     },
   ];
 
@@ -41,7 +41,7 @@ export default function Agenda({ match }) {
           data={DataBreadcrumb}
           primer="black"
           secondary="red"
-          back="/2021/materi-ketentuan/materi"
+          back="/materi-ketentuan/materi"
         />
         <div className="agenda-title">
           <h1>Modul PPSMB Fakultas</h1>

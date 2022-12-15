@@ -87,7 +87,7 @@ export default function Beranda() {
     desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
     title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
     linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
-    linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
+    linkLengkap: "/materi-ketentuan/materi/ppsmb-universitas/modul-2",
   });
 
   const [today, setToday] = useState(new Date());
@@ -100,7 +100,7 @@ export default function Beranda() {
         desc: 'PPSMB Universitas pada hari pertama akan membahas modul "Jati Diri UGM Bangun Karakterku". Detail modul dapat diakses pada laman Materi & Ketentuan atau eLOK.',
         title: "Upacara Pembukaan & PPSMB Universitas Hari Pertama",
         linkElok: "https://elok.ugm.ac.id/course/index.php?categoryid=52",
-        linkLengkap: "/2021/materi-ketentuan/materi/ppsmb-universitas/modul-2",
+        linkLengkap: "/materi-ketentuan/materi/ppsmb-universitas/modul-2",
       });
     } else if (new Date() < new Date(2021, 7, 11)) {
       setToday(new Date());
@@ -129,7 +129,7 @@ export default function Beranda() {
         title: "Penutupan PPSMB UGM 2021",
         desc: "Upacara penutupan seluruh rangkaian acara PPSMB UGM 2021.",
         linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
-        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+        linkLengkap: "https://ppsmb.ugm.ac.id/agenda",
       });
     } else {
       setToday(new Date(2021, 7, 14));
@@ -138,7 +138,7 @@ export default function Beranda() {
         title: "Penutupan PPSMB UGM 2021",
         desc: "Upacara penutupan seluruh rangkaian acara PPSMB UGM 2021.",
         linkElok: "https://elok.ugm.ac.id/enrol/index.php?id=6719",
-        linkLengkap: "https://ppsmb.ugm.ac.id/2021/agenda",
+        linkLengkap: "https://ppsmb.ugm.ac.id/agenda",
       });
     }
   }, []);
@@ -425,7 +425,7 @@ export default function Beranda() {
         <div className="vmap-content">
             <img src={VmapSS} alt="peta ugm"/> 
             <div className="vmap-btn">
-              <Link to="/2021/kembaraloka">
+              <Link to="/kembaraloka">
                 <div className='beranda-button'>
                   <Button color="var(--color-red)" bg="var(--color-white)" text="Buka Peta UGM" />
                 </div>

@@ -18,7 +18,7 @@ export default class AgendaPenugasan extends Component {
         title: "Materi",
         text: 'Bagian "Materi" berisi mengenai penjelasan singkat tentang modul-modul yang ada dalam PPSMB UGM 2021 serta akses ke eLok untuk masing-masing modul.',
         image: "agenda",
-        link: "/2021/materi-ketentuan/materi",
+        link: "/materi-ketentuan/materi",
         button:"Selengkapnya",
         color:"yellow",
         hover :"none",
@@ -27,7 +27,7 @@ export default class AgendaPenugasan extends Component {
       {
         title: "Ketentuan & Panduan Penugasan",
         text: "Bagian ini berisi ketentuan pengerjaan penugasaan serta panduan untuk mengakses penugasan, peta penugasan, serta cara akses eLok dan Simaster",
-        link: "/2021/materi-ketentuan/ketentuan",
+        link: "/materi-ketentuan/ketentuan",
         image: "ketentuan",
         button:"Selengkapnya",
         color:"yellow",
@@ -48,12 +48,12 @@ export default class AgendaPenugasan extends Component {
     const DataBreadcrumb = [
       {
         text: "PPSMB UGM 2021 ",
-        link: "/2021"
+        link: "/"
      
       },
       {
         text: "Materi & Ketentuan",
-        link: "/2021/materi-ketentuan"
+        link: "/materi-ketentuan"
       },
   
     ];
@@ -163,7 +163,7 @@ export default class AgendaPenugasan extends Component {
         </div>
         <div className="breadcrumb-content-container">
           <div className="breadcrumb-content">
-            <Breadcrumb data={DataBreadcrumb} secondary="black" back="/2021"/>
+            <Breadcrumb data={DataBreadcrumb} secondary="black" back="/"/>
           </div>
         </div>
         <div className="batik-bg">

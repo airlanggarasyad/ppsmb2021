@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/2021/Logo-transformed.glb");
+  const { nodes, materials } = useGLTF("/Logo-transformed.glb");
 
   async function handleHover(e) {
     document.body.style.cursor = "pointer";
@@ -66,4 +66,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/2021/Logo-transformed.glb");
+useGLTF.preload("/Logo-transformed.glb");

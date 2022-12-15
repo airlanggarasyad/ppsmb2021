@@ -7,9 +7,9 @@ import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/2021/computer.glb");
+  const { nodes, materials } = useGLTF("/computer.glb");
 
-  const rocketSound = new Audio("/2021/rocketSound.mp3");
+  const rocketSound = new Audio("/rocketSound.mp3");
   rocketSound.volume = 0.2;
 
   const handleClick = (e) => {
@@ -71,4 +71,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/2021/computer.glb");
+useGLTF.preload("/computer.glb");

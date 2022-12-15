@@ -33,7 +33,7 @@ function ComponentHandler() {
 
   return (
     <>
-      {pathname !== "/2021/kembaraloka" ? (
+      {pathname !== "/kembaraloka" ? (
         <div>
           <Navbar />
           <ScrollToTop />

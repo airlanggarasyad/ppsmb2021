@@ -24,7 +24,7 @@ export default function KreasiModal(props) {
       </Modal.Header>
       <Modal.Body style={{ padding: "0", overflow: "hidden" }}>
         <Loading />
-        <img src="/2021/persembahan.webp" className="img-fluid" />
+        <img src="/persembahan.webp" className="img-fluid" />
       </Modal.Body>
       <Modal.Footer>
         <ButtonWeb

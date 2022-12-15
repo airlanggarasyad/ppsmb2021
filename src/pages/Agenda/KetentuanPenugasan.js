@@ -8,15 +8,15 @@ export default function KetentuanPenugasan() {
   const DataBreadcrumb = [
     {
       text: "PPSMB UGM 2021",
-      link: "/2021",
+      link: "/",
     },
     {
       text: "Materi & Ketentuan",
-      link: "/2021/materi-ketentuan",
+      link: "/materi-ketentuan",
     },
     {
       text: "Ketentuan & Panduan Penugasan  ",
-      link: "/2021/materi-ketentuan/ketentuan",
+      link: "/materi-ketentuan/ketentuan",
     },
   ];
   return (
@@ -29,7 +29,7 @@ export default function KetentuanPenugasan() {
           data={DataBreadcrumb}
           primer="black"
           secondary="red"
-          back="/2021/materi-ketentuan"
+          back="/materi-ketentuan"
         />
         <div className="agenda-title">
           <h1>
